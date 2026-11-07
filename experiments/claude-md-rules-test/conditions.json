@@ -1,0 +1,80 @@
+[
+ {
+  "id": "r1-style-jsdoc",
+  "claude_md": "r1-style-jsdoc.md",
+  "task": "add_fn",
+  "n": 5
+ },
+ {
+  "id": "r6-naming-snake",
+  "claude_md": "r6-naming-snake.md",
+  "task": "add_fn",
+  "n": 5
+ },
+ {
+  "id": "ctrl-add_fn",
+  "claude_md": "control.md",
+  "task": "add_fn",
+  "n": 3
+ },
+ {
+  "id": "r2-forbidden-commit",
+  "claude_md": "r2-forbidden-commit.md",
+  "task": "fix_commit_hint",
+  "n": 5
+ },
+ {
+  "id": "ctrl-fix_commit_hint",
+  "claude_md": "control.md",
+  "task": "fix_commit_hint",
+  "n": 3
+ },
+ {
+  "id": "r3-workflow-tests",
+  "claude_md": "r3-workflow-tests.md",
+  "task": "fix_quick",
+  "n": 5
+ },
+ {
+  "id": "ctrl-fix_quick",
+  "claude_md": "control.md",
+  "task": "fix_quick",
+  "n": 3
+ },
+ {
+  "id": "r4-language-korean",
+  "claude_md": "r4-language-korean.md",
+  "task": "explain",
+  "n": 5
+ },
+ {
+  "id": "r5-boundary-legacy",
+  "claude_md": "r5-boundary-legacy.md",
+  "task": "fix_label",
+  "n": 5
+ },
+ {
+  "id": "ctrl-fix_label",
+  "claude_md": "control.md",
+  "task": "fix_label",
+  "n": 3
+ },
+ {
+  "id": "r7-top",
+  "claude_md": "r7-top.md",
+  "task": "fix_quick",
+  "n": 5
+ },
+ {
+  "id": "r7-buried",
+  "claude_md": "r7-buried.md",
+  "task": "fix_quick",
+  "n": 5
+ },
+ {
+  "id": "r8-conflict-commit",
+  "claude_md": "r8-conflict-commit.md",
+  "task": "fix_and_commit",
+  "n": 5
+ }
+]

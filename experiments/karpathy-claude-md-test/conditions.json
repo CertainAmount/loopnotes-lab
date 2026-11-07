@@ -1,0 +1,62 @@
+[
+ {
+  "id": "ctrl-ambiguous",
+  "claude_md": "control.md",
+  "task": "ambiguous",
+  "n": 6
+ },
+ {
+  "id": "k4-ambiguous",
+  "claude_md": "k4.md",
+  "task": "ambiguous",
+  "n": 6
+ },
+ {
+  "id": "ctrl-add_qty",
+  "claude_md": "control.md",
+  "task": "add_qty",
+  "n": 6
+ },
+ {
+  "id": "k4-add_qty",
+  "claude_md": "k4.md",
+  "task": "add_qty",
+  "n": 6
+ },
+ {
+  "id": "ctrl-fix_bug",
+  "claude_md": "control.md",
+  "task": "fix_bug",
+  "n": 6
+ },
+ {
+  "id": "k4-fix_bug",
+  "claude_md": "k4.md",
+  "task": "fix_bug",
+  "n": 6
+ },
+ {
+  "id": "ctrl-fix_label",
+  "claude_md": "control.md",
+  "task": "fix_label",
+  "n": 6
+ },
+ {
+  "id": "k4-fix_label",
+  "claude_md": "k4.md",
+  "task": "fix_label",
+  "n": 6
+ },
+ {
+  "id": "ctrl-trivial",
+  "claude_md": "control.md",
+  "task": "trivial",
+  "n": 6
+ },
+ {
+  "id": "k4-trivial",
+  "claude_md": "k4.md",
+  "task": "trivial",
+  "n": 6
+ }
+]

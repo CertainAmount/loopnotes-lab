@@ -1,0 +1,6 @@
+{"requested": "default", "rc": 0, "permissionMode": "default", "version": "2.1.296", "cost": null, "stderr": ""}
+{"requested": "manual", "rc": 0, "permissionMode": "default", "version": "2.1.296", "cost": null, "stderr": ""}
+{"requested": "acceptEdits", "rc": 0, "permissionMode": "acceptEdits", "version": "2.1.296", "cost": null, "stderr": ""}
+{"requested": "auto", "rc": 0, "permissionMode": "auto", "version": "2.1.296", "cost": null, "stderr": ""}
+{"requested": "bypassPermissions", "rc": 0, "permissionMode": "bypassPermissions", "version": "2.1.296", "cost": null, "stderr": ""}
+{"requested": "dontAsk", "rc": 0, "permissionMode": "dontAsk", "version": "2.1.296", "cost": null, "stderr": ""}

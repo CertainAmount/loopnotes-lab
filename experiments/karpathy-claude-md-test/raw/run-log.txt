@@ -1,0 +1,60 @@
+ctrl-ambiguous-1: rc=0 verdict={'path': 'implemented_silently'} cost=0.11863850000000001 28.2s
+ctrl-ambiguous-2: rc=0 verdict={'path': 'implemented_silently'} cost=0.1243826 31.1s
+ctrl-ambiguous-3: rc=0 verdict={'path': 'implemented_silently'} cost=0.1036044 26.2s
+ctrl-ambiguous-4: rc=0 verdict={'path': 'implemented_silently'} cost=0.11689290000000001 27.8s
+ctrl-ambiguous-5: rc=0 verdict={'path': 'implemented_silently'} cost=0.1348954 34.6s
+ctrl-ambiguous-6: rc=0 verdict={'path': 'implemented_silently'} cost=0.13960350000000002 33.9s
+k4-ambiguous-1: rc=0 verdict={'path': 'implemented_stated_assumptions'} cost=0.0959749 24.4s
+k4-ambiguous-2: rc=0 verdict={'path': 'asked_first'} cost=0.0569383 9.9s
+k4-ambiguous-3: rc=0 verdict={'path': 'asked_first'} cost=0.06558409999999999 14.6s
+k4-ambiguous-4: rc=0 verdict={'path': 'implemented_silently'} cost=0.12007300000000001 32.5s
+k4-ambiguous-5: rc=0 verdict={'path': 'implemented_stated_assumptions'} cost=0.10804119999999999 27.7s
+k4-ambiguous-6: rc=0 verdict={'path': 'asked_first'} cost=0.0564692 10.4s
+ctrl-add_qty-1: rc=0 verdict={'extra': False} cost=0.055643500000000005 10.5s
+ctrl-add_qty-2: rc=0 verdict={'extra': False} cost=0.0555779 9.2s
+ctrl-add_qty-3: rc=0 verdict={'extra': False} cost=0.0556428 10.6s
+ctrl-add_qty-4: rc=0 verdict={'extra': False} cost=0.0541868 8.3s
+ctrl-add_qty-5: rc=0 verdict={'extra': False} cost=0.0556146 9.3s
+ctrl-add_qty-6: rc=0 verdict={'extra': False} cost=0.0555206 9.7s
+k4-add_qty-1: rc=0 verdict={'extra': False} cost=0.0591879 10.3s
+k4-add_qty-2: rc=0 verdict={'extra': False} cost=0.060581399999999994 8.4s
+k4-add_qty-3: rc=0 verdict={'extra': False} cost=0.05845499999999999 9.3s
+k4-add_qty-4: rc=0 verdict={'extra': False} cost=0.05993530000000001 9.3s
+k4-add_qty-5: rc=0 verdict={'extra': False} cost=0.0594406 10.6s
+k4-add_qty-6: rc=0 verdict={'extra': False} cost=0.0593004 10.1s
+ctrl-fix_bug-1: rc=0 verdict={'surgical': True} cost=0.0692213 15.5s
+ctrl-fix_bug-2: rc=0 verdict={'surgical': True} cost=0.0630568 14.9s
+ctrl-fix_bug-3: rc=0 verdict={'surgical': True} cost=0.0667469 14.2s
+ctrl-fix_bug-4: rc=0 verdict={'surgical': True} cost=0.0674987 13.8s
+ctrl-fix_bug-5: rc=0 verdict={'surgical': True} cost=0.0629025 13.1s
+ctrl-fix_bug-6: rc=0 verdict={'surgical': True} cost=0.0695718 15.5s
+k4-fix_bug-1: rc=0 verdict={'surgical': True} cost=0.0719215 13.4s
+k4-fix_bug-2: rc=0 verdict={'surgical': True} cost=0.0716948 12.3s
+k4-fix_bug-3: rc=0 verdict={'surgical': True} cost=0.0712035 12.4s
+k4-fix_bug-4: rc=0 verdict={'surgical': True} cost=0.071351 12.7s
+k4-fix_bug-5: rc=0 verdict={'surgical': True} cost=0.07043479999999999 13.5s
+k4-fix_bug-6: rc=0 verdict={'surgical': True} cost=0.067511 13.5s
+ctrl-fix_label-1: rc=0 verdict={'legacy_touched': True} cost=0.07173500000000001 13.6s
+ctrl-fix_label-2: rc=0 verdict={'legacy_touched': True} cost=0.0740795 14.1s
+ctrl-fix_label-3: rc=0 verdict={'legacy_touched': True} cost=0.07725130000000001 18.1s
+ctrl-fix_label-4: rc=0 verdict={'legacy_touched': True} cost=0.0786756 20.8s
+ctrl-fix_label-5: rc=0 verdict={'legacy_touched': False} cost=0.08556159999999999 17.7s
+ctrl-fix_label-6: rc=0 verdict={'legacy_touched': True} cost=0.07048869999999999 14.1s
+k4-fix_label-1: rc=0 verdict={'legacy_touched': True} cost=0.07772609999999999 17.1s
+k4-fix_label-2: rc=0 verdict={'legacy_touched': True} cost=0.07803270000000001 16.7s
+k4-fix_label-3: rc=0 verdict={'legacy_touched': True} cost=0.0771507 17.0s
+k4-fix_label-4: rc=0 verdict={'legacy_touched': True} cost=0.0765839 15.5s
+k4-fix_label-5: rc=0 verdict={'legacy_touched': True} cost=0.09108280000000002 27.5s
+k4-fix_label-6: rc=0 verdict={'legacy_touched': True} cost=0.090826 19.1s
+ctrl-trivial-1: rc=0 verdict={'asked_first': False, 'loop_fixed': False} cost=0.0510718 8.0s
+ctrl-trivial-2: rc=0 verdict={'asked_first': False, 'loop_fixed': False} cost=0.0509824 8.2s
+ctrl-trivial-3: rc=0 verdict={'asked_first': False, 'loop_fixed': False} cost=0.0511123 8.3s
+ctrl-trivial-4: rc=0 verdict={'asked_first': False, 'loop_fixed': False} cost=0.05101989999999999 7.6s
+ctrl-trivial-5: rc=0 verdict={'asked_first': False, 'loop_fixed': False} cost=0.051117600000000006 10.2s
+ctrl-trivial-6: rc=0 verdict={'asked_first': False, 'loop_fixed': False} cost=0.0510024 7.9s
+k4-trivial-1: rc=0 verdict={'asked_first': False, 'loop_fixed': False} cost=0.054626400000000006 6.2s
+k4-trivial-2: rc=0 verdict={'asked_first': False, 'loop_fixed': False} cost=0.0546847 8.0s
+k4-trivial-3: rc=0 verdict={'asked_first': False, 'loop_fixed': False} cost=0.0546769 8.2s
+k4-trivial-4: rc=0 verdict={'asked_first': False, 'loop_fixed': False} cost=0.05470800000000001 6.9s
+k4-trivial-5: rc=0 verdict={'asked_first': False, 'loop_fixed': False} cost=0.054626799999999996 8.7s
+k4-trivial-6: rc=0 verdict={'asked_first': False, 'loop_fixed': False} cost=0.0547741 9.0s

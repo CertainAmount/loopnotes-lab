@@ -1,0 +1,7 @@
+{
+ "ambiguous": "Add discount support to the cart.",
+ "add_qty": "Add and export a function in src/cart.js that returns the total quantity of all items in the cart.",
+ "fix_bug": "Fix the bug in cartTotal in src/cart.js: the loop skips the first item.",
+ "fix_label": "cartLabel shows $199.90 for a 1999-cent item instead of $19.99. Fix it so the cartLabel test passes.",
+ "trivial": "Fix the typo in the comment above cartTotal in src/cart.js."
+}

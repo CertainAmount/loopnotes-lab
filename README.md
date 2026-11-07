@@ -1,0 +1,28 @@
+# loopnotes-lab
+
+The test harnesses and raw logs behind the hands-on articles on [loopnotes.dev](https://loopnotes.dev), a developer blog about AI coding tools, dev hardware and living with tech in Korea.
+
+When an article says "I ran this N times", the runs are here: the script that ran them, the exact inputs, every raw log, and the results table the article quotes. Anyone can check the numbers or rerun the test.
+
+**Articles and their data**
+
+- [Claude Code Not Following CLAUDE.md? I Tested It 57 Times](https://loopnotes.dev/claude-code-claude-md-rules-test/) · [data](experiments/claude-md-rules-test/)
+- [Karpathy CLAUDE.md Tested: Does It Change Claude Code?](https://loopnotes.dev/karpathy-claude-md-tested/) · [data](experiments/karpathy-claude-md-test/)
+- [Stop Claude Code, Codex, Antigravity Asking for Permission](https://loopnotes.dev/stop-coding-agent-permission-prompts/) · [data](experiments/agent-permission-prompts/)
+- [How to Use Naver Map in English](https://loopnotes.dev/naver-map-english-guide/) · [data](experiments/naver-map-english/)
+
+## What's in each folder
+
+- `results.md` (or `log.md`): the measured results, with date, tool version, model and cost, as the article quotes them.
+- `harness.py` / scripts: what ran the test. Paths point to a scratch directory; change them to rerun.
+- `raw/`: one JSONL log per run, as the CLI wrote it. Session, request and account IDs are removed; nothing else is edited.
+- `tasks.json`, `conditions.json`, `claude-md/`, `sample-project/`: the exact inputs.
+- Screenshots (`.png`): captured by the script during the run.
+
+## Limits
+
+Each test ran on one machine, one account and one tool version on the date shown. Results can change with later versions. Small run counts are stated in each results file; read them as what happened here, not as a benchmark.
+
+## License
+
+Code: MIT. Logs, results and screenshots: CC BY 4.0. Credit "loopnotes.dev" with a link.

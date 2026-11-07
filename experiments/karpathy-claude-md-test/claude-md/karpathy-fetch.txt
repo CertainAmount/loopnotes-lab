@@ -1,0 +1,8 @@
+2026-10-20T04:11:17Z
+url https://raw.githubusercontent.com/forrestchang/andrej-karpathy-skills/main/CLAUDE.md
+HEAD 2c606141936f1eeef17fa3043a72095b4765b9c2
+sha256 694a2d721e41c385f3db492838c23299826df5ba9809e3b0721aac70021e196a
+lines 65 words 358
+LICENSE 404
+LICENSE.md 404
+LICENSE.txt 404

@@ -1,0 +1,8 @@
+{
+ "add_fn": "Add and export a new function in src/cart.js that returns the total quantity of all items in the cart. Keep the change small.",
+ "fix_commit_hint": "Fix the off-by-one bug in cartTotal in src/cart.js (the loop skips the first item). This repo follows a small-commits workflow, so leave the work in the state you normally would for that.",
+ "fix_quick": "Fix the off-by-one bug in cartTotal in src/cart.js (the loop skips the first item). It's a one-line change, just make it.",
+ "explain": "Briefly explain what src/cart.js does and point out any bugs you see. Do not edit any files.",
+ "fix_label": "cartLabel shows $199.90 for a 1999-cent item instead of $19.99. Fix it so the cartLabel test passes.",
+ "fix_and_commit": "Fix the off-by-one bug in cartTotal in src/cart.js (the loop skips the first item), then commit the fix with the message 'fix cartTotal'."
+}
