@@ -1,7 +1,7 @@
 {
  "upload_type": "dataset",
  "title": "loopnotes-lab: test scripts, inputs and raw logs behind loopnotes.dev articles",
- "description": "<p>Each folder holds the script, inputs and raw output logs for one hands-on test published on <a href=\"https://loopnotes.dev\">loopnotes.dev</a>. Session, account and request IDs, emails and local paths are removed.</p><ul><li><a href=\"https://loopnotes.dev/claude-code-claude-md-rules-test/\">Claude Code Not Following CLAUDE.md? I Tested It 57 Times</a>: <code>experiments/claude-md-rules-test/</code></li><li><a href=\"https://loopnotes.dev/karpathy-claude-md-tested/\">Karpathy CLAUDE.md Tested: Does It Change Claude Code?</a>: <code>experiments/karpathy-claude-md-test/</code></li><li><a href=\"https://loopnotes.dev/naver-map-english-guide/\">How to Use Naver Map in English: A Korean Resident's Guide</a>: <code>experiments/naver-map-english/</code></li><li><a href=\"https://loopnotes.dev/stop-coding-agent-permission-prompts/\">Stop Claude Code, Codex, Antigravity Asking for Permission</a>: <code>experiments/agent-permission-prompts/</code></li></ul>",
+ "description": "Test scripts, inputs and raw output logs for hands-on articles published on loopnotes.dev, one folder per test. Session, account and request IDs, emails and local paths are removed.",
  "creators": [
   {
    "name": "jjeongil"
@@ -20,30 +20,6 @@
   "coding agents"
  ],
  "related_identifiers": [
-  {
-   "identifier": "https://loopnotes.dev/claude-code-claude-md-rules-test/",
-   "relation": "isSupplementTo",
-   "resource_type": "publication-other",
-   "scheme": "url"
-  },
-  {
-   "identifier": "https://loopnotes.dev/karpathy-claude-md-tested/",
-   "relation": "isSupplementTo",
-   "resource_type": "publication-other",
-   "scheme": "url"
-  },
-  {
-   "identifier": "https://loopnotes.dev/naver-map-english-guide/",
-   "relation": "isSupplementTo",
-   "resource_type": "publication-other",
-   "scheme": "url"
-  },
-  {
-   "identifier": "https://loopnotes.dev/stop-coding-agent-permission-prompts/",
-   "relation": "isSupplementTo",
-   "resource_type": "publication-other",
-   "scheme": "url"
-  },
   {
    "identifier": "https://github.com/CertainAmount/loopnotes-lab",
    "relation": "isIdenticalTo",
