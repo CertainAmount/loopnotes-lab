@@ -15,6 +15,7 @@ When an article says "I ran this N times", the runs are here: the script that ra
 
 The counts, sources and check dates behind the guides, one folder per article.
 
+- [GTA 6 Korea Price: ₩89,800 Is About $67, Not $58](https://loopnotes.dev/gta-6-korea-price/) · [research note](notes/gta-6-korea-price/)
 - [CatchTable Waitlist Without a Korean Phone Number](https://loopnotes.dev/catchtable-waitlist-without-korean-number/) · [research note](notes/catchtable-waitlist-without-korean-number/)
 ## What's in each folder
 

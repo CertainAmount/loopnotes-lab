@@ -1,0 +1,5 @@
+# Xbox Store KR (Microsoft display catalog, market=KR), fetched 2026-11-11 02:31 UTC
+# source: https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9P3H4968GRSM,9NNZSNHLR63L,9PN4LLBR8RCH&market=KR&languages=ko-KR
+9P3H4968GRSM | Grand Theft Auto VI | ListPrice 89800.0 | MSRP 89800.0 KRW
+9NNZSNHLR63L | Grand Theft Auto VI: 얼티밋 에디션 | ListPrice 112800.0 | MSRP 112800.0 KRW
+9PN4LLBR8RCH | Grand Theft Auto VI: 얼티밋 에디션 업그레이드 | ListPrice 23000.0 | MSRP 23000.0 KRW

@@ -1,0 +1,11 @@
+# Xbox display catalog, Korean and US markets, fetched 2026-11-11 04:00 UTC
+# https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9P3H4968GRSM,9NNZSNHLR63L,9PN4LLBR8RCH&market={US,KR}&languages=en-US
+# https://displaycatalog.mp.microsoft.com/v7.0/products?bigIds=9NL3WWNZLZZN,9PLVSSH8849X&market={US,KR}&languages=en-US (base-game package bundled in 9P3H4968GRSM)
+US | 9P3H4968GRSM | Grand Theft Auto VI | 79.99 USD | TaxesNotIncluded
+US | 9NNZSNHLR63L | Grand Theft Auto VI: Ultimate Edition | 99.99 USD | TaxesNotIncluded
+US | 9PN4LLBR8RCH | Grand Theft Auto VI: Ultimate Edition Upgrade | 20.0 USD | TaxesNotIncluded
+US | package 9NL3WWNZLZZN Grand Theft Auto VI | platform ['Windows.Xbox'] | console gen ['ConsoleGen9'] | size 225336918016 bytes | languages en-us,en-gb,en-au,en-ca,en-nz,en-ie,en-hk,en-sg,en-in,en-za,en-il,en-sk,zh-hk,zh-tw,zh-sg,fr-fr,fr-ca,fr-be,fr-ch,de-de,de-at,de-ch,it-it,ko-kr,pl-pl,pt-pt,pt-br,ru-ru,es-mx,es-es,es-us,es-ar,es-cl,es-co
+KR | 9P3H4968GRSM | Grand Theft Auto VI | 89800.0 KRW | VatIncluded
+KR | 9NNZSNHLR63L | Grand Theft Auto VI: Ultimate Edition | 112800.0 KRW | VatIncluded
+KR | 9PN4LLBR8RCH | Grand Theft Auto VI: Ultimate Edition Upgrade | 23000.0 KRW | VatIncluded
+KR | package 9NL3WWNZLZZN Grand Theft Auto VI | platform ['Windows.Xbox'] | console gen ['ConsoleGen9'] | size 225336918016 bytes | languages en-us,en-gb,en-au,en-ca,en-nz,en-ie,en-hk,en-sg,en-in,en-za,en-il,en-sk,zh-hk,zh-tw,zh-sg,fr-fr,fr-ca,fr-be,fr-ch,de-de,de-at,de-ch,it-it,ko-kr,pl-pl,pt-pt,pt-br,ru-ru,es-mx,es-es,es-us,es-ar,es-cl,es-co
