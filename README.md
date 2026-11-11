@@ -11,6 +11,11 @@ When an article says "I ran this N times", the runs are here: the script that ra
 - [Stop Claude Code, Codex, Antigravity Asking for Permission](https://loopnotes.dev/stop-coding-agent-permission-prompts/) · [data](experiments/agent-permission-prompts/)
 - [How to Use Naver Map in English](https://loopnotes.dev/naver-map-english-guide/) · [data](experiments/naver-map-english/)
 
+**Research notes**
+
+The counts, sources and check dates behind the guides, one folder per article.
+
+- [CatchTable Waitlist Without a Korean Phone Number](https://loopnotes.dev/catchtable-waitlist-without-korean-number/) · [research note](notes/catchtable-waitlist-without-korean-number/)
 ## What's in each folder
 
 - `results.md` (or `log.md`): the measured results, with date, tool version, model and cost, as the article quotes them.
