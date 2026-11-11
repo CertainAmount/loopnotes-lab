@@ -15,6 +15,7 @@ When an article says "I ran this N times", the runs are here: the script that ra
 
 The counts, sources and check dates behind the guides, one folder per article.
 
+- [Genspark AI Developer Review: What Broke on Mobile](https://loopnotes.dev/genspark-ai-developer-review/) · [research note](notes/genspark-ai-developer-review/)
 - [Galaxy Z Fold 8 Korea Price vs US (Nov 2026): Still Cheaper?](https://loopnotes.dev/galaxy-z-fold-8-korea-price/) · [research note](notes/galaxy-z-fold-8-korea-price/)
 - [GTA 6 Korea Price: ₩89,800 Is About $67, Not $58](https://loopnotes.dev/gta-6-korea-price/) · [research note](notes/gta-6-korea-price/)
 - [CatchTable Waitlist Without a Korean Phone Number](https://loopnotes.dev/catchtable-waitlist-without-korean-number/) · [research note](notes/catchtable-waitlist-without-korean-number/)
