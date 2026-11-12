@@ -20,6 +20,11 @@ The counts, sources and check dates behind the guides, one folder per article.
 - [Galaxy Z Fold 8 Korea Price vs US (Nov 2026): Still Cheaper?](https://loopnotes.dev/galaxy-z-fold-8-korea-price/) · [research note](notes/galaxy-z-fold-8-korea-price/)
 - [GTA 6 Korea Price: ₩89,800 Is About $67, Not $58](https://loopnotes.dev/gta-6-korea-price/) · [research note](notes/gta-6-korea-price/)
 - [CatchTable Waitlist Without a Korean Phone Number](https://loopnotes.dev/catchtable-waitlist-without-korean-number/) · [research note](notes/catchtable-waitlist-without-korean-number/)
+**Datasets**
+
+Series we re-measure and keep adding to; several articles draw on each.
+
+- [Korea vs US list prices in US dollars](datasets/korea-us-prices/)
 ## What's in each folder
 
 - `results.md` (or `log.md`): the measured results, with date, tool version, model and cost, as the article quotes them.

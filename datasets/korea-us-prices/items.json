@@ -1,0 +1,25 @@
+{
+  "title": "Korea vs US list prices in US dollars",
+  "question": "How much cheaper (or dearer) is a product's Korean list price than its US list price, converted at each day's ECB reference rate?",
+  "method": "Korean list prices include 10% VAT; US list prices are before sales tax. Each ECB business day, krw / (KRW per USD) gives the Korean price in USD; korea_cheaper_pct = (usd_list - krw_in_usd) / usd_list x 100. List prices change only when a row with a later 'from' date is added, each with its source and the day it was read.",
+  "fx_source": "ECB reference rates via the Frankfurter API (https://api.frankfurter.dev)",
+  "fx_start": "2026-06-22",
+  "articles": {
+    "gta-6": "https://loopnotes.dev/gta-6-korea-price/",
+    "galaxy-z-fold-8": "https://loopnotes.dev/galaxy-z-fold-8-korea-price/",
+    "switch-2": "https://loopnotes.dev/switch-2-price-increase-buy-or-wait/"
+  },
+  "items": [
+    {"id": "gta6-standard", "group": "gta-6", "name": "GTA 6 Standard (PS5/Xbox)", "prices": [{"from": "2026-06-22", "krw": 89800, "usd": 79.99, "krw_source": "https://www.playstation.com/ko-kr/games/grand-theft-auto-vi/", "usd_source": "Rockstar Store US list price", "read": "2026-11-11"}]},
+    {"id": "gta6-ultimate", "group": "gta-6", "name": "GTA 6 Ultimate (PS5/Xbox)", "prices": [{"from": "2026-06-22", "krw": 112800, "usd": 99.99, "krw_source": "https://www.playstation.com/ko-kr/games/grand-theft-auto-vi/", "usd_source": "Rockstar Store US list price", "read": "2026-11-11"}]},
+    {"id": "fold8-256", "group": "galaxy-z-fold-8", "name": "Galaxy Z Fold 8 256GB", "prices": [{"from": "2026-07-27", "krw": 2278100, "usd": 1899.99, "krw_source": "Samsung Newsroom Korea launch prices, 2026-07-27", "usd_source": "https://www.samsung.com/us/smartphones/galaxy-z-fold8/buy/", "read": "2026-11-11"}]},
+    {"id": "fold8-512", "group": "galaxy-z-fold-8", "name": "Galaxy Z Fold 8 512GB", "prices": [{"from": "2026-07-27", "krw": 2531100, "usd": 2099.99, "krw_source": "Samsung Newsroom Korea launch prices, 2026-07-27", "usd_source": "https://www.samsung.com/us/smartphones/galaxy-z-fold8/buy/", "read": "2026-11-11"}]},
+    {"id": "fold8-1tb", "group": "galaxy-z-fold-8", "name": "Galaxy Z Fold 8 1TB", "prices": [{"from": "2026-07-27", "krw": 3152600, "usd": 2499.99, "krw_source": "Samsung Newsroom Korea launch prices, 2026-07-27", "usd_source": "https://www.samsung.com/us/smartphones/galaxy-z-fold8/buy/", "read": "2026-11-11"}]},
+    {"id": "fold8u-256", "group": "galaxy-z-fold-8", "name": "Galaxy Z Fold 8 Ultra 256GB", "prices": [{"from": "2026-07-27", "krw": 2577300, "usd": 2099.99, "krw_source": "Samsung Newsroom Korea launch prices, 2026-07-27", "usd_source": "https://www.samsung.com/us/smartphones/galaxy-z-fold8/buy/", "read": "2026-11-11"}]},
+    {"id": "fold8u-512", "group": "galaxy-z-fold-8", "name": "Galaxy Z Fold 8 Ultra 512GB", "prices": [{"from": "2026-07-27", "krw": 2830300, "usd": 2299.99, "krw_source": "Samsung Newsroom Korea launch prices, 2026-07-27", "usd_source": "https://www.samsung.com/us/smartphones/galaxy-z-fold8/buy/", "read": "2026-11-11"}]},
+    {"id": "fold8u-1tb", "group": "galaxy-z-fold-8", "name": "Galaxy Z Fold 8 Ultra 1TB", "prices": [{"from": "2026-07-27", "krw": 3451800, "usd": 2699.99, "krw_source": "Samsung Newsroom Korea launch prices, 2026-07-27", "usd_source": "https://www.samsung.com/us/smartphones/galaxy-z-fold8/buy/", "read": "2026-11-11"}]},
+    {"id": "switch2", "group": "switch-2", "name": "Nintendo Switch 2", "prices": [
+      {"from": "2026-06-22", "krw": 648000, "usd": 449.99, "krw_source": "Nintendo Korea list price before the 2026-09-01 increase", "usd_source": "https://www.nintendo.co.jp/corporate/release/en/2026/260508.html", "read": "2026-11-09"},
+      {"from": "2026-09-01", "krw": 758000, "usd": 499.99, "krw_source": "https://www.news1.kr/it-science/mobile/6211361", "usd_source": "https://www.nintendo.co.jp/corporate/release/en/2026/260508.html", "read": "2026-11-09"}]}
+  ]
+}
