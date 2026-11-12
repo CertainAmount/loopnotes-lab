@@ -15,6 +15,7 @@ When an article says "I ran this N times", the runs are here: the script that ra
 
 The counts, sources and check dates behind the guides, one folder per article.
 
+- [Mac mini M6 vs M5 Pro for Developers: Is 32GB Enough?](https://loopnotes.dev/mac-mini-m6-vs-m5-pro/) · [research note](notes/mac-mini-m6-vs-m5-pro/)
 - [1Password for Claude: My Mac Setup and What It Can't Do](https://loopnotes.dev/1password-for-claude-setup/) · [research note](notes/1password-for-claude-setup/)
 - [Genspark AI Developer Review: What Broke on Mobile](https://loopnotes.dev/genspark-ai-developer-review/) · [research note](notes/genspark-ai-developer-review/)
 - [Galaxy Z Fold 8 Korea Price vs US (Nov 2026): Still Cheaper?](https://loopnotes.dev/galaxy-z-fold-8-korea-price/) · [research note](notes/galaxy-z-fold-8-korea-price/)
