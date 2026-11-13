@@ -1,0 +1,9 @@
+{
+ "type": "observations",
+ "title": "Claude Code skill auto-trigger rate",
+ "question": "How often does Claude Code call a matching skill on its own, by description wording and request wording?",
+ "method": "claude -p stream-json + interactive transcript, count Skill tool_use per prompt",
+ "articles": {
+  "claude-code-skill-not-triggering": "https://loopnotes.dev/claude-code-skill-not-triggering/"
+ }
+}
