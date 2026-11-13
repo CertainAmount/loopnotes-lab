@@ -4,6 +4,30 @@ The test harnesses and raw logs behind the hands-on articles on [loopnotes.dev](
 
 When an article says "I ran this N times", the runs are here: the script that ran them, the exact inputs, every raw log, and the results table the article quotes. Anyone can check the numbers or rerun the test.
 
+<!-- topics:start -->
+## By topic
+
+The same folders, grouped the way the site groups its articles: each topic page lists every note, experiment and dataset behind one cluster of posts.
+
+**AI coding tools**
+
+- [Coding agent permissions and sandboxes](topics/A1-coding-agent-permissions-and-sandboxes/): 2 research notes, 1 experiment
+- [When Claude Code ignores your setup](topics/A2-when-claude-code-ignores-your-setup/): 1 research note, 2 experiments, 1 dataset
+- [Codex CLI errors and plans](topics/A3-codex-cli-errors-and-plans/): 1 research note
+- [Local LLM on an RTX 4090](topics/A4-local-llm-on-an-rtx-4090/): 1 research note
+
+**Living in Korea with tech**
+
+- [Getting around Korea with apps](topics/B1-getting-around-korea-with-apps/): 1 experiment
+- [Korean phone number and verification](topics/B2-korean-phone-number-and-verification/): 1 research note
+- [Buying tech in Korea](topics/B3-buying-tech-in-korea/): 2 research notes, 1 dataset
+
+**More notes**
+
+- [AI apps](topics/Z4-ai-apps/): 1 research note
+
+<!-- topics:end -->
+
 **Articles and their data**
 
 - [Claude Code Not Following CLAUDE.md? I Tested It 57 Times](https://loopnotes.dev/claude-code-claude-md-rules-test/) · [data](experiments/claude-md-rules-test/)
