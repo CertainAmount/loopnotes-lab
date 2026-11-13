@@ -1,0 +1,162 @@
+[
+[
+"api-docs",
+"Api docs in the team's standard format: gathers the relevant files, follows the internal checklist for api docs, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for api docs work, a api docs draft, or a review of an existing api docs, including follow-up edits and small fixes to the same api docs."
+],
+[
+"db-migration",
+"Db migration in the team's standard format: gathers the relevant files, follows the internal checklist for db migration, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for db migration work, a db migration draft, or a review of an existing db migration, including follow-up edits and small fixes to the same db migration."
+],
+[
+"pr-description",
+"Pr description in the team's standard format: gathers the relevant files, follows the internal checklist for pr description, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for pr description work, a pr description draft, or a review of an existing pr description, including follow-up edits and small fixes to the same pr description."
+],
+[
+"commit-message",
+"Commit message in the team's standard format: gathers the relevant files, follows the internal checklist for commit message, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for commit message work, a commit message draft, or a review of an existing commit message, including follow-up edits and small fixes to the same commit message."
+],
+[
+"test-plan",
+"Test plan in the team's standard format: gathers the relevant files, follows the internal checklist for test plan, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for test plan work, a test plan draft, or a review of an existing test plan, including follow-up edits and small fixes to the same test plan."
+],
+[
+"incident-report",
+"Incident report in the team's standard format: gathers the relevant files, follows the internal checklist for incident report, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for incident report work, a incident report draft, or a review of an existing incident report, including follow-up edits and small fixes to the same incident report."
+],
+[
+"code-review",
+"Code review in the team's standard format: gathers the relevant files, follows the internal checklist for code review, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for code review work, a code review draft, or a review of an existing code review, including follow-up edits and small fixes to the same code review."
+],
+[
+"onboarding-guide",
+"Onboarding guide in the team's standard format: gathers the relevant files, follows the internal checklist for onboarding guide, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for onboarding guide work, a onboarding guide draft, or a review of an existing onboarding guide, including follow-up edits and small fixes to the same onboarding guide."
+],
+[
+"sql-optimizer",
+"Sql optimizer in the team's standard format: gathers the relevant files, follows the internal checklist for sql optimizer, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for sql optimizer work, a sql optimizer draft, or a review of an existing sql optimizer, including follow-up edits and small fixes to the same sql optimizer."
+],
+[
+"docker-setup",
+"Docker setup in the team's standard format: gathers the relevant files, follows the internal checklist for docker setup, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for docker setup work, a docker setup draft, or a review of an existing docker setup, including follow-up edits and small fixes to the same docker setup."
+],
+[
+"ci-pipeline",
+"Ci pipeline in the team's standard format: gathers the relevant files, follows the internal checklist for ci pipeline, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for ci pipeline work, a ci pipeline draft, or a review of an existing ci pipeline, including follow-up edits and small fixes to the same ci pipeline."
+],
+[
+"feature-flag",
+"Feature flag in the team's standard format: gathers the relevant files, follows the internal checklist for feature flag, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for feature flag work, a feature flag draft, or a review of an existing feature flag, including follow-up edits and small fixes to the same feature flag."
+],
+[
+"error-triage",
+"Error triage in the team's standard format: gathers the relevant files, follows the internal checklist for error triage, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for error triage work, a error triage draft, or a review of an existing error triage, including follow-up edits and small fixes to the same error triage."
+],
+[
+"log-analysis",
+"Log analysis in the team's standard format: gathers the relevant files, follows the internal checklist for log analysis, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for log analysis work, a log analysis draft, or a review of an existing log analysis, including follow-up edits and small fixes to the same log analysis."
+],
+[
+"perf-profile",
+"Perf profile in the team's standard format: gathers the relevant files, follows the internal checklist for perf profile, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for perf profile work, a perf profile draft, or a review of an existing perf profile, including follow-up edits and small fixes to the same perf profile."
+],
+[
+"security-audit",
+"Security audit in the team's standard format: gathers the relevant files, follows the internal checklist for security audit, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for security audit work, a security audit draft, or a review of an existing security audit, including follow-up edits and small fixes to the same security audit."
+],
+[
+"dependency-update",
+"Dependency update in the team's standard format: gathers the relevant files, follows the internal checklist for dependency update, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for dependency update work, a dependency update draft, or a review of an existing dependency update, including follow-up edits and small fixes to the same dependency update."
+],
+[
+"i18n-strings",
+"I18n strings in the team's standard format: gathers the relevant files, follows the internal checklist for i18n strings, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for i18n strings work, a i18n strings draft, or a review of an existing i18n strings, including follow-up edits and small fixes to the same i18n strings."
+],
+[
+"accessibility-check",
+"Accessibility check in the team's standard format: gathers the relevant files, follows the internal checklist for accessibility check, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for accessibility check work, a accessibility check draft, or a review of an existing accessibility check, including follow-up edits and small fixes to the same accessibility check."
+],
+[
+"ui-copy",
+"Ui copy in the team's standard format: gathers the relevant files, follows the internal checklist for ui copy, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for ui copy work, a ui copy draft, or a review of an existing ui copy, including follow-up edits and small fixes to the same ui copy."
+],
+[
+"email-template",
+"Email template in the team's standard format: gathers the relevant files, follows the internal checklist for email template, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for email template work, a email template draft, or a review of an existing email template, including follow-up edits and small fixes to the same email template."
+],
+[
+"meeting-notes",
+"Meeting notes in the team's standard format: gathers the relevant files, follows the internal checklist for meeting notes, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for meeting notes work, a meeting notes draft, or a review of an existing meeting notes, including follow-up edits and small fixes to the same meeting notes."
+],
+[
+"sprint-summary",
+"Sprint summary in the team's standard format: gathers the relevant files, follows the internal checklist for sprint summary, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for sprint summary work, a sprint summary draft, or a review of an existing sprint summary, including follow-up edits and small fixes to the same sprint summary."
+],
+[
+"roadmap-update",
+"Roadmap update in the team's standard format: gathers the relevant files, follows the internal checklist for roadmap update, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for roadmap update work, a roadmap update draft, or a review of an existing roadmap update, including follow-up edits and small fixes to the same roadmap update."
+],
+[
+"design-doc",
+"Design doc in the team's standard format: gathers the relevant files, follows the internal checklist for design doc, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for design doc work, a design doc draft, or a review of an existing design doc, including follow-up edits and small fixes to the same design doc."
+],
+[
+"adr-writer",
+"Adr writer in the team's standard format: gathers the relevant files, follows the internal checklist for adr writer, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for adr writer work, a adr writer draft, or a review of an existing adr writer, including follow-up edits and small fixes to the same adr writer."
+],
+[
+"runbook",
+"Runbook in the team's standard format: gathers the relevant files, follows the internal checklist for runbook, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for runbook work, a runbook draft, or a review of an existing runbook, including follow-up edits and small fixes to the same runbook."
+],
+[
+"postmortem",
+"Postmortem in the team's standard format: gathers the relevant files, follows the internal checklist for postmortem, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for postmortem work, a postmortem draft, or a review of an existing postmortem, including follow-up edits and small fixes to the same postmortem."
+],
+[
+"bug-report",
+"Bug report in the team's standard format: gathers the relevant files, follows the internal checklist for bug report, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for bug report work, a bug report draft, or a review of an existing bug report, including follow-up edits and small fixes to the same bug report."
+],
+[
+"jira-ticket",
+"Jira ticket in the team's standard format: gathers the relevant files, follows the internal checklist for jira ticket, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for jira ticket work, a jira ticket draft, or a review of an existing jira ticket, including follow-up edits and small fixes to the same jira ticket."
+],
+[
+"api-client",
+"Api client in the team's standard format: gathers the relevant files, follows the internal checklist for api client, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for api client work, a api client draft, or a review of an existing api client, including follow-up edits and small fixes to the same api client."
+],
+[
+"schema-review",
+"Schema review in the team's standard format: gathers the relevant files, follows the internal checklist for schema review, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for schema review work, a schema review draft, or a review of an existing schema review, including follow-up edits and small fixes to the same schema review."
+],
+[
+"data-export",
+"Data export in the team's standard format: gathers the relevant files, follows the internal checklist for data export, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for data export work, a data export draft, or a review of an existing data export, including follow-up edits and small fixes to the same data export."
+],
+[
+"backup-check",
+"Backup check in the team's standard format: gathers the relevant files, follows the internal checklist for backup check, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for backup check work, a backup check draft, or a review of an existing backup check, including follow-up edits and small fixes to the same backup check."
+],
+[
+"cost-report",
+"Cost report in the team's standard format: gathers the relevant files, follows the internal checklist for cost report, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for cost report work, a cost report draft, or a review of an existing cost report, including follow-up edits and small fixes to the same cost report."
+],
+[
+"on-call-handoff",
+"On call handoff in the team's standard format: gathers the relevant files, follows the internal checklist for on call handoff, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for on call handoff work, a on call handoff draft, or a review of an existing on call handoff, including follow-up edits and small fixes to the same on call handoff."
+],
+[
+"customer-faq",
+"Customer faq in the team's standard format: gathers the relevant files, follows the internal checklist for customer faq, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for customer faq work, a customer faq draft, or a review of an existing customer faq, including follow-up edits and small fixes to the same customer faq."
+],
+[
+"support-reply",
+"Support reply in the team's standard format: gathers the relevant files, follows the internal checklist for support reply, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for support reply work, a support reply draft, or a review of an existing support reply, including follow-up edits and small fixes to the same support reply."
+],
+[
+"blog-draft",
+"Blog draft in the team's standard format: gathers the relevant files, follows the internal checklist for blog draft, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for blog draft work, a blog draft draft, or a review of an existing blog draft, including follow-up edits and small fixes to the same blog draft."
+],
+[
+"seo-meta",
+"Seo meta in the team's standard format: gathers the relevant files, follows the internal checklist for seo meta, applies naming and tone rules, and produces a ready-to-share result. Use when the user asks for seo meta work, a seo meta draft, or a review of an existing seo meta, including follow-up edits and small fixes to the same seo meta."
+]
+]

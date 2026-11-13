@@ -1,0 +1,12 @@
+[
+ ["K1",1,"write the release notes for v1.5"],
+ ["K2",1,"Draft release notes for the 1.5.0 release from CHANGES.txt"],
+ ["K3",1,"Can you put together release notes for version 1.5?"],
+ ["K4",1,"I need the v1.5 release notes for customers"],
+ ["K5",1,"Prepare release notes covering everything in CHANGES.txt"],
+ ["N1",0,"write up what changed since v1.4 for the announcement"],
+ ["N2",0,"summarise CHANGES.txt for users"],
+ ["N3",0,"what's new in 1.5? give me something I can paste into the customer email"],
+ ["N4",0,"turn the changelog into a short update post for customers"],
+ ["N5",0,"list the user-facing changes in 1.5 for the newsletter"]
+]

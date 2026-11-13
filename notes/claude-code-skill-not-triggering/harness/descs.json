@@ -1,0 +1,5 @@
+{
+ "D1": "Formats release notes in the house style with fixed header and category labels.",
+ "D2": "Release notes, changelog, 'what changed' write-ups for an announcement: formats them in the house style with fixed header and category labels.",
+ "D3": "Release notes, changelog, 'what changed' write-ups for an announcement: formats them in the house style with fixed header and category labels. Use when the user asks to summarise changes since a version, even if the request doesn't say 'release notes'."
+}
