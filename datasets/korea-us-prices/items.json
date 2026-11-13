@@ -6,8 +6,7 @@
   "fx_start": "2026-06-22",
   "articles": {
     "gta-6": "https://loopnotes.dev/gta-6-korea-price/",
-    "galaxy-z-fold-8": "https://loopnotes.dev/galaxy-z-fold-8-korea-price/",
-    "switch-2": "https://loopnotes.dev/switch-2-price-increase-buy-or-wait/"
+    "galaxy-z-fold-8": "https://loopnotes.dev/galaxy-z-fold-8-korea-price/"
   },
   "items": [
     {"id": "gta6-standard", "group": "gta-6", "name": "GTA 6 Standard (PS5/Xbox)", "prices": [{"from": "2026-06-22", "krw": 89800, "usd": 79.99, "krw_source": "https://www.playstation.com/ko-kr/games/grand-theft-auto-vi/", "usd_source": "Rockstar Store US list price", "read": "2026-11-11"}]},

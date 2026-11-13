@@ -4,19 +4,19 @@ How much cheaper (or dearer) is a product's Korean list price than its US list p
 
 ## Latest
 
-ECB rate on 2026-11-11: 1,336.90 won per dollar.
+ECB rate on 2026-11-12: 1,334.10 won per dollar.
 
 | Item | Korea list (VAT in) | In USD | US list (before tax) | Korea cheaper by (minus = dearer) |
 |---|---|---|---|---|
-| GTA 6 Standard (PS5/Xbox) | ₩89,800 | $67.17 | $79.99 | 16.0% |
-| GTA 6 Ultimate (PS5/Xbox) | ₩112,800 | $84.37 | $99.99 | 15.6% |
-| Galaxy Z Fold 8 256GB | ₩2,278,100 | $1,704.02 | $1,899.99 | 10.3% |
-| Galaxy Z Fold 8 512GB | ₩2,531,100 | $1,893.26 | $2,099.99 | 9.8% |
-| Galaxy Z Fold 8 1TB | ₩3,152,600 | $2,358.14 | $2,499.99 | 5.7% |
-| Galaxy Z Fold 8 Ultra 256GB | ₩2,577,300 | $1,927.82 | $2,099.99 | 8.2% |
-| Galaxy Z Fold 8 Ultra 512GB | ₩2,830,300 | $2,117.06 | $2,299.99 | 8.0% |
-| Galaxy Z Fold 8 Ultra 1TB | ₩3,451,800 | $2,581.94 | $2,699.99 | 4.4% |
-| Nintendo Switch 2 | ₩758,000 | $566.98 | $499.99 | -13.4% |
+| GTA 6 Standard (PS5/Xbox) | ₩89,800 | $67.31 | $79.99 | 15.9% |
+| GTA 6 Ultimate (PS5/Xbox) | ₩112,800 | $84.55 | $99.99 | 15.4% |
+| Galaxy Z Fold 8 256GB | ₩2,278,100 | $1,707.59 | $1,899.99 | 10.1% |
+| Galaxy Z Fold 8 512GB | ₩2,531,100 | $1,897.23 | $2,099.99 | 9.7% |
+| Galaxy Z Fold 8 1TB | ₩3,152,600 | $2,363.09 | $2,499.99 | 5.5% |
+| Galaxy Z Fold 8 Ultra 256GB | ₩2,577,300 | $1,931.86 | $2,099.99 | 8.0% |
+| Galaxy Z Fold 8 Ultra 512GB | ₩2,830,300 | $2,121.51 | $2,299.99 | 7.8% |
+| Galaxy Z Fold 8 Ultra 1TB | ₩3,451,800 | $2,587.36 | $2,699.99 | 4.2% |
+| Nintendo Switch 2 | ₩758,000 | $568.17 | $499.99 | -13.6% |
 
 ## Method
 
@@ -34,6 +34,5 @@ Exchange rates: ECB reference rates via the Frankfurter API (https://api.frankfu
 
 - https://loopnotes.dev/gta-6-korea-price/
 - https://loopnotes.dev/galaxy-z-fold-8-korea-price/
-- https://loopnotes.dev/switch-2-price-increase-buy-or-wait/
 
-Last collected: 2026-11-12.
+Last collected: 2026-11-13.
