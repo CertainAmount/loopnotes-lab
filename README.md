@@ -35,6 +35,7 @@ The same folders, grouped the way the site groups its articles: each topic page 
 
 The counts, sources and check dates behind the guides, one folder per article.
 
+- [Coding Agent Model Routing: When a Cheap Model Is Enough](https://loopnotes.dev/gpt-6-sol-vs-luna-routing/) · [research note](notes/gpt-6-sol-vs-luna-routing/)
 - [RTX 4090 Local LLM: Which Runtime, Model Size and Context](https://loopnotes.dev/local-llm-hardware-runtime-guide/) · [research note](notes/local-llm-hardware-runtime-guide/)
 - [Local LLM Hardware: What to Buy for the Model You'll Run](https://loopnotes.dev/local-llm-hardware-what-to-buy/) · [research note](notes/local-llm-hardware-what-to-buy/)
 - [Codex CLI npm install Fails? It's Sandbox Network Access](https://loopnotes.dev/codex-cli-npm-install-sandbox/) · [research note](notes/codex-cli-npm-install-sandbox/)
