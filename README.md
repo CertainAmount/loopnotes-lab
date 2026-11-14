@@ -39,6 +39,7 @@ The same folders, grouped the way the site groups its articles: each topic page 
 
 The counts, sources and check dates behind the guides, one folder per article.
 
+- [Local LLM Hardware: What to Buy for the Model You'll Run](https://loopnotes.dev/local-llm-hardware-what-to-buy/) · [research note](notes/local-llm-hardware-what-to-buy/)
 - [Codex CLI npm install Fails? It's Sandbox Network Access](https://loopnotes.dev/codex-cli-npm-install-sandbox/) · [research note](notes/codex-cli-npm-install-sandbox/)
 - [Claude Code Skill Not Triggering? It's the Prompt (45 Runs)](https://loopnotes.dev/claude-code-skill-not-triggering/) · [research note](notes/claude-code-skill-not-triggering/)
 - [Mac mini M6 vs M5 Pro for Developers: Is 32GB Enough?](https://loopnotes.dev/mac-mini-m6-vs-m5-pro/) · [research note](notes/mac-mini-m6-vs-m5-pro/)
