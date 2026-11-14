@@ -1,8 +1,6 @@
-# Local LLM on an RTX 4090
+# Choosing hardware for local LLMs
 
 Part of **AI coding tools** on [loopnotes.dev](https://loopnotes.dev). Everything we measured, logged or re-checked for this topic, grouped by the article it backs.
-
-Start with the guide: [Local LLM Hardware and Runtime Guide: My RTX 4090 Notes](https://loopnotes.dev/local-llm-hardware-runtime-guide/)
 
 ## By article
 
