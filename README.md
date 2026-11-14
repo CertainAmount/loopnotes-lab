@@ -14,6 +14,7 @@ The same folders, grouped the way the site groups its articles: each topic page 
 - [Coding agent permissions and sandboxes](topics/A1-coding-agent-permissions-and-sandboxes/): 3 research notes, 1 experiment
 - [When Claude Code ignores your setup](topics/A2-when-claude-code-ignores-your-setup/): 1 research note, 2 experiments, 1 dataset
 - [Codex CLI errors and plans](topics/A3-codex-cli-errors-and-plans/): 2 research notes
+- [Running a local LLM on an RTX 4090](topics/A4-running-a-local-llm-on-an-rtx-4090/): 1 research note, 1 dataset
 - [Choosing hardware for local LLMs](topics/A6-choosing-hardware-for-local-llms/): 2 research notes
 
 **Living in Korea with tech**
