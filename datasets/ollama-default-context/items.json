@@ -1,0 +1,9 @@
+{
+ "type": "observations",
+ "title": "Ollama default context length: docs vs code",
+ "question": "What context window does Ollama allocate when OLLAMA_CONTEXT_LENGTH and num_ctx are unset, and do its docs and code agree?",
+ "method": "Read the Ollama FAQ, the context-length doc page and the source commit that sets the VRAM tiers on the given day; record each stated value with its URL. Re-read on each Ollama release.",
+ "articles": {
+  "local-llm-hardware-runtime-guide": "https://loopnotes.dev/local-llm-hardware-runtime-guide/"
+ }
+}

@@ -53,6 +53,7 @@ The counts, sources and check dates behind the guides, one folder per article.
 
 Series we re-measure and keep adding to; several articles draw on each.
 
+- [Ollama default context length: docs vs code](datasets/ollama-default-context/)
 - [Claude Code skill auto-trigger rate](datasets/claude-code-skill-trigger/)
 - [Korea vs US list prices in US dollars](datasets/korea-us-prices/)
 ## What's in each folder

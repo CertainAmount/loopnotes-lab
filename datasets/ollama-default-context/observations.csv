@@ -1,0 +1,8 @@
+date,item,value,unit,source
+2026-11-14,faq-default-context,4096,tokens,https://docs.ollama.com/faq
+2026-11-14,doc-tier-under-24GiB,4096,tokens,https://docs.ollama.com/context-length
+2026-11-14,doc-tier-24-48GiB,32768,tokens,https://docs.ollama.com/context-length
+2026-11-14,doc-tier-48GiB-plus,262144,tokens,https://docs.ollama.com/context-length
+2026-11-14,doc-agent-coding-minimum,64000,tokens,https://docs.ollama.com/context-length
+2026-11-14,code-lower-tier-boundary,23,GiB,https://github.com/ollama/ollama/commit/0334ffa6
+2026-11-14,code-upper-tier-boundary,47,GiB,https://github.com/ollama/ollama/commit/0334ffa6
