@@ -1,6 +1,6 @@
 # Getting around Korea with apps
 
-Part of **Living in Korea with tech** on [loopnotes.dev](https://loopnotes.dev). Everything we measured, logged or re-checked for this topic, grouped by the article it backs.
+Part of **Tech in Korea, from a Seoul developer** on [loopnotes.dev](https://loopnotes.dev). Everything we measured, logged or re-checked for this topic, grouped by the article it backs.
 
 ## By article
 

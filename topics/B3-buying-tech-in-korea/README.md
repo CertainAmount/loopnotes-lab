@@ -1,6 +1,6 @@
 # Buying tech in Korea
 
-Part of **Living in Korea with tech** on [loopnotes.dev](https://loopnotes.dev). Everything we measured, logged or re-checked for this topic, grouped by the article it backs.
+Part of **Tech in Korea, from a Seoul developer** on [loopnotes.dev](https://loopnotes.dev). Everything we measured, logged or re-checked for this topic, grouped by the article it backs.
 
 Start with the guide: [Is It Cheaper to Buy Electronics in Korea? Where to Buy](https://loopnotes.dev/buy-electronics-in-korea/)
 

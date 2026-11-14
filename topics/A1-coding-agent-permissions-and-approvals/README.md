@@ -1,6 +1,6 @@
-# Coding agent permissions and sandboxes
+# Coding agent permissions and approvals
 
-Part of **AI coding tools** on [loopnotes.dev](https://loopnotes.dev). Everything we measured, logged or re-checked for this topic, grouped by the article it backs.
+Part of **Working with AI coding agents** on [loopnotes.dev](https://loopnotes.dev). Everything we measured, logged or re-checked for this topic, grouped by the article it backs.
 
 Start with the guide: [Claude Code or Codex Keeps Asking for Permission? 4 Causes](https://loopnotes.dev/stop-coding-agent-permission-prompts/)
 

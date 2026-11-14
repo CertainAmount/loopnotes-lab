@@ -1,6 +1,6 @@
 # When Claude Code ignores your setup
 
-Part of **AI coding tools** on [loopnotes.dev](https://loopnotes.dev). Everything we measured, logged or re-checked for this topic, grouped by the article it backs.
+Part of **Working with AI coding agents** on [loopnotes.dev](https://loopnotes.dev). Everything we measured, logged or re-checked for this topic, grouped by the article it backs.
 
 ## By article
 

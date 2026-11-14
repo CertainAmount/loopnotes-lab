@@ -1,6 +1,6 @@
 # Running a local LLM on an RTX 4090
 
-Part of **AI coding tools** on [loopnotes.dev](https://loopnotes.dev). Everything we measured, logged or re-checked for this topic, grouped by the article it backs.
+Part of **Working with AI coding agents** on [loopnotes.dev](https://loopnotes.dev). Everything we measured, logged or re-checked for this topic, grouped by the article it backs.
 
 Start with the guide: [RTX 4090 Local LLM: Which Runtime, Model Size and Context](https://loopnotes.dev/local-llm-hardware-runtime-guide/)
 

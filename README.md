@@ -9,23 +9,18 @@ When an article says "I ran this N times", the runs are here: the script that ra
 
 The same folders, grouped the way the site groups its articles: each topic page lists every note, experiment and dataset behind one cluster of posts.
 
-**AI coding tools**
+**Working with AI coding agents**
 
-- [Coding agent permissions and sandboxes](topics/A1-coding-agent-permissions-and-sandboxes/): 3 research notes, 1 experiment
+- [Coding agent permissions and approvals](topics/A1-coding-agent-permissions-and-approvals/): 3 research notes, 1 experiment
 - [When Claude Code ignores your setup](topics/A2-when-claude-code-ignores-your-setup/): 1 research note, 2 experiments, 1 dataset
-- [Codex CLI errors and plans](topics/A3-codex-cli-errors-and-plans/): 2 research notes
 - [Running a local LLM on an RTX 4090](topics/A4-running-a-local-llm-on-an-rtx-4090/): 1 research note, 1 dataset
 - [Choosing hardware for local LLMs](topics/A6-choosing-hardware-for-local-llms/): 2 research notes
 
-**Living in Korea with tech**
+**Tech in Korea, from a Seoul developer**
 
-- [Getting around Korea with apps](topics/B1-getting-around-korea-with-apps/): 1 experiment
-- [Korean phone number and verification](topics/B2-korean-phone-number-and-verification/): 1 research note
 - [Buying tech in Korea](topics/B3-buying-tech-in-korea/): 2 research notes, 1 dataset
-
-**More notes**
-
-- [AI apps](topics/Z4-ai-apps/): 1 research note
+- [Korean phone number and verification](topics/B2-korean-phone-number-and-verification/): 1 research note
+- [Getting around Korea with apps](topics/B1-getting-around-korea-with-apps/): 1 experiment
 
 <!-- topics:end -->
 

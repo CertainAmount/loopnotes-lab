@@ -1,6 +1,6 @@
 # Choosing hardware for local LLMs
 
-Part of **AI coding tools** on [loopnotes.dev](https://loopnotes.dev). Everything we measured, logged or re-checked for this topic, grouped by the article it backs.
+Part of **Working with AI coding agents** on [loopnotes.dev](https://loopnotes.dev). Everything we measured, logged or re-checked for this topic, grouped by the article it backs.
 
 Start with the guide: [Local LLM Hardware: What to Buy for the Model You'll Run](https://loopnotes.dev/local-llm-hardware-what-to-buy/)
 
