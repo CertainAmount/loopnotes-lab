@@ -12,7 +12,7 @@ The same folders, grouped the way the site groups its articles: each topic page 
 **Working with AI coding agents**
 
 - [Coding agent permissions and approvals](topics/A1-coding-agent-permissions-and-approvals/): 4 research notes, 1 experiment
-- [When Claude Code ignores your setup](topics/A2-when-claude-code-ignores-your-setup/): 1 research note, 2 experiments, 1 dataset
+- [When Claude Code ignores your setup](topics/A2-when-claude-code-ignores-your-setup/): 2 research notes, 2 experiments, 1 dataset
 - [Building agents that call tools](topics/A5-building-agents-that-call-tools/): 1 research note
 - [Running a local LLM on an RTX 4090](topics/A4-running-a-local-llm-on-an-rtx-4090/): 1 research note, 1 dataset
 - [Choosing hardware for local LLMs](topics/A6-choosing-hardware-for-local-llms/): 2 research notes
