@@ -76,3 +76,17 @@ Added after a reader asked where to undo a standing permission and which control
 - The Muse help page values date from 2026-10-30; the 2026-11-15 re-read failed. Option names in these products change, so the table should be read with its dates.
 - No email account or card was connected to Muse for this note; the table is what the official pages say, not observed behaviour.
 - Tom's Guide and NerdWallet were judged from search snippets because their pages did not load.
+
+## Moved from the article body (reader fix r1, second pass, 2026-11-15)
+
+- Where Dots settings live: OpenAI describes dots as always-on agents in ChatGPT with their own cloud computer and browser that use connected tools (GPT-6 Astra system card, dots appendix: https://deploymentsafety.openai.com/gpt-6-astra/sec:appendix-dots, as cited in our Dots post). The mail permission a dot uses is therefore ChatGPT's app permission (Settings > Apps, Evidence 5), not a separate Dots screen; Custom Rules (Customize > Custom rules) only set when the dot asks.
+- Muse connector modes (Evidence 5): "Ask for some actions" already asks before every write action, so it is enough for the read-yes, send-and-pay-ask rule; "Always ask" adds a prompt before reads.
+- Sentinel, from Meta's research blog (read 2026-10-30): "Sentinel is the sole permission authority for connector actions and network egress"; the blog also says the agent never sees real tokens. Both enforce permissions already granted; neither chooses them.
+- Log detail: in the author's dot Activity View, the scheduling-reply task showed as one line from the start to the approval request. The article keeps only the check (ask for a draft and watch it stop at send).
+- Measurement wording: the article now gives the 18-minute (approvals) and 12-minute (auto) times directly so the six-minute difference has a baseline; run count and approval count stay here (Evidence 4).
+
+## Moved from the article body (reader fix r2, 2026-11-15)
+
+- The "Hidden passwords are a different setting from permission" subsection: action permission (read, write, send, pay) and credential exposure (whether the agent sees passwords and tokens) are two separate axes; Meta built Muse so the agent never sees real tokens, and Sentinel enforces what each connector may do (Meta research blog, read 2026-10-30). The author's MCP gateway keeps the same split: an agent knows only that it may call a tool, not the credential behind it. The article keeps one sentence: hiding credentials decides where they live, not what the agent may do with the access granted.
+- The author's first-dot setup in full: reading and search on, document edits and outside sending through approval, no card connected. The article keeps the read-only and no-card facts on its first screen and the choice of the everyday personal inbox in the read-access section.
+- Check steps added for the reader, from Evidence 5: under Muse's "Ask for some actions", every write action (a send included) asks first, so asking Muse to send a one-line email to yourself should bring up the approval prompt; under ChatGPT's "Allow read actions", a dot can still write a reply for you and stops when it would send (the author's scheduling-reply scene, read-only mail access). Whether saving into the mailbox's Drafts folder counts as a write at that level is not stated on OpenAI's page.
