@@ -36,6 +36,7 @@ The same folders, grouped the way the site groups its articles: each topic page 
 
 The counts, sources and check dates behind the guides, one folder per article.
 
+- [Letting Claude Code Run Overnight: What I Leave Open](https://loopnotes.dev/openai-dots-permissions-setup/) · [research note](notes/openai-dots-permissions-setup/)
 - [Claude Code Ignores CLAUDE.md or Skills? Where to Look First](https://loopnotes.dev/claude-code-ignoring-setup/) · [research note](notes/claude-code-ignoring-setup/)
 - [AI Agent Access to Email and Payments: Read, Recommend, Act](https://loopnotes.dev/meta-muse-permissions-email-payments/) · [research note](notes/meta-muse-permissions-email-payments/)
 - [Coding Agent Model Routing: When a Cheap Model Is Enough](https://loopnotes.dev/gpt-6-sol-vs-luna-routing/) · [research note](notes/gpt-6-sol-vs-luna-routing/)
