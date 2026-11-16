@@ -1,0 +1,28 @@
+# apt-daily-upgrade.timer (Ubuntu 22.04.3 LTS, this machine, checked 2026-11-16)
+[Unit]
+Description=Daily apt upgrade and clean activities
+After=apt-daily.timer
+
+[Timer]
+OnCalendar=*-*-* 6:00
+RandomizedDelaySec=60m
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+
+# apt-daily.timer
+[Unit]
+Description=Daily apt download activities
+
+[Timer]
+OnCalendar=*-*-* 6,18:00
+RandomizedDelaySec=12h
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+
+# apt package version
+apt	2.4.10
+unattended-upgrades	2.8ubuntu1

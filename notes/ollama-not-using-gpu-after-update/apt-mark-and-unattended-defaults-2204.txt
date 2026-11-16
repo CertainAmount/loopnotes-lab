@@ -1,0 +1,47 @@
+# apt-mark(8) hold text, apt 2.4.10 on Ubuntu 22.04.3 (checked 2026-11-16)
+       hold
+	   hold is used to mark a package as held back, which will prevent the
+	   package from being automatically installed, upgraded or removed.
+
+       unhold
+
+# /etc/apt/apt.conf.d/50unattended-upgrades (unattended-upgrades 2.8ubuntu1), relevant lines with line numbers
+3:// Note that in Ubuntu security updates may pull in new dependencies
+4:// from non-security sources (e.g. chromium). By allowing the release
+6:Unattended-Upgrade::Allowed-Origins {
+8:	"${distro_id}:${distro_codename}-security";
+13:	"${distro_id}ESMApps:${distro_codename}-apps-security";
+14:	"${distro_id}ESM:${distro_codename}-infra-security";
+20:// Python regular expressions, matching packages to exclude from upgrading
+21:Unattended-Upgrade::Package-Blacklist {
+38:    // For more information about Python regular expressions, see
+94://Unattended-Upgrade::Automatic-Reboot "false";
+97:// when Unattended-Upgrade::Automatic-Reboot is set to true
+98://Unattended-Upgrade::Automatic-Reboot-WithUsers "true";
+103://Unattended-Upgrade::Automatic-Reboot-Time "02:00";
+Unattended-Upgrade::Package-Blacklist {
+    // The following matches all packages starting with linux-
+//  "linux-";
+
+    // Use $ to explicitely define the end of a package name. Without
+    // the $, "libc6" would match all of them.
+//  "libc6$";
+//  "libc6-dev$";
+//  "libc6-i686$";
+
+    // Special characters need escaping
+//  "libstdc\+\+6$";
+
+    // The following matches packages like xen-system-amd64, xen-utils-4.1,
+    // xenstore-utils and libxenstore3.0
+//  "(lib)?xen(store)?";
+
+    // For more information about Python regular expressions, see
+    // https://docs.python.org/3/howto/regex.html
+};
+
+# 20auto-upgrades
+APT::Periodic::Update-Package-Lists "0";
+APT::Periodic::Download-Upgradeable-Packages "0";
+APT::Periodic::AutocleanInterval "0";
+APT::Periodic::Unattended-Upgrade "0";

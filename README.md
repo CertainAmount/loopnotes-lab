@@ -36,6 +36,7 @@ The same folders, grouped the way the site groups its articles: each topic page 
 
 The counts, sources and check dates behind the guides, one folder per article.
 
+- [Ollama Not Using GPU After an Update on Linux: The Fix](https://loopnotes.dev/ollama-not-using-gpu-after-update/) · [research note](notes/ollama-not-using-gpu-after-update/)
 - [Letting Claude Code Run Overnight: What I Leave Open](https://loopnotes.dev/openai-dots-permissions-setup/) · [research note](notes/openai-dots-permissions-setup/)
 - [Claude Code Ignores CLAUDE.md or Skills? Where to Look First](https://loopnotes.dev/claude-code-ignoring-setup/) · [research note](notes/claude-code-ignoring-setup/)
 - [AI Agent Access to Email and Payments: Read, Recommend, Act](https://loopnotes.dev/meta-muse-permissions-email-payments/) · [research note](notes/meta-muse-permissions-email-payments/)
