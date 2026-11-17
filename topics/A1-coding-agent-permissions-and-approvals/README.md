@@ -12,5 +12,10 @@ Start with the guide: [Claude Code or Codex Keeps Asking for Permission? 4 Cause
 - [1Password for Claude: My Mac Setup and What It Can't Do](https://loopnotes.dev/1password-for-claude-setup/): [research note](../../notes/1password-for-claude-setup/)
 - [AI Agent Access to Email and Payments: Read, Recommend, Act](https://loopnotes.dev/meta-muse-permissions-email-payments/): [research note](../../notes/meta-muse-permissions-email-payments/)
 - [Letting Claude Code Run Overnight: What I Leave Open](https://loopnotes.dev/openai-dots-permissions-setup/): [research note](../../notes/openai-dots-permissions-setup/)
+- [Claude Code Auto Mode Not Working: Check the Real Mode First](https://loopnotes.dev/claude-code-auto-mode-not-working/): [research note](../../notes/claude-code-auto-mode-not-working/)
+
+## Datasets we keep re-measuring
+
+- [claude-code-auto-mode](../../datasets/claude-code-auto-mode/)
 
 Generated from the site's topic map; each folder's own README has the method, dates and limits.
