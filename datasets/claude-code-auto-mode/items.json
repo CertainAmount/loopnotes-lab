@@ -1,0 +1,9 @@
+{
+ "type": "observations",
+ "title": "Claude Code auto mode: where it takes effect",
+ "question": "Which way of asking for auto mode actually starts a Claude Code session in auto, per version, and what the session shows when it doesn't?",
+ "method": "Fresh empty git repo per case on Linux; headless: claude -p with stream-json, permissionMode read from the system/init event; interactive: pty-driven session, status line and Shift+Tab cycle read from the rendered screen. User-level defaultMode is bypassPermissions unless the case says otherwise. One run per case.",
+ "articles": {
+  "claude-code-auto-mode-not-working": "https://loopnotes.dev/claude-code-auto-mode-not-working/"
+ }
+}
