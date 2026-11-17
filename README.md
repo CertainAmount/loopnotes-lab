@@ -20,7 +20,7 @@ The same folders, grouped the way the site groups its articles: each topic page 
 **Tech in Korea, from a Seoul developer**
 
 - [Buying tech in Korea](topics/B3-buying-tech-in-korea/): 2 research notes, 1 dataset
-- [Korean phone number and verification](topics/B2-korean-phone-number-and-verification/): 1 research note
+- [Korean phone number and verification](topics/B2-korean-phone-number-and-verification/): 2 research notes
 - [Getting around Korea with apps](topics/B1-getting-around-korea-with-apps/): 1 experiment
 
 <!-- topics:end -->
