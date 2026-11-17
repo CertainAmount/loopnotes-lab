@@ -1,0 +1,6 @@
+===== start
+ ▐▛███▛█   Claude Code v2.1.326
+▝▜██████▀  Haiku 5.5 · Claude Ultra
+ ▝▝   ▝▝   <tmpdir>
+❯ Try "write a test for <filepath>"
+  ⏵⏵ auto mode on (shift+tab to cycle)

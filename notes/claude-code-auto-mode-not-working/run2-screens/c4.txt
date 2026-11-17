@@ -1,0 +1,43 @@
+===== start
+ ▐▛███▛█   Claude Code v2.1.326
+▝▜██████▀  Haiku 5.5 · Claude Ultra
+ ▝▝   ▝▝   <tmpdir>
+                                                                                                                      auto mode disabled by settings
+❯ Try "refactor <filepath>"
+  ⏸ manual mode on · ? for shortcuts
+===== status
+ ▝▝   ▝▝   <tmpdir>
+   Settings  Status   Config   Usage   Stats
+   Version:           2.1.326
+   Session name:      /rename to add a name
+   Session ID:        <id>
+   Session kind:      interactive
+   Peer address:      <sock>
+   cwd:               <tmpdir>
+   Login method:      Claude Ultra account
+   Organization:      <org>
+   Email:             <email>
+   Cloud sessions:    GitHub connected
+   Model:             haiku (claude-haiku-5-5)
+   MCP servers:       4 connected · /mcp
+   Setting sources:   User settings, Shared project settings
+   Auto mode server:  Disabled
+   Esc to cancel
+===== shifttab 1
+❯
+  ⏵⏵ accept edits on (shift+tab to cycle)
+===== shifttab 2
+❯
+  ⏸ plan mode on (shift+tab to cycle)
+===== shifttab 3
+                                                                                                                      auto mode disabled by settings
+❯
+  ⏸ manual mode on · ? for shortcuts
+===== shifttab 4
+                                                                                                                      auto mode disabled by settings
+❯
+  ⏵⏵ accept edits on (shift+tab to cycle)
+===== shifttab 5
+                                                                                                                      auto mode disabled by settings
+❯
+  ⏸ plan mode on (shift+tab to cycle)

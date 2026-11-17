@@ -1,0 +1,6 @@
+===== start
+ ▐▛███▛█   Claude Code v2.1.326
+▝▜██████▀  Sonnet 5.5 · Claude Ultra
+ ▝▝   ▝▝   <tmpdir>
+❯ Try "how does <filepath> work?"
+  ⏵⏵ auto mode on (shift+tab to cycle)

@@ -1,0 +1,31 @@
+===== start
+ ▐▛███▛█   Claude Code v2.1.326
+▝▜██████▀  Haiku 5.5 · Claude Ultra
+ ▝▝   ▝▝   <tmpdir>
+❯ Try "how does <filepath> work?"
+  ⏵⏵ auto mode on (shift+tab to cycle)
+===== after-model
+ ▐▛███▛█   Claude Code v2.1.326
+▝▜██████▀  Haiku 4.5 · Claude Ultra
+ ▝▝   ▝▝   <tmpdir>
+❯ /model claude-haiku-4-5
+  ⎿  Set model to Haiku 4.5 and saved as your default for new sessions
+                                                                                                                auto mode unavailable for this model
+❯
+  ⏸ manual mode on · ? for shortcuts
+===== shifttab 1
+                                                                                                                auto mode unavailable for this model
+❯
+  ⏵⏵ accept edits on (shift+tab to cycle)
+===== shifttab 2
+                                                                                                                auto mode unavailable for this model
+❯
+  ⏸ plan mode on (shift+tab to cycle)
+===== shifttab 3
+                                                                                                                auto mode unavailable for this model
+❯
+  ⏸ manual mode on · ? for shortcuts
+===== shifttab 4
+                                                                                                                auto mode unavailable for this model
+❯
+  ⏵⏵ accept edits on (shift+tab to cycle)
