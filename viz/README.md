@@ -17,6 +17,7 @@ Requires Python 3 with matplotlib and Pillow.
 | `compare` | What changed for each item between two conditions? |
 | `dots` | How spread out are repeated measurements? |
 | `timeline` | Where did the time go, and at which step did it go wrong? |
+| `stack` | When the condition changes, which part of the total shrinks? |
 | `flow` | What happens step by step, and where does the path split? |
 
 `examples/` shows each frame drawn from its example spec (sample values, not measurements). New frames are added as articles need them.

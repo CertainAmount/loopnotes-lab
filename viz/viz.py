@@ -33,7 +33,9 @@ def rows_of(spec):
     if f == "dots":
         return [["item", "run", "value"]] + [[it, j + 1, v] for it, r in zip(spec["items"], spec["runs"]) for j, v in enumerate(r)]
     if f == "timeline":
-        return [["t", "label", "bad"]] + [[e["t"], e["label"], bool(e.get("bad"))] for e in spec["events"]]
+        return [["t", "label", "sub", "bad"]] + [[e.get("t", i), e["label"].replace("\n", " "), e.get("sub", ""), bool(e.get("bad") or e.get("focus"))] for i, e in enumerate(spec["events"])]
+    if f == "stack":
+        return [["condition"] + [c["name"] for c in spec["classes"]]] + [[r] + v for r, v in zip(spec["rows"], spec["values"])]
     if f == "flow":
         return [["from", "to", "label"]] + [[e[0], e[1], e[2] if len(e) > 2 else ""] for e in spec["edges"]]
     return [["spec"], [json.dumps(spec)]]

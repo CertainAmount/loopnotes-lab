@@ -2,7 +2,7 @@
 import style as S
 
 NAME = "timeline"
-QUESTION = "Where did the time go, and at which step did it go wrong?"
+QUESTION = "Where did the time go, and at which step did it go wrong? (mode steps: order only, label above, small line below)"
 EXAMPLE = {
     "frame": "timeline",
     "unit": "min",
@@ -16,7 +16,29 @@ EXAMPLE = {
 }
 
 
+def steps(spec):
+    """순서만 있는 단계(시각 없음): 위에 단계 이름, 아래에 작은 줄. ai-code-review-false-positives 그림 3에서 일반화."""
+    ev = spec["events"]
+    fig = S.figure(3.0)
+    ax = fig.add_axes([0.02, 0.12, 0.96, 0.84])
+    xs = list(range(len(ev)))
+    ax.plot([xs[0], xs[-1]], [0, 0], color=S.LIGHT, lw=7, solid_capstyle="round", zorder=1)
+    for x, e in zip(xs, ev):
+        hot, first = e.get("bad") or e.get("focus"), x == 0
+        col = S.ACCENT if hot else (S.GRAY if first else S.NAVY)
+        ax.scatter([x], [0], s=420 if hot else 240, zorder=3, color="white" if first else col, edgecolors=col, linewidths=2.5)
+        ax.text(x, 0.28, e["label"], ha="center", va="bottom", fontsize=S.FONT + 1, color=col,
+                fontweight="bold" if hot else None, linespacing=1.15)
+        if e.get("sub"):
+            ax.text(x, -0.28, e["sub"], ha="center", va="top", fontsize=S.FONT_SMALL + 1, color=S.GRAY)
+    ax.set_xlim(-0.55, len(ev) - 0.45); ax.set_ylim(-0.95, 1.25); ax.axis("off")
+    S.note(fig, spec.get("note"))
+    return fig
+
+
 def draw(spec):
+    if spec.get("mode") == "steps" or "t" not in spec["events"][0]:
+        return steps(spec)
     ev = spec["events"]
     unit = spec.get("unit", "")
     fig = S.figure(2.3)
