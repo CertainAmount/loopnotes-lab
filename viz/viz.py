@@ -36,6 +36,8 @@ def rows_of(spec):
         return [["t", "label", "sub", "bad"]] + [[e.get("t", i), e["label"].replace("\n", " "), e.get("sub", ""), bool(e.get("bad") or e.get("focus"))] for i, e in enumerate(spec["events"])]
     if f == "stack":
         return [["condition"] + [c["name"] for c in spec["classes"]]] + [[r] + v for r, v in zip(spec["rows"], spec["values"])]
+    if f == "ladder":
+        return [["step", "value", "beyond", "text"]] + [[st["label"], st.get("value", ""), st.get("beyond", ""), st.get("text", "")] for st in spec["steps"]]
     if f == "flow":
         return [["from", "to", "label"]] + [[e[0], e[1], e[2] if len(e) > 2 else ""] for e in spec["edges"]]
     return [["spec"], [json.dumps(spec)]]
