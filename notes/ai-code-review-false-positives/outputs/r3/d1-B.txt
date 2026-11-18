@@ -1,0 +1,4 @@
+- `get_team_badge`: `repo.find_by_id(uid)` returns `None` for deleted users, whose uids still appear in old URLs, so `user.team_id` raises `AttributeError` and `/badge` returns a 500; handle `None` the way `get_display_name` does, e.g. with an "Unknown user" fallback.
+- `get_team_badge`: `repo.find_team` returns `None` when `user.team_id` is `None`, so `team.short_label` raises `AttributeError` for users without a team; fall back to just `user.name` or a placeholder label.
+- `get_team_badges`: one deleted user or teamless user anywhere in `uids` raises and fails the whole `/badges` request with a 500; once `get_team_badge` handles `None`, each entry degrades on its own.
+- `get_team_badges`: it runs two queries per uid (N+1), and the API layer doesn't cap the length of `uids`, so a large request triggers 2N DB round-trips; batch-fetch users and teams if the repo supports it, or enforce a limit.

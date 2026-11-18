@@ -1,0 +1,99 @@
+{
+ "duration_api_ms": 14740,
+ "stop_reason": "end_turn",
+ "total_cost_usd": 0.028064,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 3280,
+  "output_tokens": 1370,
+  "output_tokens_details": {
+   "thinking_tokens": 605
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1370,
+    "cache_read_input_tokens": 3280,
+    "cache_creation_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 1370,
+   "cacheReadInputTokens": 3280,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.028064,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 605,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 0,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "- `short_name` raises `IndexError` for a whitespace-only name longer than `n` (e.g. `\" \" * 20`): `split()` returns `[]`, so the `len(parts) == 1` check fails and `parts[0]` blows up.\n- `n` isn't validated: `n=0` gives `name[:-1] + \"…\"`, a result nearly as long as the input, and negative `n` behaves just as oddly. Reject or clamp `n < 1`.\n- The single-word branch slices the raw `name` rather than `parts[0]`, so leading or trailing whitespace is kept and counts toward the limit. That is inconsistent with the multi-word branch, which normalizes through `split()`.\n- The final fallback can add \"…\" to a first name that wasn't truncated. With `n=12` and `\"Bartholomew Smith\"`, `\"Bartholomew S.\"` is 14 chars, so the function returns `\"Bartholomew…\"` even though the first name is complete. The ellipsis wrongly suggests truncation.\n- The fallback drops the last-name initial entirely instead of shortening the first name to keep it (e.g. `\"Bartholo… S.\"`). That loses the disambiguating info, which may not be intended.\n- `last[0]` isn't uppercased, unlike `initials()`, so `\"anna van\"` becomes `\"anna v.\"`. This is inconsistent within the same module.\n- Middle names are silently dropped, and multi-word surnames (`\"van der Berg\"`, `\"de la Cruz\"`) collapse to the last token (`\"B.\"`), which is wrong for many real names.\n- `len()` and slicing work on code points, not graphemes or display width. Slicing can split combining marks, emoji, and ZWJ sequences, and CJK or full-width names will look about twice as wide as `n` suggests.\n- The returned length includes the \"…\" character. That's fine for display, but storage or ASCII-only consumers (DB columns, SMS, logs) may expect `n` bytes or ASCII. Document this, or make the ellipsis configurable.\n- The default `n=12` is an unexplained magic number. Name it as a constant or document why 12.\n- There's no docstring and no tests covering the edge cases: empty string, whitespace-only, exactly `n` chars, single long word, long first name, and non-ASCII input.",
+ "ttft_ms": 7840,
+ "type": "result",
+ "duration_ms": 15121,
+ "ttft_stream_ms": 1290,
+ "time_to_request_ms": 380,
+ "first_content_frame_ms": 1290,
+ "queued_turn_count": 0,
+ "result_index": 0
+}

@@ -1,0 +1,5 @@
+- `place_order` returns `True` from the `except` branch, so a failed charge or insert makes `/checkout` respond `201 {"status": "placed"}`. It should return `False` so the caller returns 502.
+- The broad `except Exception` in `place_order` has no `# intentional:` comment, which violates team rule 3. Either catch the specific payment and DB exceptions or justify the broad catch.
+- `charge` runs before `db.insert` with no compensation. If the insert fails after a successful charge, the customer is billed but no order is recorded. Insert a pending order first, or refund/void the charge when the insert fails.
+- `charge` is called without an idempotency key. A client or proxy retry of `/checkout` can charge the customer twice. Pass a key derived from the order.
+- `log.warning("place_order failed: %s", e)` drops the traceback and logs a lost charge or failed checkout at warning level. Use `log.exception(...)` and include `order.customer_id` or an order id for traceability.

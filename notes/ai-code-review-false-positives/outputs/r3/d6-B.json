@@ -1,0 +1,99 @@
+{
+ "duration_api_ms": 13089,
+ "stop_reason": "end_turn",
+ "total_cost_usd": 0.023996600000000003,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 3543,
+  "output_tokens": 1164,
+  "output_tokens_details": {
+   "thinking_tokens": 705
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1164,
+    "cache_read_input_tokens": 3543,
+    "cache_creation_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 1164,
+   "cacheReadInputTokens": 3543,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.023996600000000003,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 705,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 0,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "- `short_name`: the final fallback `first[: n - 1] + \"…\"` adds an ellipsis even when nothing was cut. If `len(first)` is `n - 2` or `n - 1` (e.g. `\"Christophe Smith\"` gives `\"Christophe…\"`), the whole first name fits. Return `first` unchanged when `len(first) <= n`, and truncate only when it is longer.\n- `short_name`: there is no guard on `n`. With `n <= 0`, `name[: n - 1]` uses a negative index and returns nearly the whole string plus `\"…\"` (e.g. `n=0` gives `name[:-1] + \"…\"`), so the result is longer than `n`. Assert or clamp `n >= 1`.\n- `short_name`: whitespace handling is inconsistent. A name within the limit is returned as-is (internal runs of spaces kept), but longer names are rebuilt from `split()` and normalized. Pick one behavior.\n- `short_name`: `len()` counts code points, not displayed characters. Names with combining marks or wide CJK characters can exceed or fall short of the intended visual width. Fine if code points are what's intended, but document it.\n- No tests were added for `short_name`. It has several branches (fits as-is, single long word, \"First L.\" form, long-first-name fallback) and boundary cases at exactly `n` and `n - 1` that should be covered.",
+ "ttft_ms": 8792,
+ "type": "result",
+ "duration_ms": 13276,
+ "ttft_stream_ms": 900,
+ "time_to_request_ms": 182,
+ "first_content_frame_ms": 901,
+ "queued_turn_count": 0,
+ "result_index": 0
+}

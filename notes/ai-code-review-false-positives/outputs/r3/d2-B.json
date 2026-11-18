@@ -1,0 +1,99 @@
+{
+ "duration_api_ms": 6869,
+ "stop_reason": "end_turn",
+ "total_cost_usd": 0.0135996,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 3658,
+  "output_tokens": 643,
+  "output_tokens_details": {
+   "thinking_tokens": 199
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 643,
+    "cache_read_input_tokens": 3658,
+    "cache_creation_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 643,
+   "cacheReadInputTokens": 3658,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.0135996,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 199,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 0,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "- `place_order` returns `True` from the `except` block, so a failed charge or a failed DB insert makes the `/checkout` route respond `201 {\"status\": \"placed\"}` instead of `502`. The failure path should return `False` (or re-raise).\n- The `except Exception as e:` in `place_order` has no `# intentional:` comment, which violates team rule 3. It is also too broad: it swallows programming errors such as `AttributeError` and `TypeError` along with the payment and DB failures.\n- `charge()` runs before `db.insert()`. If the insert fails, the customer has been charged but no order exists. There is no refund or compensation, and the error is swallowed. Insert a pending order first and mark it paid after the charge, or refund or void the charge when the insert fails.\n- `charge()` is not idempotent: there is no idempotency key such as an order ID. A client or proxy retry of `/checkout` can charge the customer twice.\n- `log.warning(\"place_order failed: %s\", e)` drops the traceback and logs a lost payment or order at warning level. Use `log.exception(...)`, or `log.error(..., exc_info=True)`, and include `order.customer_id` or the order ID for traceability.\n- `place_order` now returns `True` on every path, so the return value carries no information. The caller's `if ok:` / `502` branch is dead code.",
+ "ttft_ms": 2991,
+ "type": "result",
+ "duration_ms": 7085,
+ "ttft_stream_ms": 1027,
+ "time_to_request_ms": 211,
+ "first_content_frame_ms": 1027,
+ "queued_turn_count": 0,
+ "result_index": 0
+}

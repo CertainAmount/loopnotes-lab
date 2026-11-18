@@ -1,0 +1,3 @@
+- `export_month` leaks the SQLite connection on the empty-result path: `return 0` runs before `conn.close()`, so the connection is never closed when no rows match.
+- `export_month` also leaks the connection if `conn.execute`, `fetchall`, or `write_rows` raises (for example, an unwritable `out_path` or a disk-full error), because `conn.close()` is not in a `try/finally` or `with contextlib.closing(...)` block.
+- `cur.fetchall()` loads the whole month's payments into memory before writing. Large months could cause high memory use; streaming the cursor (`write_rows(out_path, cur)`) would keep memory bounded.

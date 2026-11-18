@@ -1,0 +1,12 @@
+- `_hits[cur] = n + 1` is a non-atomic read-modify-write; concurrent calls (threaded server, async workers) can lose increments, and every lost hit is lost revenue. Guard it with a `threading.Lock` or use an atomic counter.
+- `_hits` lives only in process memory, so counts vanish on restart, deploy or crash before the monthly invoice job runs. Billing data needs durable storage (DB, Redis `INCR`, append-only log).
+- Under multi-process deployments (gunicorn/uwsgi workers, multiple hosts), each process has its own `_hits`, and `billing_report()` only sees the calling process's counts. An invoice job running in a separate process will see an empty dict.
+- `_hits` is never reset or windowed by period, so a "monthly" report returns cumulative all-time counts and re-bills previous months. Partition counts by billing period or atomically snapshot-and-reset in `billing_report()`.
+- Counts are keyed only by currency, with no partner identifier. `billing_report()` cannot say which partner to bill, contradicting the comment "each hit is billed to the partner". `get_rate_counted` needs a `partner_id` parameter and should key by `(partner_id, cur)`.
+- The name `_hits` is misleading: it counts every call, including cache misses that trigger `fetch_rate`, not cache hits. Rename it (e.g. `_calls`/`_requests`) or count what is actually meant to be billed.
+- `cur` is not validated or normalized before being used as a billing key. `"usd"`, `"USD"` and `"USD "` become separate line items, and arbitrary caller input grows `_hits` (and `_rates`) without bound.
+- Billing is opt-in through `get_rate_counted`, while plain `get_rate` remains public. Any caller using `get_rate` gets rates without being billed. Make the uncounted path private or document clearly which callers must use which.
+- Keeping billing accounting inside a rate *cache* module mixes concerns and couples invoicing correctness to cache implementation details. Move metering into a dedicated billing/metering component.
+- `{cur: n for cur, n in _hits.items()}` can raise `RuntimeError: dictionary changed size during iteration` if another thread adds a currency mid-iteration. Copy under the same lock used for increments.
+- There are no tests for the new counting/reporting behavior: concurrent increments, report contents, reset semantics. That is risky for code that directly drives invoices.
+- Minor: `n = _hits.get(cur, 0); _hits[cur] = n + 1` is more idiomatic as `collections.Counter` / `_hits[cur] += 1` with a `defaultdict(int)`. This does not fix the atomicity issue on its own.

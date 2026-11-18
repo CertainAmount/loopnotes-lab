@@ -1,0 +1,21 @@
+condition,run,comments,acted_on,wrong,right_low_value,planted_hits_of_5
+Diff only,r1,53,14,6,33,5
+Diff only,r2,57,14,5,38,5
+Diff only,r3,52,14,4,34,5
+Diff only,mean,54.0,14.0,5.0,35.0,5.0
+Diff only,min-max,52-57,14-14,4-6,33-38,5-5
+Diff + callers,r1,29,11,0,18,5
+Diff + callers,r2,25,11,0,14,5
+Diff + callers,r3,29,12,0,17,5
+Diff + callers,mean,27.7,11.3,0.0,16.3,5.0
+Diff + callers,min-max,25-29,11-12,0-0,14-18,5-5
+Risk areas only,r1,38,10,5,23,5
+Risk areas only,r2,35,10,6,19,5
+Risk areas only,r3,37,10,6,21,5
+Risk areas only,mean,36.7,10.0,5.7,21.0,5.0
+Risk areas only,min-max,35-38,10-10,5-6,19-23,5-5
+Risk areas + stay quiet,r1,20,10,2,8,5
+Risk areas + stay quiet,r2,19,10,2,7,5
+Risk areas + stay quiet,r3,19,10,2,7,5
+Risk areas + stay quiet,mean,19.3,10.0,2.0,7.3,5.0
+Risk areas + stay quiet,min-max,19-20,10-10,2-2,7-8,5-5

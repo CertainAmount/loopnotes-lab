@@ -1,0 +1,7 @@
+- `get_page`: off-by-one — `end = start + size - 1` combined with Python's exclusive slice end returns only `size - 1` items per page; should be `end = start + size`.
+- `get_page`: no validation of `page` — `page=0` gives `start = -size`, and a negative start slices from the end of the list, returning wrong items silently; reject `page < 1`.
+- `get_page`/`page_meta`/`total_pages`: no validation of `size` — `size=0` raises `ZeroDivisionError` in `total_pages`, and a negative `size` produces nonsensical slices and page counts.
+- `page_meta`: requesting a page beyond `pages` silently returns an empty `items` list with no signal; consider clamping or raising so callers can tell it's out of range.
+- `page_meta`: when `items` is empty, `pages` is 0 but page 1 is still accepted, so the metadata is inconsistent (`page > pages`); decide whether an empty result has 0 or 1 pages and be consistent.
+- `page_meta`: requires the full collection in memory (`len(items)` plus slicing) to return a single page; fine for lists, but it won't work with generators/iterators and won't scale for large search result sets. Document this or accept a total count and an offset-capable source.
+- No tests were added for the new functions; the off-by-one would have been caught by a basic test asserting `len(get_page(range(10), 1, 5)) == 5`.

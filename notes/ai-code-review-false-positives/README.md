@@ -1,18 +1,19 @@
 # How many AI code review comments are worth acting on, and what removes the wrong ones?
 
-Research note for the loopnotes article on AI code review false positives. It holds the evidence behind the article: one measurement made for it (E3, six planted-bug diffs reviewed under five prompts) and a side-by-side reading of the public "resolved" and "useful" figures the article compares against.
+Research note for the loopnotes article on AI code review false positives. It holds the evidence behind the article: one measurement made for it (E3, six planted-bug diffs reviewed under five prompts; the four prompts the article uses were run three times each) and a side-by-side reading of the public "resolved" and "useful" figures the article compares against.
 
 ## Conclusions
-- Every wrong comment in our run flagged input that the caller had already validated. When the reviewer also saw the caller file and three team rules, wrong comments went from 6 to 0 and the pile went from 53 to 29 comments. If your reviewer keeps flagging handled cases, give it the callers and your team's rules before you change anything else.
-- The biggest slice was never the wrong comments. Under the first three prompts, 61–62% of comments were true about the code but not worth a change. Judge your bot by the share of comments that led to a code change, not by its false-positive rate.
-- A one-line scope instruction ("only security, concurrency, error handling, data integrity, performance") cut the count from 53 to 38 but left the mix where it was (61% low value) and kept 5 wrong comments; some nitpicks came back under the allowed category names ("no authorization check", "CSV formula injection" on numeric columns). Adding one sentence to that same prompt, "If you are not confident an issue is real, do not mention it", cut the low-value share to 40% and the pile to 20, with no relabelled nitpicks and 5/5 planted bugs. It did not touch the two wrong comments about input validated elsewhere, and it dropped the "add a test" comments.
+Updated 2026-11-19 to the three-run picture (prompts A, B, C, E, three runs each; see 「Repeats」 below). Ranges are min–max across the three runs.
+- Every wrong comment flagged input that the caller had already validated (one in C's third run framed it as path traversal). When the reviewer also saw the caller file and three team rules, wrong comments went from 4–6 per run to 0 in every run, and the pile went from 52–57 to 25–29 comments. If your reviewer keeps flagging handled cases, give it the callers and your team's rules before you change anything else.
+- The biggest slice was never the wrong comments. Under the first three prompts, 54–67% of comments were true about the code but not worth a change, more than half in every run. Judge your bot by the share of comments that led to a code change, not by its false-positive rate.
+- A one-line scope instruction ("only security, concurrency, error handling, data integrity, performance") cut the count from a mean of 54 to 37 but barely moved the mix (54–61% low value against A's 62–67%) and kept 5–6 wrong comments per run, as many as the diff alone; in every run some nitpicks came back under the allowed category names ("no authorization check", "CSV formula injection" on numeric columns, "resource exhaustion" from an uncapped uid list, path traversal on a path the caller builds). Adding one sentence to that same prompt, "If you are not confident an issue is real, do not mention it", cut the low-value pile from 19–23 to 7–8 comments (37–40%) and the whole pile to 19–20 in every run, with no relabelled nitpicks and 5/5 planted bugs. It did not touch the two wrong comments about input validated elsewhere (the same two in all three runs), and it dropped every "add a test" comment.
 - So the two slices answer to different fixes: wrong comments come from code the reviewer cannot see and go away only with context; right-but-low-value comments come from a reviewer that says everything it notices and shrink when it is told to stay quiet unless sure.
-- No prompt missed a planted bug: all three caught 5 of 5, including an off-by-one that sat outside the scope list. In this small run, adding context or a scope line cost nothing in bugs caught. The diff with no planted bug still drew 6–11 comments under every prompt, so a long list is not a sign that something is wrong.
+- No prompt missed a planted bug in any run: 5 of 5 every time, including an off-by-one that sat outside the scope list. In this small test, adding context or a scope line cost nothing in bugs caught. The diff with no planted bug drew 3–11 comments in every run without the stay-quiet line, and with the diff alone it drew as many as the buggy diffs (10–11 against 7–12), so a long list is not a sign that something is wrong.
 - Public figures count different things. Uber's 65% "addressed" means the comment did not come back when the reviewer was rerun on the final commit, its 75% "useful" comes from engineers who chose to rate comments, and Beko's 73.8% "resolved" is a label the PR author set. Before comparing your team's number with theirs, recount 20–30 of your own PRs by one rule: did a person change the code because of the comment?
 
 ## Measurement E3: six diffs, five prompts
 
-Measured 2026-11-18 on the author's machine. Tool: Claude Code 2.1.327, headless (`claude -p`), default model (`claude-opus-5-5`, recorded per run in `outputs/*.json` under `modelUsage`), no tools (`--tools ""`), no settings files (`--setting-sources ""`), run from an empty directory so no project instructions were loaded. One run per prompt, 18 runs, total cost $0.42. Runner: `run_e3.sh`; prompts built by `build_prompts.py`.
+Measured 2026-11-18 on the author's machine. Tool: Claude Code 2.1.327, headless (`claude -p`), default model (`claude-opus-5-5`, recorded per run in `outputs/*.json` under `modelUsage`), no tools (`--tools ""`), no settings files (`--setting-sources ""`), run from an empty directory so no project instructions were loaded. Run 1: one run per prompt, 18 runs, total cost $0.42 (repeats of A, B, C and E: 「Repeats」 below). Runner: `run_e3.sh`; prompts built by `build_prompts.py`.
 
 ### Material
 Six small Python diffs (20–30 lines each, `diffs/`), written for this test. Five carry one planted bug each; the sixth is a control with no planted bug. Each diff also carries "non-problems": things a reviewer might flag that are already handled outside the diff or allowed by the team.
@@ -48,7 +49,7 @@ Each `- ` line is one comment. Each comment gets exactly one class:
 Classifier: the agent that wrote the diffs, reading each comment against the rules above and the known planted list. One judge, no second rater. Labels are in `classify.py`.
 
 ### Results
-`e3-summary.csv` (per condition), `e3-classified.csv` (one row per comment, 158 rows: 120 for A–C, 38 for D–E, with a short note).
+`e3-summary.csv` (run 1, per condition), `e3-classified.csv` (one row per comment with a `run` column; run 1 is 158 rows: 120 for A–C, 38 for D–E, with a short note; the repeats add 273 rows).
 
 | prompt | comments | acted on | wrong | right, low value | planted bugs caught |
 |---|---|---|---|---|---|
@@ -87,11 +88,49 @@ D differs from C in three ways at once (the confidence line, a fuller do-not lis
 - Per diff, D / E comment counts: d1 3/4, d2 5/4, d3 1/3, d4 3/3, d5 4/5, d6 2/1. Ambiguous labels: 4 and 4.
 
 ### Figures
-- Counts per prompt, stacked by class (used in the article): drawn by `fig_f1_counts.py` from `e3-summary.csv`.
+- Counts per prompt, stacked by class (used in the article): first drawn by `fig_f1_counts.py` from run 1 (`e3-summary.csv`); redrawn 2026-11-19 from the three-run means in `e3-summary-runs.csv` with the loopnotes viz engine (`stack` frame), spec and data in `figures/fig-1/`.
 - 100% bars per prompt (`fig_f1.py`): not used in the article. Its leftmost bar is the author's own team count described in the article (about 120 comments over about 50 PRs, 2026-09: about 40% acted on, about 20% wrong, 30–40% right but low value; the three do not sum to 100, so the bar draws 40 / 20 / 40 with the last slice as the remainder and is labelled "approx.").
 - Terminal capture of `outputs/d4-A.txt`: comment 1 is the planted bug; comments 2 and 4 are the wrong "page not validated" kind.
 
 Stripped from `outputs/*.json` after the run: session_id, uuid, credential_expires_at.
+
+## Repeats (2026-11-19): three runs per prompt
+Why: run 1 was one run per prompt, so a gap between prompts could be run-to-run noise. Prompts A, B, C and E (the four in the article) were run twice more on the same six diffs; D (the team paragraph, not in the article) was not repeated.
+
+Method
+- Same prompts (`prompts/dN-X.txt`, unchanged), same command and flags as `run_e3.sh` (`claude -p ... --tools "" --setting-sources "" --output-format json`), Claude Code 2.1.327, model `claude-opus-5-5` in every run (`modelUsage`), from an empty temp directory, sequential, each run under a 2 GB memory cap. Runner: `run_e3_repeats.sh`. Outputs: `outputs/r2/`, `outputs/r3/`; run 1 stays in `outputs/` as r1. 48 runs, total cost $0.83 (about $0.017 each); no run errored. session_id, uuid and credential_expires_at stripped from the JSON as in run 1.
+- Classification: the rules under 「Classification rules」, unchanged, applied by the same judge the same way as run 1 (labels in `classify.py`, keys `r2/dN-X`, `r3/dN-X`). `e3-classified.csv` now has a `run` column; `e3-summary-runs.csv` has per-run counts and, per condition, the mean and min–max across the three runs (plus `control_d6_comments`, comments on the bug-free diff).
+
+Per run (comments: acted on / wrong / right, low value; planted bugs caught)
+
+| prompt | run 1 | run 2 | run 3 | mean (range) |
+|---|---|---|---|---|
+| A diff only | 53: 14 / 6 / 33; 5/5 | 57: 14 / 5 / 38; 5/5 | 52: 14 / 4 / 34; 5/5 | 54 (52–57): 14 / 5.0 (4–6) / 35 (33–38) |
+| B diff + callers + team rules | 29: 11 / 0 / 18; 5/5 | 25: 11 / 0 / 14; 5/5 | 29: 12 / 0 / 17; 5/5 | 27.7 (25–29): 11.3 (11–12) / 0 (0–0) / 16.3 (14–18) |
+| C diff + risk-area scope line | 38: 10 / 5 / 23; 5/5 | 35: 10 / 6 / 19; 5/5 | 37: 10 / 6 / 21; 5/5 | 36.7 (35–38): 10 / 5.7 (5–6) / 21 (19–23) |
+| E = C + stay-quiet line | 20: 10 / 2 / 8; 5/5 | 19: 10 / 2 / 7; 5/5 | 19: 10 / 2 / 7; 5/5 | 19.3 (19–20): 10 / 2 (2–2) / 7.3 (7–8) |
+
+Right-but-low-value share per run: A 62 / 67 / 65%, B 62 / 56 / 59%, C 61 / 54 / 57%, E 40 / 37 / 37%. Per diff counts (d1–d6), run 2 / run 3: A 8,8,12,7,12,10 / 8,8,9,7,9,11; B 4,5,4,1,6,5 / 4,6,7,1,6,5; C 6,6,6,6,7,4 / 7,6,6,6,9,3; E 4,4,3,3,4,1 / 4,4,3,3,4,1.
+
+What held across runs
+- **B had 0 wrong comments in every run.** A had 4–6, all `already-handled-elsewhere` (d4 page ×2 in every run, d6 whitespace in every run; d3 month and d5 currency in two of three).
+- **The stay-quiet line cut right-but-low-value comments in every run**: C 23 / 19 / 21 → E 8 / 7 / 7. By the pre-registered E3-E threshold (10+ points below A's 62%), E's 37–40% passes in every run.
+- **Every run caught all 5 planted bugs** under every prompt, including C's off-by-one outside its scope list.
+- **E's two wrong comments are the same two in all three runs** (d4 `page` not validated, d6 whitespace-only name): the stay-quiet line did not remove the kind that needs context.
+- **E dropped every "add a test" comment in every run** (A had 4–5 per run, all acted on); A's acted-on count was 14 in all three runs, E's 10.
+- **C relabelled nitpicks under allowed names in every run** (run 2: "resource exhaustion" from an uncapped `uids` list, "may leak payment data" in a log line, "stale rates" as data integrity; run 3: the same `uids` one, non-transactional reads as concurrency, path traversal on `out_path`, stale rates). E had none in any run. The two examples the article names ("CSV formula injection" on a numeric column, "impersonation risk" from a name collision) are from run 1 only.
+- E is the steadiest prompt: 19–20 comments, the same per-diff counts in runs 2 and 3.
+
+What didn't hold, or moved
+- **The scope line's effect on the mix is small but not zero.** In run 1 C's low-value share equalled A's (61 vs 62%); in runs 2 and 3 it was 13 and 8 points below A in the same run. Against the pre-registered 62% anchor C never reaches the 10-point line (lowest 54%, 8 below), so "the scope line did not change the mix" becomes "barely changed it": C's mean 57% against A's 65% and E's 38%.
+- **The scope line did not reduce wrong comments**: C had 5–6 per run, A 4–6. Run 3's C added one new kind (path traversal on a path the caller builds from a fixed directory).
+- **The control diff no longer drew comments under every prompt "as many as the buggy ones".** d6 drew A 11 / 10 / 11 and B 7 / 5 / 5, in the range of the buggy diffs, but C fell to 4 and 3 in runs 2 and 3 (buggy diffs 6–9). Without the stay-quiet line it still drew 3–11 comments in every run, none worth a change; under E it drew one (wrong) comment in every run.
+
+Labelling notes (run-1 labels were not changed)
+- The repeats were labelled with the run-1 notes as the reference, so the same comment kind gets the same class (for example "N+1 batch", "in-memory billing", "idempotency key", "stale file when empty", "size<=0" stay `right_low_value` with `ambiguous=1`; "page not validated", "page beyond total", "cur unvalidated", "whitespace-only name" stay `wrong`).
+- Mixed comments: when a comment's main point is true but an aside assumes unvalidated input, it is `right_low_value` with `ambiguous=1` (r3 d3-A month column; r2 d6-A normalization). This matches run 1's d5-C comment 7 (no TTL plus unbounded `cur` keys), labelled the same way. When the comment's whole premise is that handled input is unhandled, it is `wrong` (r3 d6-A leading/trailing whitespace, like run 1's d6-A "name not stripped"; r3 d3-C path traversal).
+- r3 d2-B comment 6 restates the planted bug from the caller's side (the 502 branch is dead); the rules give it `acted_on` as a comment that points at the planted bug, which adds one acted-on comment to that run that is not a separate defect.
+- Run-1 labels re-read against these: none looked inconsistent enough to change. One note: run 1's d1-C "authorization check" and d3-C "CSV formula injection" carry no "(security framing)" tag in their note text although they are the same kind as the repeats' tagged notes; the class is the same.
 
 ## What the public figures count
 
@@ -112,10 +151,11 @@ The article's own measure is narrower than all of these: did a person change the
 No Naver or other Korean web data was used; this is an English-language engineering question with no Korean angle.
 
 ## Limits
-- E3 is 6 diffs, 1 run per prompt, Python only, one model, with small single-file diffs written for the test. It shows how the three slices of a review pile move when context or scope changes; it is not an accuracy figure for Claude or for any review product.
-- One person classified all 158 comments, with no second rater; 28 labels were close calls, placed in the lower class.
-- Planted bugs are simple and well known. 5/5 in every condition means these bugs did not separate the prompts; it does not show that narrowing never costs real bugs in a large codebase.
-- The scope-line and stay-quiet results (C, D, E) are from this run only; context plus the stay-quiet line together was not run. A team that narrows scope over weeks on real code (with its own vocabulary and allowed styles) may see the low-value share move differently.
+- E3 is 6 diffs, 3 runs per prompt for A, B, C and E (1 run for D), Python only, one model, with small single-file diffs written for the test. Three runs show which differences hold from run to run on these diffs; they are not enough for a confidence interval, and a different set of diffs could move the numbers more than the runs did. It shows how the three slices of a review pile move when context or scope changes; it is not an accuracy figure for Claude or for any review product.
+- One person classified all 431 comments, with no second rater; 80 labels were close calls, placed in the lower class (run 1: 28; repeats: 52). The same judge wrote the diffs, knew the planted list and, for the repeats, knew the run-1 result.
+- Planted bugs are simple and well known. 5/5 in every condition and every run means these bugs did not separate the prompts; it does not show that narrowing never costs real bugs in a large codebase.
+- The scope-line and stay-quiet results (C, D, E) are from this test only; context plus the stay-quiet line together was not run, and D was not repeated. A team that narrows scope over weeks on real code (with its own vocabulary and allowed styles) may see the low-value share move differently.
+- Runs are not independent draws from a fixed reviewer in any strict sense: same prompts, same model, same day, default sampling settings of `claude -p`.
 - Uber and cubic figures were read from search result summaries, not the full pages.
 
 ## Where to put context and the test check (added 2026-11-18, reader fix 1)
@@ -138,7 +178,7 @@ Official pages checked 2026-11-18 for the "how" the article gives:
 - Not measured: whether rules alone (without pasting the callers) clear the wrong comments for a reviewer that reads only the diff. E3-B gave callers and rules together.
 
 ## Reader fix 3 (2026-11-18)
-- The article now shows condition C's scope line word for word and tells readers to add it together with the stay-quiet line, the pair tested as E. Expected size given in the body: A 53 comments → E 20 on the same six diffs. The stay-quiet line without a scope line was not run.
+- The article now shows condition C's scope line word for word and tells readers to add it together with the stay-quiet line, the pair tested as E. Expected size given in the body: A 53 comments → E 20 on the same six diffs (since 2026-11-19 the body gives the three-run figures, about 54 → 19 or 20; see 「Repeats」). The stay-quiet line without a scope line was not run.
 - "The 80 is the README's example" left the body; the source stays in Reader fix 2 above.
 - Uber's human-reviewer figure (51%, in words "about half") now appears only as a reason not to compare against 100%.
 

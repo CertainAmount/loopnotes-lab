@@ -1,0 +1,6 @@
+- `conn` leaks on the `if not rows: return 0` path because `conn.close()` is never reached. Close it in `try/finally` or wrap it in `contextlib.closing(...)`. Note that `with sqlite3.connect(...)` alone does not close the connection.
+- `conn` also leaks if `conn.execute`, `fetchall`, or `write_rows` raises, since there is no `try/finally` around the connection's lifetime.
+- `cur.fetchall()` loads the whole month's payments into memory at once. Iterate the cursor, or use `fetchmany` in batches, and stream rows into `write_rows`.
+- The DB connection stays open for the whole file write. Close it, or release the read, before the slower disk I/O, or stream deliberately inside one bounded scope.
+- When there are no rows, `out_path` is not created or truncated. A stale file from an earlier export stays in place while the function returns 0, so downstream consumers may read outdated data as this month's export.
+- `write_rows` writes directly to `out_path`, so a failure partway through leaves a truncated or corrupt CSV. Write to a temp file in the same directory and `os.replace` it into place.

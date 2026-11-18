@@ -1,0 +1,1 @@
+- `short_name` raises `IndexError` on `parts[0]` when `name` is whitespace-only and longer than `n` (e.g. 13 spaces), because `name.split()` returns `[]`, which skips the `len(parts) == 1` branch.

@@ -1,0 +1,99 @@
+{
+ "duration_api_ms": 10003,
+ "stop_reason": "end_turn",
+ "total_cost_usd": 0.0229236,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 881,
+  "cache_read_input_tokens": 2438,
+  "output_tokens": 769,
+  "output_tokens_details": {
+   "thinking_tokens": 459
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 881,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 769,
+    "cache_read_input_tokens": 2438,
+    "cache_creation_input_tokens": 881,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 881
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 769,
+   "cacheReadInputTokens": 2438,
+   "cacheCreationInputTokens": 881,
+   "webSearchRequests": 0,
+   "costUSD": 0.0229236,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 459,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 881,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "- `short_name` raises `IndexError` on `parts[0]` when `name` is longer than `n` but contains only whitespace, because `name.split()` returns `[]`, which skips the `len(parts) == 1` branch.\n- `short_name` does not validate `n`. With `n <= 0`, `name[: n - 1]` and `first[: n - 1]` use a negative slice bound, which keeps almost the whole string instead of truncating it. The result can be far longer than `n`.\n- `short_name` raises `TypeError` (from `len(None)`) when `name` is `None`, and it has no guard or clear error. Nullable name fields from account records will crash callers.\n- Slicing by code point (`name[: n - 1]`, `first[: n - 1]`, `last[0]`) can split grapheme clusters such as combining accents or ZWJ emoji sequences. This produces corrupted characters, or an initial that is a lone combining mark.",
+ "ttft_ms": 7485,
+ "type": "result",
+ "duration_ms": 10418,
+ "ttft_stream_ms": 1638,
+ "time_to_request_ms": 414,
+ "first_content_frame_ms": 1638,
+ "queued_turn_count": 0,
+ "result_index": 0
+}

@@ -1,0 +1,8 @@
+- `place_order` returns `True` from the `except` branch, so a failed charge or failed insert is reported to the caller as a successful order; it should re-raise or return a failure value.
+- If `charge` succeeds but `db.insert` fails, the customer has been charged with no order recorded and nothing refunds or voids the charge; add compensation (refund/void) or record the order as pending before charging.
+- Retries after a partial failure can double-charge the customer because `charge` takes no idempotency key; pass one derived from the order.
+- The broad `except Exception` wraps both the payment call and the DB write, so failures that need very different handling (declined card, payment provider outage, DB error) are flattened into one path.
+- A failed charge/order is logged at `warning` level with only `str(e)`, which loses the traceback and the order/customer identifiers; use `log.exception` (or `exc_info=True`) at error level and include the order id.
+- `_emit_placed` swallows metrics errors silently with a bare `pass`; logging at debug level would keep checkout safe while leaving failures visible.
+- No failure metric is emitted (e.g. `orders.failed` / `payments.failed`), so failed checkouts are invisible on dashboards that previously only saw successes.
+- No tests are added for the new payment path, the charge-succeeds/insert-fails case, or the error return behavior.

@@ -1,0 +1,10 @@
+- `short_name` raises `IndexError` on `parts[0]` when `name` is whitespace-only and longer than `n`, because `split()` returns an empty list and the `len(parts) == 1` check doesn't catch it.
+- The final fallback always appends "…" to `first[: n - 1]`, even when `first` already fits within `n`. For example, `short_name("Bartholomew Montgomery-Smithson", 12)` returns "Bartholomew…" when "Bartholomew" (11 chars) could be returned untruncated.
+- `n <= 0` gives a wrong result: `name[: n - 1]` becomes a negative slice (e.g. `name[:-1]` for `n=0`), so it returns almost the whole string instead of something of length ≤ n. `n` should be validated (e.g. require `n >= 2`).
+- Whitespace handling is inconsistent: names with `len(name) <= n` are returned as-is, including leading, trailing or doubled spaces, while longer names are normalized through `split()`. Strip or normalize up front.
+- Slicing by code points can split grapheme clusters (combining accents, emoji ZWJ sequences), producing broken characters before the "…".
+- `len()` counts code points, not display width, so CJK or other wide characters will overflow an `n`-column budget. If `n` is meant as a display constraint, use a width-aware measure (e.g. `wcwidth`).
+- Using `last[0]` as the initial misses multi-part surnames ("Ludwig van Beethoven" → "Ludwig v.") and names with lowercase particles. Consider documenting this or handling particles.
+- The "…" output is a non-ASCII character. Callers that measure bytes or need ASCII output (DB column limits, legacy systems) may break. Consider making the ellipsis configurable.
+- There's no docstring explaining what `n` means (max code points including the ellipsis) or the fallback order.
+- No tests were added. Edge cases to cover: empty, whitespace-only, single long word, exact-length boundary, `n` smaller than 2, and Unicode input.

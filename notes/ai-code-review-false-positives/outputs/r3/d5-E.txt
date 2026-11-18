@@ -1,0 +1,4 @@
+- `get_rate_counted` does a non-atomic read-modify-write on `_hits` (`get` then assign), so concurrent calls for the same currency can lose increments and under-bill partners; guard it with a lock.
+- `billing_report` iterates `_hits.items()` without synchronization, so a concurrent `get_rate_counted` that adds a new currency can raise `RuntimeError: dictionary changed size during iteration` and fail the invoice job.
+- `_hits` is never reset after the monthly report, so each invoice bills the cumulative count since process start and double-bills earlier months' hits.
+- Billable hit counts live only in process memory: a restart or crash loses them, and multiple worker processes each keep a separate partial `_hits`, so the invoice job sees incomplete data. Billing records need durable, shared storage.

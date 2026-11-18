@@ -1,0 +1,99 @@
+{
+ "duration_api_ms": 13010,
+ "stop_reason": "end_turn",
+ "total_cost_usd": 0.0317316,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 887,
+  "cache_read_input_tokens": 2438,
+  "output_tokens": 1207,
+  "output_tokens_details": {
+   "thinking_tokens": 282
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 887,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1207,
+    "cache_read_input_tokens": 2438,
+    "cache_creation_input_tokens": 887,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 887
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 1207,
+   "cacheReadInputTokens": 2438,
+   "cacheCreationInputTokens": 887,
+   "webSearchRequests": 0,
+   "costUSD": 0.0317316,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 282,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 887,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "- `_hits[cur] = n + 1` is a non-atomic read-modify-write; concurrent calls (threaded server, async workers) can lose increments, and every lost hit is lost revenue. Guard it with a `threading.Lock` or use an atomic counter.\n- `_hits` lives only in process memory, so counts vanish on restart, deploy or crash before the monthly invoice job runs. Billing data needs durable storage (DB, Redis `INCR`, append-only log).\n- Under multi-process deployments (gunicorn/uwsgi workers, multiple hosts), each process has its own `_hits`, and `billing_report()` only sees the calling process's counts. An invoice job running in a separate process will see an empty dict.\n- `_hits` is never reset or windowed by period, so a \"monthly\" report returns cumulative all-time counts and re-bills previous months. Partition counts by billing period or atomically snapshot-and-reset in `billing_report()`.\n- Counts are keyed only by currency, with no partner identifier. `billing_report()` cannot say which partner to bill, contradicting the comment \"each hit is billed to the partner\". `get_rate_counted` needs a `partner_id` parameter and should key by `(partner_id, cur)`.\n- The name `_hits` is misleading: it counts every call, including cache misses that trigger `fetch_rate`, not cache hits. Rename it (e.g. `_calls`/`_requests`) or count what is actually meant to be billed.\n- `cur` is not validated or normalized before being used as a billing key. `\"usd\"`, `\"USD\"` and `\"USD \"` become separate line items, and arbitrary caller input grows `_hits` (and `_rates`) without bound.\n- Billing is opt-in through `get_rate_counted`, while plain `get_rate` remains public. Any caller using `get_rate` gets rates without being billed. Make the uncounted path private or document clearly which callers must use which.\n- Keeping billing accounting inside a rate *cache* module mixes concerns and couples invoicing correctness to cache implementation details. Move metering into a dedicated billing/metering component.\n- `{cur: n for cur, n in _hits.items()}` can raise `RuntimeError: dictionary changed size during iteration` if another thread adds a currency mid-iteration. Copy under the same lock used for increments.\n- There are no tests for the new counting/reporting behavior: concurrent increments, report contents, reset semantics. That is risky for code that directly drives invoices.\n- Minor: `n = _hits.get(cur, 0); _hits[cur] = n + 1` is more idiomatic as `collections.Counter` / `_hits[cur] += 1` with a `defaultdict(int)`. This does not fix the atomicity issue on its own.",
+ "ttft_ms": 4326,
+ "type": "result",
+ "duration_ms": 13370,
+ "ttft_stream_ms": 1480,
+ "time_to_request_ms": 352,
+ "first_content_frame_ms": 1480,
+ "queued_turn_count": 0,
+ "result_index": 0
+}

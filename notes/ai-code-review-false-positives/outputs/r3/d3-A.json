@@ -1,0 +1,99 @@
+{
+ "duration_api_ms": 7001,
+ "stop_reason": "end_turn",
+ "total_cost_usd": 0.0125174,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 3347,
+  "output_tokens": 592,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 592,
+    "cache_read_input_tokens": 3347,
+    "cache_creation_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 592,
+   "cacheReadInputTokens": 3347,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.0125174,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 0,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 0,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "- Connection leaks on the early `return 0` path (and on any exception from `execute`/`fetchall`/`write_rows`), since `conn.close()` is only reached on the success path; use `try/finally` or `contextlib.closing(sqlite3.connect(db_path))` (note `with sqlite3.connect(...)` alone manages transactions, not closing).\n- Connection is held open during the CSV file write; close it (or fetch then close) before calling `write_rows` to release the DB handle sooner.\n- When no rows match, no output file is created (or a stale file from a previous run is left in place), which is inconsistent with callers expecting `out_path` to reflect the export; consider writing an empty/header-only file or documenting the behavior.\n- No header row is written, so the CSV has no column names (`id, amount, created_at`); consider passing `cur.description` names to the writer.\n- `fetchall()` loads the entire month into memory; stream with the cursor (iterate `cur` directly) for large tables, which `write_rows` already supports since it just iterates.\n- Filtering on a `month` column assumes the schema stores a denormalized month; if it doesn't exist, this should derive from `created_at` (e.g. `strftime('%Y-%m', created_at) = ?`), and the expected format of the `month` argument is undocumented/unvalidated.\n- Results have no `ORDER BY`, so row order in the export is nondeterministic; add `ORDER BY created_at, id`.\n- `write_rows` (unchanged context) should open the file with `newline=\"\"` (and an explicit `encoding`) per the `csv` module docs to avoid blank lines on Windows; worth verifying since this new caller depends on it.\n- `export_month` lacks a docstring and tests covering the empty-month and populated-month cases.",
+ "ttft_ms": 7250,
+ "type": "result",
+ "duration_ms": 7278,
+ "ttft_stream_ms": 1034,
+ "time_to_request_ms": 277,
+ "first_content_frame_ms": 1034,
+ "queued_turn_count": 0,
+ "result_index": 0
+}

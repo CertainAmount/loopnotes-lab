@@ -1,0 +1,4 @@
+- `place_order` returns `True` from the `except` branch, so callers are told the order succeeded when the charge or insert actually failed; it should re-raise or return a failure value.
+- If `charge` succeeds but `db.insert` fails, the customer is charged with no order record and nothing refunds or voids the payment. Insert first in a pending state, use a transaction, or compensate (refund/void) on insert failure.
+- `charge` is called with no idempotency key, so a client or caller retry (especially likely since failures are hidden) can double-charge the customer.
+- The broad `except Exception` logs only `%s` of the error at warning level, with no traceback and no order or customer identifiers. A charged-but-unrecorded payment then can't be traced or reconciled; use `log.exception` with order context.

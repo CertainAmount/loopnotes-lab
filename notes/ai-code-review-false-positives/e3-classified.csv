@@ -1,159 +1,432 @@
-condition,diff,comment_id,cls,planted_hit,reason_tag,ambiguous,note
-A,d1,d1-A-1,acted_on,1,,0,user None
-A,d1,d1-A-2,acted_on,0,,0,team None
-A,d1,d1-A-3,right_low_value,0,,1,N+1 batch
-A,d1,d1-A-4,right_low_value,0,,0,dedupe teams
-A,d1,d1-A-5,right_low_value,0,,0,batch fails on one
-A,d1,d1-A-6,right_low_value,0,,0,list comprehension
-A,d1,d1-A-7,right_low_value,0,,0,empty short_label
-A,d1,d1-A-8,right_low_value,0,,0,separator in service layer
-A,d1,d1-A-9,acted_on,0,,0,tests for missing user/team
-B,d1,d1-B-1,acted_on,1,,0,user None
-B,d1,d1-B-2,acted_on,0,,0,team None
-B,d1,d1-B-3,right_low_value,0,,0,batch fails on one
-B,d1,d1-B-4,right_low_value,0,,1,N+1 batch
-C,d1,d1-C-1,acted_on,1,,0,user None
-C,d1,d1-C-2,acted_on,0,,0,team None
-C,d1,d1-C-3,right_low_value,0,,0,batch fails on one
-C,d1,d1-C-4,right_low_value,0,,1,N+1 batch
-C,d1,d1-C-5,right_low_value,0,,0,dedupe teams
-C,d1,d1-C-6,right_low_value,0,,0,uids size limit (security framing)
-C,d1,d1-C-7,right_low_value,0,,1,authorization check (speculative)
-A,d2,d2-A-1,acted_on,1,,0,except returns True
-A,d2,d2-A-2,acted_on,0,,0,charged without order
-A,d2,d2-A-3,right_low_value,0,,1,broad except types
-A,d2,d2-A-4,right_low_value,0,,0,log.warning drops traceback
-A,d2,d2-A-5,right_low_value,0,,1,idempotency key
-A,d2,d2-A-6,right_low_value,0,,0,intentional except is silent
-A,d2,d2-A-7,acted_on,0,,0,tests for failure paths
-B,d2,d2-B-1,acted_on,1,,0,"except returns True, 502 unreachable"
-B,d2,d2-B-2,acted_on,0,,0,broad except lacks intentional marker (team rule 3)
-B,d2,d2-B-3,acted_on,0,,0,charged without order
-B,d2,d2-B-4,right_low_value,0,,0,log.warning drops traceback
-B,d2,d2-B-5,right_low_value,0,,1,idempotency key
-C,d2,d2-C-1,acted_on,1,,0,except returns True
-C,d2,d2-C-2,acted_on,0,,0,charged without order
-C,d2,d2-C-3,right_low_value,0,,1,idempotency key
-C,d2,d2-C-4,right_low_value,0,,1,broad except / ambiguous charge
-C,d2,d2-C-5,right_low_value,0,,0,log.warning drops traceback
-A,d3,d3-A-1,acted_on,1,,0,conn leak on early return
-A,d3,d3-A-2,right_low_value,0,,1,no file when empty
-A,d3,d3-A-3,right_low_value,0,,0,close right after fetchall
-A,d3,d3-A-4,right_low_value,0,,0,fetchall memory
-A,d3,d3-A-5,right_low_value,0,,0,no CSV header (pre-existing)
-A,d3,d3-A-6,right_low_value,0,,0,month column assumption
-A,d3,d3-A-7,wrong,0,already-handled-elsewhere,0,month unvalidated
-A,d3,d3-A-8,right_low_value,0,,0,float amounts
-A,d3,d3-A-9,acted_on,0,,0,tests for empty-month path
-B,d3,d3-B-1,acted_on,1,,0,conn leak on early return
-B,d3,d3-B-2,acted_on,0,,0,conn leak on exception
-B,d3,d3-B-3,right_low_value,0,,0,close right after fetchall
-B,d3,d3-B-4,right_low_value,0,,1,atomic temp-file write
-B,d3,d3-B-5,right_low_value,0,,1,stale file when empty
-B,d3,d3-B-6,right_low_value,0,,0,no CSV header
-C,d3,d3-C-1,acted_on,1,,0,conn leak on early return
-C,d3,d3-C-2,acted_on,0,,0,conn leak on exception
-C,d3,d3-C-3,right_low_value,0,,0,close right after fetchall
-C,d3,d3-C-4,right_low_value,0,,0,fetchall memory
-C,d3,d3-C-5,right_low_value,0,,1,atomic temp-file write
-C,d3,d3-C-6,right_low_value,0,,1,stale file when empty
-C,d3,d3-C-7,right_low_value,0,,0,CSV formula injection (numeric columns)
-A,d4,d4-A-1,acted_on,1,,0,off-by-one end
-A,d4,d4-A-2,wrong,0,already-handled-elsewhere,0,page not validated
-A,d4,d4-A-3,right_low_value,0,,1,"size<=0 (caller code, outside diff)"
-A,d4,d4-A-4,wrong,0,already-handled-elsewhere,0,page beyond total
-A,d4,d4-A-5,right_low_value,0,,0,needs materialized list
-A,d4,d4-A-6,acted_on,0,,0,boundary tests
-A,d4,d4-A-7,right_low_value,0,,0,docstring 1-indexed
-B,d4,d4-B-1,acted_on,1,,0,off-by-one end
-C,d4,d4-C-1,acted_on,1,,0,off-by-one end (framed as data integrity)
-C,d4,d4-C-2,wrong,0,already-handled-elsewhere,0,page not validated
-C,d4,d4-C-3,right_low_value,0,,1,"size<=0 (caller code, outside diff)"
-C,d4,d4-C-4,wrong,0,already-handled-elsewhere,0,size upper bound (caller caps at 100)
-C,d4,d4-C-5,right_low_value,0,,0,needs materialized list
-C,d4,d4-C-6,wrong,0,already-handled-elsewhere,0,page beyond total
-A,d5,d5-A-1,acted_on,1,,0,non-atomic increment
-A,d5,d5-A-2,right_low_value,0,,1,in-memory billing
-A,d5,d5-A-3,acted_on,0,,0,never reset across months
-A,d5,d5-A-4,right_low_value,0,,0,no partner id
-A,d5,d5-A-5,acted_on,0,,0,dict changed size during iteration
-A,d5,d5-A-6,right_low_value,0,,0,hits counts misses (naming)
-A,d5,d5-A-7,wrong,0,already-handled-elsewhere,0,cur unvalidated
-A,d5,d5-A-8,right_low_value,0,,0,get_rate duplicate fetch (pre-existing)
-A,d5,d5-A-9,right_low_value,0,,0,use Counter
-A,d5,d5-A-10,acted_on,0,,0,tests for counting
-B,d5,d5-B-1,acted_on,1,,0,non-atomic increment
-B,d5,d5-B-2,acted_on,0,,0,dict changed size during iteration
-B,d5,d5-B-3,acted_on,0,,0,never reset across months
-B,d5,d5-B-4,right_low_value,0,,1,in-memory billing
-B,d5,d5-B-5,right_low_value,0,,0,get_rate duplicate fetch (pre-existing)
-B,d5,d5-B-6,right_low_value,0,,0,hits counts misses (naming)
-C,d5,d5-C-1,acted_on,1,,0,non-atomic increment
-C,d5,d5-C-2,right_low_value,0,,0,get_rate duplicate fetch (pre-existing)
-C,d5,d5-C-3,acted_on,0,,0,dict changed size during iteration
-C,d5,d5-C-4,acted_on,0,,0,never reset across months
-C,d5,d5-C-5,right_low_value,0,,1,in-memory billing
-C,d5,d5-C-6,right_low_value,0,,0,fetch_rate errors not handled
-C,d5,d5-C-7,right_low_value,0,,1,no TTL / unbounded keys if unvalidated
-A,d6,d6-A-1,wrong,0,already-handled-elsewhere,0,whitespace-only name
-A,d6,d6-A-2,right_low_value,0,,0,n not validated
-A,d6,d6-A-3,wrong,0,already-handled-elsewhere,0,name not stripped
-A,d6,d6-A-4,right_low_value,0,,0,inconsistent normalization
-A,d6,d6-A-5,right_low_value,0,,0,ellipsis when first fits
-A,d6,d6-A-6,right_low_value,0,,0,grapheme clusters
-A,d6,d6-A-7,right_low_value,0,,0,display width
-A,d6,d6-A-8,right_low_value,0,,0,byte length
-A,d6,d6-A-9,right_low_value,0,,0,western name order
-A,d6,d6-A-10,right_low_value,0,,0,docstring
-A,d6,d6-A-11,right_low_value,0,,0,tests
-B,d6,d6-B-1,right_low_value,0,,0,n<=0
-B,d6,d6-B-2,right_low_value,0,,0,ellipsis when first fits
-B,d6,d6-B-3,right_low_value,0,,0,grapheme clusters
-B,d6,d6-B-4,right_low_value,0,,0,display width
-B,d6,d6-B-5,right_low_value,0,,0,middle names dropped
-B,d6,d6-B-6,right_low_value,0,,0,tests
-B,d6,d6-B-7,right_low_value,0,,0,docstring
-C,d6,d6-C-1,wrong,0,already-handled-elsewhere,0,whitespace-only name
-C,d6,d6-C-2,wrong,0,already-handled-elsewhere,0,name None
-C,d6,d6-C-3,right_low_value,0,,0,n not validated
-C,d6,d6-C-4,right_low_value,0,,0,grapheme clusters
-C,d6,d6-C-5,right_low_value,0,,0,byte length
-C,d6,d6-C-6,right_low_value,0,,0,collisions / impersonation (security framing)
-D,d1,d1-D-1,acted_on,1,,0,user None
-D,d1,d1-D-2,acted_on,0,,0,team None
-D,d1,d1-D-3,right_low_value,0,,0,batch fails on one
-D,d2,d2-D-1,acted_on,1,,0,except returns True
-D,d2,d2-D-2,acted_on,0,,0,charged without order
-D,d2,d2-D-3,right_low_value,0,,1,broad except types
-D,d2,d2-D-4,right_low_value,0,,0,log.warning drops traceback
-D,d2,d2-D-5,right_low_value,0,,1,idempotency key
-D,d3,d3-D-1,acted_on,1,,0,conn leak on early return and on exception
-D,d4,d4-D-1,acted_on,1,,0,off-by-one end
-D,d4,d4-D-2,wrong,0,already-handled-elsewhere,0,page not validated
-D,d4,d4-D-3,right_low_value,0,,1,"size<=0 (caller code, outside diff)"
-D,d5,d5-D-1,acted_on,1,,0,non-atomic increment
-D,d5,d5-D-2,acted_on,0,,0,dict changed size during iteration
-D,d5,d5-D-3,acted_on,0,,0,never reset across months
-D,d5,d5-D-4,right_low_value,0,,1,in-memory billing
-D,d6,d6-D-1,wrong,0,already-handled-elsewhere,0,whitespace-only name
-D,d6,d6-D-2,right_low_value,0,,0,n not validated
-E,d1,d1-E-1,acted_on,1,,0,user None
-E,d1,d1-E-2,acted_on,0,,0,team None
-E,d1,d1-E-3,right_low_value,0,,1,N+1 batch
-E,d1,d1-E-4,right_low_value,0,,0,batch fails on one
-E,d2,d2-E-1,acted_on,1,,0,except returns True
-E,d2,d2-E-2,acted_on,0,,0,charged without order
-E,d2,d2-E-3,right_low_value,0,,1,idempotency key
-E,d2,d2-E-4,right_low_value,0,,0,log.warning drops traceback
-E,d3,d3-E-1,acted_on,1,,0,conn leak on early return
-E,d3,d3-E-2,acted_on,0,,0,conn leak on exception
-E,d3,d3-E-3,right_low_value,0,,0,fetchall memory
-E,d4,d4-E-1,acted_on,1,,0,off-by-one end
-E,d4,d4-E-2,wrong,0,already-handled-elsewhere,0,page not validated
-E,d4,d4-E-3,right_low_value,0,,1,"size<=0 (caller code, outside diff)"
-E,d5,d5-E-1,acted_on,1,,0,non-atomic increment
-E,d5,d5-E-2,acted_on,0,,0,dict changed size during iteration
-E,d5,d5-E-3,right_low_value,0,,1,in-memory billing
-E,d5,d5-E-4,acted_on,0,,0,never reset across months
-E,d5,d5-E-5,right_low_value,0,,0,get_rate duplicate fetch (pre-existing)
-E,d6,d6-E-1,wrong,0,already-handled-elsewhere,0,whitespace-only name
+run,condition,diff,comment_id,cls,planted_hit,reason_tag,ambiguous,note
+r1,A,d1,d1-A-1,acted_on,1,,0,user None
+r1,A,d1,d1-A-2,acted_on,0,,0,team None
+r1,A,d1,d1-A-3,right_low_value,0,,1,N+1 batch
+r1,A,d1,d1-A-4,right_low_value,0,,0,dedupe teams
+r1,A,d1,d1-A-5,right_low_value,0,,0,batch fails on one
+r1,A,d1,d1-A-6,right_low_value,0,,0,list comprehension
+r1,A,d1,d1-A-7,right_low_value,0,,0,empty short_label
+r1,A,d1,d1-A-8,right_low_value,0,,0,separator in service layer
+r1,A,d1,d1-A-9,acted_on,0,,0,tests for missing user/team
+r1,B,d1,d1-B-1,acted_on,1,,0,user None
+r1,B,d1,d1-B-2,acted_on,0,,0,team None
+r1,B,d1,d1-B-3,right_low_value,0,,0,batch fails on one
+r1,B,d1,d1-B-4,right_low_value,0,,1,N+1 batch
+r1,C,d1,d1-C-1,acted_on,1,,0,user None
+r1,C,d1,d1-C-2,acted_on,0,,0,team None
+r1,C,d1,d1-C-3,right_low_value,0,,0,batch fails on one
+r1,C,d1,d1-C-4,right_low_value,0,,1,N+1 batch
+r1,C,d1,d1-C-5,right_low_value,0,,0,dedupe teams
+r1,C,d1,d1-C-6,right_low_value,0,,0,uids size limit (security framing)
+r1,C,d1,d1-C-7,right_low_value,0,,1,authorization check (speculative)
+r1,A,d2,d2-A-1,acted_on,1,,0,except returns True
+r1,A,d2,d2-A-2,acted_on,0,,0,charged without order
+r1,A,d2,d2-A-3,right_low_value,0,,1,broad except types
+r1,A,d2,d2-A-4,right_low_value,0,,0,log.warning drops traceback
+r1,A,d2,d2-A-5,right_low_value,0,,1,idempotency key
+r1,A,d2,d2-A-6,right_low_value,0,,0,intentional except is silent
+r1,A,d2,d2-A-7,acted_on,0,,0,tests for failure paths
+r1,B,d2,d2-B-1,acted_on,1,,0,"except returns True, 502 unreachable"
+r1,B,d2,d2-B-2,acted_on,0,,0,broad except lacks intentional marker (team rule 3)
+r1,B,d2,d2-B-3,acted_on,0,,0,charged without order
+r1,B,d2,d2-B-4,right_low_value,0,,0,log.warning drops traceback
+r1,B,d2,d2-B-5,right_low_value,0,,1,idempotency key
+r1,C,d2,d2-C-1,acted_on,1,,0,except returns True
+r1,C,d2,d2-C-2,acted_on,0,,0,charged without order
+r1,C,d2,d2-C-3,right_low_value,0,,1,idempotency key
+r1,C,d2,d2-C-4,right_low_value,0,,1,broad except / ambiguous charge
+r1,C,d2,d2-C-5,right_low_value,0,,0,log.warning drops traceback
+r1,A,d3,d3-A-1,acted_on,1,,0,conn leak on early return
+r1,A,d3,d3-A-2,right_low_value,0,,1,no file when empty
+r1,A,d3,d3-A-3,right_low_value,0,,0,close right after fetchall
+r1,A,d3,d3-A-4,right_low_value,0,,0,fetchall memory
+r1,A,d3,d3-A-5,right_low_value,0,,0,no CSV header (pre-existing)
+r1,A,d3,d3-A-6,right_low_value,0,,0,month column assumption
+r1,A,d3,d3-A-7,wrong,0,already-handled-elsewhere,0,month unvalidated
+r1,A,d3,d3-A-8,right_low_value,0,,0,float amounts
+r1,A,d3,d3-A-9,acted_on,0,,0,tests for empty-month path
+r1,B,d3,d3-B-1,acted_on,1,,0,conn leak on early return
+r1,B,d3,d3-B-2,acted_on,0,,0,conn leak on exception
+r1,B,d3,d3-B-3,right_low_value,0,,0,close right after fetchall
+r1,B,d3,d3-B-4,right_low_value,0,,1,atomic temp-file write
+r1,B,d3,d3-B-5,right_low_value,0,,1,stale file when empty
+r1,B,d3,d3-B-6,right_low_value,0,,0,no CSV header
+r1,C,d3,d3-C-1,acted_on,1,,0,conn leak on early return
+r1,C,d3,d3-C-2,acted_on,0,,0,conn leak on exception
+r1,C,d3,d3-C-3,right_low_value,0,,0,close right after fetchall
+r1,C,d3,d3-C-4,right_low_value,0,,0,fetchall memory
+r1,C,d3,d3-C-5,right_low_value,0,,1,atomic temp-file write
+r1,C,d3,d3-C-6,right_low_value,0,,1,stale file when empty
+r1,C,d3,d3-C-7,right_low_value,0,,0,CSV formula injection (numeric columns)
+r1,A,d4,d4-A-1,acted_on,1,,0,off-by-one end
+r1,A,d4,d4-A-2,wrong,0,already-handled-elsewhere,0,page not validated
+r1,A,d4,d4-A-3,right_low_value,0,,1,"size<=0 (caller code, outside diff)"
+r1,A,d4,d4-A-4,wrong,0,already-handled-elsewhere,0,page beyond total
+r1,A,d4,d4-A-5,right_low_value,0,,0,needs materialized list
+r1,A,d4,d4-A-6,acted_on,0,,0,boundary tests
+r1,A,d4,d4-A-7,right_low_value,0,,0,docstring 1-indexed
+r1,B,d4,d4-B-1,acted_on,1,,0,off-by-one end
+r1,C,d4,d4-C-1,acted_on,1,,0,off-by-one end (framed as data integrity)
+r1,C,d4,d4-C-2,wrong,0,already-handled-elsewhere,0,page not validated
+r1,C,d4,d4-C-3,right_low_value,0,,1,"size<=0 (caller code, outside diff)"
+r1,C,d4,d4-C-4,wrong,0,already-handled-elsewhere,0,size upper bound (caller caps at 100)
+r1,C,d4,d4-C-5,right_low_value,0,,0,needs materialized list
+r1,C,d4,d4-C-6,wrong,0,already-handled-elsewhere,0,page beyond total
+r1,A,d5,d5-A-1,acted_on,1,,0,non-atomic increment
+r1,A,d5,d5-A-2,right_low_value,0,,1,in-memory billing
+r1,A,d5,d5-A-3,acted_on,0,,0,never reset across months
+r1,A,d5,d5-A-4,right_low_value,0,,0,no partner id
+r1,A,d5,d5-A-5,acted_on,0,,0,dict changed size during iteration
+r1,A,d5,d5-A-6,right_low_value,0,,0,hits counts misses (naming)
+r1,A,d5,d5-A-7,wrong,0,already-handled-elsewhere,0,cur unvalidated
+r1,A,d5,d5-A-8,right_low_value,0,,0,get_rate duplicate fetch (pre-existing)
+r1,A,d5,d5-A-9,right_low_value,0,,0,use Counter
+r1,A,d5,d5-A-10,acted_on,0,,0,tests for counting
+r1,B,d5,d5-B-1,acted_on,1,,0,non-atomic increment
+r1,B,d5,d5-B-2,acted_on,0,,0,dict changed size during iteration
+r1,B,d5,d5-B-3,acted_on,0,,0,never reset across months
+r1,B,d5,d5-B-4,right_low_value,0,,1,in-memory billing
+r1,B,d5,d5-B-5,right_low_value,0,,0,get_rate duplicate fetch (pre-existing)
+r1,B,d5,d5-B-6,right_low_value,0,,0,hits counts misses (naming)
+r1,C,d5,d5-C-1,acted_on,1,,0,non-atomic increment
+r1,C,d5,d5-C-2,right_low_value,0,,0,get_rate duplicate fetch (pre-existing)
+r1,C,d5,d5-C-3,acted_on,0,,0,dict changed size during iteration
+r1,C,d5,d5-C-4,acted_on,0,,0,never reset across months
+r1,C,d5,d5-C-5,right_low_value,0,,1,in-memory billing
+r1,C,d5,d5-C-6,right_low_value,0,,0,fetch_rate errors not handled
+r1,C,d5,d5-C-7,right_low_value,0,,1,no TTL / unbounded keys if unvalidated
+r1,A,d6,d6-A-1,wrong,0,already-handled-elsewhere,0,whitespace-only name
+r1,A,d6,d6-A-2,right_low_value,0,,0,n not validated
+r1,A,d6,d6-A-3,wrong,0,already-handled-elsewhere,0,name not stripped
+r1,A,d6,d6-A-4,right_low_value,0,,0,inconsistent normalization
+r1,A,d6,d6-A-5,right_low_value,0,,0,ellipsis when first fits
+r1,A,d6,d6-A-6,right_low_value,0,,0,grapheme clusters
+r1,A,d6,d6-A-7,right_low_value,0,,0,display width
+r1,A,d6,d6-A-8,right_low_value,0,,0,byte length
+r1,A,d6,d6-A-9,right_low_value,0,,0,western name order
+r1,A,d6,d6-A-10,right_low_value,0,,0,docstring
+r1,A,d6,d6-A-11,right_low_value,0,,0,tests
+r1,B,d6,d6-B-1,right_low_value,0,,0,n<=0
+r1,B,d6,d6-B-2,right_low_value,0,,0,ellipsis when first fits
+r1,B,d6,d6-B-3,right_low_value,0,,0,grapheme clusters
+r1,B,d6,d6-B-4,right_low_value,0,,0,display width
+r1,B,d6,d6-B-5,right_low_value,0,,0,middle names dropped
+r1,B,d6,d6-B-6,right_low_value,0,,0,tests
+r1,B,d6,d6-B-7,right_low_value,0,,0,docstring
+r1,C,d6,d6-C-1,wrong,0,already-handled-elsewhere,0,whitespace-only name
+r1,C,d6,d6-C-2,wrong,0,already-handled-elsewhere,0,name None
+r1,C,d6,d6-C-3,right_low_value,0,,0,n not validated
+r1,C,d6,d6-C-4,right_low_value,0,,0,grapheme clusters
+r1,C,d6,d6-C-5,right_low_value,0,,0,byte length
+r1,C,d6,d6-C-6,right_low_value,0,,0,collisions / impersonation (security framing)
+r1,D,d1,d1-D-1,acted_on,1,,0,user None
+r1,D,d1,d1-D-2,acted_on,0,,0,team None
+r1,D,d1,d1-D-3,right_low_value,0,,0,batch fails on one
+r1,D,d2,d2-D-1,acted_on,1,,0,except returns True
+r1,D,d2,d2-D-2,acted_on,0,,0,charged without order
+r1,D,d2,d2-D-3,right_low_value,0,,1,broad except types
+r1,D,d2,d2-D-4,right_low_value,0,,0,log.warning drops traceback
+r1,D,d2,d2-D-5,right_low_value,0,,1,idempotency key
+r1,D,d3,d3-D-1,acted_on,1,,0,conn leak on early return and on exception
+r1,D,d4,d4-D-1,acted_on,1,,0,off-by-one end
+r1,D,d4,d4-D-2,wrong,0,already-handled-elsewhere,0,page not validated
+r1,D,d4,d4-D-3,right_low_value,0,,1,"size<=0 (caller code, outside diff)"
+r1,D,d5,d5-D-1,acted_on,1,,0,non-atomic increment
+r1,D,d5,d5-D-2,acted_on,0,,0,dict changed size during iteration
+r1,D,d5,d5-D-3,acted_on,0,,0,never reset across months
+r1,D,d5,d5-D-4,right_low_value,0,,1,in-memory billing
+r1,D,d6,d6-D-1,wrong,0,already-handled-elsewhere,0,whitespace-only name
+r1,D,d6,d6-D-2,right_low_value,0,,0,n not validated
+r1,E,d1,d1-E-1,acted_on,1,,0,user None
+r1,E,d1,d1-E-2,acted_on,0,,0,team None
+r1,E,d1,d1-E-3,right_low_value,0,,1,N+1 batch
+r1,E,d1,d1-E-4,right_low_value,0,,0,batch fails on one
+r1,E,d2,d2-E-1,acted_on,1,,0,except returns True
+r1,E,d2,d2-E-2,acted_on,0,,0,charged without order
+r1,E,d2,d2-E-3,right_low_value,0,,1,idempotency key
+r1,E,d2,d2-E-4,right_low_value,0,,0,log.warning drops traceback
+r1,E,d3,d3-E-1,acted_on,1,,0,conn leak on early return
+r1,E,d3,d3-E-2,acted_on,0,,0,conn leak on exception
+r1,E,d3,d3-E-3,right_low_value,0,,0,fetchall memory
+r1,E,d4,d4-E-1,acted_on,1,,0,off-by-one end
+r1,E,d4,d4-E-2,wrong,0,already-handled-elsewhere,0,page not validated
+r1,E,d4,d4-E-3,right_low_value,0,,1,"size<=0 (caller code, outside diff)"
+r1,E,d5,d5-E-1,acted_on,1,,0,non-atomic increment
+r1,E,d5,d5-E-2,acted_on,0,,0,dict changed size during iteration
+r1,E,d5,d5-E-3,right_low_value,0,,1,in-memory billing
+r1,E,d5,d5-E-4,acted_on,0,,0,never reset across months
+r1,E,d5,d5-E-5,right_low_value,0,,0,get_rate duplicate fetch (pre-existing)
+r1,E,d6,d6-E-1,wrong,0,already-handled-elsewhere,0,whitespace-only name
+r2,A,d1,r2-d1-A-1,acted_on,1,,0,user None
+r2,A,d1,r2-d1-A-2,acted_on,0,,0,team None
+r2,A,d1,r2-d1-A-3,right_low_value,0,,1,N+1 batch
+r2,A,d1,r2-d1-A-4,right_low_value,0,,0,batch fails on one
+r2,A,d1,r2-d1-A-5,right_low_value,0,,0,team.name None fallback
+r2,A,d1,r2-d1-A-6,right_low_value,0,,0,user.name None
+r2,A,d1,r2-d1-A-7,right_low_value,0,,0,list comprehension
+r2,A,d1,r2-d1-A-8,acted_on,0,,0,tests for missing user/team
+r2,B,d1,r2-d1-B-1,acted_on,1,,0,user None
+r2,B,d1,r2-d1-B-2,acted_on,0,,0,team None
+r2,B,d1,r2-d1-B-3,right_low_value,0,,0,batch fails on one
+r2,B,d1,r2-d1-B-4,right_low_value,0,,1,N+1 batch
+r2,C,d1,r2-d1-C-1,acted_on,1,,0,user None
+r2,C,d1,r2-d1-C-2,acted_on,0,,0,team None
+r2,C,d1,r2-d1-C-3,right_low_value,0,,1,N+1 batch
+r2,C,d1,r2-d1-C-4,right_low_value,0,,0,batch fails on one
+r2,C,d1,r2-d1-C-5,right_low_value,0,,0,uids size limit (security framing)
+r2,C,d1,r2-d1-C-6,right_low_value,0,,0,team.name None fallback
+r2,E,d1,r2-d1-E-1,acted_on,1,,0,user None
+r2,E,d1,r2-d1-E-2,acted_on,0,,0,team None
+r2,E,d1,r2-d1-E-3,right_low_value,0,,1,N+1 batch
+r2,E,d1,r2-d1-E-4,right_low_value,0,,0,batch fails on one
+r2,A,d2,r2-d2-A-1,acted_on,1,,0,except returns True
+r2,A,d2,r2-d2-A-2,acted_on,0,,0,charged without order
+r2,A,d2,r2-d2-A-3,right_low_value,0,,1,pending order before charge / crash between steps
+r2,A,d2,r2-d2-A-4,right_low_value,0,,1,broad except types
+r2,A,d2,r2-d2-A-5,right_low_value,0,,0,log.warning drops traceback
+r2,A,d2,r2-d2-A-6,right_low_value,0,,0,no failure metric
+r2,A,d2,r2-d2-A-7,right_low_value,0,,1,idempotency key
+r2,A,d2,r2-d2-A-8,right_low_value,0,,0,intentional except is silent
+r2,B,d2,r2-d2-B-1,acted_on,1,,0,"except returns True, 502 unreachable"
+r2,B,d2,r2-d2-B-2,acted_on,0,,0,broad except lacks intentional marker (team rule 3)
+r2,B,d2,r2-d2-B-3,acted_on,0,,0,charged without order
+r2,B,d2,r2-d2-B-4,right_low_value,0,,1,idempotency key
+r2,B,d2,r2-d2-B-5,right_low_value,0,,0,log.warning drops traceback
+r2,C,d2,r2-d2-C-1,acted_on,1,,0,except returns True
+r2,C,d2,r2-d2-C-2,acted_on,0,,0,charged without order
+r2,C,d2,r2-d2-C-3,right_low_value,0,,1,idempotency key
+r2,C,d2,r2-d2-C-4,right_low_value,0,,1,broad except / ambiguous charge
+r2,C,d2,r2-d2-C-5,right_low_value,0,,0,log.warning drops traceback
+r2,C,d2,r2-d2-C-6,right_low_value,0,,0,exception text may leak payment data (security framing)
+r2,E,d2,r2-d2-E-1,acted_on,1,,0,except returns True
+r2,E,d2,r2-d2-E-2,acted_on,0,,0,charged without order
+r2,E,d2,r2-d2-E-3,right_low_value,0,,1,idempotency key
+r2,E,d2,r2-d2-E-4,right_low_value,0,,1,broad except / ambiguous charge
+r2,A,d3,r2-d3-A-1,acted_on,1,,0,conn leak on early return
+r2,A,d3,r2-d3-A-2,acted_on,0,,0,conn leak on exception
+r2,A,d3,r2-d3-A-3,right_low_value,0,,0,with-connect does not close (advice)
+r2,A,d3,r2-d3-A-4,right_low_value,0,,0,close right after fetchall
+r2,A,d3,r2-d3-A-5,right_low_value,0,,1,stale file when empty
+r2,A,d3,r2-d3-A-6,right_low_value,0,,0,fetchall memory
+r2,A,d3,r2-d3-A-7,right_low_value,0,,0,no CSV header (pre-existing)
+r2,A,d3,r2-d3-A-8,right_low_value,0,,0,write_rows newline (pre-existing)
+r2,A,d3,r2-d3-A-9,right_low_value,0,,0,month column assumption
+r2,A,d3,r2-d3-A-10,wrong,0,already-handled-elsewhere,0,month unvalidated
+r2,A,d3,r2-d3-A-11,acted_on,0,,0,tests for empty-month path
+r2,A,d3,r2-d3-A-12,right_low_value,0,,0,docstring
+r2,B,d3,r2-d3-B-1,acted_on,1,,0,conn leak on early return
+r2,B,d3,r2-d3-B-2,acted_on,0,,0,conn leak on exception
+r2,B,d3,r2-d3-B-3,right_low_value,0,,1,stale file when empty
+r2,B,d3,r2-d3-B-4,right_low_value,0,,0,close right after fetchall
+r2,C,d3,r2-d3-C-1,acted_on,1,,0,conn leak on early return
+r2,C,d3,r2-d3-C-2,acted_on,0,,0,conn leak on exception
+r2,C,d3,r2-d3-C-3,right_low_value,0,,0,fetchall memory
+r2,C,d3,r2-d3-C-4,right_low_value,0,,0,close right after fetchall
+r2,C,d3,r2-d3-C-5,right_low_value,0,,1,stale file when empty
+r2,C,d3,r2-d3-C-6,right_low_value,0,,1,atomic temp-file write
+r2,E,d3,r2-d3-E-1,acted_on,1,,0,conn leak on early return
+r2,E,d3,r2-d3-E-2,acted_on,0,,0,conn leak on exception
+r2,E,d3,r2-d3-E-3,right_low_value,0,,0,fetchall memory
+r2,A,d4,r2-d4-A-1,acted_on,1,,0,off-by-one end
+r2,A,d4,r2-d4-A-2,wrong,0,already-handled-elsewhere,0,page not validated
+r2,A,d4,r2-d4-A-3,right_low_value,0,,1,"size<=0 (caller code, outside diff)"
+r2,A,d4,r2-d4-A-4,wrong,0,already-handled-elsewhere,0,page beyond total
+r2,A,d4,r2-d4-A-5,right_low_value,0,,0,empty result 0 pages vs page 1
+r2,A,d4,r2-d4-A-6,right_low_value,0,,0,needs materialized list
+r2,A,d4,r2-d4-A-7,acted_on,0,,0,boundary tests
+r2,B,d4,r2-d4-B-1,acted_on,1,,0,off-by-one end
+r2,C,d4,r2-d4-C-1,acted_on,1,,0,off-by-one end
+r2,C,d4,r2-d4-C-2,wrong,0,already-handled-elsewhere,0,page not validated
+r2,C,d4,r2-d4-C-3,right_low_value,0,,1,"size<=0 (caller code, outside diff)"
+r2,C,d4,r2-d4-C-4,wrong,0,already-handled-elsewhere,0,size upper bound (caller caps at 100)
+r2,C,d4,r2-d4-C-5,wrong,0,already-handled-elsewhere,0,page/size not type-checked (caller int())
+r2,C,d4,r2-d4-C-6,right_low_value,0,,0,needs materialized list
+r2,E,d4,r2-d4-E-1,acted_on,1,,0,off-by-one end
+r2,E,d4,r2-d4-E-2,wrong,0,already-handled-elsewhere,0,page not validated
+r2,E,d4,r2-d4-E-3,right_low_value,0,,1,"size<=0 (caller code, outside diff)"
+r2,A,d5,r2-d5-A-1,acted_on,1,,0,non-atomic increment
+r2,A,d5,r2-d5-A-2,right_low_value,0,,1,in-memory billing
+r2,A,d5,r2-d5-A-3,right_low_value,0,,1,per-process counts (in-memory billing)
+r2,A,d5,r2-d5-A-4,acted_on,0,,0,never reset across months
+r2,A,d5,r2-d5-A-5,right_low_value,0,,0,no partner id
+r2,A,d5,r2-d5-A-6,right_low_value,0,,0,hits counts misses (naming)
+r2,A,d5,r2-d5-A-7,wrong,0,already-handled-elsewhere,0,cur unvalidated
+r2,A,d5,r2-d5-A-8,right_low_value,0,,0,get_rate stays public / unbilled path
+r2,A,d5,r2-d5-A-9,right_low_value,0,,0,billing in cache module (design)
+r2,A,d5,r2-d5-A-10,acted_on,0,,0,dict changed size during iteration
+r2,A,d5,r2-d5-A-11,acted_on,0,,0,tests for counting
+r2,A,d5,r2-d5-A-12,right_low_value,0,,0,use Counter
+r2,B,d5,r2-d5-B-1,acted_on,1,,0,non-atomic increment
+r2,B,d5,r2-d5-B-2,acted_on,0,,0,dict changed size during iteration
+r2,B,d5,r2-d5-B-3,acted_on,0,,0,never reset across months
+r2,B,d5,r2-d5-B-4,right_low_value,0,,1,in-memory billing
+r2,B,d5,r2-d5-B-5,right_low_value,0,,0,hits counts misses (naming)
+r2,B,d5,r2-d5-B-6,right_low_value,0,,0,get_rate duplicate fetch (pre-existing)
+r2,C,d5,r2-d5-C-1,acted_on,1,,0,non-atomic increment
+r2,C,d5,r2-d5-C-2,acted_on,0,,0,dict changed size during iteration
+r2,C,d5,r2-d5-C-3,right_low_value,0,,0,get_rate duplicate fetch (pre-existing)
+r2,C,d5,r2-d5-C-4,right_low_value,0,,1,in-memory billing
+r2,C,d5,r2-d5-C-5,acted_on,0,,0,never reset across months
+r2,C,d5,r2-d5-C-6,wrong,0,already-handled-elsewhere,0,cur unvalidated
+r2,C,d5,r2-d5-C-7,right_low_value,0,,1,no TTL on rates (data integrity framing)
+r2,E,d5,r2-d5-E-1,acted_on,1,,0,non-atomic increment
+r2,E,d5,r2-d5-E-2,acted_on,0,,0,dict changed size during iteration
+r2,E,d5,r2-d5-E-3,right_low_value,0,,1,in-memory billing
+r2,E,d5,r2-d5-E-4,acted_on,0,,0,never reset across months
+r2,A,d6,r2-d6-A-1,wrong,0,already-handled-elsewhere,0,whitespace-only name
+r2,A,d6,r2-d6-A-2,right_low_value,0,,0,ellipsis when first fits
+r2,A,d6,r2-d6-A-3,right_low_value,0,,0,n not validated
+r2,A,d6,r2-d6-A-4,right_low_value,0,,1,inconsistent normalization (leading/trailing part handled by route)
+r2,A,d6,r2-d6-A-5,right_low_value,0,,0,grapheme clusters
+r2,A,d6,r2-d6-A-6,right_low_value,0,,0,display width
+r2,A,d6,r2-d6-A-7,right_low_value,0,,0,western name order
+r2,A,d6,r2-d6-A-8,right_low_value,0,,0,byte length / non-ASCII ellipsis
+r2,A,d6,r2-d6-A-9,right_low_value,0,,0,docstring
+r2,A,d6,r2-d6-A-10,right_low_value,0,,0,tests
+r2,B,d6,r2-d6-B-1,right_low_value,0,,0,ellipsis when first fits
+r2,B,d6,r2-d6-B-2,right_low_value,0,,0,collisions (last initial dropped)
+r2,B,d6,r2-d6-B-3,right_low_value,0,,0,n<=0
+r2,B,d6,r2-d6-B-4,right_low_value,0,,0,grapheme clusters / display width
+r2,B,d6,r2-d6-B-5,right_low_value,0,,0,tests
+r2,C,d6,r2-d6-C-1,wrong,0,already-handled-elsewhere,0,whitespace-only name
+r2,C,d6,r2-d6-C-2,right_low_value,0,,0,n not validated
+r2,C,d6,r2-d6-C-3,wrong,0,already-handled-elsewhere,0,name None
+r2,C,d6,r2-d6-C-4,right_low_value,0,,0,grapheme clusters
+r2,E,d6,r2-d6-E-1,wrong,0,already-handled-elsewhere,0,whitespace-only name
+r3,A,d1,r3-d1-A-1,acted_on,1,,0,user None
+r3,A,d1,r3-d1-A-2,acted_on,0,,0,team None
+r3,A,d1,r3-d1-A-3,right_low_value,0,,1,N+1 batch
+r3,A,d1,r3-d1-A-4,right_low_value,0,,0,batch fails on one
+r3,A,d1,r3-d1-A-5,right_low_value,0,,0,list comprehension
+r3,A,d1,r3-d1-A-6,right_low_value,0,,0,team.name None fallback
+r3,A,d1,r3-d1-A-7,right_low_value,0,,0,separator in service layer
+r3,A,d1,r3-d1-A-8,acted_on,0,,0,tests for missing user/team
+r3,B,d1,r3-d1-B-1,acted_on,1,,0,user None
+r3,B,d1,r3-d1-B-2,acted_on,0,,0,team None
+r3,B,d1,r3-d1-B-3,right_low_value,0,,0,batch fails on one
+r3,B,d1,r3-d1-B-4,right_low_value,0,,1,N+1 batch
+r3,C,d1,r3-d1-C-1,acted_on,1,,0,user None
+r3,C,d1,r3-d1-C-2,acted_on,0,,0,team None
+r3,C,d1,r3-d1-C-3,right_low_value,0,,1,N+1 batch
+r3,C,d1,r3-d1-C-4,right_low_value,0,,0,dedupe teams
+r3,C,d1,r3-d1-C-5,right_low_value,0,,0,batch fails on one
+r3,C,d1,r3-d1-C-6,right_low_value,0,,0,uids size limit (security framing)
+r3,C,d1,r3-d1-C-7,right_low_value,0,,0,non-transactional reads (concurrency framing)
+r3,E,d1,r3-d1-E-1,acted_on,1,,0,user None
+r3,E,d1,r3-d1-E-2,acted_on,0,,0,team None
+r3,E,d1,r3-d1-E-3,right_low_value,0,,0,batch fails on one
+r3,E,d1,r3-d1-E-4,right_low_value,0,,1,N+1 batch
+r3,A,d2,r3-d2-A-1,acted_on,1,,0,except returns True
+r3,A,d2,r3-d2-A-2,acted_on,0,,0,charged without order
+r3,A,d2,r3-d2-A-3,right_low_value,0,,1,idempotency key
+r3,A,d2,r3-d2-A-4,right_low_value,0,,1,broad except types
+r3,A,d2,r3-d2-A-5,right_low_value,0,,0,log.warning drops traceback
+r3,A,d2,r3-d2-A-6,right_low_value,0,,0,intentional except is silent
+r3,A,d2,r3-d2-A-7,right_low_value,0,,0,no failure metric
+r3,A,d2,r3-d2-A-8,acted_on,0,,0,tests for failure paths
+r3,B,d2,r3-d2-B-1,acted_on,1,,0,"except returns True, 502 unreachable"
+r3,B,d2,r3-d2-B-2,acted_on,0,,0,broad except lacks intentional marker (team rule 3)
+r3,B,d2,r3-d2-B-3,acted_on,0,,0,charged without order
+r3,B,d2,r3-d2-B-4,right_low_value,0,,1,idempotency key
+r3,B,d2,r3-d2-B-5,right_low_value,0,,0,log.warning drops traceback
+r3,B,d2,r3-d2-B-6,acted_on,0,,0,restates planted bug: 502 branch dead
+r3,C,d2,r3-d2-C-1,acted_on,1,,0,except returns True
+r3,C,d2,r3-d2-C-2,acted_on,0,,0,charged without order
+r3,C,d2,r3-d2-C-3,right_low_value,0,,1,idempotency key
+r3,C,d2,r3-d2-C-4,right_low_value,0,,1,broad except types
+r3,C,d2,r3-d2-C-5,right_low_value,0,,0,log.warning drops traceback
+r3,C,d2,r3-d2-C-6,right_low_value,0,,1,charge timeout / ambiguous charge
+r3,E,d2,r3-d2-E-1,acted_on,1,,0,except returns True
+r3,E,d2,r3-d2-E-2,acted_on,0,,0,charged without order
+r3,E,d2,r3-d2-E-3,right_low_value,0,,1,idempotency key
+r3,E,d2,r3-d2-E-4,right_low_value,0,,0,log.warning drops traceback
+r3,A,d3,r3-d3-A-1,acted_on,1,,0,conn leak on early return and on exception
+r3,A,d3,r3-d3-A-2,right_low_value,0,,0,close right after fetchall
+r3,A,d3,r3-d3-A-3,right_low_value,0,,1,stale file when empty
+r3,A,d3,r3-d3-A-4,right_low_value,0,,0,no CSV header (pre-existing)
+r3,A,d3,r3-d3-A-5,right_low_value,0,,0,fetchall memory
+r3,A,d3,r3-d3-A-6,right_low_value,0,,1,month column assumption (+ month unvalidated aside)
+r3,A,d3,r3-d3-A-7,right_low_value,0,,0,no ORDER BY
+r3,A,d3,r3-d3-A-8,right_low_value,0,,0,write_rows newline (pre-existing)
+r3,A,d3,r3-d3-A-9,acted_on,0,,0,docstring + tests for empty-month path
+r3,B,d3,r3-d3-B-1,acted_on,1,,0,conn leak on early return
+r3,B,d3,r3-d3-B-2,acted_on,0,,0,conn leak on exception
+r3,B,d3,r3-d3-B-3,right_low_value,0,,0,close right after fetchall
+r3,B,d3,r3-d3-B-4,right_low_value,0,,1,stale file when empty
+r3,B,d3,r3-d3-B-5,right_low_value,0,,1,atomic temp-file write
+r3,B,d3,r3-d3-B-6,right_low_value,0,,0,no ORDER BY
+r3,B,d3,r3-d3-B-7,right_low_value,0,,0,fetchall memory
+r3,C,d3,r3-d3-C-1,acted_on,1,,0,conn leak on early return
+r3,C,d3,r3-d3-C-2,acted_on,0,,0,conn leak on exception
+r3,C,d3,r3-d3-C-3,right_low_value,0,,0,fetchall memory
+r3,C,d3,r3-d3-C-4,right_low_value,0,,1,stale file when empty
+r3,C,d3,r3-d3-C-5,right_low_value,0,,1,atomic temp-file write
+r3,C,d3,r3-d3-C-6,wrong,0,already-handled-elsewhere,0,out_path traversal (caller builds from fixed dir; security framing)
+r3,E,d3,r3-d3-E-1,acted_on,1,,0,conn leak on early return
+r3,E,d3,r3-d3-E-2,acted_on,0,,0,conn leak on exception
+r3,E,d3,r3-d3-E-3,right_low_value,0,,0,fetchall memory
+r3,A,d4,r3-d4-A-1,acted_on,1,,0,off-by-one end
+r3,A,d4,r3-d4-A-2,wrong,0,already-handled-elsewhere,0,page not validated
+r3,A,d4,r3-d4-A-3,right_low_value,0,,1,"size<=0 (caller code, outside diff)"
+r3,A,d4,r3-d4-A-4,wrong,0,already-handled-elsewhere,0,page beyond total
+r3,A,d4,r3-d4-A-5,right_low_value,0,,0,empty result 0 pages vs page 1
+r3,A,d4,r3-d4-A-6,right_low_value,0,,0,needs materialized list
+r3,A,d4,r3-d4-A-7,acted_on,0,,0,boundary tests
+r3,B,d4,r3-d4-B-1,acted_on,1,,0,off-by-one end
+r3,C,d4,r3-d4-C-1,acted_on,1,,0,off-by-one end (framed as data integrity)
+r3,C,d4,r3-d4-C-2,wrong,0,already-handled-elsewhere,0,page not validated
+r3,C,d4,r3-d4-C-3,right_low_value,0,,1,"size<=0 (caller code, outside diff)"
+r3,C,d4,r3-d4-C-4,wrong,0,already-handled-elsewhere,0,size upper bound (caller caps at 100)
+r3,C,d4,r3-d4-C-5,wrong,0,already-handled-elsewhere,0,page beyond total
+r3,C,d4,r3-d4-C-6,right_low_value,0,,0,needs materialized list
+r3,E,d4,r3-d4-E-1,acted_on,1,,0,off-by-one end
+r3,E,d4,r3-d4-E-2,wrong,0,already-handled-elsewhere,0,page not validated
+r3,E,d4,r3-d4-E-3,right_low_value,0,,1,"size<=0 (caller code, outside diff)"
+r3,A,d5,r3-d5-A-1,acted_on,1,,0,non-atomic increment
+r3,A,d5,r3-d5-A-2,acted_on,0,,0,dict changed size during iteration
+r3,A,d5,r3-d5-A-3,right_low_value,0,,1,in-memory billing
+r3,A,d5,r3-d5-A-4,acted_on,0,,0,never reset across months
+r3,A,d5,r3-d5-A-5,right_low_value,0,,0,no partner id
+r3,A,d5,r3-d5-A-6,right_low_value,0,,0,hits counts misses (naming)
+r3,A,d5,r3-d5-A-7,right_low_value,0,,0,get_rate stays public / unbilled path
+r3,A,d5,r3-d5-A-8,right_low_value,0,,0,dict comprehension -> dict()
+r3,A,d5,r3-d5-A-9,acted_on,0,,0,tests for counting
+r3,B,d5,r3-d5-B-1,acted_on,1,,0,non-atomic increment
+r3,B,d5,r3-d5-B-2,acted_on,0,,0,dict changed size during iteration
+r3,B,d5,r3-d5-B-3,acted_on,0,,0,never reset across months
+r3,B,d5,r3-d5-B-4,right_low_value,0,,1,in-memory billing
+r3,B,d5,r3-d5-B-5,right_low_value,0,,0,get_rate duplicate fetch (pre-existing)
+r3,B,d5,r3-d5-B-6,right_low_value,0,,0,hits counts misses (naming)
+r3,C,d5,r3-d5-C-1,acted_on,1,,0,non-atomic increment
+r3,C,d5,r3-d5-C-2,right_low_value,0,,0,get_rate duplicate fetch (pre-existing)
+r3,C,d5,r3-d5-C-3,right_low_value,0,,1,in-memory billing
+r3,C,d5,r3-d5-C-4,acted_on,0,,0,never reset across months
+r3,C,d5,r3-d5-C-5,acted_on,0,,0,dict changed size during iteration
+r3,C,d5,r3-d5-C-6,right_low_value,0,,0,fetch_rate errors not handled
+r3,C,d5,r3-d5-C-7,right_low_value,0,,1,no TTL on rates (data integrity framing)
+r3,C,d5,r3-d5-C-8,wrong,0,already-handled-elsewhere,0,cur unvalidated
+r3,C,d5,r3-d5-C-9,right_low_value,0,,0,no partner id
+r3,E,d5,r3-d5-E-1,acted_on,1,,0,non-atomic increment
+r3,E,d5,r3-d5-E-2,acted_on,0,,0,dict changed size during iteration
+r3,E,d5,r3-d5-E-3,acted_on,0,,0,never reset across months
+r3,E,d5,r3-d5-E-4,right_low_value,0,,1,in-memory billing
+r3,A,d6,r3-d6-A-1,wrong,0,already-handled-elsewhere,0,whitespace-only name
+r3,A,d6,r3-d6-A-2,right_low_value,0,,0,n not validated
+r3,A,d6,r3-d6-A-3,wrong,0,already-handled-elsewhere,1,leading/trailing whitespace kept (route strips)
+r3,A,d6,r3-d6-A-4,right_low_value,0,,0,ellipsis when first fits
+r3,A,d6,r3-d6-A-5,right_low_value,0,,0,collisions (last initial dropped)
+r3,A,d6,r3-d6-A-6,right_low_value,0,,0,last initial not uppercased
+r3,A,d6,r3-d6-A-7,right_low_value,0,,0,western name order
+r3,A,d6,r3-d6-A-8,right_low_value,0,,0,grapheme clusters / display width
+r3,A,d6,r3-d6-A-9,right_low_value,0,,0,byte length / non-ASCII ellipsis
+r3,A,d6,r3-d6-A-10,right_low_value,0,,0,magic number n=12
+r3,A,d6,r3-d6-A-11,right_low_value,0,,0,docstring + tests
+r3,B,d6,r3-d6-B-1,right_low_value,0,,0,ellipsis when first fits
+r3,B,d6,r3-d6-B-2,right_low_value,0,,0,n<=0
+r3,B,d6,r3-d6-B-3,right_low_value,0,,0,inconsistent normalization (internal spaces)
+r3,B,d6,r3-d6-B-4,right_low_value,0,,0,grapheme clusters / display width
+r3,B,d6,r3-d6-B-5,right_low_value,0,,0,tests
+r3,C,d6,r3-d6-C-1,wrong,0,already-handled-elsewhere,0,whitespace-only name
+r3,C,d6,r3-d6-C-2,right_low_value,0,,0,n not validated
+r3,C,d6,r3-d6-C-3,right_low_value,0,,0,grapheme clusters
+r3,E,d6,r3-d6-E-1,wrong,0,already-handled-elsewhere,0,whitespace-only name

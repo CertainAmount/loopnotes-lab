@@ -1,0 +1,6 @@
+- `get_team_badge` doesn't check whether `repo.find_by_id(uid)` returned `None`, so `user.team_id` raises `AttributeError` for unknown uids. The existing `get_display_name` handles that case by returning "Unknown user".
+- `repo.find_team(user.team_id)` isn't checked for `None`. A user with no team (`team_id` is `None`) or a dangling/deleted team id will crash on `team.short_label`.
+- `get_team_badges` makes 2 sequential repo queries per uid (an N+1 pattern). It should batch-fetch users and teams, for example with `find_by_ids` and a single team lookup keyed by the unique `team_id`s. This also avoids re-fetching the same team for every member.
+- In `get_team_badges`, one bad uid raises an exception that aborts the whole batch and discards every badge already built. Per-item failures should be caught or degraded to a fallback badge.
+- `get_team_badges` has no limit on the size of `uids`. A caller-controlled list can trigger an unbounded number of DB round-trips, which is a resource-exhaustion/DoS risk.
+- `label = team.short_label or team.name` still yields `None` if both are empty or null, which renders as "Name · None". There is no fallback value.

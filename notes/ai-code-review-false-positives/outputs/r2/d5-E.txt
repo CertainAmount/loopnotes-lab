@@ -1,0 +1,4 @@
+- `get_rate_counted` does an unsynchronized read-modify-write on `_hits` (`get` then assign). Concurrent calls for the same currency can lose increments, which silently under-bills partners. Guard it with a lock.
+- `billing_report` iterates `_hits.items()` without a lock. If another thread adds a new currency key during iteration, it raises `RuntimeError: dictionary changed size during iteration` and the invoice job fails.
+- `_hits` lives only in process memory, so billing counts are lost on every restart or crash. They are also not aggregated across multiple worker processes or hosts, so invoices will be incomplete. Billable usage needs durable, shared storage.
+- `billing_report` never resets or windows `_hits`, so counts accumulate across months. Each monthly invoice re-bills all prior hits, overcharging partners.

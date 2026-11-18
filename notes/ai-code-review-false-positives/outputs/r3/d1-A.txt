@@ -1,0 +1,8 @@
+- `get_team_badge` doesn't handle `repo.find_by_id(uid)` returning `None`, so an unknown uid raises `AttributeError` on `user.team_id`; the existing `get_display_name` guards this case and the new function should be consistent (e.g. fall back to "Unknown user").
+- `repo.find_team(user.team_id)` isn't checked for `None`, so users without a team (null `team_id`) or with a stale/deleted team will crash on `team.short_label`.
+- `get_team_badges` makes two repo queries per uid (N+1 pattern); for large lists, batch-fetch users and teams (e.g. `find_by_ids` / `find_teams`) and cache teams, since many users likely share a team.
+- One bad uid in `get_team_badges` aborts the whole batch with an exception; decide whether to skip, substitute a placeholder, or fail, and make it explicit.
+- `get_team_badges` can be a list comprehension: `return [get_team_badge(u) for u in uids]`.
+- `team.short_label or team.name` also falls back on empty-string/whitespace labels, which is probably intended but worth confirming; if `team.name` can also be empty the badge renders as `"Name · "`.
+- The `" · "` separator and badge format are hard-coded in the service layer; consider whether this presentation string belongs in the view/template layer or should be localized.
+- No tests are included for the new functions; add cases for missing user, missing team, missing `short_label`, and an empty `uids` list.

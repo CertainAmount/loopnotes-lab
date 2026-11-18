@@ -1,0 +1,99 @@
+{
+ "duration_api_ms": 14054,
+ "stop_reason": "end_turn",
+ "total_cost_usd": 0.0320516,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 842,
+  "cache_read_input_tokens": 2438,
+  "output_tokens": 1241,
+  "output_tokens_details": {
+   "thinking_tokens": 549
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 842,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1241,
+    "cache_read_input_tokens": 2438,
+    "cache_creation_input_tokens": 842,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 842
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 1241,
+   "cacheReadInputTokens": 2438,
+   "cacheCreationInputTokens": 842,
+   "webSearchRequests": 0,
+   "costUSD": 0.0320516,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 549,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 842,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "- `short_name` raises `IndexError` on `parts[0]` when `name` is whitespace-only and longer than `n`, because `split()` returns an empty list and the `len(parts) == 1` check doesn't catch it.\n- The final fallback always appends \"…\" to `first[: n - 1]`, even when `first` already fits within `n`. For example, `short_name(\"Bartholomew Montgomery-Smithson\", 12)` returns \"Bartholomew…\" when \"Bartholomew\" (11 chars) could be returned untruncated.\n- `n <= 0` gives a wrong result: `name[: n - 1]` becomes a negative slice (e.g. `name[:-1]` for `n=0`), so it returns almost the whole string instead of something of length ≤ n. `n` should be validated (e.g. require `n >= 2`).\n- Whitespace handling is inconsistent: names with `len(name) <= n` are returned as-is, including leading, trailing or doubled spaces, while longer names are normalized through `split()`. Strip or normalize up front.\n- Slicing by code points can split grapheme clusters (combining accents, emoji ZWJ sequences), producing broken characters before the \"…\".\n- `len()` counts code points, not display width, so CJK or other wide characters will overflow an `n`-column budget. If `n` is meant as a display constraint, use a width-aware measure (e.g. `wcwidth`).\n- Using `last[0]` as the initial misses multi-part surnames (\"Ludwig van Beethoven\" → \"Ludwig v.\") and names with lowercase particles. Consider documenting this or handling particles.\n- The \"…\" output is a non-ASCII character. Callers that measure bytes or need ASCII output (DB column limits, legacy systems) may break. Consider making the ellipsis configurable.\n- There's no docstring explaining what `n` means (max code points including the ellipsis) or the fallback order.\n- No tests were added. Edge cases to cover: empty, whitespace-only, single long word, exact-length boundary, `n` smaller than 2, and Unicode input.",
+ "ttft_ms": 7394,
+ "type": "result",
+ "duration_ms": 14237,
+ "ttft_stream_ms": 876,
+ "time_to_request_ms": 176,
+ "first_content_frame_ms": 876,
+ "queued_turn_count": 0,
+ "result_index": 0
+}

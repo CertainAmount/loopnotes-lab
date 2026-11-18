@@ -1,0 +1,6 @@
+- `get_page` computes `end = start + size - 1`, but Python slice ends are exclusive, so every page silently drops its last item and returns only `size - 1` results; use `end = start + size`.
+- `page` is not validated: `page = 0` gives `start = -size` and a negative `end`, and slicing with negative indices returns items from the end of the list instead of an error or empty page; reject `page < 1`.
+- `size` is not validated: `size = 0` raises an unhandled `ZeroDivisionError` in `total_pages`, and a negative `size` gives meaningless slices and page counts; reject `size < 1`.
+- `size` has no upper bound, so a caller passing a huge value (e.g. from a query string) can get back the whole collection in one response; clamp it to a maximum page size.
+- `page` and `size` are not type-checked, so non-integer input (strings or floats from request parameters) raises `TypeError` in the slice or division instead of a clean validation error.
+- `page_meta` requires the full result set in memory (`len(items)` plus a slice copy) on every request, so paging large result sets costs O(n) memory and time; push the count and the offset/limit down to the data source.

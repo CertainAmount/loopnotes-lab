@@ -1,0 +1,1 @@
+- `search/paging.py:10`: Off-by-one in `get_page`. Python slice ends are already exclusive, so `end = start + size - 1` makes `items[start:end]` return only `size - 1` items. A full page of 20 returns 19 items, and the last item of every page is never returned on any page. Use `end = start + size`.

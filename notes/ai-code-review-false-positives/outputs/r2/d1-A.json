@@ -1,0 +1,99 @@
+{
+ "duration_api_ms": 6149,
+ "stop_reason": "end_turn",
+ "total_cost_usd": 0.0313738,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 2662,
+  "cache_read_input_tokens": 649,
+  "output_tokens": 497,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 2662,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 497,
+    "cache_read_input_tokens": 649,
+    "cache_creation_input_tokens": 2662,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 2662
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 497,
+   "cacheReadInputTokens": 649,
+   "cacheCreationInputTokens": 2662,
+   "webSearchRequests": 0,
+   "costUSD": 0.0313738,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 0,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 2662,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "- `get_team_badge` doesn't handle `repo.find_by_id(uid)` returning `None`, unlike `get_display_name` just above it. An unknown uid will raise `AttributeError` on `user.team_id`.\n- `repo.find_team(user.team_id)` isn't checked for `None`. A user with no team (`team_id` is `None`) or a deleted team will crash on `team.short_label`.\n- `get_team_badges` makes an N+1 query: each uid causes two repo lookups (user and team), so a list of N uids costs 2N round trips. It should batch-fetch users and teams, or at least cache teams, since many users likely share one.\n- `get_team_badges` lets a single bad uid raise and abort the whole batch. It should decide whether to skip, use a placeholder like `\"Unknown user\"`, or fail, and handle that consistently.\n- `team.short_label or team.name` falls back silently when `short_label` is an empty string. That's probably intended, but if `team.name` can also be empty or `None`, the badge renders as `\"Name · \"` or `\"Name · None\"`.\n- `user.name` isn't guarded against `None` or empty values, so the badge could render as `\"None · Team\"`. `get_display_name` already exists for this and should be reused.\n- The loop in `get_team_badges` can be a list comprehension: `[get_team_badge(u) for u in uids]`.\n- No tests cover the new functions, especially the missing-user, missing-team, and empty-`short_label` cases.",
+ "ttft_ms": 6241,
+ "type": "result",
+ "duration_ms": 6277,
+ "ttft_stream_ms": 1502,
+ "time_to_request_ms": 129,
+ "first_content_frame_ms": 1503,
+ "queued_turn_count": 0,
+ "result_index": 0
+}

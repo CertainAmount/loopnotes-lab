@@ -1,0 +1,9 @@
+- `_hits[cur] = n + 1` is a non-atomic read-modify-write, so concurrent callers can lose increments and under-bill partners; guard it with a lock or use a thread-safe counter.
+- `billing_report()` iterates `_hits` while other threads may insert new currencies, which can raise `RuntimeError: dictionary changed size during iteration`; take the snapshot under the same lock.
+- `_hits` lives in process memory, so billing data is lost on restart or deploy and is split across workers or processes; the invoice job will only see one process's partial counts. Billable usage needs durable, shared storage.
+- `_hits` is never reset, so each monthly report includes all prior months and partners get billed again for old usage; the report needs a period boundary, such as a reset-on-read or timestamped records.
+- The counter is keyed only by currency, with no partner identifier, so the invoice job cannot tell which partner made which hit even though the comment says hits are billed per partner.
+- "Hits" includes cache misses, because the first call that triggers `fetch_rate` is counted too; either rename the counter or count only true cache hits, depending on what is actually billable.
+- Only callers that use `get_rate_counted` are counted, while existing `get_rate` callers go unbilled; make sure the billable path can't be bypassed by accident.
+- `{cur: n for cur, n in _hits.items()}` is just `dict(_hits)`; simplify it, ideally as a snapshot taken under the lock.
+- There are no tests covering the counting and report logic, even though it directly drives invoicing.

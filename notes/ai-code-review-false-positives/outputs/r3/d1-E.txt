@@ -1,0 +1,4 @@
+- `get_team_badge`: `repo.find_by_id(uid)` can return `None` (as `get_display_name` already handles), but the result is used unchecked, so `user.team_id` raises `AttributeError` for unknown uids.
+- `get_team_badge`: `repo.find_team(user.team_id)` is not checked for `None` (e.g. a user with no team or a deleted team), so `team.short_label` raises `AttributeError`.
+- `get_team_badges`: one missing user or team raises from `get_team_badge` and aborts the whole batch, so no badges come back for any of the other uids.
+- `get_team_badges`: it makes two repository queries per uid (an N+1 pattern). Large lists cause 2N round-trips, and the same team is fetched again for every member. Batch-load the users and the distinct teams instead.

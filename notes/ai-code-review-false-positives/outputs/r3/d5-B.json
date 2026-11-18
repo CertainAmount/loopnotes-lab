@@ -1,0 +1,99 @@
+{
+ "duration_api_ms": 10779,
+ "stop_reason": "end_turn",
+ "total_cost_usd": 0.0194018,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 3669,
+  "output_tokens": 933,
+  "output_tokens_details": {
+   "thinking_tokens": 306
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 933,
+    "cache_read_input_tokens": 3669,
+    "cache_creation_input_tokens": 0,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 0
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 933,
+   "cacheReadInputTokens": 3669,
+   "cacheCreationInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.0194018,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 306,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 0,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "- `get_rate_counted`: the `_hits.get(cur, 0)` read and the `_hits[cur] = n + 1` write are not atomic. `quote()` calls this from a 16-worker `ThreadPoolExecutor`, so concurrent requests for the same currency lose increments and partners are under-billed. Guard the update with a `threading.Lock`, or use a lock-protected `collections.Counter`.\n- `billing_report`: it iterates `_hits` without the lock while worker threads may be inserting new keys. This can raise `RuntimeError: dictionary changed size during iteration`, and it can return a snapshot that mixes counts from different moments. Take the same lock and copy the dict under it.\n- `billing_report`: counts are never reset. Each monthly `close_month()` returns cumulative totals since process start, so partners are re-billed for every previous month's hits. Snapshot and clear under the lock, or key counts by billing period.\n- `_hits` is held only in process memory. A restart, deploy or crash before the month closes silently drops billable usage. If the service runs as several processes or hosts, each one reports only its own share. Billing data should go to durable shared storage such as a DB or Redis `INCR`.\n- `get_rate` (existing, but now on a concurrent billing path): the `if cur not in _rates` check followed by the fetch-and-assign is a check-then-act race. Several threads can call `fetch_rate` for the same currency at the same time, which causes redundant upstream calls. Use a lock or a per-key once-guard if `fetch_rate` is costly or rate-limited.\n- `billing_report` comment / naming: the comment says \"each hit is billed\", but `_hits` counts every call, including cache misses that triggered `fetch_rate`. Confirm that billing should be per request and not per cache hit, and rename to `_calls` or `_requests` if per request is what's intended.",
+ "ttft_ms": 4430,
+ "type": "result",
+ "duration_ms": 11021,
+ "ttft_stream_ms": 963,
+ "time_to_request_ms": 234,
+ "first_content_frame_ms": 964,
+ "queued_turn_count": 0,
+ "result_index": 0
+}

@@ -1,0 +1,99 @@
+{
+ "duration_api_ms": 9176,
+ "stop_reason": "end_turn",
+ "total_cost_usd": 0.026823600000000003,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1246,
+  "cache_read_input_tokens": 2438,
+  "output_tokens": 818,
+  "output_tokens_details": {
+   "thinking_tokens": 316
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1246,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 818,
+    "cache_read_input_tokens": 2438,
+    "cache_creation_input_tokens": 1246,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1246
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 818,
+   "cacheReadInputTokens": 2438,
+   "cacheCreationInputTokens": 1246,
+   "webSearchRequests": 0,
+   "costUSD": 0.026823600000000003,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 316,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 1246,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "- `export_month` (reports/export.py:19-20): when there are no rows, the function returns before `conn.close()`, so the SQLite connection leaks. The job runs every hour for the current month inside one long-lived worker, and early in a month the query will often be empty. Each of those runs leaks another connection and file handle until the worker runs out of descriptors or holds locks on `payments.db`. Close the connection before returning, ideally with `try/finally` or `contextlib.closing(sqlite3.connect(db_path))`.\n- `export_month` (reports/export.py:14-23): if `conn.execute`, `fetchall`, or `write_rows` raises (for example, the database is locked or `/var/exports` is not writable), `conn.close()` never runs and the connection leaks in the long-lived worker. Wrapping the body in `closing(...)` or `try/finally` fixes this and the early-return leak together. Note that `with sqlite3.connect(...)` alone only manages transactions and does not close the connection.\n- `export_month` (reports/export.py:19-20): when there are no rows, nothing is written to `out_path`. Any CSV already at `payments-{month}.csv` stays in place even though the data now has no rows, and consumers can't tell \"no payments\" from \"export never ran\". Consider always writing the (empty) file.\n- `export_month` (reports/export.py:21): the CSV is still being written while the connection is open. Since the rows are already fetched, close the connection right after `fetchall()` so it isn't held during file I/O.",
+ "ttft_ms": 4204,
+ "type": "result",
+ "duration_ms": 9350,
+ "ttft_stream_ms": 819,
+ "time_to_request_ms": 162,
+ "first_content_frame_ms": 820,
+ "queued_turn_count": 0,
+ "result_index": 0
+}

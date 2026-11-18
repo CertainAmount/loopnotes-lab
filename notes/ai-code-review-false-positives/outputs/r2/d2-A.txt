@@ -1,0 +1,8 @@
+- `place_order` returns `True` from the `except` block, so callers can't tell a failed order from a successful one; it should return `False` or re-raise.
+- If `charge` succeeds but `db.insert` fails, the customer is charged with no order recorded. There is no refund/void or idempotency handling, so this needs compensation or a transactional/outbox pattern.
+- Charging happens before the order row exists, so a crash or retry between the two steps can double-charge or orphan payments. Persist a pending order first, then charge, then mark it paid.
+- `except Exception` catches every exception, including programming errors (e.g. `AttributeError` on `order`). Catch the specific payment/DB exceptions instead.
+- `log.warning` with only `%s` of the exception drops the traceback and any order/customer context. Use `log.exception` (or `exc_info=True`) at error level, and include an order identifier.
+- No metric is emitted for failed orders or failed charges. Add a failure counter (e.g. `orders.failed`) so failures are visible.
+- `charge` is called with no idempotency key, so caller retries of `place_order` can charge the customer more than once.
+- `_emit_placed` swallows metrics errors silently with `pass`. The intent is fine, but log at debug/warning so a broken metrics client doesn't go unnoticed.

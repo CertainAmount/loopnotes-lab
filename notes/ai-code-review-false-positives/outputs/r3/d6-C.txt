@@ -1,0 +1,3 @@
+- `short_name` raises `IndexError` when `name` is longer than `n` but contains only whitespace: `name.split()` returns `[]`, which skips the `len(parts) == 1` branch and then fails on `parts[0]`. Add an empty-`parts` guard.
+- If `n <= 0`, `name[: n - 1]` becomes a negative slice (e.g. `name[:-1]`), so the result is almost the whole name plus "…" rather than something within `n` characters. Validate `n >= 1`.
+- Slicing with `[: n - 1]` cuts by code point, not by visible character, so it can split combining-mark sequences, emoji ZWJ sequences, or flag pairs. That leaves a broken partial character in the shortened name.

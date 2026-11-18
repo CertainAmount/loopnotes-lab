@@ -1,0 +1,6 @@
+- `place_order` returns `True` from the `except` branch, so callers are told the order succeeded when the charge or the insert failed; it should return `False` or re-raise.
+- `charge()` runs before `db.insert()` with no compensation, so if the insert fails the customer is charged but no order row exists; refund/void on insert failure, or record a pending order first and finalize it after a successful charge.
+- There is no idempotency key on `charge()`, so a client or caller retry of `place_order` can charge the customer twice for the same order.
+- The bare `except Exception` treats payment declines, network timeouts with an unknown charge outcome, and DB errors the same way; an ambiguous charge result needs reconciliation, not just a log line.
+- `log.warning("... %s", e)` drops the stack trace (use `log.exception`) and logs at too low a severity for a failed payment or lost order.
+- Interpolating the raw exception from the payments client into logs risks leaking payment or customer data, depending on what `charge()` puts in its exception messages.

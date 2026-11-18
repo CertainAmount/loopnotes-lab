@@ -1,0 +1,4 @@
+- `short_name` raises `IndexError` on `parts[0]` when `name` is longer than `n` but contains only whitespace, because `name.split()` returns `[]`, which skips the `len(parts) == 1` branch.
+- `short_name` does not validate `n`. With `n <= 0`, `name[: n - 1]` and `first[: n - 1]` use a negative slice bound, which keeps almost the whole string instead of truncating it. The result can be far longer than `n`.
+- `short_name` raises `TypeError` (from `len(None)`) when `name` is `None`, and it has no guard or clear error. Nullable name fields from account records will crash callers.
+- Slicing by code point (`name[: n - 1]`, `first[: n - 1]`, `last[0]`) can split grapheme clusters such as combining accents or ZWJ emoji sequences. This produces corrupted characters, or an initial that is a lone combining mark.

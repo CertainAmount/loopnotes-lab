@@ -1,0 +1,11 @@
+- `short_name` raises `IndexError` for a whitespace-only name longer than `n` (e.g. `" " * 20`): `split()` returns `[]`, so the `len(parts) == 1` check fails and `parts[0]` blows up.
+- `n` isn't validated: `n=0` gives `name[:-1] + "…"`, a result nearly as long as the input, and negative `n` behaves just as oddly. Reject or clamp `n < 1`.
+- The single-word branch slices the raw `name` rather than `parts[0]`, so leading or trailing whitespace is kept and counts toward the limit. That is inconsistent with the multi-word branch, which normalizes through `split()`.
+- The final fallback can add "…" to a first name that wasn't truncated. With `n=12` and `"Bartholomew Smith"`, `"Bartholomew S."` is 14 chars, so the function returns `"Bartholomew…"` even though the first name is complete. The ellipsis wrongly suggests truncation.
+- The fallback drops the last-name initial entirely instead of shortening the first name to keep it (e.g. `"Bartholo… S."`). That loses the disambiguating info, which may not be intended.
+- `last[0]` isn't uppercased, unlike `initials()`, so `"anna van"` becomes `"anna v."`. This is inconsistent within the same module.
+- Middle names are silently dropped, and multi-word surnames (`"van der Berg"`, `"de la Cruz"`) collapse to the last token (`"B."`), which is wrong for many real names.
+- `len()` and slicing work on code points, not graphemes or display width. Slicing can split combining marks, emoji, and ZWJ sequences, and CJK or full-width names will look about twice as wide as `n` suggests.
+- The returned length includes the "…" character. That's fine for display, but storage or ASCII-only consumers (DB columns, SMS, logs) may expect `n` bytes or ASCII. Document this, or make the ellipsis configurable.
+- The default `n=12` is an unexplained magic number. Name it as a constant or document why 12.
+- There's no docstring and no tests covering the edge cases: empty string, whitespace-only, exactly `n` chars, single long word, long first name, and non-ASCII input.

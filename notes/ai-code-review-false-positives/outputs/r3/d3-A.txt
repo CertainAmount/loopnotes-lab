@@ -1,0 +1,9 @@
+- Connection leaks on the early `return 0` path (and on any exception from `execute`/`fetchall`/`write_rows`), since `conn.close()` is only reached on the success path; use `try/finally` or `contextlib.closing(sqlite3.connect(db_path))` (note `with sqlite3.connect(...)` alone manages transactions, not closing).
+- Connection is held open during the CSV file write; close it (or fetch then close) before calling `write_rows` to release the DB handle sooner.
+- When no rows match, no output file is created (or a stale file from a previous run is left in place), which is inconsistent with callers expecting `out_path` to reflect the export; consider writing an empty/header-only file or documenting the behavior.
+- No header row is written, so the CSV has no column names (`id, amount, created_at`); consider passing `cur.description` names to the writer.
+- `fetchall()` loads the entire month into memory; stream with the cursor (iterate `cur` directly) for large tables, which `write_rows` already supports since it just iterates.
+- Filtering on a `month` column assumes the schema stores a denormalized month; if it doesn't exist, this should derive from `created_at` (e.g. `strftime('%Y-%m', created_at) = ?`), and the expected format of the `month` argument is undocumented/unvalidated.
+- Results have no `ORDER BY`, so row order in the export is nondeterministic; add `ORDER BY created_at, id`.
+- `write_rows` (unchanged context) should open the file with `newline=""` (and an explicit `encoding`) per the `csv` module docs to avoid blank lines on Windows; worth verifying since this new caller depends on it.
+- `export_month` lacks a docstring and tests covering the empty-month and populated-month cases.

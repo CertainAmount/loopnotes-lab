@@ -1,0 +1,8 @@
+- `get_team_badge` doesn't handle `repo.find_by_id(uid)` returning `None`, unlike `get_display_name` just above it. An unknown uid will raise `AttributeError` on `user.team_id`.
+- `repo.find_team(user.team_id)` isn't checked for `None`. A user with no team (`team_id` is `None`) or a deleted team will crash on `team.short_label`.
+- `get_team_badges` makes an N+1 query: each uid causes two repo lookups (user and team), so a list of N uids costs 2N round trips. It should batch-fetch users and teams, or at least cache teams, since many users likely share one.
+- `get_team_badges` lets a single bad uid raise and abort the whole batch. It should decide whether to skip, use a placeholder like `"Unknown user"`, or fail, and handle that consistently.
+- `team.short_label or team.name` falls back silently when `short_label` is an empty string. That's probably intended, but if `team.name` can also be empty or `None`, the badge renders as `"Name · "` or `"Name · None"`.
+- `user.name` isn't guarded against `None` or empty values, so the badge could render as `"None · Team"`. `get_display_name` already exists for this and should be reused.
+- The loop in `get_team_badges` can be a list comprehension: `[get_team_badge(u) for u in uids]`.
+- No tests cover the new functions, especially the missing-user, missing-team, and empty-`short_label` cases.

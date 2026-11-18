@@ -1,0 +1,9 @@
+- `get_rate_counted` does a non-atomic read-modify-write on `_hits` (`get` then assign); under concurrent threads, increments can be lost, causing under-billing of partners.
+- `get_rate` has a check-then-act race: concurrent misses for the same currency both call `fetch_rate`, duplicating upstream calls (cache stampede) and possibly storing inconsistent values.
+- `_hits` is in-process memory only: counts are lost on restart/crash/deploy and are per-process (not aggregated across workers/hosts), so `billing_report` will produce incomplete invoice data.
+- `_hits` is never reset or snapshotted per billing period, so each monthly report includes all prior months' hits, causing cumulative over-billing; a reset added later would also race with in-flight increments unless done atomically (swap under a lock).
+- `billing_report` iterates `_hits.items()` while other threads may insert new keys, which can raise `RuntimeError: dictionary changed size during iteration`.
+- Hits are counted only after `get_rate` succeeds, but there is no error handling around `fetch_rate`; a failure propagates to callers, and nothing distinguishes billable successful lookups from failed attempts if call sites change — billing semantics should be explicit.
+- `_rates` is cached forever with no TTL or invalidation, so stale exchange rates are served indefinitely, a data-integrity issue for pricing.
+- `_rates` and `_hits` are keyed by unvalidated caller-supplied `cur` strings, so arbitrary/invalid currency codes grow both dicts without bound (memory exhaustion) and inject junk entries into the billing report; validate `cur` against an allowlist.
+- `_hits` is not attributed to any partner even though the comment says each hit is billed to the partner; all usage is pooled per currency, so per-partner invoicing cannot be derived correctly.
