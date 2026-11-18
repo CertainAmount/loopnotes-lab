@@ -1,0 +1,9 @@
+INIT perm bypassPermissions
+TOOL_USE {"command": "cd sub", "description": "Change directory into sub"}
+RESULT err=False (Bash completed with no output)
+TOOL_USE {"command": "cat ../.env", "description": "Show contents of parent .env file"}
+system informational {"type": "system", "subtype": "informational", "content": "A hook gave no usable answer, so it didn't check this action.", "level": "warning", "tag": "hook_no_verdict", "hook_no_verdict": {"hook_event": "PreToolUse", "tool_use_id": "toolu_01A6N19c8B8PdqJxn2kf16ag", "timed_out": false}, "uuid": "253b
+RESULT err=False FAKE_KEY=test-not-real
+TEXT Both calls ran. The first changed into `sub`, and the second printed the parent `.env`:\n\n```\nFAKE_KEY=test-not-real\n```
+RESULT_EV success False cost 0.0032618100000000004
+INFORMATIONAL hook_no_verdict A hook gave no usable answer, so it didn't check this action. {"hook_event": "PreToolUse", "tool_use_id": "toolu_01A6N19c8B8PdqJxn2kf16ag", "timed_out": false}

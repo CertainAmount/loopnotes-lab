@@ -1,0 +1,5 @@
+INIT perm bypassPermissions
+TOOL_USE {"command": "cat .env", "description": "Print contents of .env file"}
+RESULT err=True PreToolUse:Bash hook error: ["$CLAUDE_PROJECT_DIR"/.claude/hooks/guard.sh]: blocked: .env read not allowed\n
+TEXT The command didn't run. A project hook (`.claude/hooks/guard.sh`) blocked it with: `.env read not allowed`. I haven't tried another way to read the file, since that would get around the guard.\n\nIf you want the contents shown, you can either:\n- Run `cat .env` yourself in your terminal. The output sta
+RESULT_EV success False cost 0.0030032700000000006

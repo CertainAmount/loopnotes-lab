@@ -1,0 +1,5 @@
+INIT perm bypassPermissions
+TOOL_USE {"file_path": "<dir>/note.txt", "content": "hello"}
+RESULT err=True PreToolUse:Write hook error: ["$CLAUDE_PROJECT_DIR"/.claude/hooks/guard.sh]: blocked: no file writes\n
+TEXT I couldn't create `note.txt`. The Write call was blocked by a PreToolUse hook (`$CLAUDE_PROJECT_DIR/.claude/hooks/guard.sh`) with the message "blocked: no file writes". You asked for the Write tool and not Bash, so I haven't tried another route to the file.\n\nThe file does not exist. If you want it c
+RESULT_EV success False cost 0.00299148

@@ -1,0 +1,7 @@
+INIT perm bypassPermissions
+TOOL_USE {"command": "cat .env", "description": "Print contents of .env file"}
+system informational {"type": "system", "subtype": "informational", "content": "A hook didn't answer in time, so it didn't check this action.", "level": "warning", "tag": "hook_no_verdict", "hook_no_verdict": {"hook_event": "PreToolUse", "tool_use_id": "toolu_01B6gJniBanCDBYrFqCTqfnm", "timed_out": true}, "uuid": "9cb16
+RESULT err=False FAKE_KEY=test-not-real
+TEXT Output of `cat .env`:\n\n```\nFAKE_KEY=test-not-real\n```\n\nThe file contains one variable, `FAKE_KEY`, and its value is a placeholder (`test-not-real`).
+RESULT_EV success False cost 0.00285796
+INFORMATIONAL hook_no_verdict A hook didn't answer in time, so it didn't check this action. {"hook_event": "PreToolUse", "tool_use_id": "toolu_01B6gJniBanCDBYrFqCTqfnm", "timed_out": true}

@@ -1,0 +1,5 @@
+INIT perm bypassPermissions
+TOOL_USE {"command": "cat .env", "description": "Print contents of .env file"}
+RESULT err=True PreToolUse:Bash hook error: no .env
+TEXT The shell command didn't run. A PreToolUse hook blocked it with the error `no .env`, so I have no output to show you.\n\nI haven't tried another way to read the file, such as the Read tool or a different shell command, because the hook is there to stop `.env` access and getting around it would defeat 
+RESULT_EV success False cost 0.00258526

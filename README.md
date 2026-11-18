@@ -36,6 +36,7 @@ The same folders, grouped the way the site groups its articles: each topic page 
 
 The counts, sources and check dates behind the guides, one folder per article.
 
+- [Claude Code Hooks Not Firing: Which Mistakes Fail Silently](https://loopnotes.dev/claude-code-hooks-not-firing/) · [research note](notes/claude-code-hooks-not-firing/)
 - [Claude Code Auto Mode Not Working: Check the Real Mode First](https://loopnotes.dev/claude-code-auto-mode-not-working/) · [research note](notes/claude-code-auto-mode-not-working/)
 - [KakaoTalk Verification Code Not Sent or Still in Progress?](https://loopnotes.dev/kakaotalk-verification-code-not-sent/) · [research note](notes/kakaotalk-verification-code-not-sent/)
 - [Ollama Not Using GPU After an Update on Linux: The Fix](https://loopnotes.dev/ollama-not-using-gpu-after-update/) · [research note](notes/ollama-not-using-gpu-after-update/)

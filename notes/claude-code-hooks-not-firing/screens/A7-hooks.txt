@@ -1,0 +1,23 @@
+===== start
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Settings Warning
+  <dir>/.claude/settings.json
+  └ hooks.pretooluse: Unknown hook event "pretooluse" was ignored. Valid events: PreToolUse, PostToolUse, PostToolUseFailure, PostToolBatch,
+    Notification, UserPromptSubmit, UserPromptExpansion, SessionStart, SessionEnd, Stop, StopFailure, SubagentStart, SubagentStop, PreCompact,
+    PostCompact, PreModelSwitch, PostModelSwitch, PermissionRequest, PermissionDenied, Setup, TeammateIdle, TaskCreated, TaskCompleted, Elicitation,
+    ElicitationResult, ConfigChange, WorktreeCreate, WorktreeRemove, InstructionsLoaded, CwdChanged, FileChanged, DirectoryAdded, MessageDisplay
+  Learn more: https://code.claude.com/docs/en/hooks
+  The values listed above were skipped; the rest of the file is in effect.
+  ❯ 1. Continue
+    2. Fix with Claude
+    3. Exit and fix manually
+  Enter to confirm · Esc to cancel
+===== hooks
+ ▐▛███▛█   Claude Code v2.1.327
+▝▜██████▀  Haiku 5.5 · Claude Ultra
+ ▝▝   ▝▝   <dir>
+                                                                                                                                  ◐ medium · /effort
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ Try "write a test for <filepath>"
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ auto mode on (shift+tab to cycle) · ← for agents

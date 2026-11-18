@@ -1,0 +1,65 @@
+===== B5 interactive (timeout 2, script sleeps 5), raw stream with ANSI codes stripped, spinner frames left in
+      
+  *  g        
+   n         
+  ✢        
+  ·  i  …         
+   s  g        
+  ✢  i  n        
+  ●  Running  1  shell command…       
+  *  v  i        
+           
+  ✶        
+   o  s        
+  ead file…  
+    ⎿  $ cat .env
+  (running PreToolUse hook · 1s)        
+  ✻   · ↓ 2 tokens)        
+  ✽  r  i  2 4         
+   5        
+   p  v  7        
+  ●        
+   9        
+  ✻  m  o  11 tokens)        
+  ✶  I  r  2        
+  *  4        
+  ✢ p  6        
+  Printing cont nts of .env file
+   Im        
+           
+   Improvising…  7         
+  ·  Improvising…  3        
+   Improvising…        
+   Improvising…        
+   Improvising…        
+  ✢  Improvising…        
+  ●        
+  *  Improvising…        
+  ✶        
+  ✻        
+   Improvising…  3s · ↓   37 tokens)          
+   4        
+  ✽  Improvising…  49        
+           
+   Improvising…  57        
+   Improvising…  64        
+   Improvising…  5        
+  ✻  Improvising…  7        
+  ✶ Improvising…  8        
+  ●
+  *  70        
+  ✢  2         
+   Improvising…  3        
+  ·  Improvising…  5 5        
+   Improvising…  7        
+   Improvising…  8        
+   Improvising…        
+           
+    Read  1  file   
+  
+  ●  Output of  cat .env :
+   FAKE_KEY=test-not-real         
+  ✻ Brewed for 5s · done 오전 11:53
+   
+ ❯ 
+  

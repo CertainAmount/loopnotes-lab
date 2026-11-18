@@ -1,0 +1,5 @@
+INIT perm bypassPermissions
+TOOL_USE {"command": "cat .env", "description": "Print contents of .env file"}
+RESULT err=True PreToolUse:Bash hook error: ["$CLAUDE_PROJECT_DIR"/.claude/hooks/gaurd.sh]: failed; blocking because onFailure is "block"\n/bin/sh: 1: <dir>/.claude/hooks/gaurd.sh: not found
+TEXT I couldn't print `.env`. A PreToolUse hook blocked the `cat .env` command before it ran:\n\n```\nPreToolUse:Bash hook error: ["$CLAUDE_PROJECT_DIR"/.claude/hooks/gaurd.sh]: failed; blocking because onFailure is "block"\n/bin/sh: 1: <dir>/.claude/hooks/gaurd.sh: not found\n```\n\nThe hook script 
+RESULT_EV success False cost 0.0027500600000000004
