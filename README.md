@@ -68,6 +68,11 @@ Series we re-measure and keep adding to; several articles draw on each.
 - [Ollama default context length: docs vs code](datasets/ollama-default-context/)
 - [Claude Code skill auto-trigger rate](datasets/claude-code-skill-trigger/)
 - [Korea vs US list prices in US dollars](datasets/korea-us-prices/)
+**Viz engine**
+
+The chart and diagram engine that draws the figures; each research note keeps the spec and data behind its figures.
+
+- [viz engine](viz/)
 ## What's in each folder
 
 - `results.md` (or `log.md`): the measured results, with date, tool version, model and cost, as the article quotes them.
