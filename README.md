@@ -17,6 +17,10 @@ The same folders, grouped the way the site groups its articles: each topic page 
 - [Running a local LLM on an RTX 4090](topics/A4-running-a-local-llm-on-an-rtx-4090/): 2 research notes, 1 dataset
 - [Choosing hardware for local LLMs](topics/A6-choosing-hardware-for-local-llms/): 2 research notes
 
+**Running backends in production**
+
+- [Java and Gradle builds](topics/C3-java-and-gradle-builds/): 1 research note
+
 **Tech in Korea, from a Seoul developer**
 
 - [Buying tech in Korea](topics/B3-buying-tech-in-korea/): 2 research notes, 1 dataset
