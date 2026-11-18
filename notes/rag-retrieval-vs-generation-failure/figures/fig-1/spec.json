@@ -1,0 +1,139 @@
+{
+ "frame": "matrix",
+ "caption": "Heading paths halved retrieval misses, 8 to 4, yet accuracy stayed at 21 of 30.",
+ "rows": [
+  "S10",
+  "C03",
+  "P04",
+  "S06",
+  "C05",
+  "C09",
+  "P10",
+  "S08",
+  "P09",
+  "C06",
+  "P06"
+ ],
+ "cols": [
+  "Headings only",
+  "Headings + path"
+ ],
+ "col_sub": [
+  "21 of 30 right",
+  "21 of 30 right"
+ ],
+ "cells": [
+  [
+   "retrieval",
+   "retrieval"
+  ],
+  [
+   "retrieval",
+   "retrieval"
+  ],
+  [
+   "retrieval",
+   "retrieval"
+  ],
+  [
+   "retrieval",
+   "retrieval"
+  ],
+  [
+   "generation",
+   "generation"
+  ],
+  [
+   "retrieval",
+   "gen_new"
+  ],
+  [
+   "retrieval",
+   "gen_new"
+  ],
+  [
+   "retrieval",
+   "correct"
+  ],
+  [
+   "retrieval",
+   "correct"
+  ],
+  [
+   "correct",
+   "gen_new"
+  ],
+  [
+   "correct",
+   "gen_new"
+  ]
+ ],
+ "cell_text": [
+  [
+   "Retrieval",
+   "Retrieval"
+  ],
+  [
+   "Retrieval",
+   "Retrieval"
+  ],
+  [
+   "Retrieval",
+   "Retrieval"
+  ],
+  [
+   "Retrieval",
+   "Retrieval"
+  ],
+  [
+   "Generation",
+   "Generation"
+  ],
+  [
+   "Retrieval",
+   "Generation"
+  ],
+  [
+   "Retrieval",
+   "Generation"
+  ],
+  [
+   "Retrieval",
+   "Right"
+  ],
+  [
+   "Retrieval",
+   "Right"
+  ],
+  [
+   "Right",
+   "Generation"
+  ],
+  [
+   "Right",
+   "Generation"
+  ]
+ ],
+ "legend": false,
+ "mono_rows": true,
+ "label_width": 0.14,
+ "outcomes": {
+  "correct": [
+   "Right",
+   "#E6EAEE"
+  ],
+  "retrieval": [
+   "Retrieval",
+   "#8A96A3"
+  ],
+  "generation": [
+   "Generation",
+   "#1E3A5F"
+  ],
+  "gen_new": [
+   "Generation",
+   "#3B82F6"
+  ]
+ },
+ "note": "E1, Kubernetes docs, 30 questions, Qwen2.5-3B, 2026-11-18. Rows: questions wrong in either setting."
+}

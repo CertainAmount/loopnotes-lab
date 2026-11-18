@@ -1,0 +1,44 @@
+{
+ "frame": "ladder",
+ "caption": "A reranker couldn't lift a chunk that wasn't a candidate; the heading path did.",
+ "steps": [
+  {
+   "label": "Baseline",
+   "beyond": "> 30"
+  },
+  {
+   "label": "Query terms spelled out",
+   "value": 12
+  },
+  {
+   "label": "BM25 hybrid",
+   "value": 6
+  },
+  {
+   "label": "Doc-type filter",
+   "text": "fixed it, broke others"
+  },
+  {
+   "label": "Reranker only",
+   "beyond": "> 20",
+   "text": "unchanged"
+  },
+  {
+   "label": "Heading path on chunk",
+   "value": 2
+  },
+  {
+   "label": "Heading path + reranker",
+   "value": 1
+  }
+ ],
+ "max": 30,
+ "cutoff": 5,
+ "cutoff_label": "Top-5 cutoff",
+ "lower_is_better": true,
+ "highlight": [
+  "Heading path on chunk"
+ ],
+ "xlabel": "Rank of the right chunk",
+ "note": "One question from the author's internal RAG POC; logs kept the top 30 candidates; reranker saw 20"
+}

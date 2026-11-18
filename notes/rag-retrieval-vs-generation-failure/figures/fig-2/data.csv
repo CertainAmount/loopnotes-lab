@@ -1,0 +1,8 @@
+step,value,beyond,text
+Baseline,,> 30,
+Query terms spelled out,12,,
+BM25 hybrid,6,,
+Doc-type filter,,,"fixed it, broke others"
+Reranker only,,> 20,unchanged
+Heading path on chunk,2,,
+Heading path + reranker,1,,

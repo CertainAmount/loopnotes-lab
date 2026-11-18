@@ -1,0 +1,4 @@
+{"A:C07":{"correct":true,"why":"Answer line 'existing Pods are killed' is right; grader wanted the word 'before' in the same line"},
+ "C:C07":{"correct":true,"why":"'terminates ... before creating' is right; grader string 'terminated' missed 'terminates'"},
+ "D:C07":{"correct":true,"why":"same as C:C07"},
+ "D:C06":{"correct":true,"why":"'only created when manually deleting old DaemonSet pods' is right; grader string 'manually delete' missed 'deleting'"}}

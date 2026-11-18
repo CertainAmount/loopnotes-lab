@@ -1,0 +1,12 @@
+case,Headings only,Headings + path
+S10,retrieval,retrieval
+C03,retrieval,retrieval
+P04,retrieval,retrieval
+S06,retrieval,retrieval
+C05,generation,generation
+C09,retrieval,gen_new
+P10,retrieval,gen_new
+S08,retrieval,correct
+P09,retrieval,correct
+C06,correct,gen_new
+P06,correct,gen_new
