@@ -1,0 +1,55 @@
+Review this diff. List each issue as one comment.
+Format: one comment per line, each line starting with "- ". No other text.
+
+```diff
+diff --git a/search/paging.py b/search/paging.py
+--- a/search/paging.py
++++ b/search/paging.py
+@@ -3,3 +3,20 @@
+ 
+ def total_pages(n, size):
+     return (n + size - 1) // size
++
++
++def get_page(items, page, size):
++    start = (page - 1) * size
++    end = start + size - 1
++    return items[start:end]
++
++
++def page_meta(items, page, size):
++    n = len(items)
++    return {
++        "page": page,
++        "size": size,
++        "total": n,
++        "pages": total_pages(n, size),
++        "items": get_page(items, page, size),
++    }
+```
+
+Callers of the changed code (unchanged files, for context):
+```python
+"""api/search_routes.py (unchanged, shown for context)"""
+from flask import Blueprint, abort, request
+from search.index import find
+from search.paging import page_meta, total_pages
+
+bp = Blueprint("search", __name__)
+
+
+@bp.get("/search")
+def search():
+    q = request.args.get("q", "")
+    size = min(int(request.args.get("size", 20)), 100)
+    items = find(q)
+    page = int(request.args.get("page", 1))
+    if page < 1 or page > max(1, total_pages(len(items), size)):
+        abort(400, "page out of range")
+    return page_meta(items, page, size)
+```
+
+Team rules:
+1. Short local names (u, n, s, uid, out) are fine in functions under 30 lines.
+2. Request input is validated in the API layer (see callers); service functions do not re-validate it.
+3. A broad `except Exception` is allowed when the line carries an `# intentional:` comment.

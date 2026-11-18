@@ -1,0 +1,30 @@
+Review this diff. List each issue as one comment.
+Format: one comment per line, each line starting with "- ". No other text.
+Only review for security, concurrency, error handling, and data integrity. Do not comment on naming, style, formatting, or minor refactors. If you are not confident an issue is real, do not mention it.
+
+```diff
+diff --git a/search/paging.py b/search/paging.py
+--- a/search/paging.py
++++ b/search/paging.py
+@@ -3,3 +3,20 @@
+ 
+ def total_pages(n, size):
+     return (n + size - 1) // size
++
++
++def get_page(items, page, size):
++    start = (page - 1) * size
++    end = start + size - 1
++    return items[start:end]
++
++
++def page_meta(items, page, size):
++    n = len(items)
++    return {
++        "page": page,
++        "size": size,
++        "total": n,
++        "pages": total_pages(n, size),
++        "items": get_page(items, page, size),
++    }
+```

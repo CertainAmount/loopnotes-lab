@@ -1,0 +1,7 @@
+- `short_name` with `n <= 0` produces wrong output: for `n=0`, `name[: n - 1]` becomes `name[:-1]`, which returns almost the whole name plus "…" instead of something no longer than `n`. Guard with `if n < 1: raise ValueError` (or clamp `n`).
+- In the final fallback, when `len(first)` is `n - 2` or `n - 1`, `first[: n - 1]` is the whole first name, so "…" is appended even though nothing was cut from it. Consider returning `first` alone when it fits within `n`, or confirm the trailing "…" is meant to signal the dropped last name.
+- Slicing by code point (`name[: n - 1]`, `first[: n - 1]`, `last[0]`) can split combining characters or multi-codepoint emoji and grapheme clusters (e.g. accented names written in decomposed form, ZWJ sequences), leaving broken glyphs. Consider grapheme-aware truncation if non-ASCII names are expected.
+- `len()` counts code points, not display width, so CJK or other wide-character names can still overflow a UI slot sized for `n` characters. Worth a note in the docstring if callers rely on this for layout.
+- Middle names are silently dropped ("Mary Ann Smith" becomes "Mary S."). Document this, since it isn't obvious from the function name.
+- No tests are included for the new function. Add cases for a short name, a long single word, a two-word name that fits as "First L.", a long first name hitting the fallback, and small values of `n`.
+- Add a docstring to `short_name` explaining `n`, the truncation strategy, and that the result never exceeds `n` characters (once the `n <= 0` case is fixed).

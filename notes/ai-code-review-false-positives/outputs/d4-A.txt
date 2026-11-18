@@ -1,0 +1,7 @@
+- `get_page` has an off-by-one error: `end = start + size - 1` combined with Python's exclusive slice end returns only `size - 1` items per page. It should be `end = start + size`.
+- `get_page` does not validate `page`. `page=0` gives `start = -size`, and a negative page gives an even more negative start, so the slice silently returns wrong items from the end of the list instead of raising an error.
+- `size <= 0` is not validated: `size=0` raises `ZeroDivisionError` in `total_pages`, and a negative size produces meaningless slices and page counts.
+- A `page` beyond `total_pages` silently returns an empty list. `page_meta` then reports `"page": page` with no signal that the page is out of range, so consider clamping or raising.
+- `page_meta` recomputes `len(items)` and slices the list. This requires `items` to be a fully materialized sequence and won't work with iterators or querysets/generators. Document or enforce this assumption.
+- The new functions have no tests, and the off-by-one bug shows that page-boundary tests (first page, last partial page, empty list) are needed.
+- The new functions have no docstrings stating that `page` is 1-indexed, which the start offset assumes.

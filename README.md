@@ -40,6 +40,7 @@ The same folders, grouped the way the site groups its articles: each topic page 
 
 The counts, sources and check dates behind the guides, one folder per article.
 
+- [AI Code Review False Positives: What 120 Comments Showed](https://loopnotes.dev/ai-code-review-false-positives/) · [research note](notes/ai-code-review-false-positives/)
 - ['STS "cannot be resolved to a type" but Gradle build passes'](https://loopnotes.dev/sts-gradle-error-build-passes/) · [research note](notes/sts-gradle-error-build-passes/)
 - [Claude Code Hooks Not Firing: Which Mistakes Fail Silently](https://loopnotes.dev/claude-code-hooks-not-firing/) · [research note](notes/claude-code-hooks-not-firing/)
 - [Claude Code Auto Mode Not Working: Check the Real Mode First](https://loopnotes.dev/claude-code-auto-mode-not-working/) · [research note](notes/claude-code-auto-mode-not-working/)

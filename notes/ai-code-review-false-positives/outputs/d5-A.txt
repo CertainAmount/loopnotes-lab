@@ -1,0 +1,10 @@
+- `_hits[cur] = n + 1` is a non-atomic read-modify-write; concurrent requests can lose increments and under-bill partners. Use a lock or `itertools.count`/atomic store.
+- `_hits` is per-process in-memory state, so counts vanish on restart or deploy and are split across workers. A separate monthly invoice job will see an empty or partial dict. Billing data needs durable, shared storage such as a DB or Redis.
+- Nothing resets `_hits` after `billing_report()`, so counts accumulate across months and partners get re-billed for earlier usage. Any reset added later must be atomic with the read to avoid dropping hits in between.
+- Hits are keyed only by currency, with no partner identifier, so the report cannot attribute usage to the partner who should be billed.
+- `billing_report()` iterates `_hits.items()` while other threads may insert new keys, which can raise `RuntimeError: dictionary changed size during iteration`. Snapshot under a lock.
+- "Hits" counts every call, including cache misses that triggered `fetch_rate`. Clarify whether billing should cover all lookups, and rename it, e.g. `_lookups`, to avoid confusion with cache hits.
+- `cur` is not validated before it becomes a key in both `_rates` and `_hits`. Arbitrary or garbage currency strings grow memory without bound and appear as billable line items.
+- `get_rate` has the same check-then-set race, so concurrent misses fetch the same rate twice. This is minor, but it matters if `fetch_rate` is itself metered.
+- `collections.Counter` with `_hits[cur] += 1` (under a lock) would be clearer than the manual `get`/`set`. The dict comprehension in `billing_report` is just `dict(_hits)`.
+- There are no tests for the counting or report behavior, which is risky for code that directly drives invoicing.

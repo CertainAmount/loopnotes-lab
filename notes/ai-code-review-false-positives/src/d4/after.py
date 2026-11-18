@@ -1,0 +1,22 @@
+"""search/paging.py"""
+
+
+def total_pages(n, size):
+    return (n + size - 1) // size
+
+
+def get_page(items, page, size):
+    start = (page - 1) * size
+    end = start + size - 1
+    return items[start:end]
+
+
+def page_meta(items, page, size):
+    n = len(items)
+    return {
+        "page": page,
+        "size": size,
+        "total": n,
+        "pages": total_pages(n, size),
+        "items": get_page(items, page, size),
+    }

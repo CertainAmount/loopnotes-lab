@@ -1,0 +1,5 @@
+- Returning `True` from the `except` block reports failed orders as successful, so callers cannot detect a declined charge or a failed insert.
+- `charge()` runs before `db.insert()` with no compensation. If the insert fails, the customer has been charged but no order record exists, and there is no refund or void.
+- `charge()` is called without an idempotency key (such as the order ID), so caller retries or concurrent duplicate submissions can charge the customer more than once.
+- `except Exception` treats payment declines, network timeouts, and DB errors the same way. An ambiguous charge result, such as a timeout after the provider processed it, is never reconciled.
+- `log.warning("... %s", e)` drops the stack trace and logs a failed payment or order at warning level. Use `log.exception`/error level and include the order and customer identifiers so failures can be found and reconciled.

@@ -1,0 +1,99 @@
+{
+ "duration_api_ms": 6842,
+ "stop_reason": "end_turn",
+ "total_cost_usd": 0.0200596,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 948,
+  "cache_read_input_tokens": 2438,
+  "output_tokens": 599,
+  "output_tokens_details": {
+   "thinking_tokens": 140
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 948,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 599,
+    "cache_read_input_tokens": 2438,
+    "cache_creation_input_tokens": 948,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 948
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 599,
+   "cacheReadInputTokens": 2438,
+   "cacheCreationInputTokens": 948,
+   "webSearchRequests": 0,
+   "costUSD": 0.0200596,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 140,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 948,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "- `conn` is never closed on the `if not rows: return 0` early-return path, so every empty-month export leaks a SQLite connection and file handle.\n- No `try/finally` (or `contextlib.closing(sqlite3.connect(...))`) around the query and write, so an exception in `execute`, `fetchall`, or `write_rows` leaks the connection; note that `with sqlite3.connect(...)` alone only manages transactions and does not close the connection.\n- The connection stays open for the whole CSV write even though the rows are already fetched; close it right after `fetchall()` to release the DB handle and any read lock sooner.\n- `cur.fetchall()` loads the entire month into memory, which is unbounded for large tables; stream by passing `cur` (or `fetchmany` batches) to `write_rows` instead.\n- The CSV is written directly to `out_path`, so a failure mid-write leaves a truncated file that looks valid to consumers; write to a temp file in the same directory and `os.replace` it on success.\n- When there are no rows, no file is written and any stale export from a previous run stays at `out_path`, so downstream readers may consume outdated data as if it were current.\n- Values written to the CSV are not sanitized against formula injection (cells starting with `=`, `+`, `-`, `@`), which matters if the export is opened in a spreadsheet and any column can contain user-influenced text.",
+ "ttft_ms": 2702,
+ "type": "result",
+ "duration_ms": 7021,
+ "ttft_stream_ms": 1321,
+ "time_to_request_ms": 167,
+ "first_content_frame_ms": 1321,
+ "queued_turn_count": 0,
+ "result_index": 0
+}

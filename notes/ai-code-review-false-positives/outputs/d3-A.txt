@@ -1,0 +1,9 @@
+- Connection leaks on the early `return 0` path (and on any exception from `execute`/`fetchall`/`write_rows`) because `conn.close()` is only reached on the success path; wrap it in `try/finally` or `contextlib.closing(sqlite3.connect(db_path))` (note `with sqlite3.connect(...)` alone only manages transactions, it does not close).
+- When no rows match, no output file is written at all, so callers/consumers expecting a file (even header-only) at `out_path` will find a missing or stale file from a previous run; consider always writing the file.
+- `conn.close()` is called after `write_rows`, holding the DB connection open during file I/O unnecessarily; close it (or release it) right after `fetchall()`.
+- `fetchall()` loads the whole month into memory; for large tables, pass the cursor directly to `write_rows` (it just iterates) to stream rows.
+- No CSV header row is written, so the exported file has unlabeled columns (`id, amount, created_at`); consider writing `[d[0] for d in cur.description]` first.
+- Filtering on a `month` column assumes the schema has one; if months are derived from `created_at`, this query will fail or need a range predicate on `created_at` (which can also use an index).
+- `month` parameter format is undocumented/unvalidated (e.g. `"2026-11"` vs `11` vs `"11"`), so a mismatched type/format silently returns 0 rows instead of erroring.
+- `amount` is written however SQLite returns it; if stored as REAL, float representation (e.g. `0.30000000000000004`) may leak into the report — confirm storage type (integer cents or TEXT/Decimal) for monetary values.
+- New function has no docstring or tests covering the empty-month and non-empty paths.

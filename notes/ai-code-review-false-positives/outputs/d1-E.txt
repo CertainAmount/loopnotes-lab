@@ -1,0 +1,4 @@
+- `get_team_badge` dereferences `user` without a None check, unlike `get_display_name` just above it; an unknown `uid` raises `AttributeError` on `user.team_id` instead of degrading gracefully.
+- `get_team_badge` also dereferences `team` without a None check; a user with no team (`team_id` None) or a dangling `team_id` will raise `AttributeError` on `team.short_label`.
+- `get_team_badges` issues two repository queries per uid (`find_by_id` + `find_team`), an N+1 pattern; batch-fetch users and their distinct teams instead of looping over single lookups.
+- `get_team_badges` lets a single missing user/team abort the whole batch with an exception, so one bad uid prevents badges from being returned for all the others.

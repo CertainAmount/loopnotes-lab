@@ -1,0 +1,7 @@
+- `get_team_badge` doesn't check whether `repo.find_by_id(uid)` returned `None`, so an unknown uid raises `AttributeError` on `user.team_id`; `get_display_name` already handles this case.
+- `repo.find_team(user.team_id)` isn't checked for `None` either; a user with no team (`team_id` is `None`) or a dangling team reference will crash on `team.short_label`.
+- In `get_team_badges`, one bad uid raises and drops the whole batch; failures should be handled per item (skip, placeholder, or collect errors) so partial results aren't lost.
+- `get_team_badges` makes 2 sequential queries per uid (an N+1 pattern), so a large list means many database round trips; batch-fetch users by ids and teams by the distinct `team_id`s instead.
+- Teams are fetched again for every user even when many users share the same team; dedupe or cache `team_id` lookups within the batch.
+- `uids` has no size limit, so a caller can pass an arbitrarily large list and trigger an unbounded number of queries; cap the batch size if this is reachable from request input.
+- `get_team_badge` has no authorization check, so any caller can see any user's team membership; confirm that callers are allowed to see this data, especially if it's exposed through an endpoint that accepts arbitrary uids.

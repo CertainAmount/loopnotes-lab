@@ -1,0 +1,11 @@
+- `short_name` raises `IndexError` for a whitespace-only name longer than `n` (e.g. `" " * 20`). `split()` returns `[]`, so the code skips the single-part branch and `parts[0]` fails.
+- `n` is not validated. With `n=0`, `name[: n - 1]` becomes `name[:-1]`, so the result is nearly the full name plus "…" and far exceeds `n`. Negative `n` misbehaves the same way. Reject `n < 1` or clamp it.
+- The length check and the single-word branch use the raw `name`, not the stripped value. Leading or trailing whitespace counts toward the limit, so `"  Bob"` is truncated to `" Bob…"`-style output instead of being normalized.
+- Names under the limit are returned untouched, while longer ones are rebuilt from `split()`. This gives inconsistent normalization: internal tabs and multiple spaces survive for short names and collapse for long ones.
+- The final fallback always appends "…" even when `first` alone fits within `n`. For example, a first name of exactly `n` characters gets needlessly cut. Return `first` unchanged when `len(first) <= n`.
+- Truncation slices by code point, so it can split grapheme clusters: combining accents, emoji with ZWJ/skin-tone modifiers, and some Hangul/Indic sequences. This produces broken characters.
+- `len()` counts code points, not display width. CJK/full-width names will render about twice as wide as `n` in the UI.
+- If `n` represents a storage or byte limit, "…" is 3 bytes in UTF-8, so the result can exceed it. Document that `n` is a character count, or use `"..."`.
+- The `first last-initial` format assumes Western name order. It produces wrong or misleading output for family-name-first names (e.g. Korean, Chinese, Japanese) and for surname particles ("van der Berg" → "van B.").
+- There is no docstring explaining the truncation strategy or the meaning of `n`.
+- There are no tests for the new function. Cover the empty/whitespace input, the single word at or around `n`, the exact boundary `len == n`, the long first name fallback, and non-ASCII input.

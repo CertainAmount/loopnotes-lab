@@ -1,0 +1,4 @@
+Team rules:
+1. Short local names (u, n, s, uid, out) are fine in functions under 30 lines.
+2. Request input is validated in the API layer (see callers); service functions do not re-validate it.
+3. A broad `except Exception` is allowed when the line carries an `# intentional:` comment.

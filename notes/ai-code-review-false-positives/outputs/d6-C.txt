@@ -1,0 +1,6 @@
+- `short_name` raises `IndexError` at `parts[0]` when `name` is longer than `n` but contains only whitespace (e.g. 15 spaces), because `name.split()` returns `[]` and neither branch handles an empty list.
+- `short_name` raises `TypeError` on `len(name)` when `name` is `None` (e.g. a nullable DB field), with no validation or fallback.
+- `n` is not validated: with `n=0` or a negative value, `name[: n - 1]` and `first[: n - 1]` slice from the end, so the result is nearly the whole string plus "…", far longer than `n`.
+- Slicing by code point can split combining characters, emoji ZWJ sequences or flag pairs. `last[0]` can also pick up only part of a grapheme, so the output can be malformed.
+- The result is guaranteed to be at most `n` characters, not `n` bytes. "…" is 3 bytes in UTF-8, and multibyte names are larger still, so storing the result in a byte-limited column or field could still overflow or be silently truncated.
+- Truncated outputs can collide (e.g. "Jonathan Smith" and "Jonathan Stone" both become "Jonathan S."), so if `short_name` is ever used as a key, dedup value or identity shown in security-relevant UI, it creates ambiguity and impersonation risk.

@@ -1,0 +1,99 @@
+{
+ "duration_api_ms": 7500,
+ "stop_reason": "end_turn",
+ "total_cost_usd": 0.019843599999999996,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 926,
+  "cache_read_input_tokens": 2438,
+  "output_tokens": 597,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 926,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 597,
+    "cache_read_input_tokens": 2438,
+    "cache_creation_input_tokens": 926,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 926
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 597,
+   "cacheReadInputTokens": 2438,
+   "cacheCreationInputTokens": 926,
+   "webSearchRequests": 0,
+   "costUSD": 0.019843599999999996,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 0,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 926,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "- `get_rate_counted`: the read-modify-write on `_hits[cur]` (`n = _hits.get(...)` then `_hits[cur] = n + 1`) is not atomic; concurrent callers can lose increments, under-counting billable hits that feed invoices — guard with a lock or use an atomic counter.\n- `get_rate`: check-then-set on `_rates` is racy; concurrent misses for the same currency will each call `fetch_rate`, causing duplicate upstream fetches and possibly different rates returned to different callers.\n- `billing_report`: iterating `_hits.items()` while other threads mutate `_hits` can raise `RuntimeError: dictionary changed size during iteration`, failing the monthly invoice job — snapshot under a lock.\n- `billing_report`: counts are never reset or partitioned by billing period, so each monthly report includes all hits since process start, double-billing partners on every invoice after the first.\n- `_hits` is in-process memory only: counts are lost on restart/deploy and are not aggregated across multiple workers/processes, so billing data is silently incomplete — billable usage should be persisted durably.\n- `get_rate_counted`: if `get_rate` raises (e.g. `fetch_rate` fails), the hit is not counted, but if counting is meant to bill only successful lookups this is fine — however there is no handling for `fetch_rate` errors in `get_rate`, so a transient failure propagates and nothing is cached or retried.\n- `_rates` cache has no TTL or invalidation, so stale exchange rates are served indefinitely; `_hits` and `_rates` are also unbounded and keyed by caller-supplied `cur`, allowing memory growth (and spurious billing entries) from arbitrary/invalid currency codes if input is not validated.",
+ "ttft_ms": 7630,
+ "type": "result",
+ "duration_ms": 7668,
+ "ttft_stream_ms": 1247,
+ "time_to_request_ms": 162,
+ "first_content_frame_ms": 1247,
+ "queued_turn_count": 0,
+ "result_index": 0
+}

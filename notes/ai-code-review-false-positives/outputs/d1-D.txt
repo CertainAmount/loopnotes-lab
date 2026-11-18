@@ -1,0 +1,3 @@
+- `get_team_badge` dereferences `user.team_id` without checking whether `repo.find_by_id(uid)` returned `None`, so an unknown uid raises `AttributeError`, unlike the existing `get_display_name`, which handles `None` and returns "Unknown user".
+- `team` is not checked for `None` (missing team, or a user with a null `team_id`), so `team.short_label` raises `AttributeError` for users without a valid team.
+- `get_team_badges` has no per-item error handling, so a single missing user or team aborts the whole batch and none of the badges are returned.

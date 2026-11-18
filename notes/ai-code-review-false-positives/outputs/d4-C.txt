@@ -1,0 +1,6 @@
+- `get_page` computes `end = start + size - 1`, but Python slice ends are exclusive, so every page silently drops its last item and the `items` list no longer matches `size`/`total`, causing data to go missing between pages.
+- `page` is not validated: `page=0` or a negative page makes `start` negative, so the slice indexes from the end of the list and returns wrong or unexpected items instead of raising an error.
+- `size` is not validated: `size=0` raises an unhandled `ZeroDivisionError` in `total_pages`, and a negative `size` produces nonsensical page counts and slices.
+- `size` has no upper bound, so a caller-controlled value (e.g. `size=10**9`) can return the whole result set in one response, which is a resource-exhaustion risk.
+- `page_meta` calls `len(items)` and slices it, so the entire result set must already be loaded in memory before paging. This defeats pagination for large result sets, and generators or lazy querysets will fail or be fully loaded. Push offset/limit down to the data source instead.
+- Requests where `page > pages` silently return an empty list rather than signaling an out-of-range error, which can hide client bugs and lead to inconsistent results.

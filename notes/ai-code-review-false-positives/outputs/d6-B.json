@@ -1,0 +1,99 @@
+{
+ "duration_api_ms": 13693,
+ "stop_reason": "end_turn",
+ "total_cost_usd": 0.03469560000000001,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1105,
+  "cache_read_input_tokens": 2438,
+  "output_tokens": 1268,
+  "output_tokens_details": {
+   "thinking_tokens": 694
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1105,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1268,
+    "cache_read_input_tokens": 2438,
+    "cache_creation_input_tokens": 1105,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1105
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 1268,
+   "cacheReadInputTokens": 2438,
+   "cacheCreationInputTokens": 1105,
+   "webSearchRequests": 0,
+   "costUSD": 0.03469560000000001,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 694,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 1105,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "- `short_name` with `n <= 0` produces wrong output: for `n=0`, `name[: n - 1]` becomes `name[:-1]`, which returns almost the whole name plus \"…\" instead of something no longer than `n`. Guard with `if n < 1: raise ValueError` (or clamp `n`).\n- In the final fallback, when `len(first)` is `n - 2` or `n - 1`, `first[: n - 1]` is the whole first name, so \"…\" is appended even though nothing was cut from it. Consider returning `first` alone when it fits within `n`, or confirm the trailing \"…\" is meant to signal the dropped last name.\n- Slicing by code point (`name[: n - 1]`, `first[: n - 1]`, `last[0]`) can split combining characters or multi-codepoint emoji and grapheme clusters (e.g. accented names written in decomposed form, ZWJ sequences), leaving broken glyphs. Consider grapheme-aware truncation if non-ASCII names are expected.\n- `len()` counts code points, not display width, so CJK or other wide-character names can still overflow a UI slot sized for `n` characters. Worth a note in the docstring if callers rely on this for layout.\n- Middle names are silently dropped (\"Mary Ann Smith\" becomes \"Mary S.\"). Document this, since it isn't obvious from the function name.\n- No tests are included for the new function. Add cases for a short name, a long single word, a two-word name that fits as \"First L.\", a long first name hitting the fallback, and small values of `n`.\n- Add a docstring to `short_name` explaining `n`, the truncation strategy, and that the result never exceeds `n` characters (once the `n <= 0` case is fixed).",
+ "ttft_ms": 8261,
+ "type": "result",
+ "duration_ms": 13904,
+ "ttft_stream_ms": 1125,
+ "time_to_request_ms": 200,
+ "first_content_frame_ms": 1125,
+ "queued_turn_count": 0,
+ "result_index": 0
+}

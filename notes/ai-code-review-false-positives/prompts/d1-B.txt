@@ -1,0 +1,61 @@
+Review this diff. List each issue as one comment.
+Format: one comment per line, each line starting with "- ". No other text.
+
+```diff
+diff --git a/profiles/service.py b/profiles/service.py
+--- a/profiles/service.py
++++ b/profiles/service.py
+@@ -9,3 +9,17 @@ def get_display_name(uid):
+     if user is None:
+         return "Unknown user"
+     return user.name
++
++
++def get_team_badge(uid):
++    user = repo.find_by_id(uid)
++    team = repo.find_team(user.team_id)
++    label = team.short_label or team.name
++    return f"{user.name} · {label}"
++
++
++def get_team_badges(uids):
++    out = []
++    for u in uids:
++        out.append(get_team_badge(u))
++    return out
+```
+
+Callers of the changed code (unchanged files, for context):
+```python
+"""api/profile_routes.py (unchanged, shown for context)"""
+from flask import Blueprint, abort, request
+from profiles.service import get_team_badge, get_team_badges
+
+bp = Blueprint("profiles", __name__)
+
+
+def parse_uid(raw):
+    if raw is None or not raw.isdigit():
+        abort(400, "uid must be a positive integer")
+    return int(raw)
+
+
+@bp.get("/badge")
+def badge():
+    uid = parse_uid(request.args.get("uid"))
+    return {"badge": get_team_badge(uid)}
+
+
+@bp.post("/badges")
+def badges():
+    uids = [parse_uid(str(x)) for x in request.json.get("uids", [])]
+    return {"badges": get_team_badges(uids)}
+
+# Note: repo.find_by_id returns None when no row matches (deleted users keep
+# their uid in old URLs). repo.find_team returns None when team_id is None.
+```
+
+Team rules:
+1. Short local names (u, n, s, uid, out) are fine in functions under 30 lines.
+2. Request input is validated in the API layer (see callers); service functions do not re-validate it.
+3. A broad `except Exception` is allowed when the line carries an `# intentional:` comment.

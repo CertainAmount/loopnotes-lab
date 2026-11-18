@@ -1,0 +1,99 @@
+{
+ "duration_api_ms": 6576,
+ "stop_reason": "end_turn",
+ "total_cost_usd": 0.0184476,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 869,
+  "cache_read_input_tokens": 2438,
+  "output_tokens": 550,
+  "output_tokens_details": {
+   "thinking_tokens": 153
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 869,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 550,
+    "cache_read_input_tokens": 2438,
+    "cache_creation_input_tokens": 869,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 869
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 550,
+   "cacheReadInputTokens": 2438,
+   "cacheCreationInputTokens": 869,
+   "webSearchRequests": 0,
+   "costUSD": 0.0184476,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 153,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 869,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "- `get_page` computes `end = start + size - 1`, but Python slice ends are exclusive, so every page silently drops its last item and the `items` list no longer matches `size`/`total`, causing data to go missing between pages.\n- `page` is not validated: `page=0` or a negative page makes `start` negative, so the slice indexes from the end of the list and returns wrong or unexpected items instead of raising an error.\n- `size` is not validated: `size=0` raises an unhandled `ZeroDivisionError` in `total_pages`, and a negative `size` produces nonsensical page counts and slices.\n- `size` has no upper bound, so a caller-controlled value (e.g. `size=10**9`) can return the whole result set in one response, which is a resource-exhaustion risk.\n- `page_meta` calls `len(items)` and slices it, so the entire result set must already be loaded in memory before paging. This defeats pagination for large result sets, and generators or lazy querysets will fail or be fully loaded. Push offset/limit down to the data source instead.\n- Requests where `page > pages` silently return an empty list rather than signaling an out-of-range error, which can hide client bugs and lead to inconsistent results.",
+ "ttft_ms": 2719,
+ "type": "result",
+ "duration_ms": 6922,
+ "ttft_stream_ms": 971,
+ "time_to_request_ms": 335,
+ "first_content_frame_ms": 971,
+ "queued_turn_count": 0,
+ "result_index": 0
+}

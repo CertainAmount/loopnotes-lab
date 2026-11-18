@@ -1,0 +1,99 @@
+{
+ "duration_api_ms": 8555,
+ "stop_reason": "end_turn",
+ "total_cost_usd": 0.025423599999999998,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1231,
+  "cache_read_input_tokens": 2438,
+  "output_tokens": 754,
+  "output_tokens_details": {
+   "thinking_tokens": 253
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1231,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 754,
+    "cache_read_input_tokens": 2438,
+    "cache_creation_input_tokens": 1231,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1231
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 754,
+   "cacheReadInputTokens": 2438,
+   "cacheCreationInputTokens": 1231,
+   "webSearchRequests": 0,
+   "costUSD": 0.025423599999999998,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 253,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 1231,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "- `get_rate_counted` increments `_hits` with an unsynchronized read-modify-write (`n = _hits.get(...)`, then `_hits[cur] = n + 1`). `quote()` runs it concurrently on a 16-worker pool, so increments get lost and partners are under-billed. Guard the increment with a `threading.Lock` (or use a locked `collections.Counter`).\n- `billing_report` iterates `_hits` while worker threads may be inserting new keys. This can raise `RuntimeError: dictionary changed size during iteration` during `close_month()`. Snapshot under the same lock used for increments.\n- `billing_report` never resets `_hits`, so counts keep accumulating across months. Each monthly invoice re-bills all prior months' hits. Atomically snapshot and clear (or key by period) when closing the month.\n- Billing counts live only in process memory. A restart or deploy before the monthly job silently drops billable usage, and running multiple processes or replicas splits counts so one process reports only part of it. Billing data needs durable, shared storage.\n- `get_rate` has a check-then-set race. Concurrent first requests for the same currency each call `fetch_rate`, causing redundant upstream fetches. Lock it or use per-key once-initialization.\n- The comment says \"each hit is billed\", but `get_rate_counted` also counts cache misses (the first call that triggers `fetch_rate`). Confirm whether partners should be billed per request or per cache hit, and name or count accordingly.",
+ "ttft_ms": 3581,
+ "type": "result",
+ "duration_ms": 8721,
+ "ttft_stream_ms": 1018,
+ "time_to_request_ms": 156,
+ "first_content_frame_ms": 1018,
+ "queued_turn_count": 0,
+ "result_index": 0
+}

@@ -1,0 +1,32 @@
+Review this diff. List each issue as one comment.
+Format: one comment per line, each line starting with "- ". No other text.
+Only review for security, concurrency, error handling, and data integrity. Do not comment on naming, style, formatting, or minor refactors. If you are not confident an issue is real, do not mention it.
+
+```diff
+diff --git a/pricing/cache.py b/pricing/cache.py
+--- a/pricing/cache.py
++++ b/pricing/cache.py
+@@ -2,9 +2,22 @@
+ from pricing.rates import fetch_rate
+ 
+ _rates = {}
++_hits = {}
+ 
+ 
+ def get_rate(cur):
+     if cur not in _rates:
+         _rates[cur] = fetch_rate(cur)
+     return _rates[cur]
++
++
++def get_rate_counted(cur):
++    rate = get_rate(cur)
++    n = _hits.get(cur, 0)
++    _hits[cur] = n + 1
++    return rate
++
++
++def billing_report():
++    # used by the monthly invoice job: each hit is billed to the partner
++    return {cur: n for cur, n in _hits.items()}
+```

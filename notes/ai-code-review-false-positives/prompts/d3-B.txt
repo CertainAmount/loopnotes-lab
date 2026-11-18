@@ -1,0 +1,57 @@
+Review this diff. List each issue as one comment.
+Format: one comment per line, each line starting with "- ". No other text.
+
+```diff
+diff --git a/reports/export.py b/reports/export.py
+--- a/reports/export.py
++++ b/reports/export.py
+@@ -1,5 +1,6 @@
+ """reports/export.py"""
+ import csv
++import sqlite3
+ 
+ 
+ def write_rows(path, rows):
+@@ -7,3 +8,16 @@ def write_rows(path, rows):
+         w = csv.writer(f)
+         for r in rows:
+             w.writerow(r)
++
++
++def export_month(db_path, out_path, month):
++    conn = sqlite3.connect(db_path)
++    cur = conn.execute(
++        "SELECT id, amount, created_at FROM payments WHERE month = ?", (month,)
++    )
++    rows = cur.fetchall()
++    if not rows:
++        return 0
++    write_rows(out_path, rows)
++    conn.close()
++    return len(rows)
+```
+
+Callers of the changed code (unchanged files, for context):
+```python
+"""jobs/monthly_export.py (unchanged, shown for context)"""
+import os
+import re
+
+from reports.export import export_month
+
+EXPORT_DIR = "/var/exports"
+MONTH_RE = re.compile(r"^\d{4}-\d{2}$")
+
+
+def run(month):
+    if not MONTH_RE.match(month):
+        raise ValueError("month must look like 2026-11")
+    out_path = os.path.join(EXPORT_DIR, f"payments-{month}.csv")
+    # this job runs every hour for the current month, inside one long-lived worker
+    return export_month("/var/data/payments.db", out_path, month)
+```
+
+Team rules:
+1. Short local names (u, n, s, uid, out) are fine in functions under 30 lines.
+2. Request input is validated in the API layer (see callers); service functions do not re-validate it.
+3. A broad `except Exception` is allowed when the line carries an `# intentional:` comment.

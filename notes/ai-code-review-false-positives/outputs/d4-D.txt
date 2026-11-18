@@ -1,0 +1,3 @@
+- `get_page` computes `end = start + size - 1`, but Python slice ends are exclusive, so each page returns only `size - 1` items and silently drops the last item of every page. Use `end = start + size`.
+- `get_page` does not validate `page`: `page <= 0` makes `start` negative, and negative slice indices count from the end of the list, so the call returns the wrong items (often tail items or an empty list) instead of raising an error.
+- Neither function validates `size`: `size == 0` makes `total_pages` raise `ZeroDivisionError` in `page_meta`, and a negative `size` produces negative slice bounds and a meaningless `pages` count instead of a clear validation error.

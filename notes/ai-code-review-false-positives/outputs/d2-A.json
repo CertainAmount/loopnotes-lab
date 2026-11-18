@@ -1,0 +1,99 @@
+{
+ "duration_api_ms": 6698,
+ "stop_reason": "end_turn",
+ "total_cost_usd": 0.0195076,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 924,
+  "cache_read_input_tokens": 2438,
+  "output_tokens": 581,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 924,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 581,
+    "cache_read_input_tokens": 2438,
+    "cache_creation_input_tokens": 924,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 924
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 581,
+   "cacheReadInputTokens": 2438,
+   "cacheCreationInputTokens": 924,
+   "webSearchRequests": 0,
+   "costUSD": 0.0195076,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 0,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 924,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "- `orders/checkout.py:17` — the `except` branch returns `True`, so a failed charge or insert is reported to callers as a successful order. Return `False` or re-raise so callers can tell the customer checkout failed.\n- `orders/checkout.py:13-14` — if `charge()` succeeds but `db.insert()` fails, the customer is charged with no order record. The failure is only logged at warning level, with no refund, compensation, or idempotency key, so retries can double-charge. Insert a pending order first, or refund/void the charge when the insert fails.\n- `orders/checkout.py:15` — `except Exception` treats a declined card, a payment-gateway error, and a DB failure the same way. Catch specific exceptions so each failure mode can be handled correctly; e.g., a decline is a user error, while an insert failure after a charge needs a refund.\n- `orders/checkout.py:16` — `log.warning` with only `%s` of the exception loses the traceback and has no order or customer identifier. Use `log.exception(...)` (or `exc_info=True`) at error level and include `order.id` or `customer_id`, since money may be involved.\n- `orders/checkout.py:13` — `charge()` has no idempotency key, and its return value (charge or transaction ID) is discarded. That ID isn't stored on the order, so payments can't be reconciled or refunded later.\n- `orders/checkout.py:22-26` — `_emit_placed` swallowing metrics errors is fine as the comment says, but it fails silently. Consider `log.debug` / `log.warning` with rate-limiting so a broken metrics client is noticed.\n- `orders/checkout.py` — no tests cover the new paths: successful charge, charge failure, and charge success with insert failure.",
+ "ttft_ms": 6868,
+ "type": "result",
+ "duration_ms": 6888,
+ "ttft_stream_ms": 1229,
+ "time_to_request_ms": 192,
+ "first_content_frame_ms": 1229,
+ "queued_turn_count": 0,
+ "result_index": 0
+}

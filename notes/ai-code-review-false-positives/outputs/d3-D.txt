@@ -1,0 +1,1 @@
+- `export_month` leaks the SQLite connection: `conn.close()` is skipped on the early `return 0` when no rows are found, and also when `execute`, `fetchall`, or `write_rows` raises. Wrap the connection in `try/finally` or `contextlib.closing(sqlite3.connect(db_path))`. A bare `with sqlite3.connect(...)` only manages the transaction and does not close the connection.

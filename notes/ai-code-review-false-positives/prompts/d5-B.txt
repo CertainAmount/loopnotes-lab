@@ -1,0 +1,58 @@
+Review this diff. List each issue as one comment.
+Format: one comment per line, each line starting with "- ". No other text.
+
+```diff
+diff --git a/pricing/cache.py b/pricing/cache.py
+--- a/pricing/cache.py
++++ b/pricing/cache.py
+@@ -2,9 +2,22 @@
+ from pricing.rates import fetch_rate
+ 
+ _rates = {}
++_hits = {}
+ 
+ 
+ def get_rate(cur):
+     if cur not in _rates:
+         _rates[cur] = fetch_rate(cur)
+     return _rates[cur]
++
++
++def get_rate_counted(cur):
++    rate = get_rate(cur)
++    n = _hits.get(cur, 0)
++    _hits[cur] = n + 1
++    return rate
++
++
++def billing_report():
++    # used by the monthly invoice job: each hit is billed to the partner
++    return {cur: n for cur, n in _hits.items()}
+```
+
+Callers of the changed code (unchanged files, for context):
+```python
+"""api/quote_server.py (unchanged, shown for context)"""
+from concurrent.futures import ThreadPoolExecutor
+
+from pricing.cache import billing_report, get_rate_counted
+
+CURRENCIES = {"USD", "EUR", "JPY", "KRW"}
+pool = ThreadPoolExecutor(max_workers=16)
+
+
+def quote(cur, amount):
+    if cur not in CURRENCIES:
+        raise ValueError("unsupported currency")
+    # requests are served concurrently from this pool
+    return pool.submit(lambda: amount * get_rate_counted(cur)).result()
+
+
+def close_month():
+    return billing_report()
+```
+
+Team rules:
+1. Short local names (u, n, s, uid, out) are fine in functions under 30 lines.
+2. Request input is validated in the API layer (see callers); service functions do not re-validate it.
+3. A broad `except Exception` is allowed when the line carries an `# intentional:` comment.

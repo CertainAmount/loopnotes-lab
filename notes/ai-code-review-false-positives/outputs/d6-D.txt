@@ -1,0 +1,2 @@
+- `short_name` raises `IndexError` on `parts[0]` when `name` is whitespace-only and longer than `n` (e.g. `" " * 20`): `name.split()` returns `[]`, so the `len(parts) == 1` branch is skipped. Handle the empty-parts case explicitly, for example by stripping first or returning `""`.
+- `n` is not validated. With `n=0` (or any negative `n`), `name[: n - 1]` and `first[: n - 1]` become negative slices that keep almost the whole string, so the result is much longer than `n`. Validate `n >= 1` or clamp the slice index with `max(n - 1, 0)`.

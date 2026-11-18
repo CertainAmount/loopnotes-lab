@@ -1,0 +1,4 @@
+- `place_order` returns `True` from the `except` branch, so a failed charge or failed DB insert is reported to the caller as a successful order; the failure should be propagated (re-raise or return `False`).
+- If `charge()` succeeds but `db.insert()` fails, the customer is charged with no order record, and nothing refunds or voids the charge; this leaves payment and order data inconsistent.
+- `charge()` is called with no idempotency key, so a retried `place_order` (e.g., after the insert fails or the request times out) can charge the customer more than once.
+- The broad `except Exception` logs only at `warning` with `%s` and no traceback (`log.exception`/`exc_info=True`), so charge and DB failures, including partial-charge cases, are hard to detect and reconcile.

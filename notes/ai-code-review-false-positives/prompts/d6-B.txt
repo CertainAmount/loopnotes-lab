@@ -1,0 +1,47 @@
+Review this diff. List each issue as one comment.
+Format: one comment per line, each line starting with "- ". No other text.
+
+```diff
+diff --git a/accounts/names.py b/accounts/names.py
+--- a/accounts/names.py
++++ b/accounts/names.py
+@@ -4,3 +4,16 @@
+ def initials(name):
+     parts = name.split()
+     return "".join(p[0].upper() for p in parts)
++
++
++def short_name(name, n=12):
++    if len(name) <= n:
++        return name
++    parts = name.split()
++    if len(parts) == 1:
++        return name[: n - 1] + "…"
++    first, last = parts[0], parts[-1]
++    s = f"{first} {last[0]}."
++    if len(s) <= n:
++        return s
++    return first[: n - 1] + "…"
+```
+
+Callers of the changed code (unchanged files, for context):
+```python
+"""api/account_routes.py (unchanged, shown for context)"""
+from flask import Blueprint, abort, request
+from accounts.names import short_name
+
+bp = Blueprint("accounts", __name__)
+
+
+@bp.get("/short-name")
+def get_short_name():
+    name = (request.args.get("name") or "").strip()
+    if not name:
+        abort(400, "name is required")
+    return {"short": short_name(name)}
+```
+
+Team rules:
+1. Short local names (u, n, s, uid, out) are fine in functions under 30 lines.
+2. Request input is validated in the API layer (see callers); service functions do not re-validate it.
+3. A broad `except Exception` is allowed when the line carries an `# intentional:` comment.

@@ -1,0 +1,26 @@
+Review this diff. List each issue as one comment.
+Format: one comment per line, each line starting with "- ". No other text.
+
+```diff
+diff --git a/profiles/service.py b/profiles/service.py
+--- a/profiles/service.py
++++ b/profiles/service.py
+@@ -9,3 +9,17 @@ def get_display_name(uid):
+     if user is None:
+         return "Unknown user"
+     return user.name
++
++
++def get_team_badge(uid):
++    user = repo.find_by_id(uid)
++    team = repo.find_team(user.team_id)
++    label = team.short_label or team.name
++    return f"{user.name} · {label}"
++
++
++def get_team_badges(uids):
++    out = []
++    for u in uids:
++        out.append(get_team_badge(u))
++    return out
+```

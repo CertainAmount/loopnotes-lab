@@ -1,0 +1,7 @@
+- `conn` is never closed on the `if not rows: return 0` early-return path, so every empty-month export leaks a SQLite connection and file handle.
+- No `try/finally` (or `contextlib.closing(sqlite3.connect(...))`) around the query and write, so an exception in `execute`, `fetchall`, or `write_rows` leaks the connection; note that `with sqlite3.connect(...)` alone only manages transactions and does not close the connection.
+- The connection stays open for the whole CSV write even though the rows are already fetched; close it right after `fetchall()` to release the DB handle and any read lock sooner.
+- `cur.fetchall()` loads the entire month into memory, which is unbounded for large tables; stream by passing `cur` (or `fetchmany` batches) to `write_rows` instead.
+- The CSV is written directly to `out_path`, so a failure mid-write leaves a truncated file that looks valid to consumers; write to a temp file in the same directory and `os.replace` it on success.
+- When there are no rows, no file is written and any stale export from a previous run stays at `out_path`, so downstream readers may consume outdated data as if it were current.
+- Values written to the CSV are not sanitized against formula injection (cells starting with `=`, `+`, `-`, `@`), which matters if the export is opened in a spreadsheet and any column can contain user-influenced text.
