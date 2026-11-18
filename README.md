@@ -58,6 +58,7 @@ The counts, sources and check dates behind the guides, one folder per article.
 
 Series we re-measure and keep adding to; several articles draw on each.
 
+- [Claude Code hook failure modes](datasets/claude-code-hooks/)
 - [Claude Code auto mode: where it takes effect](datasets/claude-code-auto-mode/)
 - [Ollama default context length: docs vs code](datasets/ollama-default-context/)
 - [Claude Code skill auto-trigger rate](datasets/claude-code-skill-trigger/)

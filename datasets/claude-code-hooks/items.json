@@ -1,0 +1,9 @@
+{
+ "type": "observations",
+ "title": "Claude Code hook failure modes",
+ "question": "Which hook mistakes are silent, which warn, and which fail open (the guarded command still runs), per version?",
+ "method": "Fresh mktemp git repo per case with a fake .env and a PreToolUse guard script that logs its first line and exits 2 on .env; headless claude -p (haiku, stream-json, setting-sources project,local, bypassPermissions) plus a pty-driven interactive session for startup warnings and /hooks. One mistake per case, one run per case.",
+ "articles": {
+  "claude-code-hooks-not-firing": "https://loopnotes.dev/claude-code-hooks-not-firing/"
+ }
+}
