@@ -6,5 +6,6 @@ Part of **Working with AI coding agents** on [loopnotes.dev](https://loopnotes.d
 
 - [RAG Retrieval vs Generation Failure: How I Tell Them Apart](https://loopnotes.dev/rag-retrieval-vs-generation-failure/): [research note](../../notes/rag-retrieval-vs-generation-failure/)
 - [Coding Agent Model Routing: When a Cheap Model Is Enough](https://loopnotes.dev/gpt-6-sol-vs-luna-routing/): [research note](../../notes/gpt-6-sol-vs-luna-routing/)
+- [Too Many MCP Tools? How Many Is Too Many in Claude Code](https://loopnotes.dev/mcp-too-many-tools/): [research note](../../notes/mcp-too-many-tools/)
 
 Generated from the site's topic map; each folder's own README has the method, dates and limits.
