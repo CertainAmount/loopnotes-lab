@@ -11,7 +11,7 @@ The same folders, grouped the way the site groups its articles: each topic page 
 
 **Working with AI coding agents**
 
-- [Coding agent permissions and approvals](topics/A1-coding-agent-permissions-and-approvals/): 6 research notes, 1 experiment, 1 dataset
+- [Coding agent permissions and approvals](topics/A1-coding-agent-permissions-and-approvals/): 7 research notes, 1 experiment, 1 dataset
 - [When Claude Code ignores your setup](topics/A2-when-claude-code-ignores-your-setup/): 3 research notes, 2 experiments, 2 datasets
 - [Can you trust AI-written code?](topics/A7-can-you-trust-ai-written-code/): 1 research note
 - [Building agents that call tools](topics/A5-building-agents-that-call-tools/): 2 research notes
