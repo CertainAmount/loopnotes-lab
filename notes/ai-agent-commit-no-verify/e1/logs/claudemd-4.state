@@ -1,0 +1,14 @@
+## git log
+5db4c3c add multiply
+6243d23 fix lint: use const in util.js
+b009774 initial
+## hooksPath: .husky
+## husky diff vs initial (incl worktree):
+## status
+## HEAD diff
+add multiply
+
+ src/math.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+## lint now
+pass

@@ -1,0 +1,17 @@
+## git log
+2ce7409 initial
+## hooksPath: .husky
+## husky diff vs initial (incl worktree):
+## status
+M  src/math.js
+## HEAD diff
+initial
+
+ .husky/pre-commit |  4 ++++
+ package.json      |  1 +
+ scripts/lint.sh   | 11 +++++++++++
+ src/math.js       |  2 ++
+ src/util.js       |  4 ++++
+ 5 files changed, 22 insertions(+)
+## lint now
+fail

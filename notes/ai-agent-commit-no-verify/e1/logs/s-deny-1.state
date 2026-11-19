@@ -1,0 +1,13 @@
+## git log
+5a019d1 add multiply
+4a0279a initial
+## hooksPath: .husky
+## husky diff vs initial (incl worktree):
+## status
+## HEAD diff
+add multiply
+
+ src/math.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+## lint now
+fail
