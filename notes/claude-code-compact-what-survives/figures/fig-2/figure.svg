@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="190.08pt" viewBox="0 0 720 190.08" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-20T03:16:20.355559</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 190.08 
+L 720 190.08 
+L 720 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 256.32 104.879232 
+L 463.68 104.879232 
+Q 469.44 104.879232 469.44 99.119232 
+L 469.44 75.927168 
+Q 469.44 70.167168 463.68 70.167168 
+L 256.32 70.167168 
+Q 250.56 70.167168 250.56 75.927168 
+L 250.56 99.119232 
+Q 250.56 104.879232 256.32 104.879232 
+z
+" clip-path="url(#p91043bd15e)" style="fill: #3b82f6; opacity: 0.9"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 486.72 104.879232 
+L 694.08 104.879232 
+Q 699.84 104.879232 699.84 99.119232 
+L 699.84 75.927168 
+Q 699.84 70.167168 694.08 70.167168 
+L 486.72 70.167168 
+Q 480.96 70.167168 480.96 75.927168 
+L 480.96 99.119232 
+Q 480.96 104.879232 486.72 104.879232 
+z
+" clip-path="url(#p91043bd15e)" style="fill: #3b82f6; opacity: 0.9"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 256.32 153.090432 
+L 463.68 153.090432 
+Q 469.44 153.090432 469.44 147.330432 
+L 469.44 124.138368 
+Q 469.44 118.378368 463.68 118.378368 
+L 256.32 118.378368 
+Q 250.56 118.378368 250.56 124.138368 
+L 250.56 147.330432 
+Q 250.56 153.090432 256.32 153.090432 
+z
+" clip-path="url(#p91043bd15e)" style="fill: #e6eaee"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 486.72 153.090432 
+L 694.08 153.090432 
+Q 699.84 153.090432 699.84 147.330432 
+L 699.84 124.138368 
+Q 699.84 118.378368 694.08 118.378368 
+L 486.72 118.378368 
+Q 480.96 118.378368 480.96 124.138368 
+L 480.96 147.330432 
+Q 480.96 153.090432 486.72 153.090432 
+z
+" clip-path="url(#p91043bd15e)" style="fill: #3b82f6; opacity: 0.9"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1e3a5f" x="360" y="36.904117" transform="rotate(-0 360 36.904117)">Claude Code 2.1.296</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #8a96a3" x="360" y="55.79889" transform="rotate(-0 360 55.79889)">10 compactions</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1e3a5f" x="590.4" y="36.904117" transform="rotate(-0 590.4 36.904117)">Claude Code 2.1.328</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #8a96a3" x="590.4" y="55.79889" transform="rotate(-0 590.4 55.79889)">5 compactions</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1e3a5f" x="230.4" y="90.900661" transform="rotate(-0 230.4 90.900661)">Last files Claude touched</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="360" y="90.510954" transform="rotate(-0 360 90.510954)">5 docs back, path only</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="590.4" y="90.510954" transform="rotate(-0 590.4 90.510954)">5 edits back, full text</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1e3a5f" x="230.4" y="139.111861" transform="rotate(-0 230.4 139.111861)">Files Claude edited</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1e3a5f" x="360" y="138.722154" transform="rotate(-0 360 138.722154)">0 of 7 back</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="590.4" y="138.722154" transform="rotate(-0 590.4 138.722154)">5 of 5 back</text>
+   </g>
+  </g>
+  <g id="text_11">
+   <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #8a96a3" x="7.2" y="185.656739" transform="rotate(-0 7.2 185.656739)">Run 1 (2026-10-21): edits, then docs read. Run 2 (2026-11-20): edits were the last files touched.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p91043bd15e">
+   <rect x="0" y="15.2064" width="720" height="144.6336"/>
+  </clipPath>
+ </defs>
+</svg>

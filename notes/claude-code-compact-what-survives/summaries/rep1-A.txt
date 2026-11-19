@@ -1,0 +1,60 @@
+This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation.
+
+KIWI:
+
+Summary:
+1. Primary Request and Intent:
+   - Session rules from the user: start every reply with `KIWI:`. Decision: switch ROUNDING_MODE to ROUND_HALF_EVEN because partner spec SPEC-7731 requires banker's rounding. Constraint: do not modify anything under legacy/, which is frozen until 2026-11-30.
+   - Project CLAUDE.md (/tmp/exp/rep1/ledger-svc/CLAUDE.md): "Always end every reply with a final line: -- ROOTOK". Python 3, no external deps; run tests with `python tests/run.py`.
+   - billing/CLAUDE.md: "When you mention anything about billing/, include the code word HERON."
+   - First task (complete): the 5 ordered steps (read billing files and summarize, run migrate.py, edit 7 files, run tests, remember a later step).
+   - Current task (the second user message): "Now read every file in docs/ and give me a 5-bullet summary of the architecture." The files are read; the 5-bullet summary is still to be delivered.
+
+2. Key Technical Concepts:
+   - Python `decimal` module: `ROUND_HALF_UP` to `ROUND_HALF_EVEN` (banker's rounding) via `value.quantize(Decimal('0.01'), rounding=ROUNDING_MODE)`.
+   - Each src/ledger module defines its own module-level `ROUNDING_MODE`.
+   - Migration script lock contention (E_LOCK_9472).
+   - Persistent file-based memory system (MEMORY.md index plus memory files).
+
+3. Files and Code Sections:
+   - billing/invoice.py and billing/tax.py: read only. Each has 41 near-identical helpers that return `Decimal(amount) * rate` unrounded, and each imports an unused `ROUND_HALF_UP`.
+   - src/ledger/{rounding,settlement,fees,payouts,refunds,report_templates,fx}.py: edited in that order. Lines 2 and 4 of each changed from
+     `from decimal import Decimal, ROUND_HALF_UP` / `ROUNDING_MODE = ROUND_HALF_UP`
+     to
+     `from decimal import Decimal, ROUND_HALF_EVEN` / `ROUNDING_MODE = ROUND_HALF_EVEN`.
+     Other lines in those files, such as the `quantize(..., rounding=ROUNDING_MODE)` calls, were left unchanged.
+   - docs/01-architecture-overview.md, 02-settlement-pipeline.md, 03-partner-integration.md, 04-payout-scheduling.md, 05-reporting-and-exports.md: all read in full. Each has about 18 sections of randomly generated word filler, with no real architectural content.
+   - Memory: ~/.claude/projects/-tmp-exp-cmp-exp-rep1-ledger-svc/memory/update-test-rounding-next-step.md (a project-type memory about the deferred test update) and MEMORY.md (one index line).
+
+4. Errors and fixes:
+   - `python3 scripts/migrate.py` returned `E_LOCK_9472: migration lock held by pid 31337`. Per the user's instruction I did not retry and edited files by hand.
+   - Bash with a variable in a for loop was blocked ("A variable in this command can't be checked before it runs"). A chained `sed -i` command was also blocked for needing approval. I switched to Read plus Edit for each file.
+   - Reading MEMORY.md before it existed gave "File does not exist". I then created it with Write.
+
+5. Problem Solving:
+   - The rounding change is applied in all 7 files and `python3 tests/run.py` reports "1 passed". The suite has only one test, so coverage is thin.
+   - The migration lock may still be held by pid 31337. I haven't investigated it.
+   - The edits are uncommitted. legacy/ was untouched.
+   - The docs are content-free filler, so an honest architecture summary has to say that. The only real signal is the file and heading structure plus the repeated domain vocabulary.
+
+6. All user messages:
+   - Message 1: "For the rest of this session, start every reply with `KIWI:`. Decision: we are switching ROUNDING_MODE to ROUND_HALF_EVEN because partner spec SPEC-7731 requires banker's rounding. Constraint: do not modify anything under legacy/ — it is frozen until 2026-11-30. Do these in order: 1. Read billing/invoice.py and billing/tax.py and give a one-line summary of each. 2. Run `python3 scripts/migrate.py` to migrate the rounding setting. If it fails, do not retry; switch to editing files by hand. 3. In src/ledger/, change ROUNDING_MODE to ROUND_HALF_EVEN (import it from decimal) in exactly this order: rounding.py, settlement.py, fees.py, payouts.py, refunds.py, report_templates.py, fx.py. 4. Run `python3 tests/run.py`. 5. Remember the next step for later, but do not do it now: update tests/test_rounding.py."
+   - Message 2: "Now read every file in docs/ and give me a 5-bullet summary of the architecture."
+   - Message 3 (the summarization request) said to respond with text only and no tools.
+
+7. Pending Tasks:
+   - Deliver the 5-bullet architecture summary of docs/ (the reading is done).
+   - Deferred, only when the user asks: update tests/test_rounding.py for ROUND_HALF_EVEN, then run `python3 tests/run.py`.
+
+8. Current Work:
+   I had just finished reading all five docs/ files. The next reply should be the 5-bullet summary, stated honestly. docs/01 is the "Architecture overview" with 18 sections, 02 is the "Settlement pipeline", 03 is "Partner integration", 04 is "Payout scheduling", and 05 is "Reporting and exports". Each section is a random-word paragraph with no concrete components, interfaces, data flow or decisions. The recurring vocabulary is ledger, settlement, payout, refund, rounding, partner, fee, tax, currency, reconcile, invoice, schedule, batch and export. The 5 bullets should therefore describe the docs' structure and themes and flag that no real architecture is documented. They should not invent one. The src/ledger/ layout (fees, fx, payouts, refunds, report_templates, rounding, settlement) can be mentioned as the actual verified code structure. The reply must start with `KIWI:`, must not call tools, and must end with `-- ROOTOK`. Any mention of billing/ needs the code word HERON.
+
+9. Optional Next Step:
+   Reply to the user's latest request, "Now read every file in docs/ and give me a 5-bullet summary of the architecture.", with exactly 5 bullets. They should state plainly that the five docs files (01-architecture-overview through 05-reporting-and-exports) contain only placeholder, random-word text. They can add the structure that is verifiable: the doc topics map to the src/ledger modules. The reply ends with the line `-- ROOTOK`.
+
+-- ROOTOK
+
+If you need specific details from before compaction (like exact code snippets, error messages, or content you generated), read the full transcript at: ~/.claude/projects/-tmp-exp-cmp-exp-rep1-ledger-svc/2b391005-dd14-42fe-8494-108a38f53a8b.jsonl
+Continue the conversation from where it left off without asking the user any further questions. Resume directly — do not acknowledge the summary, do not recap what was happening, do not preface with "I'll continue" or similar. Pick up the last task as if the break never happened.
+
+The messages after this summary are the most recent messages from before compaction, kept verbatim. The summary was written without seeing them, so something it says has not happened yet may already have happened in them.

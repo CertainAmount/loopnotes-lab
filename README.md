@@ -41,6 +41,7 @@ The same folders, grouped the way the site groups its articles: each topic page 
 
 The counts, sources and check dates behind the guides, one folder per article.
 
+- [What Survives Claude Code /compact? Tested on 2.1.328](https://loopnotes.dev/claude-code-compact-what-survives/) · [research note](notes/claude-code-compact-what-survives/)
 - [AI Agent Ran git commit --no-verify? Make CI the Real Gate](https://loopnotes.dev/ai-agent-commit-no-verify/) · [research note](notes/ai-agent-commit-no-verify/)
 - [RAG Retrieval vs Generation Failure: How I Tell Them Apart](https://loopnotes.dev/rag-retrieval-vs-generation-failure/) · [research note](notes/rag-retrieval-vs-generation-failure/)
 - [AI Code Review False Positives: What 120 Comments Showed](https://loopnotes.dev/ai-code-review-false-positives/) · [research note](notes/ai-code-review-false-positives/)

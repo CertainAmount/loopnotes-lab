@@ -1,0 +1,70 @@
+This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation.
+
+<system-reminder>
+<tools-used-before-summary>Bash, Read</tools-used-before-summary>
+</system-reminder>
+Summary:
+1. Primary Request and Intent:
+   The user is working in <work>t/ledger-svc, a Python 3 service with no external deps that handles settlement, refunds and payouts for partner ledgers. So far they have asked for read-only investigation, with no code changes requested:
+   - A two-line summary of src/ledger/refunds.py and docs/01-overview.md. Done.
+   - Run `python3 tests/run.py` and reply with only the failing-test count. Done: 3.
+   - Read docs/02-payout-writer.md and docs/03-reconciliation.md and summarize each in one line. The files are read, but the one-line summaries have not been delivered yet.
+
+   Standing project rule from CLAUDE.md, which overrides default behavior: "Always end every reply with a final line: -- ROOTOK". This applies even when the user asks for a terse reply, as in turn 2, where I answered "3" and then "-- ROOTOK".
+
+2. Key Technical Concepts:
+   - Python `decimal.Decimal` with ROUND_HALF_UP quantization to 0.01.
+   - `legacy.money.to_cents` is the final cent-conversion helper used by `refund_amount`.
+   - Settlement transaction and payout write timing: payouts must be written inside the settlement transaction, because partner reconciliation reads them in that same transaction.
+   - Test error code "RECON-E-6604 balance mismatch".
+   - Git attribution: commit messages end with "Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>". PR descriptions end with "🤖 Generated with [Claude Code](https://claude.com/claude-code)". The user's email (<email>) is private and must not go into external requests.
+
+3. Files and Code Sections:
+   - src/ledger/refunds.py (read, not modified)
+     - Contains about 29 near-identical rate helpers, plus the one real entry point at the end:
+     ```python
+     from decimal import Decimal, ROUND_HALF_UP
+     from legacy.money import to_cents
+     ROUNDING_MODE = ROUND_HALF_UP
+     def line_invoice_0(amount, rate=Decimal('0.36')):
+         value = Decimal(amount) * rate
+         return value.quantize(Decimal('0.01'), rounding=ROUNDING_MODE)
+     # ... settlement_gross_1 through settlement_period_28 follow the same pattern with different rates ...
+     def refund_amount(original, share):
+         # final cent conversion goes through the legacy helper
+         return to_cents(Decimal(original) * Decimal(share))
+     ```
+   - docs/01-overview.md (read): 15 sections of filler ledger-word text with no real content.
+   - docs/02-payout-writer.md (read): "Payout writer", 14 sections of filler text with no real content.
+   - docs/03-reconciliation.md (read): "Reconciliation", 13 filler sections plus one substantive "## Write timing" section. It says payout records must be written inside the settlement transaction, and that a deferred or end-of-day batch write makes reconciliation see a settlement with no payouts and flag a mismatch.
+   - tests/run.py (executed only): 41 tests collected, 3 failed and 38 passed. The failures are in tests/test_ledger.py: `test_refund_partial_cents`, `test_fx_refund_total` and `test_settlement_close_balance`.
+
+4. Errors and fixes:
+   - Test failures, all "AssertionError: RECON-E-6604 balance mismatch". I reported the count only, as asked. I have not investigated or fixed them, and the user has not asked me to.
+   - No tool errors or edit errors occurred.
+
+5. Problem Solving:
+   - I handled the conflict between the user's "reply with only the number" and CLAUDE.md's mandatory "-- ROOTOK" line by following CLAUDE.md, which says it overrides default behavior.
+   - Possible lead, not verified: the "Write timing" doc section may explain the RECON-E-6604 balance mismatches if payouts are written outside the settlement transaction. I have not checked this against the code.
+
+6. All user messages:
+   - "Read src/ledger/refunds.py and docs/01-overview.md and give me a two-line summary."
+   - "Run `python3 tests/run.py`. Reply with only the number of failing tests, nothing else."
+   - "Now read docs/02-payout-writer.md and docs/03-reconciliation.md and summarize each in one line."
+   - The latest message asks for a text-only conversation summary (this summary). It came with a "CRITICAL: Respond with TEXT ONLY. Do NOT call any tools" instruction.
+
+7. Pending Tasks:
+   - Deliver the one-line summary of each of docs/02-payout-writer.md and docs/03-reconciliation.md, ending the reply with the final line "-- ROOTOK".
+
+8. Current Work:
+   I had just read docs/02-payout-writer.md and docs/03-reconciliation.md in response to the third user message. The summarization request interrupted me before I wrote the one-line summaries. Planned content:
+   - 02-payout-writer.md: filler text only, with no substantive payout-writer content.
+   - 03-reconciliation.md: mostly filler. The one real content is the "Write timing" rule that payouts must be written inside the settlement transaction, so reconciliation doesn't flag a mismatch.
+
+9. Optional Next Step:
+   Reply to the user's most recent task, "Now read docs/02-payout-writer.md and docs/03-reconciliation.md and summarize each in one line", with two one-line summaries. Then end with the line "-- ROOTOK". I could also mention that the "Write timing" section might relate to the 3 failing RECON-E-6604 tests, labeled as unverified. I should not start investigating the failures unless the user asks.
+
+If you need specific details from before compaction (like exact code snippets, error messages, or content you generated), read the full transcript at: ~/.claude/projects/-tmp-exp-cmp-exp-r3t-ledger-svc/57c2f937-75d1-4efc-aa30-cc87d4474e54.jsonl
+Continue the conversation from where it left off without asking the user any further questions. Resume directly — do not acknowledge the summary, do not recap what was happening, do not preface with "I'll continue" or similar. Pick up the last task as if the break never happened.
+
+The messages after this summary are the most recent messages from before compaction, kept verbatim. The summary was written without seeing them, so something it says has not happened yet may already have happened in them.

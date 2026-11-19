@@ -1,0 +1,242 @@
+{
+ "frame": "matrix",
+ "rows": [
+  "Your chat rule",
+  "Your value (02:10 UTC)",
+  "Your drop reason",
+  "Your reversal",
+  "Root CLAUDE.md rule",
+  "Root cause found",
+  "Config value found",
+  "Claude's drop reason",
+  "Claude's proposed switch",
+  "Failing test names",
+  "Error code",
+  "Edited paths"
+ ],
+ "cols": [
+  "Plain",
+  "Plain",
+  "Plain",
+  "Keep line",
+  "Keep line",
+  "No compact"
+ ],
+ "cells": [
+  [
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept"
+  ],
+  [
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept"
+  ],
+  [
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept"
+  ],
+  [
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept"
+  ],
+  [
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept"
+  ],
+  [
+   "kept",
+   "altered",
+   "kept",
+   "altered",
+   "altered",
+   "kept"
+  ],
+  [
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept"
+  ],
+  [
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept"
+  ],
+  [
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept"
+  ],
+  [
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept"
+  ],
+  [
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept"
+  ],
+  [
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept",
+   "kept"
+  ]
+ ],
+ "cell_text": [
+  [
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  [
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  [
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  [
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  [
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  [
+   "",
+   "line vague",
+   "",
+   "no line",
+   "line vague",
+   ""
+  ],
+  [
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  [
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  [
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  [
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  [
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  [
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ]
+ ],
+ "outcomes": {
+  "kept": [
+   "Kept",
+   "#E6EAEE"
+  ],
+  "altered": [
+   "Blurred",
+   "#3B82F6"
+  ]
+ },
+ "col_sub": [
+  "12/12 kept",
+  "11/12 kept",
+  "12/12 kept",
+  "11/12 kept",
+  "11/12 kept",
+  "12/12 kept"
+ ],
+ "legend": false,
+ "label_width": 0.27,
+ "note": "Claude Code 2.1.328, Sonnet 5.5, one 78,118-token seed forked 6 times, 2026-11-20. Keep line: /compact with a keep instruction"
+}

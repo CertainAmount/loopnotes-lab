@@ -1,0 +1,650 @@
+[
+ {
+  "run": "A1",
+  "fact": "U1 chat rule (KIWI)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A1",
+  "fact": "D root CLAUDE.md rule",
+  "verdict": "kept"
+ },
+ {
+  "run": "A1",
+  "fact": "U2 your drop reason (cache)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A1",
+  "fact": "U3 your value (02:10 UTC)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A1",
+  "fact": "A1 root cause found",
+  "verdict": "kept",
+  "regex_verdict": "kept",
+  "note": "file and line 40-42 recalled"
+ },
+ {
+  "run": "A1",
+  "fact": "A2 config value found (retry 7)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A1",
+  "fact": "T1 failing test names (output only)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A1",
+  "fact": "T2 error code (output only)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A1",
+  "fact": "RU your reversal (HALF_EVEN, SPEC-8802)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A1",
+  "fact": "RC Claude-proposed switch (inline write)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A1",
+  "fact": "A3 Claude's drop reason (reconciliation)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A1",
+  "fact": "E edited paths (5)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A1",
+  "meta": {
+   "reattached": [
+    "src/ledger/settlement.py",
+    "src/ledger/fx.py",
+    "src/ledger/payouts.py",
+    "src/ledger/fees.py",
+    "src/ledger/refunds.py"
+   ],
+   "summary_tests_named": 3,
+   "summary_has_6604": true,
+   "summary_has_42": true,
+   "summary_has_retry7": true,
+   "summary_has_0210": true,
+   "summary_reconcil": true,
+   "summary_sections": [
+    "1. Primary Request and Intent",
+    "2. Key Technical Concepts",
+    "3. Files and Code Sections",
+    "4. Errors and fixes",
+    "5. Problem Solving",
+    "6. All user messages",
+    "7. Pending Tasks",
+    "8. Current Work",
+    "9. Optional Next Step"
+   ],
+   "compact": {
+    "trigger": "manual",
+    "pre_tokens": 78118,
+    "post_tokens": 15629,
+    "cumulative_dropped_tokens": 62489,
+    "duration_ms": 28473,
+    "preserved_segment": {
+     "head_uuid": "e20910ce-b7fc-45f5-80b1-25b3c33c91af",
+     "anchor_uuid": "8b0ade4e-ea73-4d60-8c36-4bb6f4ba0588",
+     "tail_uuid": "e20910ce-b7fc-45f5-80b1-25b3c33c91af"
+    },
+    "preserved_messages": {
+     "anchor_uuid": "8b0ade4e-ea73-4d60-8c36-4bb6f4ba0588",
+     "uuids": [
+      "e20910ce-b7fc-45f5-80b1-25b3c33c91af"
+     ],
+     "all_uuids": [
+      "e20910ce-b7fc-45f5-80b1-25b3c33c91af"
+     ]
+    }
+   },
+   "summary_words": 1227
+  }
+ },
+ {
+  "run": "A2",
+  "fact": "U1 chat rule (KIWI)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A2",
+  "fact": "D root CLAUDE.md rule",
+  "verdict": "kept"
+ },
+ {
+  "run": "A2",
+  "fact": "U2 your drop reason (cache)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A2",
+  "fact": "U3 your value (02:10 UTC)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A2",
+  "fact": "A1 root cause found",
+  "verdict": "altered",
+  "regex_verdict": "kept",
+  "note": "file and cause kept; line hedged: \"I don't remember the exact line\""
+ },
+ {
+  "run": "A2",
+  "fact": "A2 config value found (retry 7)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A2",
+  "fact": "T1 failing test names (output only)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A2",
+  "fact": "T2 error code (output only)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A2",
+  "fact": "RU your reversal (HALF_EVEN, SPEC-8802)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A2",
+  "fact": "RC Claude-proposed switch (inline write)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A2",
+  "fact": "A3 Claude's drop reason (reconciliation)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A2",
+  "fact": "E edited paths (5)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A2",
+  "meta": {
+   "reattached": [
+    "src/ledger/settlement.py",
+    "src/ledger/fx.py",
+    "src/ledger/payouts.py",
+    "src/ledger/fees.py",
+    "src/ledger/refunds.py"
+   ],
+   "summary_tests_named": 3,
+   "summary_has_6604": true,
+   "summary_has_42": false,
+   "summary_has_retry7": true,
+   "summary_has_0210": true,
+   "summary_reconcil": true,
+   "summary_sections": [
+    "1. Primary Request and Intent",
+    "2. Key Technical Concepts",
+    "3. Files and Code Sections",
+    "4. Errors and fixes",
+    "5. Problem Solving",
+    "6. All user messages",
+    "7. Pending Tasks",
+    "8. Current Work",
+    "9. Optional Next Step"
+   ],
+   "compact": {
+    "trigger": "manual",
+    "pre_tokens": 78118,
+    "post_tokens": 15693,
+    "cumulative_dropped_tokens": 62425,
+    "duration_ms": 27856,
+    "preserved_segment": {
+     "head_uuid": "e20910ce-b7fc-45f5-80b1-25b3c33c91af",
+     "anchor_uuid": "1ca0eb15-5d4e-479a-87cb-b4d3d590e9c5",
+     "tail_uuid": "e20910ce-b7fc-45f5-80b1-25b3c33c91af"
+    },
+    "preserved_messages": {
+     "anchor_uuid": "1ca0eb15-5d4e-479a-87cb-b4d3d590e9c5",
+     "uuids": [
+      "e20910ce-b7fc-45f5-80b1-25b3c33c91af"
+     ],
+     "all_uuids": [
+      "e20910ce-b7fc-45f5-80b1-25b3c33c91af"
+     ]
+    }
+   },
+   "summary_words": 1234
+  }
+ },
+ {
+  "run": "A3",
+  "fact": "U1 chat rule (KIWI)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A3",
+  "fact": "D root CLAUDE.md rule",
+  "verdict": "kept"
+ },
+ {
+  "run": "A3",
+  "fact": "U2 your drop reason (cache)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A3",
+  "fact": "U3 your value (02:10 UTC)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A3",
+  "fact": "A1 root cause found",
+  "verdict": "kept",
+  "regex_verdict": "kept",
+  "note": "file and line 40-42 recalled"
+ },
+ {
+  "run": "A3",
+  "fact": "A2 config value found (retry 7)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A3",
+  "fact": "T1 failing test names (output only)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A3",
+  "fact": "T2 error code (output only)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A3",
+  "fact": "RU your reversal (HALF_EVEN, SPEC-8802)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A3",
+  "fact": "RC Claude-proposed switch (inline write)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A3",
+  "fact": "A3 Claude's drop reason (reconciliation)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A3",
+  "fact": "E edited paths (5)",
+  "verdict": "kept"
+ },
+ {
+  "run": "A3",
+  "meta": {
+   "reattached": [
+    "src/ledger/settlement.py",
+    "src/ledger/fx.py",
+    "src/ledger/payouts.py",
+    "src/ledger/fees.py",
+    "src/ledger/refunds.py"
+   ],
+   "summary_tests_named": 3,
+   "summary_has_6604": true,
+   "summary_has_42": true,
+   "summary_has_retry7": true,
+   "summary_has_0210": true,
+   "summary_reconcil": true,
+   "summary_sections": [
+    "1. Primary Request and Intent",
+    "2. Key Technical Concepts",
+    "3. Files and Code Sections",
+    "4. Errors and fixes",
+    "5. Problem Solving",
+    "6. All user messages",
+    "7. Pending Tasks",
+    "8. Current Work",
+    "9. Optional Next Step"
+   ],
+   "compact": {
+    "trigger": "manual",
+    "pre_tokens": 78118,
+    "post_tokens": 15402,
+    "cumulative_dropped_tokens": 62716,
+    "duration_ms": 26882,
+    "preserved_segment": {
+     "head_uuid": "e20910ce-b7fc-45f5-80b1-25b3c33c91af",
+     "anchor_uuid": "aa9d5e08-f28b-43df-8029-181e2d11db1f",
+     "tail_uuid": "e20910ce-b7fc-45f5-80b1-25b3c33c91af"
+    },
+    "preserved_messages": {
+     "anchor_uuid": "aa9d5e08-f28b-43df-8029-181e2d11db1f",
+     "uuids": [
+      "e20910ce-b7fc-45f5-80b1-25b3c33c91af"
+     ],
+     "all_uuids": [
+      "e20910ce-b7fc-45f5-80b1-25b3c33c91af"
+     ]
+    }
+   },
+   "summary_words": 1078
+  }
+ },
+ {
+  "run": "B1",
+  "fact": "U1 chat rule (KIWI)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B1",
+  "fact": "D root CLAUDE.md rule",
+  "verdict": "kept"
+ },
+ {
+  "run": "B1",
+  "fact": "U2 your drop reason (cache)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B1",
+  "fact": "U3 your value (02:10 UTC)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B1",
+  "fact": "A1 root cause found",
+  "verdict": "altered",
+  "regex_verdict": "altered",
+  "note": "file and cause kept; no line number"
+ },
+ {
+  "run": "B1",
+  "fact": "A2 config value found (retry 7)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B1",
+  "fact": "T1 failing test names (output only)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B1",
+  "fact": "T2 error code (output only)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B1",
+  "fact": "RU your reversal (HALF_EVEN, SPEC-8802)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B1",
+  "fact": "RC Claude-proposed switch (inline write)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B1",
+  "fact": "A3 Claude's drop reason (reconciliation)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B1",
+  "fact": "E edited paths (5)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B1",
+  "meta": {
+   "reattached": [
+    "src/ledger/settlement.py",
+    "src/ledger/fx.py",
+    "src/ledger/payouts.py",
+    "src/ledger/fees.py",
+    "src/ledger/refunds.py"
+   ],
+   "summary_tests_named": 3,
+   "summary_has_6604": true,
+   "summary_has_42": false,
+   "summary_has_retry7": true,
+   "summary_has_0210": true,
+   "summary_reconcil": true,
+   "summary_sections": [
+    "1. Primary Request and Intent",
+    "2. Key Technical Concepts",
+    "3. Files and Code Sections",
+    "4. Errors and fixes",
+    "5. Problem Solving",
+    "6. All user messages",
+    "7. Pending Tasks",
+    "8. Current Work",
+    "9. Optional Next Step"
+   ],
+   "compact": {
+    "trigger": "manual",
+    "pre_tokens": 78118,
+    "post_tokens": 15347,
+    "cumulative_dropped_tokens": 62771,
+    "duration_ms": 27331,
+    "preserved_segment": {
+     "head_uuid": "e20910ce-b7fc-45f5-80b1-25b3c33c91af",
+     "anchor_uuid": "9a6fbfa5-d655-4597-bb5e-39d876fce875",
+     "tail_uuid": "e20910ce-b7fc-45f5-80b1-25b3c33c91af"
+    },
+    "preserved_messages": {
+     "anchor_uuid": "9a6fbfa5-d655-4597-bb5e-39d876fce875",
+     "uuids": [
+      "e20910ce-b7fc-45f5-80b1-25b3c33c91af"
+     ],
+     "all_uuids": [
+      "e20910ce-b7fc-45f5-80b1-25b3c33c91af"
+     ]
+    }
+   },
+   "summary_words": 1023
+  }
+ },
+ {
+  "run": "B2",
+  "fact": "U1 chat rule (KIWI)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B2",
+  "fact": "D root CLAUDE.md rule",
+  "verdict": "kept"
+ },
+ {
+  "run": "B2",
+  "fact": "U2 your drop reason (cache)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B2",
+  "fact": "U3 your value (02:10 UTC)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B2",
+  "fact": "A1 root cause found",
+  "verdict": "altered",
+  "regex_verdict": "kept",
+  "note": "file and cause kept; line hedged as unchecked"
+ },
+ {
+  "run": "B2",
+  "fact": "A2 config value found (retry 7)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B2",
+  "fact": "T1 failing test names (output only)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B2",
+  "fact": "T2 error code (output only)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B2",
+  "fact": "RU your reversal (HALF_EVEN, SPEC-8802)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B2",
+  "fact": "RC Claude-proposed switch (inline write)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B2",
+  "fact": "A3 Claude's drop reason (reconciliation)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B2",
+  "fact": "E edited paths (5)",
+  "verdict": "kept"
+ },
+ {
+  "run": "B2",
+  "meta": {
+   "reattached": [
+    "src/ledger/settlement.py",
+    "src/ledger/fx.py",
+    "src/ledger/payouts.py",
+    "src/ledger/fees.py",
+    "src/ledger/refunds.py"
+   ],
+   "summary_tests_named": 3,
+   "summary_has_6604": true,
+   "summary_has_42": false,
+   "summary_has_retry7": true,
+   "summary_has_0210": true,
+   "summary_reconcil": true,
+   "summary_sections": [
+    "1. Primary Request and Intent",
+    "2. Key Technical Concepts",
+    "3. Files and Code Sections",
+    "4. Errors and fixes",
+    "5. Problem Solving",
+    "6. All user messages",
+    "7. Pending Tasks",
+    "8. Current Work",
+    "9. Optional Next Step"
+   ],
+   "compact": {
+    "trigger": "manual",
+    "pre_tokens": 78118,
+    "post_tokens": 15515,
+    "cumulative_dropped_tokens": 62603,
+    "duration_ms": 30783,
+    "preserved_segment": {
+     "head_uuid": "e20910ce-b7fc-45f5-80b1-25b3c33c91af",
+     "anchor_uuid": "b69cf907-8b63-400b-8b48-271b79267bdd",
+     "tail_uuid": "e20910ce-b7fc-45f5-80b1-25b3c33c91af"
+    },
+    "preserved_messages": {
+     "anchor_uuid": "b69cf907-8b63-400b-8b48-271b79267bdd",
+     "uuids": [
+      "e20910ce-b7fc-45f5-80b1-25b3c33c91af"
+     ],
+     "all_uuids": [
+      "e20910ce-b7fc-45f5-80b1-25b3c33c91af"
+     ]
+    }
+   },
+   "summary_words": 1143
+  }
+ },
+ {
+  "run": "C1",
+  "fact": "U1 chat rule (KIWI)",
+  "verdict": "kept"
+ },
+ {
+  "run": "C1",
+  "fact": "D root CLAUDE.md rule",
+  "verdict": "kept"
+ },
+ {
+  "run": "C1",
+  "fact": "U2 your drop reason (cache)",
+  "verdict": "kept"
+ },
+ {
+  "run": "C1",
+  "fact": "U3 your value (02:10 UTC)",
+  "verdict": "kept"
+ },
+ {
+  "run": "C1",
+  "fact": "A1 root cause found",
+  "verdict": "kept",
+  "regex_verdict": "altered",
+  "note": "control: file and line 40-42"
+ },
+ {
+  "run": "C1",
+  "fact": "A2 config value found (retry 7)",
+  "verdict": "kept"
+ },
+ {
+  "run": "C1",
+  "fact": "T1 failing test names (output only)",
+  "verdict": "kept"
+ },
+ {
+  "run": "C1",
+  "fact": "T2 error code (output only)",
+  "verdict": "kept"
+ },
+ {
+  "run": "C1",
+  "fact": "RU your reversal (HALF_EVEN, SPEC-8802)",
+  "verdict": "kept"
+ },
+ {
+  "run": "C1",
+  "fact": "RC Claude-proposed switch (inline write)",
+  "verdict": "kept"
+ },
+ {
+  "run": "C1",
+  "fact": "A3 Claude's drop reason (reconciliation)",
+  "verdict": "kept"
+ },
+ {
+  "run": "C1",
+  "fact": "E edited paths (5)",
+  "verdict": "kept"
+ },
+ {
+  "run": "C1",
+  "meta": {
+   "reattached": [],
+   "summary_tests_named": 0,
+   "summary_has_6604": false,
+   "summary_has_42": false,
+   "summary_has_retry7": false,
+   "summary_has_0210": false,
+   "summary_reconcil": false,
+   "summary_sections": [],
+   "compact": null,
+   "summary_words": 0
+  }
+ },
+ {
+  "run": "TA1",
+  "fact": "T1 failing test names (tool output only, reply said \"3\")",
+  "verdict": "kept",
+  "note": "3/3 names and RECON-E-6604 in summary and probe"
+ }
+]

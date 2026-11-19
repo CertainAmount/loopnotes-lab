@@ -1,0 +1,718 @@
+[
+ {
+  "rep": "rep0",
+  "branch": "A",
+  "P1_kiwi": true,
+  "P2_kiwi": true,
+  "P1_rootok": true,
+  "P2_rootok": true,
+  "P2_heron": true,
+  "sum_heron": true,
+  "sum_kiwi": true,
+  "after_billing_claudemd": true,
+  "after_owl": true,
+  "P1_paths": 7,
+  "sum_paths": 7,
+  "P1_memory_file": true,
+  "P1_legacy_as_modified": false,
+  "P1_half_even": true,
+  "P1_spec": true,
+  "sum_spec": true,
+  "P1_err": true,
+  "sum_err": true,
+  "P1_migrate": true,
+  "P1_legacy_date": true,
+  "P1_next": true,
+  "sum_next": true,
+  "reattached": [
+   "docs/05-reporting-and-exports.md",
+   "docs/04-payout-scheduling.md",
+   "docs/03-partner-integration.md",
+   "docs/01-architecture-overview.md",
+   "docs/02-settlement-pipeline.md"
+  ],
+  "report_templates_ref_only": false,
+  "compact": {
+   "trigger": "manual",
+   "pre_tokens": 82890,
+   "post_tokens": 5832,
+   "cumulative_dropped_tokens": 77058,
+   "duration_ms": 21303,
+   "preserved_segment": {
+    "head_uuid": "0058ce85-3a4e-4b55-895a-16d1dc27f8d2",
+    "anchor_uuid": "94d6517a-ea7c-4208-bbee-6fd066c3ff44",
+    "tail_uuid": "1ee22020-eced-473c-81e8-d148d46250f1"
+   },
+   "preserved_messages": {
+    "anchor_uuid": "94d6517a-ea7c-4208-bbee-6fd066c3ff44",
+    "uuids": [
+     "0058ce85-3a4e-4b55-895a-16d1dc27f8d2",
+     "1ee22020-eced-473c-81e8-d148d46250f1"
+    ],
+    "all_uuids": [
+     "0058ce85-3a4e-4b55-895a-16d1dc27f8d2",
+     "1ee22020-eced-473c-81e8-d148d46250f1"
+    ]
+   }
+  },
+  "P1_cost": 0.068616,
+  "sum_words": 955
+ },
+ {
+  "rep": "rep1",
+  "branch": "B",
+  "P1_kiwi": true,
+  "P2_kiwi": true,
+  "P1_rootok": true,
+  "P2_rootok": true,
+  "P2_heron": true,
+  "sum_heron": true,
+  "sum_kiwi": true,
+  "after_billing_claudemd": true,
+  "after_owl": true,
+  "P1_paths": 7,
+  "sum_paths": 7,
+  "P1_memory_file": true,
+  "P1_legacy_as_modified": false,
+  "P1_half_even": true,
+  "P1_spec": true,
+  "sum_spec": true,
+  "P1_err": true,
+  "sum_err": true,
+  "P1_migrate": true,
+  "P1_legacy_date": true,
+  "P1_next": true,
+  "sum_next": true,
+  "reattached": [
+   "docs/05-reporting-and-exports.md",
+   "docs/04-payout-scheduling.md",
+   "docs/03-partner-integration.md",
+   "docs/02-settlement-pipeline.md",
+   "docs/01-architecture-overview.md"
+  ],
+  "report_templates_ref_only": false,
+  "compact": {
+   "trigger": "manual",
+   "pre_tokens": 84892,
+   "post_tokens": 5840,
+   "cumulative_dropped_tokens": 79052,
+   "duration_ms": 22976,
+   "preserved_segment": {
+    "head_uuid": "372f070a-f058-45fa-9f5b-e6396a93ac7e",
+    "anchor_uuid": "f00dffb8-84d7-40ec-b3d5-a98038c2692a",
+    "tail_uuid": "333f5b9f-4ae8-4607-b989-fdd811e89159"
+   },
+   "preserved_messages": {
+    "anchor_uuid": "f00dffb8-84d7-40ec-b3d5-a98038c2692a",
+    "uuids": [
+     "372f070a-f058-45fa-9f5b-e6396a93ac7e",
+     "333f5b9f-4ae8-4607-b989-fdd811e89159"
+    ],
+    "all_uuids": [
+     "372f070a-f058-45fa-9f5b-e6396a93ac7e",
+     "333f5b9f-4ae8-4607-b989-fdd811e89159"
+    ]
+   }
+  },
+  "P1_cost": 0.06394,
+  "sum_words": 956
+ },
+ {
+  "rep": "rep1",
+  "branch": "C",
+  "P1_kiwi": true,
+  "P2_kiwi": true,
+  "P1_rootok": true,
+  "P2_rootok": true,
+  "P2_heron": true,
+  "sum_heron": false,
+  "sum_kiwi": false,
+  "after_billing_claudemd": false,
+  "after_owl": false,
+  "P1_paths": 7,
+  "sum_paths": 0,
+  "P1_memory_file": true,
+  "P1_legacy_as_modified": false,
+  "P1_half_even": true,
+  "P1_spec": true,
+  "sum_spec": false,
+  "P1_err": true,
+  "sum_err": false,
+  "P1_migrate": true,
+  "P1_legacy_date": true,
+  "P1_next": true,
+  "sum_next": false,
+  "reattached": [],
+  "report_templates_ref_only": false,
+  "compact": null,
+  "P1_cost": 0.292964,
+  "sum_words": 0
+ },
+ {
+  "rep": "rep1",
+  "branch": "A",
+  "P1_kiwi": true,
+  "P2_kiwi": true,
+  "P1_rootok": true,
+  "P2_rootok": true,
+  "P2_heron": true,
+  "sum_heron": true,
+  "sum_kiwi": true,
+  "after_billing_claudemd": true,
+  "after_owl": true,
+  "P1_paths": 7,
+  "sum_paths": 7,
+  "P1_memory_file": true,
+  "P1_legacy_as_modified": false,
+  "P1_half_even": true,
+  "P1_spec": true,
+  "sum_spec": true,
+  "P1_err": true,
+  "sum_err": true,
+  "P1_migrate": true,
+  "P1_legacy_date": true,
+  "P1_next": true,
+  "sum_next": true,
+  "reattached": [
+   "docs/05-reporting-and-exports.md",
+   "docs/04-payout-scheduling.md",
+   "docs/03-partner-integration.md",
+   "docs/02-settlement-pipeline.md",
+   "docs/01-architecture-overview.md"
+  ],
+  "report_templates_ref_only": false,
+  "compact": {
+   "trigger": "manual",
+   "pre_tokens": 84892,
+   "post_tokens": 5933,
+   "cumulative_dropped_tokens": 78959,
+   "duration_ms": 23410,
+   "preserved_segment": {
+    "head_uuid": "372f070a-f058-45fa-9f5b-e6396a93ac7e",
+    "anchor_uuid": "ef2be13b-3df9-4681-a293-f350313fcf5f",
+    "tail_uuid": "333f5b9f-4ae8-4607-b989-fdd811e89159"
+   },
+   "preserved_messages": {
+    "anchor_uuid": "ef2be13b-3df9-4681-a293-f350313fcf5f",
+    "uuids": [
+     "372f070a-f058-45fa-9f5b-e6396a93ac7e",
+     "333f5b9f-4ae8-4607-b989-fdd811e89159"
+    ],
+    "all_uuids": [
+     "372f070a-f058-45fa-9f5b-e6396a93ac7e",
+     "333f5b9f-4ae8-4607-b989-fdd811e89159"
+    ]
+   }
+  },
+  "P1_cost": 0.060507,
+  "sum_words": 1004
+ },
+ {
+  "rep": "rep2",
+  "branch": "B",
+  "P1_kiwi": true,
+  "P2_kiwi": true,
+  "P1_rootok": true,
+  "P2_rootok": true,
+  "P2_heron": true,
+  "sum_heron": true,
+  "sum_kiwi": true,
+  "after_billing_claudemd": true,
+  "after_owl": true,
+  "P1_paths": 7,
+  "sum_paths": 7,
+  "P1_memory_file": false,
+  "P1_legacy_as_modified": false,
+  "P1_half_even": true,
+  "P1_spec": true,
+  "sum_spec": true,
+  "P1_err": true,
+  "sum_err": true,
+  "P1_migrate": true,
+  "P1_legacy_date": true,
+  "P1_next": true,
+  "sum_next": true,
+  "reattached": [
+   "docs/05-reporting-and-exports.md",
+   "docs/04-payout-scheduling.md",
+   "docs/03-partner-integration.md",
+   "docs/02-settlement-pipeline.md",
+   "docs/01-architecture-overview.md"
+  ],
+  "report_templates_ref_only": false,
+  "compact": {
+   "trigger": "manual",
+   "pre_tokens": 81270,
+   "post_tokens": 5867,
+   "cumulative_dropped_tokens": 75403,
+   "duration_ms": 25892,
+   "preserved_segment": {
+    "head_uuid": "3b9b0cd2-5f5f-436e-ac03-b4e40f7b9803",
+    "anchor_uuid": "7953e266-4f31-4e59-95a0-19ff5d1145d5",
+    "tail_uuid": "042fc5f2-7a77-4772-9a07-a15d8d71af12"
+   },
+   "preserved_messages": {
+    "anchor_uuid": "7953e266-4f31-4e59-95a0-19ff5d1145d5",
+    "uuids": [
+     "3b9b0cd2-5f5f-436e-ac03-b4e40f7b9803",
+     "042fc5f2-7a77-4772-9a07-a15d8d71af12"
+    ],
+    "all_uuids": [
+     "3b9b0cd2-5f5f-436e-ac03-b4e40f7b9803",
+     "042fc5f2-7a77-4772-9a07-a15d8d71af12"
+    ]
+   }
+  },
+  "P1_cost": 0.070326,
+  "sum_words": 973
+ },
+ {
+  "rep": "rep2",
+  "branch": "C",
+  "P1_kiwi": true,
+  "P2_kiwi": true,
+  "P1_rootok": true,
+  "P2_rootok": true,
+  "P2_heron": true,
+  "sum_heron": false,
+  "sum_kiwi": false,
+  "after_billing_claudemd": false,
+  "after_owl": false,
+  "P1_paths": 7,
+  "sum_paths": 0,
+  "P1_memory_file": false,
+  "P1_legacy_as_modified": false,
+  "P1_half_even": true,
+  "P1_spec": true,
+  "sum_spec": false,
+  "P1_err": true,
+  "sum_err": false,
+  "P1_migrate": true,
+  "P1_legacy_date": true,
+  "P1_next": true,
+  "sum_next": false,
+  "reattached": [],
+  "report_templates_ref_only": false,
+  "compact": null,
+  "P1_cost": 0.279794,
+  "sum_words": 0
+ },
+ {
+  "rep": "rep2",
+  "branch": "A",
+  "P1_kiwi": true,
+  "P2_kiwi": true,
+  "P1_rootok": true,
+  "P2_rootok": true,
+  "P2_heron": true,
+  "sum_heron": true,
+  "sum_kiwi": true,
+  "after_billing_claudemd": true,
+  "after_owl": true,
+  "P1_paths": 7,
+  "sum_paths": 7,
+  "P1_memory_file": false,
+  "P1_legacy_as_modified": false,
+  "P1_half_even": true,
+  "P1_spec": true,
+  "sum_spec": true,
+  "P1_err": true,
+  "sum_err": true,
+  "P1_migrate": true,
+  "P1_legacy_date": true,
+  "P1_next": true,
+  "sum_next": true,
+  "reattached": [
+   "docs/05-reporting-and-exports.md",
+   "docs/04-payout-scheduling.md",
+   "docs/03-partner-integration.md",
+   "docs/02-settlement-pipeline.md",
+   "docs/01-architecture-overview.md"
+  ],
+  "report_templates_ref_only": false,
+  "compact": {
+   "trigger": "manual",
+   "pre_tokens": 81270,
+   "post_tokens": 5642,
+   "cumulative_dropped_tokens": 75628,
+   "duration_ms": 23317,
+   "preserved_segment": {
+    "head_uuid": "3b9b0cd2-5f5f-436e-ac03-b4e40f7b9803",
+    "anchor_uuid": "bdc8b5e9-d7df-4f18-a43a-11f4f337003e",
+    "tail_uuid": "042fc5f2-7a77-4772-9a07-a15d8d71af12"
+   },
+   "preserved_messages": {
+    "anchor_uuid": "bdc8b5e9-d7df-4f18-a43a-11f4f337003e",
+    "uuids": [
+     "3b9b0cd2-5f5f-436e-ac03-b4e40f7b9803",
+     "042fc5f2-7a77-4772-9a07-a15d8d71af12"
+    ],
+    "all_uuids": [
+     "3b9b0cd2-5f5f-436e-ac03-b4e40f7b9803",
+     "042fc5f2-7a77-4772-9a07-a15d8d71af12"
+    ]
+   }
+  },
+  "P1_cost": 0.058003,
+  "sum_words": 866
+ },
+ {
+  "rep": "rep3",
+  "branch": "B",
+  "P1_kiwi": true,
+  "P2_kiwi": true,
+  "P1_rootok": true,
+  "P2_rootok": true,
+  "P2_heron": true,
+  "sum_heron": true,
+  "sum_kiwi": true,
+  "after_billing_claudemd": true,
+  "after_owl": true,
+  "P1_paths": 7,
+  "sum_paths": 7,
+  "P1_memory_file": true,
+  "P1_legacy_as_modified": false,
+  "P1_half_even": true,
+  "P1_spec": true,
+  "sum_spec": true,
+  "P1_err": true,
+  "sum_err": true,
+  "P1_migrate": true,
+  "P1_legacy_date": true,
+  "P1_next": true,
+  "sum_next": true,
+  "reattached": [
+   "docs/05-reporting-and-exports.md",
+   "docs/04-payout-scheduling.md",
+   "docs/03-partner-integration.md",
+   "docs/01-architecture-overview.md",
+   "docs/02-settlement-pipeline.md"
+  ],
+  "report_templates_ref_only": false,
+  "compact": {
+   "trigger": "manual",
+   "pre_tokens": 90548,
+   "post_tokens": 3747,
+   "cumulative_dropped_tokens": 86801,
+   "duration_ms": 28932,
+   "preserved_segment": {
+    "head_uuid": "1397cb5b-efbb-4c03-91be-3750d950ce53",
+    "anchor_uuid": "f8726461-7b8c-41e6-8ee1-0a38172302e9",
+    "tail_uuid": "59442785-de48-467b-975a-c9bb7672d248"
+   },
+   "preserved_messages": {
+    "anchor_uuid": "f8726461-7b8c-41e6-8ee1-0a38172302e9",
+    "uuids": [
+     "1397cb5b-efbb-4c03-91be-3750d950ce53",
+     "59442785-de48-467b-975a-c9bb7672d248"
+    ],
+    "all_uuids": [
+     "1397cb5b-efbb-4c03-91be-3750d950ce53",
+     "59442785-de48-467b-975a-c9bb7672d248"
+    ]
+   }
+  },
+  "P1_cost": 0.070588,
+  "sum_words": 995
+ },
+ {
+  "rep": "rep3",
+  "branch": "C",
+  "P1_kiwi": true,
+  "P2_kiwi": true,
+  "P1_rootok": true,
+  "P2_rootok": true,
+  "P2_heron": true,
+  "sum_heron": false,
+  "sum_kiwi": false,
+  "after_billing_claudemd": false,
+  "after_owl": false,
+  "P1_paths": 7,
+  "sum_paths": 0,
+  "P1_memory_file": true,
+  "P1_legacy_as_modified": false,
+  "P1_half_even": true,
+  "P1_spec": true,
+  "sum_spec": false,
+  "P1_err": true,
+  "sum_err": false,
+  "P1_migrate": true,
+  "P1_legacy_date": true,
+  "P1_next": true,
+  "sum_next": false,
+  "reattached": [],
+  "report_templates_ref_only": false,
+  "compact": null,
+  "P1_cost": 0.314578,
+  "sum_words": 0
+ },
+ {
+  "rep": "rep3",
+  "branch": "A",
+  "P1_kiwi": true,
+  "P2_kiwi": true,
+  "P1_rootok": true,
+  "P2_rootok": true,
+  "P2_heron": true,
+  "sum_heron": true,
+  "sum_kiwi": true,
+  "after_billing_claudemd": true,
+  "after_owl": true,
+  "P1_paths": 7,
+  "sum_paths": 7,
+  "P1_memory_file": true,
+  "P1_legacy_as_modified": false,
+  "P1_half_even": true,
+  "P1_spec": true,
+  "sum_spec": true,
+  "P1_err": true,
+  "sum_err": true,
+  "P1_migrate": true,
+  "P1_legacy_date": true,
+  "P1_next": true,
+  "sum_next": true,
+  "reattached": [
+   "docs/05-reporting-and-exports.md",
+   "docs/04-payout-scheduling.md",
+   "docs/03-partner-integration.md",
+   "docs/01-architecture-overview.md",
+   "docs/02-settlement-pipeline.md"
+  ],
+  "report_templates_ref_only": false,
+  "compact": {
+   "trigger": "manual",
+   "pre_tokens": 90548,
+   "post_tokens": 6011,
+   "cumulative_dropped_tokens": 84537,
+   "duration_ms": 25670,
+   "preserved_segment": {
+    "head_uuid": "1397cb5b-efbb-4c03-91be-3750d950ce53",
+    "anchor_uuid": "ee372eb6-c7fc-48e1-8ce2-a14cbfb2b24c",
+    "tail_uuid": "59442785-de48-467b-975a-c9bb7672d248"
+   },
+   "preserved_messages": {
+    "anchor_uuid": "ee372eb6-c7fc-48e1-8ce2-a14cbfb2b24c",
+    "uuids": [
+     "1397cb5b-efbb-4c03-91be-3750d950ce53",
+     "59442785-de48-467b-975a-c9bb7672d248"
+    ],
+    "all_uuids": [
+     "1397cb5b-efbb-4c03-91be-3750d950ce53",
+     "59442785-de48-467b-975a-c9bb7672d248"
+    ]
+   }
+  },
+  "P1_cost": 0.064467,
+  "sum_words": 1041
+ },
+ {
+  "rep": "rep4",
+  "branch": "C",
+  "P1_kiwi": true,
+  "P2_kiwi": true,
+  "P1_rootok": true,
+  "P2_rootok": true,
+  "P2_heron": true,
+  "sum_heron": false,
+  "sum_kiwi": false,
+  "after_billing_claudemd": false,
+  "after_owl": false,
+  "P1_paths": 7,
+  "sum_paths": 0,
+  "P1_memory_file": true,
+  "P1_legacy_as_modified": false,
+  "P1_half_even": true,
+  "P1_spec": true,
+  "sum_spec": false,
+  "P1_err": true,
+  "sum_err": false,
+  "P1_migrate": true,
+  "P1_legacy_date": true,
+  "P1_next": true,
+  "sum_next": false,
+  "reattached": [],
+  "report_templates_ref_only": false,
+  "compact": null,
+  "P1_cost": 0.3086,
+  "sum_words": 0
+ },
+ {
+  "rep": "rep4",
+  "branch": "B",
+  "P1_kiwi": true,
+  "P2_kiwi": true,
+  "P1_rootok": true,
+  "P2_rootok": true,
+  "P2_heron": true,
+  "sum_heron": true,
+  "sum_kiwi": true,
+  "after_billing_claudemd": true,
+  "after_owl": true,
+  "P1_paths": 7,
+  "sum_paths": 7,
+  "P1_memory_file": true,
+  "P1_legacy_as_modified": false,
+  "P1_half_even": true,
+  "P1_spec": true,
+  "sum_spec": true,
+  "P1_err": true,
+  "sum_err": true,
+  "P1_migrate": true,
+  "P1_legacy_date": true,
+  "P1_next": true,
+  "sum_next": true,
+  "reattached": [
+   "docs/05-reporting-and-exports.md",
+   "docs/04-payout-scheduling.md",
+   "docs/02-settlement-pipeline.md",
+   "docs/03-partner-integration.md",
+   "docs/01-architecture-overview.md"
+  ],
+  "report_templates_ref_only": false,
+  "compact": {
+   "trigger": "manual",
+   "pre_tokens": 88105,
+   "post_tokens": 3627,
+   "cumulative_dropped_tokens": 84478,
+   "duration_ms": 25009,
+   "preserved_segment": {
+    "head_uuid": "c34c11d9-9f45-485c-b0d6-ad6f978accdd",
+    "anchor_uuid": "adfb607b-0916-4ea1-9ba1-c709e56ae033",
+    "tail_uuid": "c34c11d9-9f45-485c-b0d6-ad6f978accdd"
+   },
+   "preserved_messages": {
+    "anchor_uuid": "adfb607b-0916-4ea1-9ba1-c709e56ae033",
+    "uuids": [
+     "c34c11d9-9f45-485c-b0d6-ad6f978accdd"
+    ],
+    "all_uuids": [
+     "c34c11d9-9f45-485c-b0d6-ad6f978accdd"
+    ]
+   }
+  },
+  "P1_cost": 0.068862,
+  "sum_words": 928
+ },
+ {
+  "rep": "rep4",
+  "branch": "A",
+  "P1_kiwi": true,
+  "P2_kiwi": true,
+  "P1_rootok": true,
+  "P2_rootok": true,
+  "P2_heron": true,
+  "sum_heron": true,
+  "sum_kiwi": true,
+  "after_billing_claudemd": true,
+  "after_owl": true,
+  "P1_paths": 7,
+  "sum_paths": 7,
+  "P1_memory_file": true,
+  "P1_legacy_as_modified": true,
+  "P1_half_even": true,
+  "P1_spec": true,
+  "sum_spec": true,
+  "P1_err": true,
+  "sum_err": true,
+  "P1_migrate": true,
+  "P1_legacy_date": true,
+  "P1_next": true,
+  "sum_next": true,
+  "reattached": [
+   "docs/05-reporting-and-exports.md",
+   "docs/04-payout-scheduling.md",
+   "docs/02-settlement-pipeline.md",
+   "docs/03-partner-integration.md",
+   "docs/01-architecture-overview.md"
+  ],
+  "report_templates_ref_only": false,
+  "compact": {
+   "trigger": "manual",
+   "pre_tokens": 88105,
+   "post_tokens": 5813,
+   "cumulative_dropped_tokens": 82292,
+   "duration_ms": 26982,
+   "preserved_segment": {
+    "head_uuid": "c34c11d9-9f45-485c-b0d6-ad6f978accdd",
+    "anchor_uuid": "a97b5948-e0cb-44b5-98d3-45d3ac22c662",
+    "tail_uuid": "c34c11d9-9f45-485c-b0d6-ad6f978accdd"
+   },
+   "preserved_messages": {
+    "anchor_uuid": "a97b5948-e0cb-44b5-98d3-45d3ac22c662",
+    "uuids": [
+     "c34c11d9-9f45-485c-b0d6-ad6f978accdd"
+    ],
+    "all_uuids": [
+     "c34c11d9-9f45-485c-b0d6-ad6f978accdd"
+    ]
+   }
+  },
+  "P1_cost": 0.060403,
+  "sum_words": 942
+ },
+ {
+  "rep": "rep5",
+  "branch": "D",
+  "P1_kiwi": true,
+  "P2_kiwi": true,
+  "P1_rootok": true,
+  "P2_rootok": true,
+  "P2_heron": true,
+  "sum_heron": true,
+  "sum_kiwi": true,
+  "after_billing_claudemd": true,
+  "after_owl": true,
+  "P1_paths": 7,
+  "sum_paths": 7,
+  "P1_memory_file": true,
+  "P1_legacy_as_modified": false,
+  "P1_half_even": true,
+  "P1_spec": true,
+  "sum_spec": true,
+  "P1_err": true,
+  "sum_err": true,
+  "P1_migrate": true,
+  "P1_legacy_date": true,
+  "P1_next": true,
+  "sum_next": true,
+  "reattached": [
+   "docs/05-reporting-and-exports.md",
+   "docs/04-payout-scheduling.md",
+   "docs/03-partner-integration.md",
+   "docs/02-settlement-pipeline.md",
+   "docs/01-architecture-overview.md"
+  ],
+  "report_templates_ref_only": false,
+  "compact": {
+   "trigger": "auto",
+   "pre_tokens": 80639,
+   "post_tokens": 5949,
+   "cumulative_dropped_tokens": 74690,
+   "duration_ms": 22940,
+   "preserved_segment": {
+    "head_uuid": "b9ace42c-3e66-47a0-862d-791a7c35f218",
+    "anchor_uuid": "46bd3c9d-85d6-4e61-b03b-680fb6c8cb3e",
+    "tail_uuid": "3be5f80f-db8f-4c8b-b164-edf8971834ce"
+   },
+   "preserved_messages": {
+    "anchor_uuid": "46bd3c9d-85d6-4e61-b03b-680fb6c8cb3e",
+    "uuids": [
+     "b9ace42c-3e66-47a0-862d-791a7c35f218",
+     "fd1cc15b-76b6-46d5-a7ce-c764d4bcbdb7",
+     "e6ee0070-0676-44ea-8f51-02a019f452ec",
+     "5bed3831-32f6-4e29-b66a-374f959cff5f",
+     "3be5f80f-db8f-4c8b-b164-edf8971834ce"
+    ],
+    "all_uuids": [
+     "b9ace42c-3e66-47a0-862d-791a7c35f218",
+     "fd1cc15b-76b6-46d5-a7ce-c764d4bcbdb7",
+     "e6ee0070-0676-44ea-8f51-02a019f452ec",
+     "5bed3831-32f6-4e29-b66a-374f959cff5f",
+     "3be5f80f-db8f-4c8b-b164-edf8971834ce"
+    ]
+   }
+  },
+  "P1_cost": 0.087896,
+  "sum_words": 934
+ }
+]

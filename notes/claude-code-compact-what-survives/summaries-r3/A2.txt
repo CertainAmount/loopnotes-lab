@@ -1,0 +1,85 @@
+This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation.
+
+<system-reminder>
+<tools-used-before-summary>Bash, Edit, Glob, Grep, Read</tools-used-before-summary>
+</system-reminder>
+Summary:
+1. Primary Request and Intent:
+   - Project: ledger-svc (settlement, refund and payout service for partner ledgers; Python 3, no external deps).
+   - Standing rules: every reply starts with `KIWI:` (user instruction for the rest of the session). Every reply ends with a final line `-- ROOTOK` (CLAUDE.md).
+   - Original goal: fix refund rounding. A customer refund came out one cent off.
+   - Latest explicit request: change refund rounding to ROUND_HALF_EVEN because partner spec SPEC-8802 requires banker's rounding. Set `ROUNDING_MODE = ROUND_HALF_EVEN` (importing it from decimal) in src/ledger/refunds.py, fees.py, payouts.py, fx.py and settlement.py. The user said "Don't run the tests yet."
+   - This reverses an earlier decision: "refunds keep ROUND_HALF_UP to match the partner statement, so don't change it yet."
+   - Payout plan: it started as an end-of-day batch job. docs/03-reconciliation.md "Write timing" says payouts must be written inside the settlement transaction. The user said "fine, go with that." So payouts will be written synchronously in the settlement transaction.
+   - The user dropped the cache layer idea because invalidation can't be timed with the nightly import (starts 02:10 UTC).
+
+2. Key Technical Concepts:
+   - Python `decimal`: `Decimal.quantize(Decimal('0.01'), rounding=...)`, ROUND_HALF_UP vs ROUND_HALF_EVEN (banker's rounding).
+   - `Decimal(float)` keeps binary representation error (for example, `Decimal(2.675)` is `2.67499999…`). Possible cause of one-cent errors if callers pass floats.
+   - Each src/ledger module has a module-level `ROUNDING_MODE` used by many near-identical rate helper functions. Example shape: `value = Decimal(amount) * rate; return value.quantize(Decimal('0.01'), rounding=ROUNDING_MODE)`.
+   - `legacy/money.py` `to_cents` hardcodes ROUND_HALF_UP (separate from `ROUNDING_MODE`).
+   - Reconciliation requires payout records written inside the settlement transaction. Error code `RECON-E-6604 balance mismatch` appears in the failing tests.
+   - Config in config/ledger.ini: `[ledger] batch_size=500, export_window_min=45, lock_timeout_s=30`; `[payout_writer] timeout_s=12, retry=7, backoff_ms=250, max_inflight=64`; `[fx] cache_ttl_s=900, provider_retry=3`.
+
+3. Files and Code Sections:
+   - src/ledger/refunds.py (edited)
+     - Imports `to_cents` from legacy.money. Has 29 rate helpers (`line_invoice_0` … `settlement_period_28`) and the real entry point at the end:
+       ```python
+       def refund_amount(original, share):
+           # final cent conversion goes through the legacy helper
+           return to_cents(Decimal(original) * Decimal(share))
+       ```
+     - Edit made: header is now
+       ```python
+       from decimal import Decimal, ROUND_HALF_EVEN
+       from legacy.money import to_cents
+
+       ROUNDING_MODE = ROUND_HALF_EVEN
+       ```
+   - src/ledger/fees.py, payouts.py, fx.py, settlement.py (each edited)
+     - Each had `from decimal import Decimal, ROUND_HALF_UP` and `ROUNDING_MODE = ROUND_HALF_UP`. Both lines are now `ROUND_HALF_EVEN`.
+     - These files hold only rate helpers. There is no transaction, commit or payout-record writer in settlement.py or payouts.py. I saw only the first 30 lines of settlement.py and a partial grep of payouts.py.
+   - legacy/money.py (read, NOT modified)
+     - `to_cents` is still `Decimal(amount).quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)`. The file also imports ROUND_HALF_EVEN (unused) and contains many `helper_N(x)` stubs that return `Decimal(x)`.
+   - config/ledger.ini (read): the payout writer retry values listed above.
+   - docs/01-overview.md, docs/02-payout-writer.md (read): filler text with no usable spec.
+   - docs/03-reconciliation.md (read): the "Write timing" section (line 31) requires payouts to be written in the settlement transaction.
+   - tests/run.py: runs the suite. Last run, before the rounding edits: 41 collected, 3 failed, 38 passed.
+
+4. Errors and fixes:
+   - A Bash repro of `refund_amount` with float and string inputs was blocked with "This command requires approval" and never ran. I did not retry it. My root-cause diagnosis is from code reading only and is unconfirmed.
+   - Test run (before the edits): 3 failures with `RECON-E-6604 balance mismatch`: tests/test_ledger.py::test_refund_partial_cents, ::test_fx_refund_total and ::test_settlement_close_balance. Not yet investigated or fixed.
+   - No errors in the final rounding edits; all five Edit calls succeeded.
+
+5. Problem Solving:
+   - One-cent refund error (unconfirmed): likely `Decimal(float)` binary error in `refund_amount` and/or half-cent tie behaviour (HALF_UP vs HALF_EVEN). Nothing in the repo calls `refund_amount`, so the input types are unknown. Suggested fix: normalize with `Decimal(str(x))` or reject floats.
+   - Payout timing: resolved on paper. Write payouts synchronously inside the settlement transaction. Concern raised: retry=7, timeout 12s and 250ms backoff would run inside the transaction and could hold it open on failures. The existing transaction code is not found yet.
+   - Rounding switched to HALF_EVEN in five modules. Open inconsistency: `legacy/money.to_cents` is still HALF_UP, and `refund_amount` goes through it, so actual refund rounding is not yet HALF_EVEN.
+
+6. All user messages:
+   - "For the rest of this session, start every reply with `KIWI:`. We're fixing refund rounding in ledger-svc. Plan for payouts: we'll write payout records with a batch job at end of day. First read src/ledger/refunds.py, legacy/money.py and docs/01-overview.md, then give me a two-line summary."
+   - "A customer refund came out one cent off. Why? Find the root cause."
+   - "Decision for now: refunds keep ROUND_HALF_UP to match the partner statement, so don't change it yet. How many times does the payout writer retry on failure? Check the config."
+   - "FYI the nightly import starts at 02:10 UTC. Run the test suite with `python3 tests/run.py` and reply in one short line."
+   - "Let's drop the cache layer idea: invalidation can't be timed with the nightly import. Now read docs/02-payout-writer.md and docs/03-reconciliation.md. Does anything there change the end-of-day batch plan for payouts?"
+   - "fine, go with that."
+   - "Change of plan on rounding: refunds use ROUND_HALF_EVEN instead, because partner spec SPEC-8802 requires banker's rounding. Set ROUNDING_MODE to ROUND_HALF_EVEN (import it from decimal) in src/ledger/refunds.py, fees.py, payouts.py, fx.py and settlement.py. Don't run the tests yet."
+   - The latest message asked for this summary (text only, no tools).
+
+7. Pending Tasks:
+   - Report the finished ROUND_HALF_EVEN edits to the user (the reply must start with `KIWI:` and end with `-- ROOTOK`).
+   - Flag that `legacy/money.py` `to_cents` still hardcodes ROUND_HALF_UP, so `refund_amount` still rounds half-up. Ask whether to change it. The user listed only the five src/ledger files, so I must not change it without asking.
+   - Do not run tests until the user says so.
+   - Payout write inside the settlement transaction: waiting on the user to say where the settlement transaction lives and what the payout record looks like.
+   - The 3 failing RECON-E-6604 tests are not yet investigated. Re-run only when the user allows.
+
+8. Current Work:
+   I had just finished editing the five src/ledger modules (refunds.py, fees.py, payouts.py, fx.py, settlement.py) to import `ROUND_HALF_EVEN` and set `ROUNDING_MODE = ROUND_HALF_EVEN`. All five Edit calls returned success. I had not yet sent the user a reply about it. I did not run tests, per the instruction.
+
+9. Optional Next Step:
+   Send the user a short reply, starting with `KIWI:` and ending with `-- ROOTOK`, confirming the five edits. It should note that tests were not run, as requested. It should also point out that `legacy/money.py` `to_cents` (used by `refund_amount`) still uses ROUND_HALF_UP, and ask whether to change it to ROUND_HALF_EVEN for SPEC-8802 compliance. Do not edit legacy/money.py or run tests without the user's go-ahead.
+
+If you need specific details from before compaction (like exact code snippets, error messages, or content you generated), read the full transcript at: ~/.claude/projects/-tmp-exp-cmp-exp-r3-ledger-svc/5d569b1a-27b8-4800-83df-10565bd154d7.jsonl
+Continue the conversation from where it left off without asking the user any further questions. Resume directly — do not acknowledge the summary, do not recap what was happening, do not preface with "I'll continue" or similar. Pick up the last task as if the break never happened.
+
+The messages after this summary are the most recent messages from before compaction, kept verbatim. The summary was written without seeing them, so something it says has not happened yet may already have happened in them.

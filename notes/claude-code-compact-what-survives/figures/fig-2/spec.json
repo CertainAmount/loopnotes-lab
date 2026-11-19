@@ -1,0 +1,48 @@
+{
+ "frame": "matrix",
+ "rows": [
+  "Last files Claude touched",
+  "Files Claude edited"
+ ],
+ "cols": [
+  "Claude Code 2.1.296",
+  "Claude Code 2.1.328"
+ ],
+ "col_sub": [
+  "10 compactions",
+  "5 compactions"
+ ],
+ "cells": [
+  [
+   "back",
+   "back"
+  ],
+  [
+   "gone",
+   "back"
+  ]
+ ],
+ "cell_text": [
+  [
+   "5 docs back, path only",
+   "5 edits back, full text"
+  ],
+  [
+   "0 of 7 back",
+   "5 of 5 back"
+  ]
+ ],
+ "outcomes": {
+  "back": [
+   "Re-attached",
+   "#3B82F6"
+  ],
+  "gone": [
+   "Not re-attached",
+   "#E6EAEE"
+  ]
+ },
+ "legend": false,
+ "label_width": 0.34,
+ "note": "Run 1 (2026-10-21): edits, then docs read. Run 2 (2026-11-20): edits were the last files touched."
+}

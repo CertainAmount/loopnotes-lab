@@ -1,0 +1,12 @@
+{
+ "session": "0f1e94a2-c8b1-4ab3-b43d-dfcd856c7b37",
+ "proj": "/tmp/exp/ledger-svc",
+ "diff": [
+  "src/ledger/fees.py",
+  "src/ledger/fx.py",
+  "src/ledger/payouts.py",
+  "src/ledger/refunds.py",
+  "src/ledger/settlement.py"
+ ],
+ "version": "2.1.328 (Claude Code)"
+}
