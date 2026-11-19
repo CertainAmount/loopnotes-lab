@@ -20,6 +20,7 @@ The same folders, grouped the way the site groups its articles: each topic page 
 
 **Running backends in production**
 
+- [Self-hosting and Linux dev servers](topics/C2-self-hosting-and-linux-dev-servers/): 1 research note
 - [Java and Gradle builds](topics/C3-java-and-gradle-builds/): 1 research note
 
 **Tech in Korea, from a Seoul developer**
