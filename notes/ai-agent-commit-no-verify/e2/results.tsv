@@ -1,0 +1,10 @@
+form	git_result	naive_guard	wide_guard
+control: git commit -m x	blocked by hook	passes	passes
+git commit --no-verify	committed, hook skipped	blocked	blocked
+git commit -n	committed, hook skipped	passes	blocked
+git commit -nm (bundled)	committed, hook skipped	passes	blocked
+HUSKY=0 git commit	committed, hook skipped	passes	blocked
+git -c core.hooksPath=/dev/null commit	committed, hook skipped	passes	blocked
+git config core.hooksPath then commit	committed, hook skipped	passes	blocked
+sh -c wrapper with --no-verify	committed, hook skipped	blocked	blocked
+Edit tool empties .husky/pre-commit	committed, hook neutered	passes	blocked

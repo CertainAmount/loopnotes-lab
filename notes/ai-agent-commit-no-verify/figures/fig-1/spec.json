@@ -1,0 +1,75 @@
+{
+ "frame": "flow",
+ "nodes": [
+  {
+   "id": "a",
+   "label": "Commit",
+   "col": 0,
+   "row": 0
+  },
+  {
+   "id": "b",
+   "label": "Hook fails",
+   "col": 1,
+   "row": 0,
+   "kind": "muted"
+  },
+  {
+   "id": "c",
+   "label": "--no-verify",
+   "col": 2,
+   "row": 0,
+   "mono": true
+  },
+  {
+   "id": "d",
+   "label": "Push",
+   "col": 3,
+   "row": 0
+  },
+  {
+   "id": "e",
+   "label": "CI lint fails",
+   "col": 4,
+   "row": 0,
+   "kind": "focus"
+  }
+ ],
+ "edges": [
+  [
+   "a",
+   "b"
+  ],
+  [
+   "b",
+   "c"
+  ],
+  [
+   "c",
+   "d"
+  ],
+  [
+   "d",
+   "e"
+  ]
+ ],
+ "note": "Author's Husky + lint-staged project; CI is a required check in branch protection",
+ "zones": [
+  {
+   "label": "Local, skippable",
+   "cols": [
+    0,
+    2
+   ],
+   "row": 0
+  },
+  {
+   "label": "Server, required",
+   "cols": [
+    3,
+    4
+   ],
+   "row": 0
+  }
+ ]
+}

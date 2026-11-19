@@ -1,0 +1,10 @@
+case,"Git, failing hook",--no-verify guard,Wide guard
+git commit (control),hookblock,pass,pass
+git commit --no-verify,commit,stop,stop
+sh -c '… --no-verify',commit,stop,stop
+git commit -n,commit,through,stop
+git commit -nm,commit,through,stop
+HUSKY=0 git commit,commit,through,stop
+git -c core.hooksPath,commit,through,stop
+git config core.hooksPath,commit,through,stop
+Edit .husky/pre-commit,commit,through,stop

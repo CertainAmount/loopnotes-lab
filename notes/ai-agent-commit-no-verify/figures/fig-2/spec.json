@@ -1,0 +1,144 @@
+{
+ "frame": "matrix",
+ "rows": [
+  "git commit (control)",
+  "git commit --no-verify",
+  "sh -c '… --no-verify'",
+  "git commit -n",
+  "git commit -nm",
+  "HUSKY=0 git commit",
+  "git -c core.hooksPath",
+  "git config core.hooksPath",
+  "Edit .husky/pre-commit"
+ ],
+ "cols": [
+  "Git, failing hook",
+  "--no-verify guard",
+  "Wide guard"
+ ],
+ "col_sub": [
+  "8 of 8 forms commit",
+  "blocks 2 of 8",
+  "blocks 8 of 8"
+ ],
+ "mono_rows": true,
+ "label_width": 0.37,
+ "legend": false,
+ "outcomes": {
+  "hookblock": [
+   "Hook blocks",
+   "#E6EAEE"
+  ],
+  "commit": [
+   "Commits",
+   "#1E3A5F"
+  ],
+  "through": [
+   "Gets through",
+   "#3B82F6"
+  ],
+  "stop": [
+   "Blocked",
+   "#E6EAEE"
+  ],
+  "pass": [
+   "Passes",
+   "#E6EAEE"
+  ]
+ },
+ "cells": [
+  [
+   "hookblock",
+   "pass",
+   "pass"
+  ],
+  [
+   "commit",
+   "stop",
+   "stop"
+  ],
+  [
+   "commit",
+   "stop",
+   "stop"
+  ],
+  [
+   "commit",
+   "through",
+   "stop"
+  ],
+  [
+   "commit",
+   "through",
+   "stop"
+  ],
+  [
+   "commit",
+   "through",
+   "stop"
+  ],
+  [
+   "commit",
+   "through",
+   "stop"
+  ],
+  [
+   "commit",
+   "through",
+   "stop"
+  ],
+  [
+   "commit",
+   "through",
+   "stop"
+  ]
+ ],
+ "cell_text": [
+  [
+   "hook blocks",
+   "passes",
+   "passes"
+  ],
+  [
+   "commits",
+   "blocked",
+   "blocked"
+  ],
+  [
+   "commits",
+   "blocked",
+   "blocked"
+  ],
+  [
+   "commits",
+   "gets through",
+   "blocked"
+  ],
+  [
+   "commits",
+   "gets through",
+   "blocked"
+  ],
+  [
+   "commits",
+   "gets through",
+   "blocked"
+  ],
+  [
+   "commits",
+   "gets through",
+   "blocked"
+  ],
+  [
+   "commits",
+   "gets through",
+   "blocked"
+  ],
+  [
+   "hook emptied",
+   "gets through",
+   "blocked"
+  ]
+ ],
+ "note": "E2, 2026-11-19, this machine: always-failing Husky hook, guards fed PreToolUse JSON (exit 2 = blocked)"
+}
