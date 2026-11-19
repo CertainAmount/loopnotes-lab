@@ -1,0 +1,11 @@
+from,to,label
+t,m,
+m,m2,no
+m,s,
+s,s2,no
+s,a,
+a,a2,no
+a,c,
+c,c1,exit 1
+c,c2,exit 0
+c,b,yes

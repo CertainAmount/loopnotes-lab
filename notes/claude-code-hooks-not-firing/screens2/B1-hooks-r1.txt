@@ -1,0 +1,22 @@
+===== start
+ ▐▛███▛█   Claude Code v2.1.328
+▝▜██████▀  Haiku 5.5 · Claude Ultra
+ ▝▝   ▝▝   <dir>/repo
+                                                                                                                                  ◐ medium · /effort
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ Try "create a util logging.py that…"
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ auto mode on (shift+tab to cycle) · ← for agents
+===== hooks
+ ▐▛███▛█   Claude Code v2.1.328
+▝▜██████▀  Haiku 5.5 · Claude Ultra
+ ▝▝   ▝▝   <dir>/repo
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+  Hooks
+  1 hook on 1 event
+  This menu is read-only. To add or change a hook, edit settings.json or ask Claude. Learn more
+    PreToolUse  before tool execution
+  ❯ [Project] "$CLAUDE_PROJECT_DIR"/.claude/hooks/gaurd.sh   Bash · command
+    All events
+  ↑/↓ to navigate · Enter to view · Esc to close
+SUMMARY case=B1 mode=hooks run=1 log=no fake_key=n/a running_hook_counter_seen=False

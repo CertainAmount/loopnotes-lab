@@ -1,0 +1,138 @@
+{
+ "frame": "flow",
+ "caption": "onFailure blocks a hook that fails, not one that never matched or answered wrong.",
+ "nodes": [
+  {
+   "id": "t",
+   "label": "Tool call",
+   "col": 0,
+   "row": 0
+  },
+  {
+   "id": "h",
+   "label": "With onFailure: block",
+   "col": 1,
+   "row": 0,
+   "kind": "label"
+  },
+  {
+   "id": "m",
+   "label": "Matcher fits?",
+   "col": 0,
+   "row": 1,
+   "kind": "question"
+  },
+  {
+   "id": "m2",
+   "label": "Still runs",
+   "col": 1,
+   "row": 1,
+   "kind": "focus"
+  },
+  {
+   "id": "s",
+   "label": "Script starts?",
+   "col": 0,
+   "row": 2,
+   "kind": "question"
+  },
+  {
+   "id": "s2",
+   "label": "Blocked",
+   "col": 1,
+   "row": 2,
+   "kind": "muted"
+  },
+  {
+   "id": "a",
+   "label": "Answers in time?",
+   "col": 0,
+   "row": 3,
+   "kind": "question"
+  },
+  {
+   "id": "a2",
+   "label": "Blocked",
+   "col": 1,
+   "row": 3,
+   "kind": "muted"
+  },
+  {
+   "id": "c",
+   "label": "Clear no?",
+   "col": 0,
+   "row": 4,
+   "kind": "question"
+  },
+  {
+   "id": "c1",
+   "label": "Blocked",
+   "col": 1,
+   "row": 4,
+   "kind": "muted"
+  },
+  {
+   "id": "c2",
+   "label": "Still runs",
+   "col": 1,
+   "row": 5,
+   "kind": "focus"
+  },
+  {
+   "id": "b",
+   "label": "Blocked",
+   "col": 0,
+   "row": 5,
+   "kind": "muted"
+  }
+ ],
+ "edges": [
+  [
+   "t",
+   "m"
+  ],
+  [
+   "m",
+   "m2",
+   "no"
+  ],
+  [
+   "m",
+   "s"
+  ],
+  [
+   "s",
+   "s2",
+   "no"
+  ],
+  [
+   "s",
+   "a"
+  ],
+  [
+   "a",
+   "a2",
+   "no"
+  ],
+  [
+   "a",
+   "c"
+  ],
+  [
+   "c",
+   "c1",
+   "exit 1"
+  ],
+  [
+   "c",
+   "c2",
+   "exit 0"
+  ],
+  [
+   "c",
+   "b",
+   "yes"
+  ]
+ ],
+ "note": "Claude Code 2.1.328, 3 runs per case, 2026-11-19 · exit 0 = no shebang or top-level permissionDecision"
+}

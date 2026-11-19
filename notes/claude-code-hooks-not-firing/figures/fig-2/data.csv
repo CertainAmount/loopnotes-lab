@@ -1,0 +1,8 @@
+case,/hooks,Interactive,claude -p
+Bad path or no +x,listed,hook failed,stream-json only
+exit 1,listed,hook failed,nothing
+Event name typo,no hooks yet,Warning,nothing
+Broken JSON,no hooks yet,Error,nothing
+Wrong file,no hooks yet,nothing,nothing
+Lowercase matcher,listed,nothing,nothing
+Wrong answer shape,listed,nothing,nothing

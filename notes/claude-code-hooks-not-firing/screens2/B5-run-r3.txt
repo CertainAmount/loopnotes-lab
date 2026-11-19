@@ -1,0 +1,23 @@
+===== start
+ ▐▛███▛█   Claude Code v2.1.328
+▝▜██████▀  Haiku 5.5 · Claude Ultra
+ ▝▝   ▝▝   <dir>/repo
+                                                                                                                                  ◐ medium · /effort
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ Try "how do I log an error?"
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ auto mode on (shift+tab to cycle) · ← for agents
+===== result
+ ▐▛███▛█   Claude Code v2.1.328
+▝▜██████▀  Haiku 5.5 · Claude Ultra
+ ▝▝   ▝▝   <dir>/repo
+❯ Run this exact shell command and show its output: cat .env
+  Read 1 file
+● Output of cat .env:
+  FAKE_KEY=test-not-real
+✻ Cooked for 10s · done 오전 11:07
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ auto mode on (shift+tab to cycle)
+SUMMARY case=B5 mode=run run=3 log=yes fake_key=yes running_hook_counter_seen=True
