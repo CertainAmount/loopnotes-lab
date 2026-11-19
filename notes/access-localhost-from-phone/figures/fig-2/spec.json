@@ -1,0 +1,28 @@
+{
+ "frame": "timeline",
+ "mode": "steps",
+ "events": [
+  {
+   "label": "Install,\nsame account",
+   "sub": "Mac + iPhone"
+  },
+  {
+   "label": "100.x opens",
+   "sub": "by IP\n~10 min in"
+  },
+  {
+   "label": "Name: 403",
+   "sub": "same server, by name\n15-20 min here",
+   "bad": true
+  },
+  {
+   "label": "Add '.ts.net'",
+   "sub": "in allowedHosts"
+  },
+  {
+   "label": "200",
+   "sub": "by name\n~30 min total"
+  }
+ ],
+ "note": "Author's cafe session, Vite dev server; 200/403/200 re-run on Vite 8.3.8, 2026-11-20"
+}

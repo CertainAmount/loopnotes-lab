@@ -1,0 +1,7 @@
+case,Default listen,To open it
+Vite,closed,flag
+Flask,closed,flag
+uvicorn (FastAPI),closed,flag
+Next.js dev,open,skip
+python -m http.server,open,skip
+Express (no host),open,skip

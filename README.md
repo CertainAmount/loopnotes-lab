@@ -41,6 +41,7 @@ The same folders, grouped the way the site groups its articles: each topic page 
 
 The counts, sources and check dates behind the guides, one folder per article.
 
+- [Can't Access Localhost From Your Phone? Check the Bind First](https://loopnotes.dev/access-localhost-from-phone/) · [research note](notes/access-localhost-from-phone/)
 - [Too Many MCP Tools? How Many Is Too Many in Claude Code](https://loopnotes.dev/mcp-too-many-tools/) · [research note](notes/mcp-too-many-tools/)
 - [What Survives Claude Code /compact? Tested on 2.1.328](https://loopnotes.dev/claude-code-compact-what-survives/) · [research note](notes/claude-code-compact-what-survives/)
 - [AI Agent Ran git commit --no-verify? Make CI the Real Gate](https://loopnotes.dev/ai-agent-commit-no-verify/) · [research note](notes/ai-agent-commit-no-verify/)

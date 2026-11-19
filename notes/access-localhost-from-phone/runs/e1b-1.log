@@ -1,0 +1,26 @@
+▲ Next.js 16.4.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://<LAN-IP>:3000
+✓ Ready in 391ms
+✓ Running next.config took 21ms
+
+ GET / 200 in 411ms (next.js: 233ms, application-code: 178ms)
+⚠ Blocked cross-origin request to Next.js dev resource /_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_0fb9-gqu7_t97._.js from an unknown source.
+Cross-origin access to Next.js dev resources is blocked by default for safety.
+
+This request did not include an allowlistable source host.
+If you need it to succeed, make sure the browser sends an Origin or Referer from a host listed in "allowedDevOrigins".
+
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+⚠ Blocked cross-origin request to Next.js dev resource /_next/webpack-hmr from "<LAN-IP>".
+Cross-origin access to Next.js dev resources is blocked by default for safety.
+
+To allow this host in development, add it to "allowedDevOrigins" in next.config.js and restart the dev server:
+
+// next.config.js
+module.exports = {
+  allowedDevOrigins: ['<LAN-IP>'],
+}
+
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[?25h

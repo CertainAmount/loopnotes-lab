@@ -1,0 +1,97 @@
+{
+ "frame": "matrix",
+ "rows": [
+  "Vite",
+  "Flask",
+  "uvicorn (FastAPI)",
+  "Next.js dev",
+  "python -m http.server",
+  "Express (no host)"
+ ],
+ "cols": [
+  "Default listen",
+  "To open it"
+ ],
+ "outcomes": {
+  "closed": [
+   "Loopback only",
+   "#8A96A3"
+  ],
+  "flag": [
+   "Open with flag",
+   "#1E3A5F"
+  ],
+  "open": [
+   "All addresses",
+   "#3B82F6"
+  ],
+  "skip": [
+   "Already open",
+   "#E6EAEE"
+  ]
+ },
+ "cells": [
+  [
+   "closed",
+   "flag"
+  ],
+  [
+   "closed",
+   "flag"
+  ],
+  [
+   "closed",
+   "flag"
+  ],
+  [
+   "open",
+   "skip"
+  ],
+  [
+   "open",
+   "skip"
+  ],
+  [
+   "open",
+   "skip"
+  ]
+ ],
+ "cell_text": [
+  [
+   "127.0.0.1 only",
+   "npm run dev -- --host"
+  ],
+  [
+   "127.0.0.1 only",
+   "--host=0.0.0.0"
+  ],
+  [
+   "127.0.0.1 only",
+   "--host 0.0.0.0"
+  ],
+  [
+   "all addresses",
+   "already open"
+  ],
+  [
+   "all addresses",
+   "already open"
+  ],
+  [
+   "all addresses",
+   "already open"
+  ]
+ ],
+ "mono_cols": [
+  1
+ ],
+ "mono_keys": [
+  "flag"
+ ],
+ "legend": false,
+ "label_width": 0.36,
+ "note": "Linux, 2026-11-20, 2 runs each: Vite 8.3.8, Flask 3.1.3, uvicorn 0.54.0, Next.js 16.4.6, Python 3.11.4, Express 5.3.0",
+ "gap_after": [
+  2
+ ]
+}

@@ -1,0 +1,9 @@
+t,label,sub,bad
+0,"Install, same account",Mac + iPhone,False
+1,100.x opens,"by IP
+~10 min in",False
+2,Name: 403,"same server, by name
+15-20 min here",True
+3,Add '.ts.net',in allowedHosts,False
+4,200,"by name
+~30 min total",False

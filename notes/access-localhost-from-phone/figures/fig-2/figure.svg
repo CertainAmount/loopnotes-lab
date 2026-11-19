@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="216pt" viewBox="0 0 720 216" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-20T06:39:01.205950</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 216 
+L 720 216 
+L 720 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <path d="M 88.941176 111.730909 
+L 631.058824 111.730909 
+" clip-path="url(#pa6dd843d05)" style="fill: none; stroke: #e6eaee; stroke-width: 7; stroke-linecap: round"/>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="m498e6df7d9" d="M 0 7.745967 
+C 2.054254 7.745967 4.024648 6.929803 5.477226 5.477226 
+C 6.929803 4.024648 7.745967 2.054254 7.745967 0 
+C 7.745967 -2.054254 6.929803 -4.024648 5.477226 -5.477226 
+C 4.024648 -6.929803 2.054254 -7.745967 0 -7.745967 
+C -2.054254 -7.745967 -4.024648 -6.929803 -5.477226 -5.477226 
+C -6.929803 -4.024648 -7.745967 -2.054254 -7.745967 0 
+C -7.745967 2.054254 -6.929803 4.024648 -5.477226 5.477226 
+C -4.024648 6.929803 -2.054254 7.745967 0 7.745967 
+z
+" style="stroke: #8a96a3; stroke-width: 2.5"/>
+    </defs>
+    <g clip-path="url(#pa6dd843d05)">
+     <use xlink:href="#m498e6df7d9" x="88.941176" y="111.730909" style="fill: #ffffff; stroke: #8a96a3; stroke-width: 2.5"/>
+    </g>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #8a96a3" transform="translate(65.645395 68.993702)">Install,</text>
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #8a96a3" transform="translate(39.76727 85.404327)">same account</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #8a96a3" x="88.941176" y="144.32132" transform="rotate(-0 88.941176 144.32132)">Mac + iPhone</text>
+   </g>
+   <g id="PathCollection_2">
+    <defs>
+     <path id="m493b0614bb" d="M 0 7.745967 
+C 2.054254 7.745967 4.024648 6.929803 5.477226 5.477226 
+C 6.929803 4.024648 7.745967 2.054254 7.745967 0 
+C 7.745967 -2.054254 6.929803 -4.024648 5.477226 -5.477226 
+C 4.024648 -6.929803 2.054254 -7.745967 0 -7.745967 
+C -2.054254 -7.745967 -4.024648 -6.929803 -5.477226 -5.477226 
+C -6.929803 -4.024648 -7.745967 -2.054254 -7.745967 0 
+C -7.745967 2.054254 -6.929803 4.024648 -5.477226 5.477226 
+C -4.024648 6.929803 -2.054254 7.745967 0 7.745967 
+z
+" style="stroke: #1e3a5f; stroke-width: 2.5"/>
+    </defs>
+    <g clip-path="url(#pa6dd843d05)">
+     <use xlink:href="#m493b0614bb" x="224.470588" y="111.730909" style="fill: #1e3a5f; stroke: #1e3a5f; stroke-width: 2.5"/>
+    </g>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1e3a5f" x="224.470588" y="84.328077" transform="rotate(-0 224.470588 84.328077)">100.x opens</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; fill: #8a96a3" transform="translate(209.204963 145.57254)">by IP</text>
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; fill: #8a96a3" transform="translate(189.82508 160.575958)">~10 min in</text>
+   </g>
+   <g id="PathCollection_3">
+    <defs>
+     <path id="m1fc1d384fd" d="M 0 10.246951 
+C 2.717523 10.246951 5.324109 9.167267 7.245688 7.245688 
+C 9.167267 5.324109 10.246951 2.717523 10.246951 0 
+C 10.246951 -2.717523 9.167267 -5.324109 7.245688 -7.245688 
+C 5.324109 -9.167267 2.717523 -10.246951 0 -10.246951 
+C -2.717523 -10.246951 -5.324109 -9.167267 -7.245688 -7.245688 
+C -9.167267 -5.324109 -10.246951 -2.717523 -10.246951 0 
+C -10.246951 2.717523 -9.167267 5.324109 -7.245688 7.245688 
+C -5.324109 9.167267 -2.717523 10.246951 0 10.246951 
+z
+" style="stroke: #3b82f6; stroke-width: 2.5"/>
+    </defs>
+    <g clip-path="url(#pa6dd843d05)">
+     <use xlink:href="#m1fc1d384fd" x="360" y="111.730909" style="fill: #3b82f6; stroke: #3b82f6; stroke-width: 2.5"/>
+    </g>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #3b82f6" x="360" y="85.684327" transform="rotate(-0 360 85.684327)">Name: 403</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; fill: #8a96a3" transform="translate(289.858398 145.57254)">same server, by name</text>
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; fill: #8a96a3" transform="translate(311.99707 160.575958)">15-20 min here</text>
+   </g>
+   <g id="PathCollection_4">
+    <g clip-path="url(#pa6dd843d05)">
+     <use xlink:href="#m493b0614bb" x="495.529412" y="111.730909" style="fill: #1e3a5f; stroke: #1e3a5f; stroke-width: 2.5"/>
+    </g>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1e3a5f" x="495.529412" y="85.80792" transform="rotate(-0 495.529412 85.80792)">Add '.ts.net'</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #8a96a3" x="495.529412" y="144.32132" transform="rotate(-0 495.529412 144.32132)">in allowedHosts</text>
+   </g>
+   <g id="PathCollection_5">
+    <g clip-path="url(#pa6dd843d05)">
+     <use xlink:href="#m493b0614bb" x="631.058824" y="111.730909" style="fill: #1e3a5f; stroke: #1e3a5f; stroke-width: 2.5"/>
+    </g>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1e3a5f" x="631.058824" y="85.684327" transform="rotate(-0 631.058824 85.684327)">200</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; fill: #8a96a3" transform="translate(603.680894 145.57254)">by name</text>
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; fill: #8a96a3" transform="translate(587.819566 160.575958)">~30 min total</text>
+   </g>
+  </g>
+  <g id="text_11">
+   <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #8a96a3" x="7.2" y="211.317539" transform="rotate(-0 7.2 211.317539)">Author's cafe session, Vite dev server; 200/403/200 re-run on Vite 8.3.8, 2026-11-20</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pa6dd843d05">
+   <rect x="14.4" y="8.64" width="691.2" height="181.44"/>
+  </clipPath>
+ </defs>
+</svg>

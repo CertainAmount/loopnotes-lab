@@ -1,0 +1,2 @@
+Blocked request. This host ("mymac.tail1234.ts.net") is not allowed.
+To allow this host, add "mymac.tail1234.ts.net" to `server.allowedHosts` in vite.config.js.
