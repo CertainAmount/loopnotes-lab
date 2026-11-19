@@ -1,0 +1,81 @@
+{
+ "mcpServers": {
+  "github": {
+   "type": "stdio",
+   "command": "python3",
+   "args": [
+    "-I",
+    "{EVIDENCE}/servers/server.py",
+    "github",
+    "{EVIDENCE}/servers/tools/50-clean/github.json",
+    "{EVIDENCE}/logs/calls.jsonl"
+   ]
+  },
+  "slack": {
+   "type": "stdio",
+   "command": "python3",
+   "args": [
+    "-I",
+    "{EVIDENCE}/servers/server.py",
+    "slack",
+    "{EVIDENCE}/servers/tools/50-clean/slack.json",
+    "{EVIDENCE}/logs/calls.jsonl"
+   ]
+  },
+  "docs": {
+   "type": "stdio",
+   "command": "python3",
+   "args": [
+    "-I",
+    "{EVIDENCE}/servers/server.py",
+    "docs",
+    "{EVIDENCE}/servers/tools/50-clean/docs.json",
+    "{EVIDENCE}/logs/calls.jsonl"
+   ]
+  },
+  "db": {
+   "type": "stdio",
+   "command": "python3",
+   "args": [
+    "-I",
+    "{EVIDENCE}/servers/server.py",
+    "db",
+    "{EVIDENCE}/servers/tools/50-clean/db.json",
+    "{EVIDENCE}/logs/calls.jsonl"
+   ]
+  },
+  "ci": {
+   "type": "stdio",
+   "command": "python3",
+   "args": [
+    "-I",
+    "{EVIDENCE}/servers/server.py",
+    "ci",
+    "{EVIDENCE}/servers/tools/50-clean/ci.json",
+    "{EVIDENCE}/logs/calls.jsonl"
+   ]
+  },
+  "flags": {
+   "type": "stdio",
+   "command": "python3",
+   "args": [
+    "-I",
+    "{EVIDENCE}/servers/server.py",
+    "flags",
+    "{EVIDENCE}/servers/tools/50-clean/flags.json",
+    "{EVIDENCE}/logs/calls.jsonl"
+   ]
+  },
+  "observability": {
+   "type": "stdio",
+   "command": "python3",
+   "args": [
+    "-I",
+    "{EVIDENCE}/servers/server.py",
+    "observability",
+    "{EVIDENCE}/servers/tools/50-clean/observability.json",
+    "{EVIDENCE}/logs/calls.jsonl"
+   ]
+  }
+ }
+}

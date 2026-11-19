@@ -1,0 +1,59 @@
+{
+ "mcpServers": {
+  "github": {
+   "type": "stdio",
+   "command": "python3",
+   "args": [
+    "-I",
+    "{EVIDENCE}/servers/server.py",
+    "github",
+    "{EVIDENCE}/servers/tools/fixa-R4/github.json",
+    "{EVIDENCE}/logs/calls.jsonl"
+   ]
+  },
+  "slack": {
+   "type": "stdio",
+   "command": "python3",
+   "args": [
+    "-I",
+    "{EVIDENCE}/servers/server.py",
+    "slack",
+    "{EVIDENCE}/servers/tools/fixa-R4/slack.json",
+    "{EVIDENCE}/logs/calls.jsonl"
+   ]
+  },
+  "docs": {
+   "type": "stdio",
+   "command": "python3",
+   "args": [
+    "-I",
+    "{EVIDENCE}/servers/server.py",
+    "docs",
+    "{EVIDENCE}/servers/tools/fixa-R4/docs.json",
+    "{EVIDENCE}/logs/calls.jsonl"
+   ]
+  },
+  "flags": {
+   "type": "stdio",
+   "command": "python3",
+   "args": [
+    "-I",
+    "{EVIDENCE}/servers/server.py",
+    "flags",
+    "{EVIDENCE}/servers/tools/fixa-R4/flags.json",
+    "{EVIDENCE}/logs/calls.jsonl"
+   ]
+  },
+  "observability": {
+   "type": "stdio",
+   "command": "python3",
+   "args": [
+    "-I",
+    "{EVIDENCE}/servers/server.py",
+    "observability",
+    "{EVIDENCE}/servers/tools/fixa-R4/observability.json",
+    "{EVIDENCE}/logs/calls.jsonl"
+   ]
+  }
+ }
+}

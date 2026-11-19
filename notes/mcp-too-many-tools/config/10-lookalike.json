@@ -1,0 +1,70 @@
+{
+ "mcpServers": {
+  "github": {
+   "type": "stdio",
+   "command": "python3",
+   "args": [
+    "-I",
+    "{EVIDENCE}/servers/server.py",
+    "github",
+    "{EVIDENCE}/servers/tools/10-lookalike/github.json",
+    "{EVIDENCE}/logs/calls.jsonl"
+   ]
+  },
+  "slack": {
+   "type": "stdio",
+   "command": "python3",
+   "args": [
+    "-I",
+    "{EVIDENCE}/servers/server.py",
+    "slack",
+    "{EVIDENCE}/servers/tools/10-lookalike/slack.json",
+    "{EVIDENCE}/logs/calls.jsonl"
+   ]
+  },
+  "docs": {
+   "type": "stdio",
+   "command": "python3",
+   "args": [
+    "-I",
+    "{EVIDENCE}/servers/server.py",
+    "docs",
+    "{EVIDENCE}/servers/tools/10-lookalike/docs.json",
+    "{EVIDENCE}/logs/calls.jsonl"
+   ]
+  },
+  "db": {
+   "type": "stdio",
+   "command": "python3",
+   "args": [
+    "-I",
+    "{EVIDENCE}/servers/server.py",
+    "db",
+    "{EVIDENCE}/servers/tools/10-lookalike/db.json",
+    "{EVIDENCE}/logs/calls.jsonl"
+   ]
+  },
+  "ci": {
+   "type": "stdio",
+   "command": "python3",
+   "args": [
+    "-I",
+    "{EVIDENCE}/servers/server.py",
+    "ci",
+    "{EVIDENCE}/servers/tools/10-lookalike/ci.json",
+    "{EVIDENCE}/logs/calls.jsonl"
+   ]
+  },
+  "flags": {
+   "type": "stdio",
+   "command": "python3",
+   "args": [
+    "-I",
+    "{EVIDENCE}/servers/server.py",
+    "flags",
+    "{EVIDENCE}/servers/tools/10-lookalike/flags.json",
+    "{EVIDENCE}/logs/calls.jsonl"
+   ]
+  }
+ }
+}

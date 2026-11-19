@@ -1,0 +1,126 @@
+[
+ {
+  "name": "list_commits",
+  "description": "List commits in a repository, newest first, optionally filtered by path or date.",
+  "params": {
+   "repo": "Repository name",
+   "since?": "ISO date",
+   "path?": "Path filter"
+  }
+ },
+ {
+  "name": "search_issues",
+  "description": "Search issues and pull requests by text.",
+  "params": {
+   "query": "Search text",
+   "repo?": "Repository name"
+  }
+ },
+ {
+  "name": "get_file",
+  "description": "Get the contents of a file in a repository.",
+  "params": {
+   "repo": "Repository name",
+   "path": "File path"
+  }
+ },
+ {
+  "name": "get_check",
+  "description": "Get the status of a status check on a commit.",
+  "params": {
+   "repo": "Repository name",
+   "ref": "Commit or branch"
+  }
+ },
+ {
+  "name": "create_branch",
+  "description": "Create branch.",
+  "params": {
+   "target": "The branch to act on"
+  }
+ },
+ {
+  "name": "delete_branch",
+  "description": "Delete branch.",
+  "params": {
+   "target": "The branch to act on"
+  }
+ },
+ {
+  "name": "merge_pull_request",
+  "description": "Merge pull request.",
+  "params": {
+   "target": "The pull request to act on"
+  }
+ },
+ {
+  "name": "add_label",
+  "description": "Add label.",
+  "params": {
+   "target": "The label to act on"
+  }
+ },
+ {
+  "name": "remove_label",
+  "description": "Remove label.",
+  "params": {
+   "target": "The label to act on"
+  }
+ },
+ {
+  "name": "assign_reviewer",
+  "description": "Assign reviewer.",
+  "params": {
+   "target": "The reviewer to act on"
+  }
+ },
+ {
+  "name": "close_issue",
+  "description": "Close issue.",
+  "params": {
+   "target": "The issue to act on"
+  }
+ },
+ {
+  "name": "reopen_issue",
+  "description": "Reopen issue.",
+  "params": {
+   "target": "The issue to act on"
+  }
+ },
+ {
+  "name": "create_release",
+  "description": "Create release.",
+  "params": {
+   "target": "The release to act on"
+  }
+ },
+ {
+  "name": "archive_repository",
+  "description": "Archive repository.",
+  "params": {
+   "target": "The repository to act on"
+  }
+ },
+ {
+  "name": "rename_branch",
+  "description": "Rename branch.",
+  "params": {
+   "target": "The branch to act on"
+  }
+ },
+ {
+  "name": "add_collaborator",
+  "description": "Add collaborator.",
+  "params": {
+   "target": "The collaborator to act on"
+  }
+ },
+ {
+  "name": "fork_repository",
+  "description": "Fork repository.",
+  "params": {
+   "target": "The repository to act on"
+  }
+ }
+]

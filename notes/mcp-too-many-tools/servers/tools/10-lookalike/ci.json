@@ -1,0 +1,10 @@
+[
+ {
+  "name": "get_run",
+  "description": "Get the status and result of a CI pipeline run.",
+  "params": {
+   "pipeline": "Pipeline name",
+   "run?": "Run id or 'latest'"
+  }
+ }
+]

@@ -1,0 +1,16 @@
+[
+ {
+  "name": "get_page",
+  "description": "Get a documentation page by its title.",
+  "params": {
+   "title": "Page title"
+  }
+ },
+ {
+  "name": "create_page",
+  "description": "Create page.",
+  "params": {
+   "target": "The page to act on"
+  }
+ }
+]

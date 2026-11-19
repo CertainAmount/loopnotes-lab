@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="252pt" viewBox="0 0 720 252" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-20T05:14:49.232561</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 252 
+L 720 252 
+L 720 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 216 221.76 
+L 691.2 221.76 
+L 691.2 45.36 
+L 216 45.36 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 216 83.010593 
+L 410.953846 83.010593 
+L 410.953846 53.378182 
+L 216 53.378182 
+z
+" clip-path="url(#p7a0e2928a0)" style="fill: #8a96a3"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 216 126.587668 
+L 394.707692 126.587668 
+L 394.707692 96.955257 
+L 216 96.955257 
+z
+" clip-path="url(#p7a0e2928a0)" style="fill: #8a96a3"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 216 170.164743 
+L 443.446154 170.164743 
+L 443.446154 140.532332 
+L 216 140.532332 
+z
+" clip-path="url(#p7a0e2928a0)" style="fill: #3b82f6"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 216 213.741818 
+L 459.692308 213.741818 
+L 459.692308 184.109407 
+L 216 184.109407 
+z
+" clip-path="url(#p7a0e2928a0)" style="fill: #3b82f6"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="text_1">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1e3a5f" x="209" y="73.133372" transform="rotate(-0 209 73.133372)">All 100 shown</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="text_2">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1e3a5f" x="209" y="116.710447" transform="rotate(-0 209 116.710447)">Two servers off</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="text_3">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1e3a5f" x="209" y="160.287522" transform="rotate(-0 209 160.287522)">Task set of 10</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="text_4">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1e3a5f" x="209" y="203.864597" transform="rotate(-0 209 203.864597)">Tool search off</text>
+     </g>
+    </g>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1e3a5f" x="414.609231" y="71.57134" transform="rotate(-0 414.609231 71.57134)">12/15</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #8a96a3" x="527.926154" y="71.181692" transform="rotate(-0 527.926154 71.181692)">0/3</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1e3a5f" x="398.363077" y="115.148416" transform="rotate(-0 398.363077 115.148416)">11/15</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #8a96a3" x="527.926154" y="114.758767" transform="rotate(-0 527.926154 114.758767)">0/3</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1e3a5f" x="447.101538" y="158.725491" transform="rotate(-0 447.101538 158.725491)">14/15</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #3b82f6" x="527.926154" y="158.335842" transform="rotate(-0 527.926154 158.335842)">3/3</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1e3a5f" x="463.347692" y="202.302566" transform="rotate(-0 463.347692 202.302566)">15/15</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #3b82f6" x="527.926154" y="201.913367" transform="rotate(-0 527.926154 201.913367)">3/3, 2.1x tokens</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #8a96a3" x="216" y="38.413905" transform="rotate(-0 216 38.413905)">First call right</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #8a96a3" x="527.926154" y="38.413905" transform="rotate(-0 527.926154 38.413905)">get_page request</text>
+   </g>
+  </g>
+  <g id="text_15">
+   <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #8a96a3" x="7.2" y="246.957539" transform="rotate(-0 7.2 246.957539)">Same 100-tool lookalike catalog; Claude Code 2.1.328, Haiku 5.5, 2026-11-19; 5 requests x 3 runs</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p7a0e2928a0">
+   <rect x="216" y="45.36" width="475.2" height="176.4"/>
+  </clipPath>
+ </defs>
+</svg>

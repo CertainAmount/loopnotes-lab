@@ -1,0 +1,9 @@
+[
+ {
+  "name": "list_settings",
+  "description": "List application settings rows from the config table.",
+  "params": {
+   "service?": "Service name"
+  }
+ }
+]

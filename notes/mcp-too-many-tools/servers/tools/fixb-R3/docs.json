@@ -1,0 +1,72 @@
+[
+ {
+  "name": "get_page",
+  "description": "Get a documentation page by its title.",
+  "params": {
+   "title": "Page title"
+  }
+ },
+ {
+  "name": "create_page",
+  "description": "Create page.",
+  "params": {
+   "target": "The page to act on"
+  }
+ },
+ {
+  "name": "update_page",
+  "description": "Update page.",
+  "params": {
+   "target": "The page to act on"
+  }
+ },
+ {
+  "name": "delete_page",
+  "description": "Delete page.",
+  "params": {
+   "target": "The page to act on"
+  }
+ },
+ {
+  "name": "move_page",
+  "description": "Move page.",
+  "params": {
+   "target": "The page to act on"
+  }
+ },
+ {
+  "name": "rename_page",
+  "description": "Rename page.",
+  "params": {
+   "target": "The page to act on"
+  }
+ },
+ {
+  "name": "add_comment",
+  "description": "Add comment.",
+  "params": {
+   "target": "The comment to act on"
+  }
+ },
+ {
+  "name": "restrict_page",
+  "description": "Restrict page.",
+  "params": {
+   "target": "The page to act on"
+  }
+ },
+ {
+  "name": "export_page",
+  "description": "Export page.",
+  "params": {
+   "target": "The page to act on"
+  }
+ },
+ {
+  "name": "watch_page",
+  "description": "Watch page.",
+  "params": {
+   "target": "The page to act on"
+  }
+ }
+]

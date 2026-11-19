@@ -1,0 +1,16 @@
+[
+ {
+  "name": "list_settings",
+  "description": "List application settings rows from the config table.",
+  "params": {
+   "service?": "Service name"
+  }
+ },
+ {
+  "name": "create_index",
+  "description": "Create index.",
+  "params": {
+   "target": "The index to act on"
+  }
+ }
+]

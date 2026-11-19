@@ -1,0 +1,44 @@
+[
+ {
+  "name": "create_alert",
+  "description": "Create alert.",
+  "params": {
+   "target": "The alert to act on"
+  }
+ },
+ {
+  "name": "mute_alert",
+  "description": "Mute alert.",
+  "params": {
+   "target": "The alert to act on"
+  }
+ },
+ {
+  "name": "unmute_alert",
+  "description": "Unmute alert.",
+  "params": {
+   "target": "The alert to act on"
+  }
+ },
+ {
+  "name": "ack_incident",
+  "description": "Ack incident.",
+  "params": {
+   "target": "The incident to act on"
+  }
+ },
+ {
+  "name": "resolve_incident",
+  "description": "Resolve incident.",
+  "params": {
+   "target": "The incident to act on"
+  }
+ },
+ {
+  "name": "create_monitor",
+  "description": "Create monitor.",
+  "params": {
+   "target": "The monitor to act on"
+  }
+ }
+]

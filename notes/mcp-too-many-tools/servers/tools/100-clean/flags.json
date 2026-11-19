@@ -1,0 +1,101 @@
+[
+ {
+  "name": "list_flags",
+  "description": "List feature flags and whether each is on, per environment.",
+  "params": {
+   "environment?": "Environment name",
+   "service?": "Service name"
+  }
+ },
+ {
+  "name": "create_flag",
+  "description": "Create flag.",
+  "params": {
+   "target": "The flag to act on"
+  }
+ },
+ {
+  "name": "toggle_flag",
+  "description": "Toggle flag.",
+  "params": {
+   "target": "The flag to act on"
+  }
+ },
+ {
+  "name": "archive_flag",
+  "description": "Archive flag.",
+  "params": {
+   "target": "The flag to act on"
+  }
+ },
+ {
+  "name": "add_rule",
+  "description": "Add rule.",
+  "params": {
+   "target": "The rule to act on"
+  }
+ },
+ {
+  "name": "remove_rule",
+  "description": "Remove rule.",
+  "params": {
+   "target": "The rule to act on"
+  }
+ },
+ {
+  "name": "set_rollout",
+  "description": "Set rollout.",
+  "params": {
+   "target": "The rollout to act on"
+  }
+ },
+ {
+  "name": "add_segment",
+  "description": "Add segment.",
+  "params": {
+   "target": "The segment to act on"
+  }
+ },
+ {
+  "name": "remove_segment",
+  "description": "Remove segment.",
+  "params": {
+   "target": "The segment to act on"
+  }
+ },
+ {
+  "name": "schedule_toggle",
+  "description": "Schedule toggle.",
+  "params": {
+   "target": "The toggle to act on"
+  }
+ },
+ {
+  "name": "copy_flag",
+  "description": "Copy flag.",
+  "params": {
+   "target": "The flag to act on"
+  }
+ },
+ {
+  "name": "rename_flag",
+  "description": "Rename flag.",
+  "params": {
+   "target": "The flag to act on"
+  }
+ },
+ {
+  "name": "lock_flag",
+  "description": "Lock flag.",
+  "params": {
+   "target": "The flag to act on"
+  }
+ },
+ {
+  "name": "set_default",
+  "description": "Set default.",
+  "params": {
+   "target": "The default to act on"
+  }
+ }
+]

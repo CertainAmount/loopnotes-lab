@@ -1,0 +1,94 @@
+[
+ {
+  "name": "search_messages",
+  "description": "Search messages across Slack channels the bot can read.",
+  "params": {
+   "query": "Search text",
+   "channel?": "Channel name"
+  }
+ },
+ {
+  "name": "post_message",
+  "description": "Post message.",
+  "params": {
+   "target": "The message to act on"
+  }
+ },
+ {
+  "name": "set_status",
+  "description": "Set status.",
+  "params": {
+   "target": "The status to act on"
+  }
+ },
+ {
+  "name": "create_channel",
+  "description": "Create channel.",
+  "params": {
+   "target": "The channel to act on"
+  }
+ },
+ {
+  "name": "archive_channel",
+  "description": "Archive channel.",
+  "params": {
+   "target": "The channel to act on"
+  }
+ },
+ {
+  "name": "invite_user",
+  "description": "Invite user.",
+  "params": {
+   "target": "The user to act on"
+  }
+ },
+ {
+  "name": "pin_message",
+  "description": "Pin message.",
+  "params": {
+   "target": "The message to act on"
+  }
+ },
+ {
+  "name": "add_reaction",
+  "description": "Add reaction.",
+  "params": {
+   "target": "The reaction to act on"
+  }
+ },
+ {
+  "name": "remove_reaction",
+  "description": "Remove reaction.",
+  "params": {
+   "target": "The reaction to act on"
+  }
+ },
+ {
+  "name": "schedule_message",
+  "description": "Schedule message.",
+  "params": {
+   "target": "The message to act on"
+  }
+ },
+ {
+  "name": "rename_channel",
+  "description": "Rename channel.",
+  "params": {
+   "target": "The channel to act on"
+  }
+ },
+ {
+  "name": "set_topic",
+  "description": "Set topic.",
+  "params": {
+   "target": "The topic to act on"
+  }
+ },
+ {
+  "name": "kick_user",
+  "description": "Kick user.",
+  "params": {
+   "target": "The user to act on"
+  }
+ }
+]

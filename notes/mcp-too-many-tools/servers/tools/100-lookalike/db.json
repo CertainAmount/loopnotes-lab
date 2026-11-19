@@ -1,0 +1,93 @@
+[
+ {
+  "name": "list_settings",
+  "description": "List application settings rows from the config table.",
+  "params": {
+   "service?": "Service name"
+  }
+ },
+ {
+  "name": "create_index",
+  "description": "Create index.",
+  "params": {
+   "target": "The index to act on"
+  }
+ },
+ {
+  "name": "drop_index",
+  "description": "Drop index.",
+  "params": {
+   "target": "The index to act on"
+  }
+ },
+ {
+  "name": "vacuum_table",
+  "description": "Vacuum table.",
+  "params": {
+   "target": "The table to act on"
+  }
+ },
+ {
+  "name": "create_snapshot",
+  "description": "Create snapshot.",
+  "params": {
+   "target": "The snapshot to act on"
+  }
+ },
+ {
+  "name": "restore_snapshot",
+  "description": "Restore snapshot.",
+  "params": {
+   "target": "The snapshot to act on"
+  }
+ },
+ {
+  "name": "grant_role",
+  "description": "Grant role.",
+  "params": {
+   "target": "The role to act on"
+  }
+ },
+ {
+  "name": "revoke_role",
+  "description": "Revoke role.",
+  "params": {
+   "target": "The role to act on"
+  }
+ },
+ {
+  "name": "rotate_password",
+  "description": "Rotate password.",
+  "params": {
+   "target": "The password to act on"
+  }
+ },
+ {
+  "name": "kill_session",
+  "description": "Kill session.",
+  "params": {
+   "target": "The session to act on"
+  }
+ },
+ {
+  "name": "analyze_table",
+  "description": "Analyze table.",
+  "params": {
+   "target": "The table to act on"
+  }
+ },
+ {
+  "name": "create_replica",
+  "description": "Create replica.",
+  "params": {
+   "target": "The replica to act on"
+  }
+ },
+ {
+  "name": "promote_replica",
+  "description": "Promote replica.",
+  "params": {
+   "target": "The replica to act on"
+  }
+ }
+]

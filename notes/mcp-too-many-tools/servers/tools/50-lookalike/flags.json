@@ -1,0 +1,52 @@
+[
+ {
+  "name": "list_flags",
+  "description": "List feature flags and whether each is on, per environment.",
+  "params": {
+   "environment?": "Environment name",
+   "service?": "Service name"
+  }
+ },
+ {
+  "name": "list_changes",
+  "description": "List recent changes to feature flag settings.",
+  "params": {
+   "environment?": "Environment name"
+  }
+ },
+ {
+  "name": "create_flag",
+  "description": "Create flag.",
+  "params": {
+   "target": "The flag to act on"
+  }
+ },
+ {
+  "name": "toggle_flag",
+  "description": "Toggle flag.",
+  "params": {
+   "target": "The flag to act on"
+  }
+ },
+ {
+  "name": "archive_flag",
+  "description": "Archive flag.",
+  "params": {
+   "target": "The flag to act on"
+  }
+ },
+ {
+  "name": "add_rule",
+  "description": "Add rule.",
+  "params": {
+   "target": "The rule to act on"
+  }
+ },
+ {
+  "name": "remove_rule",
+  "description": "Remove rule.",
+  "params": {
+   "target": "The rule to act on"
+  }
+ }
+]

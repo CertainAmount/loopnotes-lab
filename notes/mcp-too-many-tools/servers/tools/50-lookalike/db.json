@@ -1,0 +1,44 @@
+[
+ {
+  "name": "list_settings",
+  "description": "List application settings rows from the config table.",
+  "params": {
+   "service?": "Service name"
+  }
+ },
+ {
+  "name": "create_index",
+  "description": "Create index.",
+  "params": {
+   "target": "The index to act on"
+  }
+ },
+ {
+  "name": "drop_index",
+  "description": "Drop index.",
+  "params": {
+   "target": "The index to act on"
+  }
+ },
+ {
+  "name": "vacuum_table",
+  "description": "Vacuum table.",
+  "params": {
+   "target": "The table to act on"
+  }
+ },
+ {
+  "name": "create_snapshot",
+  "description": "Create snapshot.",
+  "params": {
+   "target": "The snapshot to act on"
+  }
+ },
+ {
+  "name": "restore_snapshot",
+  "description": "Restore snapshot.",
+  "params": {
+   "target": "The snapshot to act on"
+  }
+ }
+]

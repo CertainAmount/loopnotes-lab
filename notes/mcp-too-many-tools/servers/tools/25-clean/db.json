@@ -1,0 +1,23 @@
+[
+ {
+  "name": "create_index",
+  "description": "Create index.",
+  "params": {
+   "target": "The index to act on"
+  }
+ },
+ {
+  "name": "drop_index",
+  "description": "Drop index.",
+  "params": {
+   "target": "The index to act on"
+  }
+ },
+ {
+  "name": "vacuum_table",
+  "description": "Vacuum table.",
+  "params": {
+   "target": "The table to act on"
+  }
+ }
+]

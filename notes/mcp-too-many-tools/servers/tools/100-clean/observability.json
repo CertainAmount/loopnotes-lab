@@ -1,0 +1,93 @@
+[
+ {
+  "name": "create_alert",
+  "description": "Create alert.",
+  "params": {
+   "target": "The alert to act on"
+  }
+ },
+ {
+  "name": "mute_alert",
+  "description": "Mute alert.",
+  "params": {
+   "target": "The alert to act on"
+  }
+ },
+ {
+  "name": "unmute_alert",
+  "description": "Unmute alert.",
+  "params": {
+   "target": "The alert to act on"
+  }
+ },
+ {
+  "name": "ack_incident",
+  "description": "Ack incident.",
+  "params": {
+   "target": "The incident to act on"
+  }
+ },
+ {
+  "name": "resolve_incident",
+  "description": "Resolve incident.",
+  "params": {
+   "target": "The incident to act on"
+  }
+ },
+ {
+  "name": "create_monitor",
+  "description": "Create monitor.",
+  "params": {
+   "target": "The monitor to act on"
+  }
+ },
+ {
+  "name": "delete_monitor",
+  "description": "Delete monitor.",
+  "params": {
+   "target": "The monitor to act on"
+  }
+ },
+ {
+  "name": "set_threshold",
+  "description": "Set threshold.",
+  "params": {
+   "target": "The threshold to act on"
+  }
+ },
+ {
+  "name": "add_annotation",
+  "description": "Add annotation.",
+  "params": {
+   "target": "The annotation to act on"
+  }
+ },
+ {
+  "name": "create_slo",
+  "description": "Create slo.",
+  "params": {
+   "target": "The slo to act on"
+  }
+ },
+ {
+  "name": "page_oncall",
+  "description": "Page oncall.",
+  "params": {
+   "target": "The oncall to act on"
+  }
+ },
+ {
+  "name": "rotate_api_key",
+  "description": "Rotate api key.",
+  "params": {
+   "target": "The api key to act on"
+  }
+ },
+ {
+  "name": "set_retention",
+  "description": "Set retention.",
+  "params": {
+   "target": "The retention to act on"
+  }
+ }
+]

@@ -1,0 +1,35 @@
+{
+ "frame": "bars",
+ "caption": "A same-server rival survived two servers off; a task set or full definitions fixed it.",
+ "items": [
+  "All 100 shown",
+  "Two servers off",
+  "Task set of 10",
+  "Tool search off"
+ ],
+ "series": [
+  {
+   "name": "First call right",
+   "values": [
+    12,
+    11,
+    14,
+    15
+   ]
+  }
+ ],
+ "unit": "/15",
+ "highlight": [
+  "Task set of 10",
+  "Tool search off"
+ ],
+ "notes": [
+  "0/3",
+  "0/3",
+  "3/3",
+  "3/3, 2.1x tokens"
+ ],
+ "value_title": "First call right",
+ "notes_title": "get_page request",
+ "note": "Same 100-tool lookalike catalog; Claude Code 2.1.328, Haiku 5.5, 2026-11-19; 5 requests x 3 runs"
+}

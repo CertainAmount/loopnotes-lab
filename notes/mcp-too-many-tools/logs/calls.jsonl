@@ -1,0 +1,473 @@
+{"t": 1795115824.4321754, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-15"}}
+{"t": 1795115824.6270623, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795115824.7087317, "server": "flags", "tool": "list_flags", "args": {"service": "payments"}}
+{"t": 1795115826.5336332, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service"}}
+{"t": 1795115826.7454636, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments-service", "run": "latest"}}
+{"t": 1795115826.831189, "server": "flags", "tool": "list_flags", "args": {"service": "payments-service"}}
+{"t": 1795115828.837718, "server": "slack", "tool": "search_messages", "args": {"query": "payments outage"}}
+{"t": 1795115828.9186175, "server": "github", "tool": "search_issues", "args": {"query": "payments outage"}}
+{"t": 1795115837.6401372, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795115839.5936372, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795115846.8578024, "server": "docs", "tool": "get_page", "args": {"title": "Cache eviction"}}
+{"t": 1795115848.6327455, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795115855.3910034, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795115857.2275727, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795115865.6223323, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795115867.4320042, "server": "github", "tool": "get_check", "args": {"repo": "main", "ref": "main"}}
+{"t": 1795115878.1228518, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-18"}}
+{"t": 1795115880.2479668, "server": "slack", "tool": "search_messages", "args": {"query": "payments outage"}}
+{"t": 1795115880.3900468, "server": "github", "tool": "search_issues", "args": {"query": "payments outage"}}
+{"t": 1795115880.4855297, "server": "observability", "tool": "get_dashboard", "args": {"name": "payments-service"}}
+{"t": 1795115889.87075, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795115891.4608903, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795115892.8631835, "server": "slack", "tool": "search_messages", "args": {"query": "code freeze"}}
+{"t": 1795115900.7834468, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795115900.8185136, "server": "docs", "tool": "search", "args": {"query": "cache eviction runbook"}}
+{"t": 1795115902.6962717, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795115902.7629764, "server": "docs", "tool": "search", "args": {"query": "eviction"}}
+{"t": 1795115910.5983214, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795115912.389481, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795115920.0895288, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795115923.2147498, "server": "github", "tool": "get_check", "args": {"repo": "mcp-e4", "ref": "main"}}
+{"t": 1795115935.4648786, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-19T00:00:00Z"}}
+{"t": 1795115935.5279691, "server": "observability", "tool": "get_dashboard", "args": {"name": "payments"}}
+{"t": 1795115937.1496887, "server": "github", "tool": "list_commits", "args": {"repo": "payments"}}
+{"t": 1795115945.365623, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795115947.0770452, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795115954.5405738, "server": "docs", "tool": "search", "args": {"query": "cache eviction"}}
+{"t": 1795115956.1774502, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795115957.774592, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795115965.1698766, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795115967.1023946, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795115975.567495, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795115987.6753235, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-18"}}
+{"t": 1795115987.7735445, "server": "slack", "tool": "search_messages", "args": {"query": "payments outage"}}
+{"t": 1795115990.0421062, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-18"}}
+{"t": 1795115990.1045384, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795115998.6689181, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116000.412885, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116007.9902904, "server": "docs", "tool": "search", "args": {"query": "cache eviction runbook"}}
+{"t": 1795116009.8652954, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795116011.5402143, "server": "docs", "tool": "search", "args": {"query": "eviction"}}
+{"t": 1795116018.9589753, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116020.738386, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795116028.1954184, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116039.077498, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-13"}}
+{"t": 1795116039.154824, "server": "flags", "tool": "list_flags", "args": {"service": "payments"}}
+{"t": 1795116041.0009499, "server": "github", "tool": "list_commits", "args": {"repo": "payments"}}
+{"t": 1795116041.0824394, "server": "flags", "tool": "list_flags", "args": {}}
+{"t": 1795116041.1693811, "server": "slack", "tool": "search_messages", "args": {"query": "payments outage"}}
+{"t": 1795116049.8946948, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116051.5867434, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116059.4862454, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795116061.684619, "server": "docs", "tool": "get_page", "args": {"title": "cache eviction"}}
+{"t": 1795116068.8919618, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116070.733665, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795116078.382388, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116080.3863127, "server": "github", "tool": "get_check", "args": {"repo": "mcp-e4-nzv6i0a0", "ref": "main"}}
+{"t": 1795116082.286354, "server": "ci", "tool": "get_run", "args": {"pipeline": "mcp-e4-nzv6i0a0", "run": "latest"}}
+{"t": 1795116095.4089444, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-18T00:00:00Z"}}
+{"t": 1795116095.5302434, "server": "flags", "tool": "list_changes", "args": {"environment": "production"}}
+{"t": 1795116095.6224291, "server": "slack", "tool": "search_messages", "args": {"query": "payments outage"}}
+{"t": 1795116097.5257838, "server": "github", "tool": "list_commits", "args": {"repo": "payments"}}
+{"t": 1795116105.769323, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116107.7276103, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116115.0391233, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795116116.5456247, "server": "docs", "tool": "search", "args": {"query": "cache eviction"}}
+{"t": 1795116118.250099, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795116125.5302293, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116127.2194824, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795116134.745592, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116146.074635, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-17"}}
+{"t": 1795116148.172244, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-17"}}
+{"t": 1795116148.374373, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "path": "services/payments", "since": "2026-11-17"}}
+{"t": 1795116152.5698726, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795116152.735177, "server": "slack", "tool": "search_messages", "args": {"query": "payments outage"}}
+{"t": 1795116152.8019578, "server": "observability", "tool": "get_dashboard", "args": {"name": "payments"}}
+{"t": 1795116161.529369, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116163.2727098, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116170.924626, "server": "docs", "tool": "search", "args": {"query": "cache eviction runbook"}}
+{"t": 1795116172.5402114, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795116174.2980394, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795116182.7059739, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116184.6757774, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795116192.7807922, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116202.834676, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-13"}}
+{"t": 1795116202.8939197, "server": "observability", "tool": "get_dashboard", "args": {"name": "payments"}}
+{"t": 1795116204.7069514, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-13"}}
+{"t": 1795116204.7986996, "server": "github", "tool": "search_issues", "args": {"query": "payments outage"}}
+{"t": 1795116206.4559138, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service"}}
+{"t": 1795116206.6217594, "server": "github", "tool": "get_file", "args": {"repo": "payments-service", "path": "CHANGELOG.md"}}
+{"t": 1795116208.8294575, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments-service", "run": "latest"}}
+{"t": 1795116217.0473511, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116218.7347958, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116226.415269, "server": "docs", "tool": "search", "args": {"query": "cache eviction runbook"}}
+{"t": 1795116227.8631115, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795116229.3517826, "server": "docs", "tool": "search", "args": {"query": "eviction"}}
+{"t": 1795116236.522724, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116238.367278, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795116247.0384922, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116256.2541664, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-18"}}
+{"t": 1795116256.4520926, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795116256.543461, "server": "flags", "tool": "list_flags", "args": {"service": "payments"}}
+{"t": 1795116258.489368, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-18"}}
+{"t": 1795116258.6317317, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments-service", "run": "latest"}}
+{"t": 1795116267.0565772, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116268.7038069, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116275.6633384, "server": "docs", "tool": "get_page", "args": {"title": "Cache eviction runbook"}}
+{"t": 1795116277.2456496, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795116284.1155965, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116286.0126548, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795116294.993862, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116307.5928695, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-18"}}
+{"t": 1795116307.605453, "server": "observability", "tool": "get_dashboard", "args": {"name": "payments"}}
+{"t": 1795116309.6027718, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-18", "path": "services/payments"}}
+{"t": 1795116309.7076154, "server": "github", "tool": "search_issues", "args": {"query": "payments outage 2026-11-20"}}
+{"t": 1795116318.6716473, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116320.5649974, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116329.105366, "server": "docs", "tool": "get_page", "args": {"title": "Cache eviction"}}
+{"t": 1795116330.6058223, "server": "docs", "tool": "search", "args": {"query": "cache eviction"}}
+{"t": 1795116332.318226, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795116339.5998638, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116341.9086428, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795116349.7782094, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116351.7257311, "server": "github", "tool": "get_check", "args": {"repo": "mcp-e4-scdnnvsp", "ref": "main"}}
+{"t": 1795116362.6921847, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-19"}}
+{"t": 1795116364.722569, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-19"}}
+{"t": 1795116367.345648, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "path": "services/payments"}}
+{"t": 1795116375.7402503, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116377.5192912, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116384.503116, "server": "docs", "tool": "search", "args": {"query": "cache eviction"}}
+{"t": 1795116386.0821795, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795116387.693395, "server": "docs", "tool": "get_page", "args": {"title": "Runbook: Cache Eviction"}}
+{"t": 1795116394.428419, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116396.1760442, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116397.7317493, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795116406.5219858, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116420.1235626, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-18"}}
+{"t": 1795116422.084255, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-18", "path": "services/payments"}}
+{"t": 1795116424.0174835, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795116424.0474472, "server": "slack", "tool": "search_messages", "args": {"query": "payments outage"}}
+{"t": 1795116432.6741362, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116434.7621536, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116442.289105, "server": "docs", "tool": "search", "args": {"query": "cache eviction runbook"}}
+{"t": 1795116443.8111129, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795116445.203553, "server": "docs", "tool": "get_page", "args": {"title": "Runbook: Cache Eviction"}}
+{"t": 1795116452.1644115, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116454.1595871, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795116462.374906, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116474.911585, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-17"}}
+{"t": 1795116475.0861678, "server": "slack", "tool": "search_messages", "args": {"query": "payments outage"}}
+{"t": 1795116475.1968844, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795116477.3697186, "server": "flags", "tool": "list_flags", "args": {"service": "payments", "environment": "production"}}
+{"t": 1795116485.2764611, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116486.9222383, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116493.8047183, "server": "docs", "tool": "get_page", "args": {"title": "Cache eviction"}}
+{"t": 1795116495.3093224, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795116502.1846354, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116504.487044, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116512.832604, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116522.8944707, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-13"}}
+{"t": 1795116524.5437458, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-13"}}
+{"t": 1795116526.290319, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service"}}
+{"t": 1795116534.830934, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116536.4108531, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116544.7032864, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795116546.5162346, "server": "docs", "tool": "get_page", "args": {"title": "Runbook: Cache Eviction"}}
+{"t": 1795116554.2934544, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116555.9111874, "server": "flags", "tool": "list_flags", "args": {}}
+{"t": 1795116564.039033, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116574.7629566, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-13"}}
+{"t": 1795116574.9286842, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments-service", "run": "latest"}}
+{"t": 1795116575.0667424, "server": "flags", "tool": "list_flags", "args": {"service": "payments-service", "environment": "production"}}
+{"t": 1795116576.900626, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service"}}
+{"t": 1795116577.0483253, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795116578.788879, "server": "slack", "tool": "search_messages", "args": {"query": "payments outage"}}
+{"t": 1795116587.457675, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116589.0846305, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116596.489381, "server": "docs", "tool": "get_page", "args": {"title": "Cache eviction"}}
+{"t": 1795116598.2496476, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795116606.0151014, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116607.7007546, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795116615.1096098, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116627.6552072, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "path": "services/payments", "since": "2026-11-18"}}
+{"t": 1795116636.632688, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116638.2339523, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116638.3485234, "server": "slack", "tool": "search_messages", "args": {"query": "deploy"}}
+{"t": 1795116647.2573595, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795116648.938163, "server": "docs", "tool": "get_page", "args": {"title": "Cache eviction"}}
+{"t": 1795116656.6888816, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116658.6011212, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795116666.3941815, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116676.7132356, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-18"}}
+{"t": 1795116676.8274634, "server": "flags", "tool": "list_flags", "args": {"service": "payments"}}
+{"t": 1795116676.9779055, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795116685.3072424, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116686.9165199, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116693.7865508, "server": "docs", "tool": "get_page", "args": {"title": "Cache eviction runbook"}}
+{"t": 1795116695.7410965, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795116702.675225, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116704.5932488, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116712.917185, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116725.3930137, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-18"}}
+{"t": 1795116727.0622206, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-18"}}
+{"t": 1795116729.1169567, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795116736.8071184, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116738.5028005, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116746.4426227, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795116748.1830163, "server": "docs", "tool": "get_page", "args": {"title": "Runbook: Cache Eviction"}}
+{"t": 1795116755.2936106, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116756.9800565, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795116765.5187573, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116772.399384, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-18"}}
+{"t": 1795116772.596431, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-18"}}
+{"t": 1795116772.776411, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "path": "services/payments", "since": "2026-11-18"}}
+{"t": 1795116774.8456755, "server": "github", "tool": "list_commits", "args": {"repo": "payments"}}
+{"t": 1795116774.9467776, "server": "github", "tool": "search_issues", "args": {"query": "outage payments", "repo": "payments"}}
+{"t": 1795116782.4358218, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116782.676887, "server": "docs", "tool": "list_changes", "args": {}}
+{"t": 1795116782.689112, "server": "github", "tool": "search_issues", "args": {"query": "deploy freeze"}}
+{"t": 1795116784.472912, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116784.5646167, "server": "github", "tool": "search_issues", "args": {"query": "freeze"}}
+{"t": 1795116784.6583576, "server": "docs", "tool": "get_page", "args": {"title": "Deploy freeze"}}
+{"t": 1795116790.445518, "server": "docs", "tool": "get_page", "args": {"title": "cache eviction"}}
+{"t": 1795116792.6544, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795116794.4493546, "server": "docs", "tool": "list_changes", "args": {}}
+{"t": 1795116800.3064368, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116802.5386155, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116808.0433064, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116810.3264785, "server": "github", "tool": "get_check", "args": {"ref": "main"}}
+{"t": 1795116817.1768374, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-13"}}
+{"t": 1795116817.4057472, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-13"}}
+{"t": 1795116817.5947003, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795116817.776591, "server": "observability", "tool": "get_job", "args": {"job": "payments"}}
+{"t": 1795116817.9043083, "server": "observability", "tool": "get_dashboard", "args": {"name": "payments"}}
+{"t": 1795116818.1853476, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "path": "src/payments", "since": "2026-11-13"}}
+{"t": 1795116820.4277866, "server": "github", "tool": "get_file", "args": {"repo": "payments", "path": "README.md"}}
+{"t": 1795116822.8767369, "server": "github", "tool": "list_commits", "args": {"repo": "payments"}}
+{"t": 1795116823.083633, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments-service", "run": "latest"}}
+{"t": 1795116823.167433, "server": "observability", "tool": "get_job", "args": {"job": "payments-service"}}
+{"t": 1795116830.1982434, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116830.3245249, "server": "docs", "tool": "search", "args": {"query": "deploy freeze"}}
+{"t": 1795116832.1741633, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116832.296591, "server": "docs", "tool": "search", "args": {"query": "freeze"}}
+{"t": 1795116832.3820333, "server": "github", "tool": "search_issues", "args": {"query": "deploy freeze"}}
+{"t": 1795116838.4216924, "server": "docs", "tool": "get_page", "args": {"title": "Cache eviction runbook"}}
+{"t": 1795116840.2272222, "server": "docs", "tool": "search", "args": {"query": "cache eviction runbook"}}
+{"t": 1795116845.7856586, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116847.7380314, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795116853.5843203, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116862.0804431, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-18"}}
+{"t": 1795116862.2073436, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-18"}}
+{"t": 1795116864.3461475, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "path": "services/payments"}}
+{"t": 1795116864.3937569, "server": "github", "tool": "search_issues", "args": {"query": "payments outage"}}
+{"t": 1795116866.1314592, "server": "github", "tool": "get_file", "args": {"repo": "payments-service", "path": "README.md"}}
+{"t": 1795116869.1501791, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795116869.22508, "server": "flags", "tool": "list_flags", "args": {"service": "payments"}}
+{"t": 1795116876.1338718, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116876.152262, "server": "docs", "tool": "list_changes", "args": {}}
+{"t": 1795116877.8669012, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116877.898211, "server": "docs", "tool": "get_page", "args": {"title": "Deploy freeze"}}
+{"t": 1795116883.4689858, "server": "docs", "tool": "get_page", "args": {"title": "cache eviction"}}
+{"t": 1795116885.4222734, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795116887.0911644, "server": "docs", "tool": "list_changes", "args": {}}
+{"t": 1795116892.3360415, "server": "flags", "tool": "list_flags", "args": {"service": "checkout", "environment": "production"}}
+{"t": 1795116894.096694, "server": "flags", "tool": "list_flags", "args": {"service": "checkout"}}
+{"t": 1795116899.7295985, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116906.7974288, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-17"}}
+{"t": 1795116908.7502918, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-17"}}
+{"t": 1795116910.7317932, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service"}}
+{"t": 1795116913.5728507, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments-service", "run": "latest"}}
+{"t": 1795116920.578461, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116920.8111649, "server": "docs", "tool": "search", "args": {"query": "deploy freeze"}}
+{"t": 1795116920.829169, "server": "github", "tool": "search_issues", "args": {"query": "deploy freeze"}}
+{"t": 1795116922.6230457, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116922.7009711, "server": "docs", "tool": "search", "args": {"query": "freeze"}}
+{"t": 1795116928.5291965, "server": "docs", "tool": "get_page", "args": {"title": "cache eviction"}}
+{"t": 1795116930.3151762, "server": "docs", "tool": "search", "args": {"query": "cache eviction"}}
+{"t": 1795116935.7236516, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795116938.2574415, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795116944.32578, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116951.46353, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-13"}}
+{"t": 1795116951.6233387, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-13"}}
+{"t": 1795116953.436867, "server": "github", "tool": "list_commits", "args": {"repo": "payments"}}
+{"t": 1795116953.5995114, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service"}}
+{"t": 1795116953.7333288, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795116955.848148, "server": "github", "tool": "search_issues", "args": {"query": "payments outage"}}
+{"t": 1795116955.9350028, "server": "slack", "tool": "search_messages", "args": {"query": "payments outage"}}
+{"t": 1795116963.6961665, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795116963.989966, "server": "docs", "tool": "list_changes", "args": {}}
+{"t": 1795116963.999326, "server": "github", "tool": "search_issues", "args": {"query": "deploy freeze"}}
+{"t": 1795116965.7820086, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795116965.8834548, "server": "docs", "tool": "get_page", "args": {"title": "Deploy freeze"}}
+{"t": 1795116971.3951316, "server": "docs", "tool": "get_page", "args": {"title": "cache eviction"}}
+{"t": 1795116973.2710075, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795116978.603689, "server": "flags", "tool": "list_flags", "args": {"service": "checkout", "environment": "production"}}
+{"t": 1795116980.8176255, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795116987.0743787, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795116997.548547, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-18"}}
+{"t": 1795116997.7451375, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-18"}}
+{"t": 1795116997.9105723, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795116999.9737692, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service"}}
+{"t": 1795117000.1950965, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments-service", "run": "latest"}}
+{"t": 1795117000.2936926, "server": "github", "tool": "search_issues", "args": {"query": "payments outage"}}
+{"t": 1795117007.3578322, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795117007.603627, "server": "docs", "tool": "search", "args": {"query": "deploy freeze"}}
+{"t": 1795117007.6335397, "server": "github", "tool": "search_issues", "args": {"query": "deploy freeze"}}
+{"t": 1795117009.4430833, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795117009.4519572, "server": "docs", "tool": "search", "args": {"query": "freeze"}}
+{"t": 1795117015.5130634, "server": "docs", "tool": "get_page", "args": {"title": "cache eviction"}}
+{"t": 1795117017.3169603, "server": "docs", "tool": "search", "args": {"query": "cache eviction runbook"}}
+{"t": 1795117022.6800625, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795117024.942682, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795117030.8595693, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795117033.0950296, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795117067.7953453, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795117069.4479063, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795117071.416803, "server": "slack", "tool": "search_messages", "args": {"query": "deploy"}}
+{"t": 1795117078.3734603, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795117079.9531727, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795117087.3157725, "server": "docs", "tool": "search", "args": {"query": "cache eviction runbook"}}
+{"t": 1795117088.899299, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795117090.5190184, "server": "docs", "tool": "search", "args": {"query": "cache eviction"}}
+{"t": 1795117098.776289, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795117100.561037, "server": "docs", "tool": "get_page", "args": {"title": "Cache eviction"}}
+{"t": 1795117107.6076221, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795117109.9953747, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795117111.8639293, "server": "flags", "tool": "list_flags", "args": {}}
+{"t": 1795117119.7659316, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795117121.4154663, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795117128.867766, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795117137.493626, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795117150.577829, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-15"}}
+{"t": 1795117152.410199, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-15", "path": "services/payments"}}
+{"t": 1795117152.704724, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments-service", "run": "latest"}}
+{"t": 1795117152.7120287, "server": "observability", "tool": "get_dashboard", "args": {"name": "payments"}}
+{"t": 1795117164.9643612, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-17"}}
+{"t": 1795117172.7445252, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795117174.1612692, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795117180.9594257, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795117182.5353763, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795117189.9084, "server": "docs", "tool": "search", "args": {"query": "cache eviction runbook"}}
+{"t": 1795117191.3782876, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795117192.7746136, "server": "docs", "tool": "search", "args": {"query": "eviction"}}
+{"t": 1795117201.200064, "server": "docs", "tool": "get_page", "args": {"title": "Cache eviction"}}
+{"t": 1795117202.7694795, "server": "docs", "tool": "export_page", "args": {"target": "Cache eviction"}}
+{"t": 1795117204.4946682, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795117211.8195283, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795117219.7983038, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795117221.8822818, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795117229.6182592, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795117237.2927423, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795117249.2331822, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-13"}}
+{"t": 1795117249.3722508, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments-service", "run": "latest"}}
+{"t": 1795117251.3815186, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-13"}}
+{"t": 1795117251.5155594, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795117263.0837133, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "path": "payments", "since": "2026-11-18"}}
+{"t": 1795117270.450855, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795117272.1214557, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795117279.9142952, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795117281.3866012, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795117288.1824768, "server": "docs", "tool": "search", "args": {"query": "cache eviction runbook"}}
+{"t": 1795117289.7479265, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795117291.2591312, "server": "docs", "tool": "search", "args": {"query": "eviction"}}
+{"t": 1795117299.5947914, "server": "docs", "tool": "get_page", "args": {"title": "Cache eviction"}}
+{"t": 1795117301.801471, "server": "docs", "tool": "get_page", "args": {"title": "Runbook: Cache eviction"}}
+{"t": 1795117314.2255812, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795117316.1166546, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795117323.2113247, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795117325.365295, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795117333.2418275, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795117342.2783132, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795117353.9804227, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-18T00:00:00Z"}}
+{"t": 1795117355.627994, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-18T00:00:00Z"}}
+{"t": 1795117364.7395182, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795117366.4013093, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795117373.4769175, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795117375.043539, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795117381.949745, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795117383.5737982, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795117391.4812696, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795117405.6424687, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "path": "payments", "since": "2026-11-19"}}
+{"t": 1795117407.48338, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-15"}}
+{"t": 1795117415.860585, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795117417.4208596, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795117425.2538626, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795117427.146931, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795117434.3071375, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795117436.248576, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795117444.0154402, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795117456.9595413, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-17"}}
+{"t": 1795117457.0495818, "server": "slack", "tool": "search_messages", "args": {"query": "payments outage"}}
+{"t": 1795117458.8474607, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-17"}}
+{"t": 1795117458.90328, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795117467.7382743, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795117469.4244277, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795117476.4685833, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795117478.1181276, "server": "docs", "tool": "get_page", "args": {"title": "Runbook: Cache Eviction"}}
+{"t": 1795117484.5922906, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795117486.4618142, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795117493.9483426, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795117507.1085453, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-18"}}
+{"t": 1795117507.1931486, "server": "slack", "tool": "search_messages", "args": {"query": "outage payments"}}
+{"t": 1795117515.4732509, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795117517.0379868, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795117525.097965, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795117526.7798119, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795117534.0860007, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795117535.8814933, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795117544.09784, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795117557.96926, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "path": "services/payments", "since": "2026-11-18"}}
+{"t": 1795117559.584152, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-18"}}
+{"t": 1795117561.6623611, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795117569.8983896, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795117571.5082026, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795117578.1100302, "server": "docs", "tool": "get_page", "args": {"title": "Cache eviction"}}
+{"t": 1795117579.8251662, "server": "docs", "tool": "get_page", "args": {"title": "Runbook: Cache eviction"}}
+{"t": 1795117586.865927, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795117589.0375342, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795117596.8741224, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795117607.5472383, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-13"}}
+{"t": 1795117609.4039152, "server": "github", "tool": "list_commits", "args": {"repo": "payments-service", "since": "2026-11-13", "path": "payments"}}
+{"t": 1795117611.8220823, "server": "github", "tool": "list_commits", "args": {"repo": "payments"}}
+{"t": 1795117619.5196528, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795117621.1592956, "server": "slack", "tool": "search_messages", "args": {"query": "freeze"}}
+{"t": 1795117629.64875, "server": "docs", "tool": "get_page", "args": {"title": "Cache eviction"}}
+{"t": 1795117631.8605347, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795117642.179254, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795117643.9532945, "server": "flags", "tool": "list_flags", "args": {"environment": "production"}}
+{"t": 1795117652.039292, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795117690.3146613, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-18T00:00:00Z"}}
+{"t": 1795117690.5356064, "server": "flags", "tool": "list_changes", "args": {"environment": "production"}}
+{"t": 1795117690.7689204, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795117706.9185686, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795117707.0724134, "server": "docs", "tool": "search", "args": {"query": "deploy freeze"}}
+{"t": 1795117716.554734, "server": "docs", "tool": "search", "args": {"query": "cache eviction runbook"}}
+{"t": 1795117718.1027112, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795117735.3407207, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795117745.48956, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795117756.15999, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-18T00:00:00Z"}}
+{"t": 1795117756.4498436, "server": "flags", "tool": "list_changes", "args": {"environment": "production"}}
+{"t": 1795117756.612809, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795117769.5752661, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795117769.7359622, "server": "docs", "tool": "search", "args": {"query": "deploy freeze"}}
+{"t": 1795117777.1999846, "server": "docs", "tool": "search", "args": {"query": "cache eviction runbook"}}
+{"t": 1795117782.5901833, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795117788.9532638, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795117795.9726248, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795117802.5469203, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-18T00:00:00Z"}}
+{"t": 1795117802.5637612, "server": "flags", "tool": "list_changes", "args": {}}
+{"t": 1795117811.6664338, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795117811.7718797, "server": "docs", "tool": "search", "args": {"query": "deploy freeze"}}
+{"t": 1795117825.5712025, "server": "docs", "tool": "search", "args": {"query": "cache eviction runbook"}}
+{"t": 1795117826.8546476, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795117845.0466473, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795117852.9227812, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}
+{"t": 1795117859.4758997, "server": "github", "tool": "list_commits", "args": {"repo": "payments", "since": "2026-11-17"}}
+{"t": 1795117859.7166407, "server": "flags", "tool": "list_flags", "args": {"service": "payments"}}
+{"t": 1795117859.9368737, "server": "ci", "tool": "get_run", "args": {"pipeline": "payments", "run": "latest"}}
+{"t": 1795117867.3275776, "server": "slack", "tool": "search_messages", "args": {"query": "deploy freeze"}}
+{"t": 1795117878.264699, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction Runbook"}}
+{"t": 1795117884.3290687, "server": "docs", "tool": "get_page", "args": {"title": "Cache Eviction"}}
+{"t": 1795117892.3968723, "server": "flags", "tool": "list_flags", "args": {"environment": "production", "service": "checkout"}}
+{"t": 1795117899.6211557, "server": "ci", "tool": "get_run", "args": {"pipeline": "main", "run": "latest"}}

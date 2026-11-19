@@ -1,0 +1,10 @@
+[
+ {
+  "name": "search_messages",
+  "description": "Search messages across Slack channels the bot can read.",
+  "params": {
+   "query": "Search text",
+   "channel?": "Channel name"
+  }
+ }
+]

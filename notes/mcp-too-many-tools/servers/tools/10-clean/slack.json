@@ -1,0 +1,17 @@
+[
+ {
+  "name": "search_messages",
+  "description": "Search messages across Slack channels the bot can read.",
+  "params": {
+   "query": "Search text",
+   "channel?": "Channel name"
+  }
+ },
+ {
+  "name": "post_message",
+  "description": "Post message.",
+  "params": {
+   "target": "The message to act on"
+  }
+ }
+]

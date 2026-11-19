@@ -1,0 +1,10 @@
+[
+ {
+  "name": "list_flags",
+  "description": "List feature flags and whether each is on, per environment.",
+  "params": {
+   "environment?": "Environment name",
+   "service?": "Service name"
+  }
+ }
+]

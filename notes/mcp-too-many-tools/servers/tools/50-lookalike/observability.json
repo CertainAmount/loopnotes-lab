@@ -1,0 +1,51 @@
+[
+ {
+  "name": "get_dashboard",
+  "description": "Get a monitoring dashboard by its name.",
+  "params": {
+   "name": "Dashboard name"
+  }
+ },
+ {
+  "name": "get_job",
+  "description": "Get the status of a scheduled job.",
+  "params": {
+   "job": "Job name"
+  }
+ },
+ {
+  "name": "create_alert",
+  "description": "Create alert.",
+  "params": {
+   "target": "The alert to act on"
+  }
+ },
+ {
+  "name": "mute_alert",
+  "description": "Mute alert.",
+  "params": {
+   "target": "The alert to act on"
+  }
+ },
+ {
+  "name": "unmute_alert",
+  "description": "Unmute alert.",
+  "params": {
+   "target": "The alert to act on"
+  }
+ },
+ {
+  "name": "ack_incident",
+  "description": "Ack incident.",
+  "params": {
+   "target": "The incident to act on"
+  }
+ },
+ {
+  "name": "resolve_incident",
+  "description": "Resolve incident.",
+  "params": {
+   "target": "The incident to act on"
+  }
+ }
+]

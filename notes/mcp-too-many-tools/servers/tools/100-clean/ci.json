@@ -1,0 +1,101 @@
+[
+ {
+  "name": "get_run",
+  "description": "Get the status and result of a CI pipeline run.",
+  "params": {
+   "pipeline": "Pipeline name",
+   "run?": "Run id or 'latest'"
+  }
+ },
+ {
+  "name": "trigger_pipeline",
+  "description": "Trigger pipeline.",
+  "params": {
+   "target": "The pipeline to act on"
+  }
+ },
+ {
+  "name": "cancel_run",
+  "description": "Cancel run.",
+  "params": {
+   "target": "The run to act on"
+  }
+ },
+ {
+  "name": "retry_job",
+  "description": "Retry job.",
+  "params": {
+   "target": "The job to act on"
+  }
+ },
+ {
+  "name": "pause_pipeline",
+  "description": "Pause pipeline.",
+  "params": {
+   "target": "The pipeline to act on"
+  }
+ },
+ {
+  "name": "resume_pipeline",
+  "description": "Resume pipeline.",
+  "params": {
+   "target": "The pipeline to act on"
+  }
+ },
+ {
+  "name": "add_secret",
+  "description": "Add secret.",
+  "params": {
+   "target": "The secret to act on"
+  }
+ },
+ {
+  "name": "delete_secret",
+  "description": "Delete secret.",
+  "params": {
+   "target": "The secret to act on"
+  }
+ },
+ {
+  "name": "clear_cache",
+  "description": "Clear cache.",
+  "params": {
+   "target": "The cache to act on"
+  }
+ },
+ {
+  "name": "approve_deploy",
+  "description": "Approve deploy.",
+  "params": {
+   "target": "The deploy to act on"
+  }
+ },
+ {
+  "name": "rollback_deploy",
+  "description": "Rollback deploy.",
+  "params": {
+   "target": "The deploy to act on"
+  }
+ },
+ {
+  "name": "pin_runner",
+  "description": "Pin runner.",
+  "params": {
+   "target": "The runner to act on"
+  }
+ },
+ {
+  "name": "drain_runner",
+  "description": "Drain runner.",
+  "params": {
+   "target": "The runner to act on"
+  }
+ },
+ {
+  "name": "set_concurrency",
+  "description": "Set concurrency.",
+  "params": {
+   "target": "The concurrency to act on"
+  }
+ }
+]

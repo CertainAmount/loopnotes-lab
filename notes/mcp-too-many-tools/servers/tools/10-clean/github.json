@@ -1,0 +1,18 @@
+[
+ {
+  "name": "list_commits",
+  "description": "List commits in a repository, newest first, optionally filtered by path or date.",
+  "params": {
+   "repo": "Repository name",
+   "since?": "ISO date",
+   "path?": "Path filter"
+  }
+ },
+ {
+  "name": "create_branch",
+  "description": "Create branch.",
+  "params": {
+   "target": "The branch to act on"
+  }
+ }
+]

@@ -1,0 +1,16 @@
+[
+ {
+  "name": "create_alert",
+  "description": "Create alert.",
+  "params": {
+   "target": "The alert to act on"
+  }
+ },
+ {
+  "name": "mute_alert",
+  "description": "Mute alert.",
+  "params": {
+   "target": "The alert to act on"
+  }
+ }
+]
