@@ -130,3 +130,29 @@ Moved from the article body (reader fix r2): the sentence reporting the E1 repro
 Moved from the article body (reader fix r3): the list step "Reran `./gradlew clean build` in the terminal, in case old build output had carried the first pass" is now one clause in the scene sentence; the reason for the rerun (ruling out old build output) stays in the Korean source and here.
 
 Article: ['STS "cannot be resolved to a type" but Gradle build passes'](https://loopnotes.dev/sts-gradle-error-build-passes/)
+
+## 8. When the sync itself fails: the Gradle JVM (2026-11-20, merged from the `gradle-phased-build-action-error` post)
+
+Question: the terminal build passes, but the IDE's Gradle sync (IntelliJ's sync, or Buildship's Refresh Gradle Project) fails outright with "Could not run phased build action using connection to Gradle distribution …". Is that the stale-model case above?
+
+The author's incident (from the earlier post, IntelliJ IDEA Ultimate, around 2024): a new Spring Boot project on Gradle 8.x, Project SDK 17, `java -version` 17 in the terminal, but IntelliJ's Gradle JVM was 11 and `./gradlew --version` also reported JVM 11. About 1 h 10 min in all: about 15 min of logs and search, 40-45 min on dependencies, the wrapper, `./gradlew --stop`, a partial cache clean and Invalidate Caches / Restart (the sync failed 6-7 times), then under 10 min from spotting the mismatch to a clean sync on JDK 17. The author has not hit this error in STS or Eclipse.
+
+Method: no IDE GUI here. A small Tooling API client (`gradle-jvm-sync/Sync.java`, Gradle Tooling API 9.8.2) runs a phased build action the way an IDE sync does (a `projectsLoaded` action, then a `buildFinished` action asking for the `GradleProject` model, which configures the project) and sets the Gradle JVM with `setJavaHome`, which is what the IDE's Gradle JVM setting controls. Project: a minimal Spring Boot app (`gradle-jvm-sync/build.gradle`: Spring Boot Gradle plugin 3.5.9, dependency-management 1.1.7, Gradle 8.14.3 wrapper, toolchain 21). Gradle JVMs: Temurin 11.0.33 and OpenJDK 21.0.10. Every run sat under a 2 GB memory cap with `org.gradle.jvmargs=-Xmx512m`; daemons were stopped after each run.
+
+| Run | Gradle JVM | Result |
+|---|---|---|
+| Terminal `./gradlew --no-daemon clean build` | 21 | `BUILD SUCCESSFUL` |
+| IDE-style phased sync | 21 | sync OK, model with 40 tasks |
+| IDE-style phased sync | 11 | `CONFIGURE FAILED`; top exception `The supplied phased action failed with an exception.`; last `Caused by:` line `Dependency requires at least JVM runtime version 17. This build uses a Java 11 JVM.` (resolving `spring-boot-gradle-plugin:3.5.9`) |
+| Terminal `./gradlew --no-daemon clean build` | 11 | `BUILD FAILED`, the same "requires at least JVM runtime version 17" line |
+| Terminal `./gradlew --version` | 11 | `Launcher JVM:  11.0.33 (Eclipse Adoptium 11.0.33+10)` |
+
+Logs: `gradle-jvm-sync/sync.log`, `gradle-jvm-sync/terminal.log` (stack frames removed, local paths replaced).
+
+What it shows: with the terminal on JDK 21 and the IDE's Gradle JVM on 11, the terminal is green and only the sync fails, and the cause sits in the last `Caused by:` line, not the top line. No refresh, Clean or cache wipe changes the JVM the sync runs on.
+
+Side observation: a first client build compiled for Java 21 made the sync on JDK 11 fail with the exact top line `Could not run phased build action using connection to Gradle distribution 'https://services.gradle.org/distributions/gradle-8.14.3-bin.zip'.` and `Caused by: … UnsupportedClassVersionError … class file version 65.0 … only recognizes class file versions up to 55.0`: the same family (the Gradle JVM older than what it is asked to load), and the same lesson that the top line is generic. The client was then compiled for Java 8 so the table above shows the project's own failure.
+
+Where the setting lives (official sources, not the author's STS experience): IntelliJ IDEA, Settings → Build, Execution, Deployment → Build Tools → Gradle → Gradle JVM ([JetBrains, Gradle JVM selection](https://www.jetbrains.com/help/idea/gradle-jvm-selection.html); IntelliJ IDEA 2026.2 labels it "Gradle JVM criteria"); Buildship/STS, the `Java home` field on Window → Preferences → Gradle ([Buildship CoreMessages.properties](https://github.com/eclipse/buildship/blob/master/org.eclipse.buildship.core/src/main/resources/org/eclipse/buildship/core/internal/i18n/CoreMessages.properties), section 5); any IDE, `org.gradle.java.home` in `gradle.properties` ([Gradle build environment](https://docs.gradle.org/current/userguide/build_environment.html)).
+
+Limits: a Tooling API client, not IntelliJ or STS, so the IDE's own wording of the error dialog is not reproduced; one project, one plugin. The author's incident and this run share the cause (Gradle JVM 11 under a project that needs 17), not the project.

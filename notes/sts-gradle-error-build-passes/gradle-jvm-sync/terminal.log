@@ -1,0 +1,10 @@
+===== terminal: JAVA_HOME=openjdk version "11.0.33" 2026-10-20 ; ./gradlew --no-daemon clean build
+* What went wrong:
+> Could not resolve all artifacts for configuration 'classpath'.
+   > Could not resolve org.springframework.boot:spring-boot-gradle-plugin:3.5.9.
+      > Dependency requires at least JVM runtime version 17. This build uses a Java 11 JVM.
+BUILD FAILED in 7s
+exit=1
+===== terminal: JAVA_HOME=openjdk version "21.0.10-internal" 2026-01-20 ; ./gradlew --no-daemon clean build
+BUILD SUCCESSFUL in 10s
+exit=0
