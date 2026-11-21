@@ -1,0 +1,10 @@
+model,gguf,ctx,layers,full_attention_layers,kv_layers_allocated,kv_mib_measured,state_mib_measured,plain_mib_predicted,aware_mib_predicted,measured_over_aware,llama_cpp
+"Qwen3.5 0.8B (hybrid, 6 of 24 full)",Qwen3.5-0.8B-Q4_K_M.gguf,8192,24,6,6,96.0,19.3,384.0,96.0,1.0,"version: 1.0.0-dev (build 12383, commit c56be864f)"
+"Qwen3.5 0.8B (hybrid, 6 of 24 full)",Qwen3.5-0.8B-Q4_K_M.gguf,32768,24,6,6,384.0,19.3,1536.0,384.0,1.0,"version: 1.0.0-dev (build 12383, commit c56be864f)"
+"Qwen3.5 0.8B (hybrid, 6 of 24 full)",Qwen3.5-0.8B-Q4_K_M.gguf,131072,24,6,6,1536.0,19.3,6144.0,1536.0,1.0,"version: 1.0.0-dev (build 12383, commit c56be864f)"
+"Granite 4.0-H 350M (hybrid, 4 of 32 full)",granite-4.0-h-350m-Q4_K_M.gguf,8192,32,4,4,32.0,21.6,256.0,32.0,1.0,"version: 1.0.0-dev (build 12383, commit c56be864f)"
+"Granite 4.0-H 350M (hybrid, 4 of 32 full)",granite-4.0-h-350m-Q4_K_M.gguf,32768,32,4,4,128.0,21.6,1024.0,128.0,1.0,"version: 1.0.0-dev (build 12383, commit c56be864f)"
+"Granite 4.0-H 350M (hybrid, 4 of 32 full)",granite-4.0-h-350m-Q4_K_M.gguf,131072,32,4,4,512.0,21.6,4096.0,512.0,1.0,"version: 1.0.0-dev (build 12383, commit c56be864f)"
+"Qwen3 0.6B (all 28 full, control)",Qwen3-0.6B-Q8_0.gguf,8192,28,28,28,896.0,0,896.0,896.0,1.0,"version: 1.0.0-dev (build 12383, commit c56be864f)"
+"Qwen3 0.6B (all 28 full, control)",Qwen3-0.6B-Q8_0.gguf,32768,28,28,28,3584.0,0,3584.0,3584.0,1.0,"version: 1.0.0-dev (build 12383, commit c56be864f)"
+"Qwen3 0.6B (all 28 full, control)",Qwen3-0.6B-Q8_0.gguf,131072,28,28,28,14336.0,0,14336.0,14336.0,1.0,"version: 1.0.0-dev (build 12383, commit c56be864f)"

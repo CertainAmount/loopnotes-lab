@@ -1,0 +1,152 @@
+{
+ "frame": "curve",
+ "x": [
+  8,
+  16,
+  32,
+  64,
+  128
+ ],
+ "xscale": "log",
+ "xticklabels": [
+  "8K",
+  "16K",
+  "32K",
+  "64K",
+  "128K"
+ ],
+ "xlabel": "Context length (tokens)",
+ "height": 5.6,
+ "panels": [
+  {
+   "title": "Memory needed: Q4 weights + cache + runtime",
+   "ylim": [
+    14,
+    34
+   ],
+   "yticks": [
+    16,
+    20,
+    24,
+    28,
+    32
+   ],
+   "suffix": " GB"
+  }
+ ],
+ "series": [
+  {
+   "name": "Qwen3.6 27B",
+   "style": "accent",
+   "values": [
+    [
+     17.31,
+     17.81,
+     18.81,
+     20.81,
+     24.81
+    ]
+   ],
+   "dy": [
+    10
+   ]
+  },
+  {
+   "name": "Qwen3.6 27B, textbook formula",
+   "style": "muted",
+   "dashed": true,
+   "x": [
+    8,
+    16,
+    32,
+    64
+   ],
+   "values": [
+    [
+     18.66,
+     20.66,
+     24.66,
+     32.66
+    ]
+   ],
+   "labels": [
+    "27B, textbook formula"
+   ]
+  },
+  {
+   "name": "Qwen3 32B",
+   "style": "navy",
+   "x": [
+    8,
+    16,
+    32
+   ],
+   "values": [
+    [
+     21.4,
+     23.4,
+     27.4
+    ]
+   ],
+   "label_offset": [
+    -10,
+    12
+   ]
+  },
+  {
+   "name": "Qwen3-Coder 30B",
+   "style": "muted",
+   "values": [
+    [
+     19.03,
+     19.78,
+     21.28,
+     24.28,
+     30.28
+    ]
+   ],
+   "labels": [
+    "Qwen3-Coder 30B"
+   ],
+   "dy": [
+    8
+   ]
+  }
+ ],
+ "hlines": [
+  {
+   "y": 24,
+   "label": "24GB card"
+  },
+  {
+   "y": 16,
+   "label": "16GB card",
+   "below": true
+  }
+ ],
+ "points": [
+  {
+   "x": [
+    32,
+    64
+   ],
+   "y": [
+    21.1,
+    23.4
+   ],
+   "label": "\u25cb  measured on 4090",
+   "style": "navy",
+   "offset": [
+    12,
+    -6
+   ],
+   "ha": "left",
+   "va": "top",
+   "label_xy": [
+    128,
+    30.28
+   ]
+  }
+ ],
+ "note": "Q4_K_M weights, FP16 cache, +1 GiB runtime; Qwen3.6 27B 15.66 GiB (unsloth). Calculated from config.json, 2026-11-21."
+}

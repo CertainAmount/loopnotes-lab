@@ -1,0 +1,58 @@
+{
+ "frame": "compare",
+ "items": [
+  "Qwen3.6 27B",
+  "Gemma 3 27B",
+  "EXAONE 4.0 32B",
+  "gpt-oss 20B",
+  "DeepSeek V2 Lite 16B",
+  "Qwen3 32B",
+  "Qwen3-Coder 30B",
+  "Mistral Small 3.2 24B",
+  "Llama 3.3 70B"
+ ],
+ "tags": [
+  "1 in 4 layers full",
+  "1 in 6 layers global",
+  "1 in 4 layers global",
+  "half layers windowed",
+  "compressed latent",
+  "all layers",
+  "all layers",
+  "all layers",
+  "all layers"
+ ],
+ "hi": [
+  "Qwen3.6 27B"
+ ],
+ "before": {
+  "name": "textbook formula",
+  "values": [
+   8.0,
+   15.5,
+   8.0,
+   1.5,
+   8.4,
+   8.0,
+   3.0,
+   5.0,
+   10.0
+  ]
+ },
+ "after": {
+  "name": "what the model keeps",
+  "values": [
+   2.0,
+   2.9,
+   2.8,
+   0.8,
+   0.9,
+   8.0,
+   3.0,
+   5.0,
+   10.0
+  ]
+ },
+ "unit": " GB",
+ "note": "KV cache at 32K tokens, FP16, from each model's config.json (R1 table + Qwen3.6 27B, 2026-11-21)"
+}

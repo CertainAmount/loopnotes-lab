@@ -1,0 +1,1 @@
+llama_kv_cache: size = 14336.00 MiB (131072 cells,  28 layers,  1/1 seqs), K (f16): 7168.00 MiB, V (f16): 7168.00 MiB

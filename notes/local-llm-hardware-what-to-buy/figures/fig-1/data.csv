@@ -1,0 +1,22 @@
+series,panel,x,value,runs
+Qwen3.6 27B,Memory needed: Q4 weights + cache + runtime,8,17.31,
+Qwen3.6 27B,Memory needed: Q4 weights + cache + runtime,16,17.81,
+Qwen3.6 27B,Memory needed: Q4 weights + cache + runtime,32,18.81,
+Qwen3.6 27B,Memory needed: Q4 weights + cache + runtime,64,20.81,
+Qwen3.6 27B,Memory needed: Q4 weights + cache + runtime,128,24.81,
+"Qwen3.6 27B, textbook formula",Memory needed: Q4 weights + cache + runtime,8,18.66,
+"Qwen3.6 27B, textbook formula",Memory needed: Q4 weights + cache + runtime,16,20.66,
+"Qwen3.6 27B, textbook formula",Memory needed: Q4 weights + cache + runtime,32,24.66,
+"Qwen3.6 27B, textbook formula",Memory needed: Q4 weights + cache + runtime,64,32.66,
+Qwen3 32B,Memory needed: Q4 weights + cache + runtime,8,21.4,
+Qwen3 32B,Memory needed: Q4 weights + cache + runtime,16,23.4,
+Qwen3 32B,Memory needed: Q4 weights + cache + runtime,32,27.4,
+Qwen3-Coder 30B,Memory needed: Q4 weights + cache + runtime,8,19.03,
+Qwen3-Coder 30B,Memory needed: Q4 weights + cache + runtime,16,19.78,
+Qwen3-Coder 30B,Memory needed: Q4 weights + cache + runtime,32,21.28,
+Qwen3-Coder 30B,Memory needed: Q4 weights + cache + runtime,64,24.28,
+Qwen3-Coder 30B,Memory needed: Q4 weights + cache + runtime,128,30.28,
+○  measured on 4090,Memory needed: Q4 weights + cache + runtime,32,21.1,measured
+○  measured on 4090,Memory needed: Q4 weights + cache + runtime,64,23.4,measured
+24GB card,Memory needed: Q4 weights + cache + runtime,,24,reference line
+16GB card,Memory needed: Q4 weights + cache + runtime,,16,reference line

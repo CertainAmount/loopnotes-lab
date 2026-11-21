@@ -1,0 +1,2 @@
+llama_kv_cache: size =   32.00 MiB (  8192 cells,   4 layers,  1/1 seqs), K (f16):   16.00 MiB, V (f16):   16.00 MiB
+llama_memory_recurrent: size =   21.57 MiB (     1 cells,  32 layers,  1 seqs  0 rs_seq), R (f32):    0.57 MiB, S (f32):   21.00 MiB, P (f32):    0.00 MiB

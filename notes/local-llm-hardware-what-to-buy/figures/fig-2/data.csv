@@ -1,0 +1,10 @@
+item,textbook formula,what the model keeps,tag
+Qwen3.6 27B,8.0,2.0,1 in 4 layers full
+Gemma 3 27B,15.5,2.9,1 in 6 layers global
+EXAONE 4.0 32B,8.0,2.8,1 in 4 layers global
+gpt-oss 20B,1.5,0.8,half layers windowed
+DeepSeek V2 Lite 16B,8.4,0.9,compressed latent
+Qwen3 32B,8.0,8.0,all layers
+Qwen3-Coder 30B,3.0,3.0,all layers
+Mistral Small 3.2 24B,5.0,5.0,all layers
+Llama 3.3 70B,10.0,10.0,all layers
