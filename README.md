@@ -11,23 +11,24 @@ The same folders, grouped the way the site groups its articles: each topic page 
 
 **Working with AI coding agents**
 
-- [Coding agent permissions and approvals](topics/A1-coding-agent-permissions-and-approvals/): 7 research notes, 1 experiment, 1 dataset
+- [How far to trust a coding agent: permissions and review](topics/A1-how-far-to-trust-a-coding-agent-permissions-and-review/): 7 research notes, 1 experiment, 1 dataset
 - [When Claude Code ignores your setup](topics/A2-when-claude-code-ignores-your-setup/): 4 research notes, 2 experiments, 2 datasets
-- [Can you trust AI-written code?](topics/A7-can-you-trust-ai-written-code/): 1 research note
 - [Building agents that call tools](topics/A5-building-agents-that-call-tools/): 3 research notes
-- [Running a local LLM on an RTX 4090](topics/A4-running-a-local-llm-on-an-rtx-4090/): 2 research notes, 1 dataset
-- [Choosing hardware for local LLMs](topics/A6-choosing-hardware-for-local-llms/): 2 research notes
 
-**Running backends in production**
+**Running local LLMs on my own hardware**
 
-- [Self-hosting and Linux dev servers](topics/C2-self-hosting-and-linux-dev-servers/): 1 research note
-- [Java and Gradle builds](topics/C3-java-and-gradle-builds/): 1 research note
+- [Running a local LLM on an RTX 4090](topics/L1-running-a-local-llm-on-an-rtx-4090/): 2 research notes, 1 dataset
+- [Choosing hardware for local LLMs](topics/L2-choosing-hardware-for-local-llms/): 2 research notes
 
 **Tech in Korea, from a Seoul developer**
 
 - [Buying tech in Korea](topics/B3-buying-tech-in-korea/): 1 research note
 - [Korean phone number and verification](topics/B2-korean-phone-number-and-verification/): 2 research notes
 - [Getting around Korea with apps](topics/B1-getting-around-korea-with-apps/): 1 experiment
+
+**Running backends in production**
+
+- [Production, server and build fixes](topics/C1-production-server-and-build-fixes/): 2 research notes
 
 <!-- topics:end -->
 
