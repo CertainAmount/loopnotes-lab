@@ -1,0 +1,4 @@
+item,request-review,always-proceed,note
+Minutes per run (average),about 18,about 12,rounded averages
+Human approvals per run (average),6-7,0,always-proceed proceeds automatically
+Commands or changes stopped at approval,4 in total,0,would have run unattended

@@ -1,0 +1,5 @@
+case,rule_hit,outcome,mode_in_source,source
+git push origin,deny,"blocked, no prompt",not stated,author session
+"test, lint",ask,asks every time,always-proceed,author session
+git diff --output,allow,runs (wrote a patch file),not stated,author session
+lockfile edit,none,always-proceed runs,always-proceed,author session

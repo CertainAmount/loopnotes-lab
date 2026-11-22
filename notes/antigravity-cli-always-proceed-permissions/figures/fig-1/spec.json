@@ -1,0 +1,164 @@
+{
+ "frame": "flow",
+ "nodes": [
+  {
+   "id": "r1",
+   "label": "Deny match",
+   "col": 0,
+   "row": 0,
+   "kind": "question"
+  },
+  {
+   "id": "r2",
+   "label": "Ask match",
+   "col": 1,
+   "row": 0,
+   "kind": "question"
+  },
+  {
+   "id": "r3",
+   "label": "Allow match",
+   "col": 2,
+   "row": 0,
+   "kind": "question"
+  },
+  {
+   "id": "r4",
+   "label": "No rule of mine",
+   "col": 3,
+   "row": 0
+  },
+  {
+   "id": "o1",
+   "label": "Blocked,\nno prompt",
+   "col": 0,
+   "row": 1,
+   "kind": "muted"
+  },
+  {
+   "id": "o2",
+   "label": "Asks every time",
+   "col": 1,
+   "row": 1,
+   "kind": "focus"
+  },
+  {
+   "id": "o3",
+   "label": "Runs",
+   "col": 2,
+   "row": 1,
+   "kind": "muted"
+  },
+  {
+   "id": "o4",
+   "label": "always-proceed\nruns",
+   "col": 3,
+   "row": 1,
+   "kind": "muted"
+  },
+  {
+   "id": "c1",
+   "label": "git push origin",
+   "col": 0,
+   "row": 2,
+   "kind": "sub",
+   "mono": true
+  },
+  {
+   "id": "c2",
+   "label": "test, lint",
+   "col": 1,
+   "row": 2,
+   "kind": "sub"
+  },
+  {
+   "id": "c3",
+   "label": "git diff --output",
+   "col": 2,
+   "row": 2,
+   "kind": "sub",
+   "mono": true
+  },
+  {
+   "id": "c4",
+   "label": "lockfile edit",
+   "col": 3,
+   "row": 2,
+   "kind": "sub"
+  }
+ ],
+ "edges": [
+  [
+   "r1",
+   "o1"
+  ],
+  [
+   "r2",
+   "o2"
+  ],
+  [
+   "r3",
+   "o3"
+  ],
+  [
+   "r4",
+   "o4"
+  ]
+ ],
+ "zones": [
+  {
+   "label": "Your rules",
+   "cols": [
+    0,
+    2
+   ],
+   "row": 0
+  },
+  {
+   "label": "Mode decides",
+   "cols": [
+    3,
+    3
+   ],
+   "row": 0
+  }
+ ],
+ "note": "Author's sessions, Sept–Nov 2026; order per Antigravity Permissions docs (CLI tab), checked 2026-11-22.",
+ "data": [
+  [
+   "case",
+   "rule_hit",
+   "outcome",
+   "mode_in_source",
+   "source"
+  ],
+  [
+   "git push origin",
+   "deny",
+   "blocked, no prompt",
+   "not stated",
+   "author session"
+  ],
+  [
+   "test, lint",
+   "ask",
+   "asks every time",
+   "always-proceed",
+   "author session"
+  ],
+  [
+   "git diff --output",
+   "allow",
+   "runs (wrote a patch file)",
+   "not stated",
+   "author session"
+  ],
+  [
+   "lockfile edit",
+   "none",
+   "always-proceed runs",
+   "always-proceed",
+   "author session"
+  ]
+ ]
+}
