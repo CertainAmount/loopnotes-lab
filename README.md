@@ -12,8 +12,9 @@ The same folders, grouped the way the site groups its articles: each topic page 
 **Working with AI coding agents**
 
 - [How far to trust a coding agent: permissions and review](topics/A1-how-far-to-trust-a-coding-agent-permissions-and-review/): 8 research notes, 1 experiment, 1 dataset
-- [When Claude Code ignores your setup](topics/A2-when-claude-code-ignores-your-setup/): 4 research notes, 2 experiments, 2 datasets
+- [When Claude Code ignores your setup](topics/A2-when-claude-code-ignores-your-setup/): 5 research notes, 2 experiments, 2 datasets
 - [Building agents that call tools](topics/A5-building-agents-that-call-tools/): 3 research notes
+- [Plans, limits and token costs](topics/A3-plans-limits-and-token-costs/): 1 research note
 
 **Running local LLMs on my own hardware**
 
