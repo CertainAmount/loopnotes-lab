@@ -1,0 +1,94 @@
+{
+ "frame": "matrix",
+ "title": "What one Codex /compact kept, by fact type",
+ "caption": "One /compact kept the goal and files but lost two of my three rejected approaches.",
+ "rows": [
+  "Goal (1)",
+  "Files touched (7)",
+  "Off-limits modules (2)",
+  "Decisions Codex proposed (3)",
+  "My decisions (4)",
+  "Failing tests (2)",
+  "Approaches I rejected (3)",
+  "Exact values (~5)"
+ ],
+ "cols": [
+  "After one /compact"
+ ],
+ "cells": [
+  [
+   "kept"
+  ],
+  [
+   "kept"
+  ],
+  [
+   "kept"
+  ],
+  [
+   "blurred"
+  ],
+  [
+   "blurred"
+  ],
+  [
+   "blurred"
+  ],
+  [
+   "dropped"
+  ],
+  [
+   "dropped"
+  ]
+ ],
+ "cell_text": [
+  [
+   "Kept"
+  ],
+  [
+   "Kept"
+  ],
+  [
+   "Kept"
+  ],
+  [
+   "Blurred: 2 kept, 1 blurred"
+  ],
+  [
+   "Blurred: reason squashed"
+  ],
+  [
+   "Blurred: 1 lost its method"
+  ],
+  [
+   "2 of 3 dropped"
+  ],
+  [
+   "Most dropped"
+  ]
+ ],
+ "outcomes": {
+  "kept": [
+   "Kept",
+   "#E6EAEE"
+  ],
+  "blurred": [
+   "Blurred",
+   "#8A96A3"
+  ],
+  "dropped": [
+   "Dropped",
+   "#1E3A5F"
+  ]
+ },
+ "hi_rows": [
+  6
+ ],
+ "legend": false,
+ "label_width": 0.44,
+ "gap_after": [
+  2,
+  5
+ ],
+ "note": "One 90-min Codex CLI session (0.167.0 line, gpt-5.5), recall checked right after the compact"
+}

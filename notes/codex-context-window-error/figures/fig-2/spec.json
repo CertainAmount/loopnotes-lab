@@ -1,0 +1,68 @@
+{
+ "frame": "range",
+ "title": "Codex /status context left around two compacts and a /new",
+ "caption": "/new with a six-field handoff started with more room than either compact gave back.",
+ "points": [
+  {
+   "label": "Before\ncompact 1",
+   "lo": 20,
+   "hi": 25,
+   "text": "low 20s",
+   "reported": "low 20s % (just before compact 1)"
+  },
+  {
+   "label": "After\ncompact 1",
+   "lo": 70,
+   "hi": 89,
+   "text": "70s–80s",
+   "reported": "70s to 80s % (just after compact 1)"
+  },
+  {
+   "label": "~10 turns\nlater",
+   "lo": 13,
+   "hi": 17,
+   "text": "mid-teens",
+   "reported": "mid-teens % (about 10 turns later)"
+  },
+  {
+   "label": "After\ncompact 2",
+   "lo": 67,
+   "hi": 72,
+   "text": "high 60s–low 70s",
+   "reported": "high 60s to low 70s % (just after compact 2)"
+  },
+  {
+   "label": "/new start",
+   "lo": 88,
+   "hi": 92,
+   "text": "~90%",
+   "hi_light": true,
+   "reported": "about 90 % (start of /new with six carried lines)"
+  }
+ ],
+ "ylim": [
+  0,
+  100
+ ],
+ "yticks": [
+  0,
+  50,
+  100
+ ],
+ "suffix": "%",
+ "ylabel": "/status context left",
+ "hlines": [
+  {
+   "y": 50,
+   "label": "half left"
+  }
+ ],
+ "bands": [
+  {
+   "lo": 20,
+   "hi": 30,
+   "label": "move log work to /new"
+  }
+ ],
+ "note": "One Codex CLI session (0.167.0 line, gpt-5.5); ranges as read from /status, no token counts"
+}

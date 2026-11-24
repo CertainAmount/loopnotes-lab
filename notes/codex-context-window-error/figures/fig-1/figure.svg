@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="518.832pt" viewBox="0 0 720 518.832" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-24T18:40:41.629256</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 518.832 
+L 720 518.832 
+L 720 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 328.32 124.223205 
+L 694.08 124.223205 
+Q 699.84 124.223205 699.84 118.463205 
+L 699.84 97.963858 
+Q 699.84 92.203858 694.08 92.203858 
+L 328.32 92.203858 
+Q 322.56 92.203858 322.56 97.963858 
+L 322.56 118.463205 
+Q 322.56 124.223205 328.32 124.223205 
+z
+" clip-path="url(#p4316557abb)" style="fill: #e6eaee"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 328.32 168.694519 
+L 694.08 168.694519 
+Q 699.84 168.694519 699.84 162.934519 
+L 699.84 142.435173 
+Q 699.84 136.675173 694.08 136.675173 
+L 328.32 136.675173 
+Q 322.56 136.675173 322.56 142.435173 
+L 322.56 162.934519 
+Q 322.56 168.694519 328.32 168.694519 
+z
+" clip-path="url(#p4316557abb)" style="fill: #e6eaee"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 328.32 213.165833 
+L 694.08 213.165833 
+Q 699.84 213.165833 699.84 207.405833 
+L 699.84 186.906487 
+Q 699.84 181.146487 694.08 181.146487 
+L 328.32 181.146487 
+Q 322.56 181.146487 322.56 186.906487 
+L 322.56 207.405833 
+Q 322.56 213.165833 328.32 213.165833 
+z
+" clip-path="url(#p4316557abb)" style="fill: #e6eaee"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 328.32 275.425673 
+L 694.08 275.425673 
+Q 699.84 275.425673 699.84 269.665673 
+L 699.84 249.166327 
+Q 699.84 243.406327 694.08 243.406327 
+L 328.32 243.406327 
+Q 322.56 243.406327 322.56 249.166327 
+L 322.56 269.665673 
+Q 322.56 275.425673 328.32 275.425673 
+z
+" clip-path="url(#p4316557abb)" style="fill: #8a96a3; opacity: 0.9"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 328.32 319.896987 
+L 694.08 319.896987 
+Q 699.84 319.896987 699.84 314.136987 
+L 699.84 293.637641 
+Q 699.84 287.877641 694.08 287.877641 
+L 328.32 287.877641 
+Q 322.56 287.877641 322.56 293.637641 
+L 322.56 314.136987 
+Q 322.56 319.896987 328.32 319.896987 
+z
+" clip-path="url(#p4316557abb)" style="fill: #8a96a3; opacity: 0.9"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 328.32 364.368302 
+L 694.08 364.368302 
+Q 699.84 364.368302 699.84 358.608302 
+L 699.84 338.108955 
+Q 699.84 332.348955 694.08 332.348955 
+L 328.32 332.348955 
+Q 322.56 332.348955 322.56 338.108955 
+L 322.56 358.608302 
+Q 322.56 364.368302 328.32 364.368302 
+z
+" clip-path="url(#p4316557abb)" style="fill: #8a96a3; opacity: 0.9"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 328.32 426.628142 
+L 694.08 426.628142 
+Q 699.84 426.628142 699.84 420.868142 
+L 699.84 400.368795 
+Q 699.84 394.608795 694.08 394.608795 
+L 328.32 394.608795 
+Q 322.56 394.608795 322.56 400.368795 
+L 322.56 420.868142 
+Q 322.56 426.628142 328.32 426.628142 
+z
+" clip-path="url(#p4316557abb)" style="fill: #3b82f6; opacity: 0.9"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 328.32 471.099456 
+L 694.08 471.099456 
+Q 699.84 471.099456 699.84 465.339456 
+L 699.84 444.84011 
+Q 699.84 439.08011 694.08 439.08011 
+L 328.32 439.08011 
+Q 322.56 439.08011 322.56 444.84011 
+L 322.56 465.339456 
+Q 322.56 471.099456 328.32 471.099456 
+z
+" clip-path="url(#p4316557abb)" style="fill: #1e3a5f; opacity: 0.9"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1e3a5f" x="511.2" y="69.343244" transform="rotate(-0 511.2 69.343244)">After one /compact</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1e3a5f" x="302.4" y="111.590992" transform="rotate(-0 302.4 111.590992)">Goal (1)</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1e3a5f" x="511.2" y="111.200836" transform="rotate(-0 511.2 111.200836)">Kept</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1e3a5f" x="302.4" y="156.062307" transform="rotate(-0 302.4 156.062307)">Files touched (7)</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1e3a5f" x="511.2" y="155.67215" transform="rotate(-0 511.2 155.67215)">Kept</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1e3a5f" x="302.4" y="200.533621" transform="rotate(-0 302.4 200.533621)">Off-limits modules (2)</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1e3a5f" x="511.2" y="200.143465" transform="rotate(-0 511.2 200.143465)">Kept</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1e3a5f" x="302.4" y="262.793461" transform="rotate(-0 302.4 262.793461)">Decisions Codex proposed (3)</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="511.2" y="262.403754" transform="rotate(-0 511.2 262.403754)">Blurred: 2 kept, 1 blurred</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1e3a5f" x="302.4" y="307.264775" transform="rotate(-0 302.4 307.264775)">My decisions (4)</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="511.2" y="306.875068" transform="rotate(-0 511.2 306.875068)">Blurred: reason squashed</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1e3a5f" x="302.4" y="351.73609" transform="rotate(-0 302.4 351.73609)">Failing tests (2)</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="511.2" y="351.346382" transform="rotate(-0 511.2 351.346382)">Blurred: 1 lost its method</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #3b82f6" x="302.4" y="413.99593" transform="rotate(-0 302.4 413.99593)">Approaches I rejected (3)</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="511.2" y="413.606222" transform="rotate(-0 511.2 413.606222)">2 of 3 dropped</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1e3a5f" x="302.4" y="458.467244" transform="rotate(-0 302.4 458.467244)">Exact values (~5)</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="511.2" y="458.077537" transform="rotate(-0 511.2 458.077537)">Most dropped</text>
+   </g>
+  </g>
+  <g id="text_18">
+   <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #8a96a3" x="7.2" y="511.121219" transform="rotate(-0 7.2 511.121219)">One 90-min Codex CLI session (0.167.0 line, gpt-5.5), recall checked right after the compact</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p4316557abb">
+   <rect x="0" y="41.50656" width="720" height="435.81888"/>
+  </clipPath>
+ </defs>
+</svg>

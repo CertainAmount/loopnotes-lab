@@ -43,6 +43,7 @@ The same folders, grouped the way the site groups its articles: each topic page 
 
 The counts, sources and check dates behind the guides, one folder per article.
 
+- [Codex \"Ran Out of Room in the Model's Context Window\" Fix](https://loopnotes.dev/codex-context-window-error/) · [research note](notes/codex-context-window-error/)
 - [Antigravity CLI Always Proceed Still Asks? 5-Run Test](https://loopnotes.dev/antigravity-cli-always-proceed-permissions/) · [research note](notes/antigravity-cli-always-proceed-permissions/)
 - [Can't Access Localhost From Your Phone? Check the Bind First](https://loopnotes.dev/access-localhost-from-phone/) · [research note](notes/access-localhost-from-phone/)
 - [Too Many MCP Tools? How Many Is Too Many in Claude Code](https://loopnotes.dev/mcp-too-many-tools/) · [research note](notes/mcp-too-many-tools/)

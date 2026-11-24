@@ -1,0 +1,6 @@
+point,low,high,label,reported
+Before compact 1,20,25,low 20s,low 20s % (just before compact 1)
+After compact 1,70,89,70s–80s,70s to 80s % (just after compact 1)
+~10 turns later,13,17,mid-teens,mid-teens % (about 10 turns later)
+After compact 2,67,72,high 60s–low 70s,high 60s to low 70s % (just after compact 2)
+/new start,88,92,~90%,about 90 % (start of /new with six carried lines)
