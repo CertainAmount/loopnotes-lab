@@ -1,0 +1,58 @@
+{
+ "frame": "range",
+ "points": [
+  {
+   "label": "No agents",
+   "lo": 21,
+   "hi": 23,
+   "text": "21–23",
+   "reported": "0 agents 21–23GB, IntelliJ + OrbStack PostgreSQL/Redis + Chrome (author interview)"
+  },
+  {
+   "label": "1 agent",
+   "lo": 23,
+   "hi": 25,
+   "text": "23–25",
+   "hi_light": true,
+   "reported": "1 agent 23–25GB (author interview)"
+  },
+  {
+   "label": "3 agents",
+   "lo": 27,
+   "hi": 29,
+   "text": "27–29",
+   "reported": "3 agents 27–29GB, third agent's first test stepped the graph 3–4GB past 28 (author interview)"
+  },
+  {
+   "label": "+5 containers",
+   "lo": 30,
+   "hi": 32,
+   "text": "~2GB swap",
+   "reported": "3 agents + 5 OrbStack containers (limit 12GB): low 30s, swap about 2GB, yellow (2026-11-10, author interview)"
+  }
+ ],
+ "ylim": [
+  16,
+  36
+ ],
+ "yticks": [
+  16,
+  24,
+  32
+ ],
+ "suffix": "GB",
+ "ylabel": "Memory Used",
+ "hlines": [
+  {
+   "y": 24,
+   "label": "M5 Pro base",
+   "at": 2.5
+  },
+  {
+   "y": 32,
+   "label": "M6 max",
+   "at": 1.5
+  }
+ ],
+ "note": "Mac mini M6 32GB, Activity Monitor, read by eye, Oct–Nov 2026"
+}

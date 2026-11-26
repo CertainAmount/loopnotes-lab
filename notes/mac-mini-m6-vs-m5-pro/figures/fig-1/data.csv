@@ -1,0 +1,5 @@
+point,low,high,label,reported
+No agents,21,23,21–23,"0 agents 21–23GB, IntelliJ + OrbStack PostgreSQL/Redis + Chrome (author interview)"
+1 agent,23,25,23–25,1 agent 23–25GB (author interview)
+3 agents,27,29,27–29,"3 agents 27–29GB, third agent's first test stepped the graph 3–4GB past 28 (author interview)"
++5 containers,30,32,~2GB swap,"3 agents + 5 OrbStack containers (limit 12GB): low 30s, swap about 2GB, yellow (2026-11-10, author interview)"
